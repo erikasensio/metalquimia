@@ -1,0 +1,30 @@
+<?php
+// Carrusel de tarjetas altas con imagen y texto (Figma Modulos › 11. Highlights Carousel).
+$l = 'highlights_carousel';
+return array(
+	'name'       => $l,
+	'label'      => 'Carrusel de tarjetas con imagen',
+	'sub_fields' => array_merge(
+		array( mq_tab( $l, 'Cabecera' ), mq_theme_field( $l, 'dark' ) ),
+		mq_heading_fields( $l ),
+		array(
+			mq_tab( $l, 'Tarjetas' ),
+			mq_f(
+				$l,
+				'items',
+				'repeater',
+				'Tarjetas',
+				array(
+					'collapsed'    => 'field_mq_' . $l . '_items_lead',
+					'button_label' => 'Añadir tarjeta',
+					'sub_fields'   => array(
+						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Vertical 3:4, mínimo 900 × 1200 px (JPG o WebP). El texto va encima de la parte de abajo, que se oscurece.' ), 'items' ),
+						mq_f( $l, 'lead', 'text', 'Texto destacado', array(), 'items' ),
+						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),
+						mq_f( $l, 'link', 'link', 'Enlace', array( 'instructions' => 'Opcional: toda la tarjeta lleva a esta página.' ), 'items' ),
+					),
+				)
+			),
+		)
+	),
+);
