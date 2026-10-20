@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/Button";
 
 type Overlay = { title: string; text: string; image: WpImage | null; button: WpLink | null };
 
-// Posiciones fijas de las etiquetas alrededor del producto (se reparten en ciclo).
+// Posiciones de las etiquetas sobre el escenario 1512 × 1000 de Figma (se reparten en ciclo).
 const SPOTS: React.CSSProperties[] = [
-  { top: "20%", left: "6%" },
-  { top: "30%", right: "6%" },
-  { top: "62%", left: "3%" },
-  { top: "58%", right: "10%" },
-  { top: "42%", left: "22%" },
-  { top: "76%", right: "26%" },
+  { top: "27.8%", left: "21%" },
+  { top: "49.9%", left: "65.1%" },
+  { top: "66.3%", left: "12.4%" },
+  { top: "16%", left: "68%" },
+  { top: "40%", left: "4%" },
+  { top: "70%", left: "72%" },
 ];
 
 /** Etiquetas flotantes de <Highlight> y tarjeta que se abre al pulsarlas. */
@@ -31,7 +31,8 @@ export function HighlightTags({ tags, overlay }: { tags: string[]; overlay: Over
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const pill = "flex items-center gap-2 whitespace-nowrap border border-white/10 bg-black-grey/90 px-3 py-2 font-mono text-[0.6875rem] uppercase leading-none text-light-grey backdrop-blur";
+  // Figma: fondo #444 al 50 %, esquinas de 8 px, cuadrado de 12 px y texto mono de 14 px.
+  const pill = "flex items-center gap-4 whitespace-nowrap rounded-[8px] border border-transparent bg-dark-grey/50 px-8 py-6 font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-light-grey backdrop-blur";
 
   return (
     <>
@@ -44,12 +45,12 @@ export function HighlightTags({ tags, overlay }: { tags: string[]; overlay: Over
         >
           {overlay ? (
             <button type="button" onClick={() => setOpen(true)} aria-haspopup="dialog" className={`${pill} transition-colors hover:border-red`}>
-              <span className="size-1.5 bg-red" aria-hidden />
+              <span className="size-3 bg-light-grey" aria-hidden />
               {label}
             </button>
           ) : (
             <span className={pill}>
-              <span className="size-1.5 bg-red" aria-hidden />
+              <span className="size-3 bg-light-grey" aria-hidden />
               {label}
             </span>
           )}

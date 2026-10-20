@@ -4,6 +4,22 @@
   "en"
  ],
  "images": {
+  "hero-home-poster": {
+   "file": "hero-home-poster.jpg",
+   "alt": {
+    "es": "Línea de procesado Metalquimia en una nave industrial",
+    "en": "Metalquimia processing line in an industrial hall"
+   },
+   "find": "First frame of the home hero video"
+  },
+  "hero-home-video": {
+   "file": "hero-home.mp4",
+   "alt": {
+    "es": "Recorrido por una planta de procesado Metalquimia",
+    "en": "Walkthrough of a Metalquimia processing plant"
+   },
+   "find": "Video: camera travelling through a bright stainless steel meat processing plant"
+  },
   "hero-home": {
    "file": "hero-home.jpg",
    "alt": {
@@ -203,6 +219,398 @@
     "en": "Cooked ham"
    },
    "find": "Cut-out PNG cooked ham with slices, transparent background"
+  },
+  "ham-frame-01": {
+   "file": "ham-frame-01.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-02": {
+   "file": "ham-frame-02.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-03": {
+   "file": "ham-frame-03.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-04": {
+   "file": "ham-frame-04.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-05": {
+   "file": "ham-frame-05.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-06": {
+   "file": "ham-frame-06.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-07": {
+   "file": "ham-frame-07.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-08": {
+   "file": "ham-frame-08.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-09": {
+   "file": "ham-frame-09.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-10": {
+   "file": "ham-frame-10.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-11": {
+   "file": "ham-frame-11.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-12": {
+   "file": "ham-frame-12.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-13": {
+   "file": "ham-frame-13.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-14": {
+   "file": "ham-frame-14.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-15": {
+   "file": "ham-frame-15.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-16": {
+   "file": "ham-frame-16.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-17": {
+   "file": "ham-frame-17.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-18": {
+   "file": "ham-frame-18.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-19": {
+   "file": "ham-frame-19.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-20": {
+   "file": "ham-frame-20.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-21": {
+   "file": "ham-frame-21.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-22": {
+   "file": "ham-frame-22.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-23": {
+   "file": "ham-frame-23.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-24": {
+   "file": "ham-frame-24.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-25": {
+   "file": "ham-frame-25.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-26": {
+   "file": "ham-frame-26.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-27": {
+   "file": "ham-frame-27.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-28": {
+   "file": "ham-frame-28.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-29": {
+   "file": "ham-frame-29.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-30": {
+   "file": "ham-frame-30.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-31": {
+   "file": "ham-frame-31.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-32": {
+   "file": "ham-frame-32.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-33": {
+   "file": "ham-frame-33.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-34": {
+   "file": "ham-frame-34.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-35": {
+   "file": "ham-frame-35.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-36": {
+   "file": "ham-frame-36.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-37": {
+   "file": "ham-frame-37.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-38": {
+   "file": "ham-frame-38.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-39": {
+   "file": "ham-frame-39.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-40": {
+   "file": "ham-frame-40.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-41": {
+   "file": "ham-frame-41.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-42": {
+   "file": "ham-frame-42.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-43": {
+   "file": "ham-frame-43.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-44": {
+   "file": "ham-frame-44.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-45": {
+   "file": "ham-frame-45.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-46": {
+   "file": "ham-frame-46.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-47": {
+   "file": "ham-frame-47.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-48": {
+   "file": "ham-frame-48.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
+  },
+  "ham-frame-49": {
+   "file": "ham-frame-49.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido",
+    "en": "Cooked ham slices"
+   },
+   "find": "Video frame of cooked ham slices stacking, transparent"
   },
   "ham-slices": {
    "file": "ham-slices.png",
@@ -527,50 +935,82 @@
   "logo-a": {
    "file": "logo-a.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Bombieri",
+    "en": "Bombieri"
    },
-   "find": "Grey client logo PNG transparent (meat brand)"
+   "find": "Client logo PNG transparent (Figma)"
   },
   "logo-b": {
    "file": "logo-b.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Casa Tarradellas",
+    "en": "Casa Tarradellas"
    },
-   "find": "Grey client logo PNG transparent"
+   "find": "Client logo PNG transparent (Figma)"
   },
   "logo-c": {
    "file": "logo-c.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Sigma",
+    "en": "Sigma"
    },
-   "find": "Grey client logo PNG transparent"
+   "find": "Client logo PNG transparent (Figma)"
   },
   "logo-d": {
    "file": "logo-d.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Grandi Salumifici Italiani",
+    "en": "Grandi Salumifici Italiani"
    },
-   "find": "Grey client logo PNG transparent"
+   "find": "Client logo PNG transparent (Figma)"
   },
   "logo-e": {
    "file": "logo-e.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Plumrose",
+    "en": "Plumrose"
    },
-   "find": "Grey client logo PNG transparent"
+   "find": "Client logo PNG transparent (Figma)"
   },
   "logo-f": {
    "file": "logo-f.png",
    "alt": {
-    "es": "Cliente",
-    "en": "Client"
+    "es": "Noel",
+    "en": "Noel"
    },
-   "find": "Grey client logo PNG transparent"
+   "find": "Client logo PNG transparent (Figma)"
+  },
+  "logo-g": {
+   "file": "logo-g.png",
+   "alt": {
+    "es": "Fiorucci",
+    "en": "Fiorucci"
+   },
+   "find": "Client logo PNG transparent (Figma)"
+  },
+  "logo-h": {
+   "file": "logo-h.png",
+   "alt": {
+    "es": "Kiener",
+    "en": "Kiener"
+   },
+   "find": "Client logo PNG transparent (Figma)"
+  },
+  "logo-i": {
+   "file": "logo-i.png",
+   "alt": {
+    "es": "Guaraní",
+    "en": "Guaraní"
+   },
+   "find": "Client logo PNG transparent (Figma)"
+  },
+  "highlight-machine": {
+   "file": "highlight-machine.jpg",
+   "alt": {
+    "es": "Embutidora Metalquimia",
+    "en": "Metalquimia stuffer"
+   },
+   "find": "Copper and steel stuffing machine on pure black background (Figma Home \"Hightlights\")"
   },
   "method-1": {
    "file": "method-1.jpg",
@@ -1359,47 +1799,63 @@
     "sections": [
      {
       "type": "hero",
-      "image": "@img:hero-home",
+      "image": "@img:hero-home-poster",
       "image_mobile": "",
-      "title": "Donde la industria se detiene,\nMetalquimia diseña.",
+      "video": "@img:hero-home-video",
+      "title": "El socio foodtech y de ingeniería\npara la industria cárnica y de proteínas",
       "button": {
-       "title": "DESCUBRE CÓMO",
-       "url": "@page:solutions",
+       "title": "CONTÁCTANOS",
+       "url": "@page:contact",
        "target": ""
       }
      },
      {
       "type": "logo_highlights",
-      "title": "Con la confianza de los líderes del sector",
+      "title": "Con la confianza de las principales empresas cárnicas del mundo.",
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -1408,9 +1864,9 @@
       "type": "products",
       "eyebrow": "NUESTRAS SOLUCIONES",
       "title_muted": "Procesado con precisión y",
-      "title": "control total en cada etapa.",
+      "title": "control total en cada etapa.\nTransformamos cómo el mundo procesa la carne.",
       "button": {
-       "title": "VER SOLUCIONES",
+       "title": "SABER MÁS",
        "url": "@page:solutions",
        "target": ""
       },
@@ -1418,6 +1874,57 @@
        {
         "name": "Cooked",
         "image": "@img:ham",
+        "frames": [
+         "@img:ham-frame-01",
+         "@img:ham-frame-02",
+         "@img:ham-frame-03",
+         "@img:ham-frame-04",
+         "@img:ham-frame-05",
+         "@img:ham-frame-06",
+         "@img:ham-frame-07",
+         "@img:ham-frame-08",
+         "@img:ham-frame-09",
+         "@img:ham-frame-10",
+         "@img:ham-frame-11",
+         "@img:ham-frame-12",
+         "@img:ham-frame-13",
+         "@img:ham-frame-14",
+         "@img:ham-frame-15",
+         "@img:ham-frame-16",
+         "@img:ham-frame-17",
+         "@img:ham-frame-18",
+         "@img:ham-frame-19",
+         "@img:ham-frame-20",
+         "@img:ham-frame-21",
+         "@img:ham-frame-22",
+         "@img:ham-frame-23",
+         "@img:ham-frame-24",
+         "@img:ham-frame-25",
+         "@img:ham-frame-26",
+         "@img:ham-frame-27",
+         "@img:ham-frame-28",
+         "@img:ham-frame-29",
+         "@img:ham-frame-30",
+         "@img:ham-frame-31",
+         "@img:ham-frame-32",
+         "@img:ham-frame-33",
+         "@img:ham-frame-34",
+         "@img:ham-frame-35",
+         "@img:ham-frame-36",
+         "@img:ham-frame-37",
+         "@img:ham-frame-38",
+         "@img:ham-frame-39",
+         "@img:ham-frame-40",
+         "@img:ham-frame-41",
+         "@img:ham-frame-42",
+         "@img:ham-frame-43",
+         "@img:ham-frame-44",
+         "@img:ham-frame-45",
+         "@img:ham-frame-46",
+         "@img:ham-frame-47",
+         "@img:ham-frame-48",
+         "@img:ham-frame-49"
+        ],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1496,6 +2003,7 @@
        {
         "name": "Marinated",
         "image": "@img:marinated",
+        "frames": [],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1574,6 +2082,7 @@
        {
         "name": "Cured",
         "image": "@img:salami",
+        "frames": [],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1652,6 +2161,7 @@
        {
         "name": "Snacks",
         "image": "@img:snacks",
+        "frames": [],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1730,6 +2240,7 @@
        {
         "name": "Sausages",
         "image": "@img:sausages",
+        "frames": [],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1808,6 +2319,7 @@
        {
         "name": "Pet food",
         "image": "@img:petfood",
+        "frames": [],
         "processes": [
          {
           "label": "PREPARACIÓN DE SALMUERA",
@@ -1891,40 +2403,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:highlight-machine",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Somos expertos en investigación y desarrollo de vanguardia en tecnología cárnica, con soluciones innovadoras y las mejores prácticas del sector.",
+        "text": "Ponemos a disposición de nuestros clientes un Centro Global de Investigación y Tecnología cárnica para desarrollar nuevos productos, mejorar su calidad y lograr la máxima satisfacción en el proceso productivo."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Desarrollamos sistemas 4.0 totalmente integrados que mejoran la eficiencia operativa e impulsan la innovación gracias a nuestra tecnología propia.",
+        "text": "Ofrecemos Plantas Completas llave en mano, con automatización total y nuestros propios sistemas de conectividad 4.0 MQC_System: la máxima seguridad técnica y alimentaria en productos cocidos, marinados, curados y snacks. Somos dueños de cada tecnología crítica de nuestros equipos, lo que se traduce en actualizaciones más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin fricciones."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Estamos presentes en todo el mundo y ofrecemos una atención directa y personalizada.",
+        "text": "Nuestra tecnología y maquinaria están presentes en plantas cárnicas de todo el mundo. Una amplia red de representantes y agentes exclusivos garantiza una comunicación directa y servicio técnico en cada país."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Confiamos en la Creativación para dar forma al futuro de la industria cárnica, impulsando la innovación y la sostenibilidad.",
+        "text": "Basamos nuestra actividad en una estrategia de diferenciación a través de la Creativación (Creatividad x Innovación), junto con la máxima calidad de nuestros equipos, el Diseño Inteligente, el Talento y la Colaboración Abierta con clientes y socios."
        }
       ],
       "overlay_title": "",
@@ -1933,37 +2442,146 @@
       "overlay_button": null
      },
      {
-      "type": "steps_carousel",
-      "theme": "dark",
-      "eyebrow": "INGENIERÍA Y TECNOLOGÍA",
-      "title_muted": "No vendemos máquinas para cada paso.",
-      "title": "Diseñamos todo el proceso.",
-      "subtitle": "",
-      "button": {
-       "title": "SOLICITA INFORMACIÓN",
-       "url": "@page:contact#form",
-       "target": ""
-      },
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y controlada."
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "COCIDOS",
+        "description": "Inyección precisa de salmuera, pieza a pieza.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "COCIDOS",
+        "description": "Descongelación controlada que conserva la calidad.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "COCIDOS",
+        "description": "Embutición continua y precisa.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "MARINADOS",
+        "description": "Inyección precisa de salmuera, pieza a pieza.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "MARINADOS",
+        "description": "Descongelación controlada que conserva la calidad.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "MARINADOS",
+        "description": "Embutición continua y precisa.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "CURADOS",
+        "description": "Inyección precisa de salmuera, pieza a pieza.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "CURADOS",
+        "description": "Descongelación controlada que conserva la calidad.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "CURADOS",
+        "description": "Embutición continua y precisa.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "SNACKS",
+        "description": "Inyección precisa de salmuera, pieza a pieza.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "SNACKS",
+        "description": "Descongelación controlada que conserva la calidad.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "SNACKS",
+        "description": "Embutición continua y precisa.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        }
       ]
      },
@@ -1972,82 +2590,62 @@
       "direction": "up"
      },
      {
-      "type": "testimonial",
-      "title_muted": "Nuestros clientes no tienen",
-      "title": "margen de error",
-      "label": "CON LA CONFIANZA DE LOS LÍDERES DEL SECTOR",
+      "type": "data_highlights",
+      "eyebrow": "",
+      "title_muted": "",
+      "title": "Estándares altos. Cero concesiones.",
+      "subtitle": "",
+      "button": null,
       "items": [
        {
-        "logo": "@img:logo-a",
-        "name": "Cliente 1",
-        "quote": "Metalquimia nos ayudó a aumentar el rendimiento manteniendo la calidad que esperan nuestros consumidores.",
-        "author": "Joan Puig",
-        "role": "Director de producción"
+        "value": "50+",
+        "description": "Años inventando aquello con lo que hoy funciona la industria"
        },
        {
-        "logo": "@img:logo-b",
-        "name": "Cliente 2",
-        "quote": "Metalquimia nos ayudó a aumentar el rendimiento manteniendo la calidad que esperan nuestros consumidores.",
-        "author": "Marta Vidal",
-        "role": "Director de producción"
+        "value": "90+",
+        "description": "Países donde opera la ingeniería de Metalquimia"
        },
        {
-        "logo": "@img:logo-c",
-        "name": "Cliente 3",
-        "quote": "Metalquimia nos ayudó a aumentar el rendimiento manteniendo la calidad que esperan nuestros consumidores.",
-        "author": "Pere Soler",
-        "role": "Director de producción"
+        "value": "+100",
+        "description": "Patentes propias y tecnologías registradas"
        },
        {
-        "logo": "@img:logo-d",
-        "name": "Cliente 4",
-        "quote": "Metalquimia nos ayudó a aumentar el rendimiento manteniendo la calidad que esperan nuestros consumidores.",
-        "author": "Anna Roca",
-        "role": "Director de producción"
+        "value": "15%",
+        "description": "De la inversión destinada a proyectos de investigación y desarrollo."
        }
       ]
      },
      {
-      "type": "case_studies",
-      "eyebrow": "CASOS DE ÉXITO",
-      "title_muted": "Convertimos los retos en",
-      "title": "soluciones basadas en datos",
-      "subtitle": "",
+      "type": "media_text",
+      "theme": "light",
+      "image_position": "left",
+      "eyebrow": "CREATIVACIÓN",
+      "title_muted": "Partnership para toda la vida",
+      "title": "que genera inventos",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
+      "details": "",
       "button": {
-       "title": "DESCUBRE MÁS",
-       "url": "@page:resources",
+       "title": "Descubre nuestro modelo",
+       "url": "@page:partnership",
        "target": ""
       },
-      "read_label": "LEER CASO",
-      "items": [
-       {
-        "category": "LOGÍSTICA Y ALMACÉN",
-        "title": "Cómo Metrilus redujo un 40 % las paradas con Metalquimia",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       },
-       {
-        "category": "LOGÍSTICA Y ALMACÉN",
-        "title": "Cómo Casa Tarradellas redujo un 40 % las paradas con QDS Pro",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       },
-       {
-        "category": "LOGÍSTICA Y ALMACÉN",
-        "title": "Cómo ElPozo redujo un 40 % las paradas con QDS",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       }
-      ]
+      "image": "@img:partner"
+     },
+     {
+      "type": "media_text",
+      "theme": "light",
+      "image_position": "right",
+      "eyebrow": "SOSTENIBILIDAD",
+      "title_muted": "",
+      "title": "Comprometidos con la sociedad y con nuestro entorno.",
+      "text": "<p>Nuestro Código Ético, el respeto por el Medio Ambiente y los Objetivos de Desarrollo Sostenible (ODS), así como las actividades de nuestra propia Fundación, son algunos ejemplos del compromiso de nuestra empresa con la construcción de un mundo mejor.</p>",
+      "details": "",
+      "button": {
+       "title": "descubre más",
+       "url": "@page:about",
+       "target": ""
+      },
+      "image": "@img:building"
      },
      {
       "type": "banner_full_screen",
@@ -2064,7 +2662,7 @@
        }
       ],
       "button": {
-       "title": "DESCUBRE NUESTRA TECNOLOGÍA",
+       "title": "EXPLORA NUESTRAS TECNOLOGÍAS",
        "url": "@page:technologies",
        "target": ""
       },
@@ -2081,9 +2679,9 @@
       "items": [
        {
         "image": "@img:insight-1",
-        "category": "CASO DE ÉXITO",
-        "date": "12.03.2026",
-        "title": "Cómo Metrilus redujo un 40 % las paradas con Metalquimia",
+        "category": "NOTICIAS",
+        "date": "20 DE JULIO DE 2026",
+        "title": "Metalquimia estuvo presente en la feria Propak de Filipinas",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2093,8 +2691,8 @@
        {
         "image": "@img:insight-2",
         "category": "NOTICIAS",
-        "date": "02.02.2026",
-        "title": "Nueva generación de inyectoras para producto cocido",
+        "date": "20 DE JULIO DE 2026",
+        "title": "Sistema automatizado y continuo para coextrusión y cocción rápida de salchichas",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2103,9 +2701,9 @@
        },
        {
         "image": "@img:insight-3",
-        "category": "ARTÍCULO",
-        "date": "18.01.2026",
-        "title": "Por qué el futuro de la industria cárnica se basa en datos",
+        "category": "NOTICIAS",
+        "date": "20 DE JULIO DE 2026",
+        "title": "Metalquimia estuvo presente de nuevo en la feria IPPE 2026 | Atlanta (USA)",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2114,8 +2712,8 @@
        },
        {
         "image": "@img:insight-4",
-        "category": "REVISTA",
-        "date": "10.12.2025",
+        "category": "NOTICIAS",
+        "date": "20 DE JULIO DE 2026",
         "title": "El socio de ingeniería para la industria cárnica y de proteínas",
         "link": {
          "title": "",
@@ -2135,47 +2733,63 @@
     "sections": [
      {
       "type": "hero",
-      "image": "@img:hero-home",
+      "image": "@img:hero-home-poster",
       "image_mobile": "",
-      "title": "Where the industry stops,\nMetalquimia engineers.",
+      "video": "@img:hero-home-video",
+      "title": "The foodtech & engineering partner\nfor the meat and protein industry",
       "button": {
-       "title": "DISCOVER HOW",
-       "url": "@page:solutions",
+       "title": "CONTACT US",
+       "url": "@page:contact",
        "target": ""
       }
      },
      {
       "type": "logo_highlights",
-      "title": "Trusted by industry leaders",
+      "title": "Trusted by leading meat processing companies globally.",
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -2184,7 +2798,7 @@
       "type": "products",
       "eyebrow": "OUR SOLUTIONS",
       "title_muted": "Processed with precision and",
-      "title": "full control at every stage.",
+      "title": "full control at every stage.\nWe transform how the world processes meat.",
       "button": {
        "title": "LEARN MORE",
        "url": "@page:solutions",
@@ -2194,6 +2808,57 @@
        {
         "name": "Cooked",
         "image": "@img:ham",
+        "frames": [
+         "@img:ham-frame-01",
+         "@img:ham-frame-02",
+         "@img:ham-frame-03",
+         "@img:ham-frame-04",
+         "@img:ham-frame-05",
+         "@img:ham-frame-06",
+         "@img:ham-frame-07",
+         "@img:ham-frame-08",
+         "@img:ham-frame-09",
+         "@img:ham-frame-10",
+         "@img:ham-frame-11",
+         "@img:ham-frame-12",
+         "@img:ham-frame-13",
+         "@img:ham-frame-14",
+         "@img:ham-frame-15",
+         "@img:ham-frame-16",
+         "@img:ham-frame-17",
+         "@img:ham-frame-18",
+         "@img:ham-frame-19",
+         "@img:ham-frame-20",
+         "@img:ham-frame-21",
+         "@img:ham-frame-22",
+         "@img:ham-frame-23",
+         "@img:ham-frame-24",
+         "@img:ham-frame-25",
+         "@img:ham-frame-26",
+         "@img:ham-frame-27",
+         "@img:ham-frame-28",
+         "@img:ham-frame-29",
+         "@img:ham-frame-30",
+         "@img:ham-frame-31",
+         "@img:ham-frame-32",
+         "@img:ham-frame-33",
+         "@img:ham-frame-34",
+         "@img:ham-frame-35",
+         "@img:ham-frame-36",
+         "@img:ham-frame-37",
+         "@img:ham-frame-38",
+         "@img:ham-frame-39",
+         "@img:ham-frame-40",
+         "@img:ham-frame-41",
+         "@img:ham-frame-42",
+         "@img:ham-frame-43",
+         "@img:ham-frame-44",
+         "@img:ham-frame-45",
+         "@img:ham-frame-46",
+         "@img:ham-frame-47",
+         "@img:ham-frame-48",
+         "@img:ham-frame-49"
+        ],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2272,6 +2937,7 @@
        {
         "name": "Marinated",
         "image": "@img:marinated",
+        "frames": [],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2350,6 +3016,7 @@
        {
         "name": "Cured",
         "image": "@img:salami",
+        "frames": [],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2428,6 +3095,7 @@
        {
         "name": "Snacks",
         "image": "@img:snacks",
+        "frames": [],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2506,6 +3174,7 @@
        {
         "name": "Sausages",
         "image": "@img:sausages",
+        "frames": [],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2584,6 +3253,7 @@
        {
         "name": "Pet food",
         "image": "@img:petfood",
+        "frames": [],
         "processes": [
          {
           "label": "BRINE PREPARATION",
@@ -2667,40 +3337,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:highlight-machine",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "We are experts in cutting-edge research and development in meat technology, dedicated to innovative solutions and industry-leading practices.",
+        "text": "Providing our clients with a Global Research and Technology Center for meat to develop new meat products, improve their quality, and achieve maximum satisfaction in the production process."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "We specialize in developing fully integrated 4.0 systems that enhance operational efficiency and drive innovation through our proprietary technology.",
+        "text": "We offer our clients Complete Plants, turnkey solutions, with total automation and our own 4.0 connectivity systems MQC_System: maximum technical and food safety in cooked, marinated, cured products, and snacks. We own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "We are present worldwide and offer direct, personalized care.",
+        "text": "Our technology and machinery are present in meat processing plants around the world. A wide network of representatives and exclusive agents ensures direct communication and technical service in every country."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "We rely on Creativation to shape the future of the meat industry, driving innovation and sustainability.",
+        "text": "We base our activity on a differentiation strategy through Creativation (Creativity X Innovation) along with the highest quality of our Teams, Intelligent Design, Talent, and Open Collaboration with our clients and partners."
        }
       ],
       "overlay_title": "",
@@ -2709,37 +3376,146 @@
       "overlay_button": null
      },
      {
-      "type": "steps_carousel",
-      "theme": "dark",
-      "eyebrow": "ENGINEERING & TECHNOLOGY",
-      "title_muted": "We don't sell machines for each step.",
-      "title": "We engineer the entire process.",
-      "subtitle": "",
-      "button": {
-       "title": "REQUEST INFO",
-       "url": "@page:contact#form",
-       "target": ""
-      },
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous, controlled dissolution."
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "COOKED",
+        "description": "Precise brine injection, piece after piece.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "COOKED",
+        "description": "Controlled defrosting that preserves quality.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "COOKED",
+        "description": "Continuous, precise stuffing.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "MARINATED",
+        "description": "Precise brine injection, piece after piece.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "MARINATED",
+        "description": "Controlled defrosting that preserves quality.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "MARINATED",
+        "description": "Continuous, precise stuffing.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "CURATED",
+        "description": "Precise brine injection, piece after piece.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "CURATED",
+        "description": "Controlled defrosting that preserves quality.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "CURATED",
+        "description": "Continuous, precise stuffing.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "SNACKS",
+        "description": "Precise brine injection, piece after piece.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "SNACKS",
+        "description": "Controlled defrosting that preserves quality.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "SNACKS",
+        "description": "Continuous, precise stuffing.",
+        "link": {
+         "title": "",
+         "url": "@page:machine",
+         "target": ""
+        }
        }
       ]
      },
@@ -2748,82 +3524,62 @@
       "direction": "up"
      },
      {
-      "type": "testimonial",
-      "title_muted": "Our customers have",
-      "title": "no margin for error",
-      "label": "TRUSTED BY INDUSTRY LEADERS",
+      "type": "data_highlights",
+      "eyebrow": "",
+      "title_muted": "",
+      "title": "High standards. Zero compromises.",
+      "subtitle": "",
+      "button": null,
       "items": [
        {
-        "logo": "@img:logo-a",
-        "name": "Cliente 1",
-        "quote": "Metalquimia helped us increase yield while keeping the quality our consumers expect.",
-        "author": "Joan Puig",
-        "role": "Production Director"
+        "value": "50+",
+        "description": "Years inventing what the industry runs on today"
        },
        {
-        "logo": "@img:logo-b",
-        "name": "Cliente 2",
-        "quote": "Metalquimia helped us increase yield while keeping the quality our consumers expect.",
-        "author": "Marta Vidal",
-        "role": "Production Director"
+        "value": "90+",
+        "description": "Countries where Metalquimia engineering operates"
        },
        {
-        "logo": "@img:logo-c",
-        "name": "Cliente 3",
-        "quote": "Metalquimia helped us increase yield while keeping the quality our consumers expect.",
-        "author": "Pere Soler",
-        "role": "Production Director"
+        "value": "+100",
+        "description": "Proprietary patents and registered technologies"
        },
        {
-        "logo": "@img:logo-d",
-        "name": "Cliente 4",
-        "quote": "Metalquimia helped us increase yield while keeping the quality our consumers expect.",
-        "author": "Anna Roca",
-        "role": "Production Director"
+        "value": "15%",
+        "description": "Investment allocated for research and development projects."
        }
       ]
      },
      {
-      "type": "case_studies",
-      "eyebrow": "CASE STUDIES",
-      "title_muted": "Turning challenges into",
-      "title": "data-driven solutions",
-      "subtitle": "",
+      "type": "media_text",
+      "theme": "light",
+      "image_position": "left",
+      "eyebrow": "CREATIVATION",
+      "title_muted": "Partnership for life",
+      "title": "that produces inventions",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
+      "details": "",
       "button": {
-       "title": "DISCOVER MORE",
-       "url": "@page:resources",
+       "title": "Discover our model",
+       "url": "@page:partnership",
        "target": ""
       },
-      "read_label": "READ CASE",
-      "items": [
-       {
-        "category": "LOGISTICS & WAREHOUSING",
-        "title": "How Metrilus cut downtime by 40% with Metalquimia",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       },
-       {
-        "category": "LOGISTICS & WAREHOUSING",
-        "title": "How Casa Tarradellas cut downtime by 40% with QDS Pro",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       },
-       {
-        "category": "LOGISTICS & WAREHOUSING",
-        "title": "How ElPozo cut downtime by 40% with QDS",
-        "link": {
-         "title": "",
-         "url": "@page:insight",
-         "target": ""
-        }
-       }
-      ]
+      "image": "@img:partner"
+     },
+     {
+      "type": "media_text",
+      "theme": "light",
+      "image_position": "right",
+      "eyebrow": "SUSTAINABILITY",
+      "title_muted": "",
+      "title": "We are committed to society and our environment.",
+      "text": "<p>Our Code of Ethics, our respect for the Environment, and the Sustainable Development Goals (SDGs), as well as the activities of our own Foundation, are some examples of our company's commitment to building a better world.</p>",
+      "details": "",
+      "button": {
+       "title": "discover more",
+       "url": "@page:about",
+       "target": ""
+      },
+      "image": "@img:building"
      },
      {
       "type": "banner_full_screen",
@@ -2840,7 +3596,7 @@
        }
       ],
       "button": {
-       "title": "DISCOVER OUR TECHNOLOGY",
+       "title": "EXPLORE OUR TECHNOLOGIES",
        "url": "@page:technologies",
        "target": ""
       },
@@ -2857,9 +3613,9 @@
       "items": [
        {
         "image": "@img:insight-1",
-        "category": "CASE STUDY",
-        "date": "12.03.2026",
-        "title": "How Metrilus cut downtime by 40% with Metalquimia",
+        "category": "NEWS",
+        "date": "JULY 20, 2026",
+        "title": "Metalquimia attended the Propak trade fair in the Philippines",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2869,8 +3625,8 @@
        {
         "image": "@img:insight-2",
         "category": "NEWS",
-        "date": "02.02.2026",
-        "title": "A new generation of injectors for cooked products",
+        "date": "JULY 20, 2026",
+        "title": "Automated continuous system for sausage co-extrusion and fast cooking",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2879,9 +3635,9 @@
        },
        {
         "image": "@img:insight-3",
-        "category": "ARTICLE",
-        "date": "18.01.2026",
-        "title": "Why the future of the meat industry is data-driven",
+        "category": "NEWS",
+        "date": "JULY 20, 2026",
+        "title": "Metalquimia once again attended IPPE 2026 | Atlanta (USA)",
         "link": {
          "title": "",
          "url": "@page:insight",
@@ -2890,8 +3646,8 @@
        },
        {
         "image": "@img:insight-4",
-        "category": "MAGAZINE",
-        "date": "10.12.2025",
+        "category": "NEWS",
+        "date": "JULY 20, 2026",
         "title": "The engineering partner for the meat and protein industry",
         "link": {
          "title": "",
@@ -7667,32 +8423,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -7971,32 +8742,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -8640,32 +9426,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -8833,32 +9634,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -9047,32 +9863,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -9203,32 +10034,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -9512,32 +10358,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -9732,32 +10593,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -10899,32 +11775,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]
@@ -11162,32 +12053,47 @@
       "logos": [
        {
         "image": "@img:logo-a",
-        "name": "Cliente 1",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-b",
-        "name": "Cliente 2",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-c",
-        "name": "Cliente 3",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-d",
-        "name": "Cliente 4",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-e",
-        "name": "Cliente 5",
+        "name": "",
         "url": ""
        },
        {
         "image": "@img:logo-f",
-        "name": "Cliente 6",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-g",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-h",
+        "name": "",
+        "url": ""
+       },
+       {
+        "image": "@img:logo-i",
+        "name": "",
         "url": ""
        }
       ]

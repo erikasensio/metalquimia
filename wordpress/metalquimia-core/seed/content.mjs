@@ -5,6 +5,8 @@
  *   - el front en modo WP_URL=mock para maquetar sin WordPress.
  *
  * L(es, en) marca un texto traducible. "@img:clave" es una imagen de seed/images, "@page:clave" un enlace a otra página.
+ * Las imágenes viven en la biblioteca de medios de WordPress (opción mq_seed_images: clave → adjunto); seed/images no se versiona
+ * y solo hace falta en local para subir una imagen nueva la primera vez.
  */
 
 export const L = (es, en) => ({ __l: true, es, en: en ?? es });
@@ -18,6 +20,8 @@ const link = (title, url, target = "") => ({ title, url, target });
 
 // ---------- Imágenes ----------
 const I = {
+  heroHomePoster: img("hero-home-poster", "hero-home-poster.jpg", "Línea de procesado Metalquimia en una nave industrial", "Metalquimia processing line in an industrial hall", "First frame of the home hero video"),
+  heroHomeVideo: img("hero-home-video", "hero-home.mp4", "Recorrido por una planta de procesado Metalquimia", "Walkthrough of a Metalquimia processing plant", "Video: camera travelling through a bright stainless steel meat processing plant"),
   heroHome: img("hero-home", "hero-home.jpg", "Planta de procesado de carne Metalquimia", "Metalquimia meat processing plant", "Dark, wide industrial meat-processing hall with stainless steel machines, cinematic, bottom dark"),
   tunnel: img("tunnel", "tunnel.jpg", "Interior de un tambor de acero inoxidable", "Inside a stainless steel tumbler drum", "Inside of a stainless steel drum/tunnel, metallic reflections, dark"),
   machineHero: img("machine-hero", "machine-hero.jpg", "Inyectora Movistick en la planta", "Movistick injector in the plant", "Large stainless steel industrial meat injector machine in a dark showroom"),
@@ -43,6 +47,11 @@ const I = {
   waves: img("waves", "waves.jpg", "Detalle abstracto de acero", "Abstract steel detail", "Abstract dark wave pattern metallic texture"),
   map: img("map", "map.jpg", "Mapa", "Map", "unused"),
   ham: img("ham", "ham.png", "Jamón cocido", "Cooked ham", "Cut-out PNG cooked ham with slices, transparent background"),
+  // Fotogramas del vídeo de las lonchas separándose (fondo transparente): el scroll pasa de uno a otro.
+  hamFrames: Array.from({ length: 49 }, (_, i) => {
+    const n = String(i + 1).padStart(2, "0");
+    return img(`ham-frame-${n}`, `ham-frame-${n}.webp`, "Lonchas de jamón cocido", "Cooked ham slices", "Video frame of cooked ham slices stacking, transparent");
+  }),
   hamSlices: img("ham-slices", "ham-slices.png", "Lonchas de jamón cocido", "Cooked ham slices", "Cut-out PNG floating slices of cooked ham, transparent"),
   turkey: img("turkey", "turkey.png", "Pechuga de pavo", "Turkey breast", "Cut-out PNG cooked turkey breast, transparent"),
   bacon: img("bacon", "bacon.png", "Bacon", "Bacon", "Cut-out PNG bacon strips, transparent"),
@@ -83,12 +92,16 @@ const I = {
   h2: img("history-2", "history-2.jpg", "Primera inyectora", "First injector", "Vintage industrial machine photo"),
   h3: img("history-3", "history-3.jpg", "Expansión internacional", "International expansion", "Trade fair stand 1990s"),
   h4: img("history-4", "history-4.jpg", "Nueva sede", "New headquarters", "Modern industrial building"),
-  logoA: img("logo-a", "logo-a.png", "Cliente", "Client", "Grey client logo PNG transparent (meat brand)"),
-  logoB: img("logo-b", "logo-b.png", "Cliente", "Client", "Grey client logo PNG transparent"),
-  logoC: img("logo-c", "logo-c.png", "Cliente", "Client", "Grey client logo PNG transparent"),
-  logoD: img("logo-d", "logo-d.png", "Cliente", "Client", "Grey client logo PNG transparent"),
-  logoE: img("logo-e", "logo-e.png", "Cliente", "Client", "Grey client logo PNG transparent"),
-  logoF: img("logo-f", "logo-f.png", "Cliente", "Client", "Grey client logo PNG transparent"),
+  logoA: img("logo-a", "logo-a.png", "Bombieri", "Bombieri", "Client logo PNG transparent (Figma)"),
+  logoB: img("logo-b", "logo-b.png", "Casa Tarradellas", "Casa Tarradellas", "Client logo PNG transparent (Figma)"),
+  logoC: img("logo-c", "logo-c.png", "Sigma", "Sigma", "Client logo PNG transparent (Figma)"),
+  logoD: img("logo-d", "logo-d.png", "Grandi Salumifici Italiani", "Grandi Salumifici Italiani", "Client logo PNG transparent (Figma)"),
+  logoE: img("logo-e", "logo-e.png", "Plumrose", "Plumrose", "Client logo PNG transparent (Figma)"),
+  logoF: img("logo-f", "logo-f.png", "Noel", "Noel", "Client logo PNG transparent (Figma)"),
+  logoG: img("logo-g", "logo-g.png", "Fiorucci", "Fiorucci", "Client logo PNG transparent (Figma)"),
+  logoH: img("logo-h", "logo-h.png", "Kiener", "Kiener", "Client logo PNG transparent (Figma)"),
+  logoI: img("logo-i", "logo-i.png", "Guaraní", "Guaraní", "Client logo PNG transparent (Figma)"),
+  highlightMachine: img("highlight-machine", "highlight-machine.jpg", "Embutidora Metalquimia", "Metalquimia stuffer", "Copper and steel stuffing machine on pure black background (Figma Home \"Hightlights\")"),
   methodCard1: img("method-1", "method-1.jpg", "Engineering Mindset", "Engineering Mindset", "Man in suit in front of industrial robots, blue light"),
   methodCard2: img("method-2", "method-2.jpg", "Tecnologías propias", "Proprietary technologies", "Large stainless machine in grey showroom"),
 };
@@ -97,7 +110,7 @@ const I = {
 const logos = (title = L("Con la confianza de los líderes del sector", "Trusted by industry leaders")) => ({
   type: "logo_highlights",
   title,
-  logos: [I.logoA, I.logoB, I.logoC, I.logoD, I.logoE, I.logoF].map((image, i) => ({ image, name: `Cliente ${i + 1}`, url: "" })),
+  logos: [I.logoA, I.logoB, I.logoC, I.logoD, I.logoE, I.logoF, I.logoG, I.logoH, I.logoI].map((image) => ({ image, name: "", url: "" })),
 });
 
 const partnership = (titleMuted = L("Partnership para toda la vida", "Partnership for life"), title = L("que genera inventos", "that produces inventions")) => ({
@@ -143,12 +156,12 @@ const caseStudies = () => ({
   ],
 });
 
-const method = (dark = true) => ({
+const method = (dark = true, image = I.hamSlices) => ({
   type: "highlight",
   eyebrow: L("EL MÉTODO METALQUIMIA", "THE METALQUIMIA METHOD"),
   word_top: "Meat.",
   word_bottom: "The Next.",
-  image: I.hamSlices,
+  image,
   tags: [
     { label: L("Inyección precisa", "Precision injection") },
     { label: L("Masaje refrigerado", "Refrigerated tumbling") },
@@ -263,24 +276,25 @@ export const pages = [
     es: { title: "Inicio", slug: "inicio", seo_title: "Metalquimia · Ingeniería para la industria cárnica", seo_description: "Tecnología y maquinaria para el procesado de carne y proteínas." },
     en: { title: "Home", slug: "home", seo_title: "Metalquimia · Engineering for the meat industry", seo_description: "Technology and machinery for meat and protein processing." },
     sections: [
-      { type: "hero", image: I.heroHome, image_mobile: "", title: L("Donde la industria se detiene,\nMetalquimia diseña.", "Where the industry stops,\nMetalquimia engineers."), button: link(L("DESCUBRE CÓMO", "DISCOVER HOW"), "@page:solutions") },
-      logos(),
+      { type: "hero", image: I.heroHomePoster, image_mobile: "", video: I.heroHomeVideo, title: L("El socio foodtech y de ingeniería\npara la industria cárnica y de proteínas", "The foodtech & engineering partner\nfor the meat and protein industry"), button: link(L("CONTÁCTANOS", "CONTACT US"), "@page:contact") },
+      logos(L("Con la confianza de las principales empresas cárnicas del mundo.", "Trusted by leading meat processing companies globally.")),
       {
         type: "products",
         eyebrow: L("NUESTRAS SOLUCIONES", "OUR SOLUTIONS"),
         title_muted: L("Procesado con precisión y", "Processed with precision and"),
-        title: L("control total en cada etapa.", "full control at every stage."),
-        button: link(L("VER SOLUCIONES", "LEARN MORE"), "@page:solutions"),
+        title: L("control total en cada etapa.\nTransformamos cómo el mundo procesa la carne.", "full control at every stage.\nWe transform how the world processes meat."),
+        button: link(L("SABER MÁS", "LEARN MORE"), "@page:solutions"),
         categories: [
-          ["Cooked", I.ham, "cooked"],
+          ["Cooked", I.ham, "cooked", I.hamFrames],
           ["Marinated", I.marinated, "marinated"],
           ["Cured", I.salami, "cured"],
           ["Snacks", I.snacks, "snacks"],
           ["Sausages", I.sausages, "sausages"],
           ["Pet food", I.petfood, "petfood"],
-        ].map(([name, image, key]) => ({
+        ].map(([name, image, key, frames = []]) => ({
           name,
           image,
+          frames,
           processes: [
             L("PREPARACIÓN DE SALMUERA", "BRINE PREPARATION"),
             L("DESCONGELACIÓN DE BLOQUES DE CARNE", "MEAT BLOCK DEFROSTING"),
@@ -294,39 +308,100 @@ export const pages = [
         })),
       },
       { type: "gradient_divider", direction: "down" },
-      method(false),
       {
-        type: "steps_carousel",
-        theme: "dark",
-        eyebrow: L("INGENIERÍA Y TECNOLOGÍA", "ENGINEERING & TECHNOLOGY"),
-        title_muted: L("No vendemos máquinas para cada paso.", "We don't sell machines for each step."),
-        title: L("Diseñamos todo el proceso.", "We engineer the entire process."),
-        subtitle: "",
-        button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFO"), "@page:contact#form"),
-        items: [
-          { image: I.step1, lead: L("Preparación de salmuera.", "Brine preparation."), text: L("Disolución homogénea y controlada.", "Homogeneous, controlled dissolution.") },
-          { image: I.step2, lead: L("Inyección.", "Injection."), text: L("Reparto uniforme en cada pieza.", "Even distribution in every piece.") },
-          { image: I.step3, lead: L("Masaje.", "Tumbling."), text: L("Extracción de proteína sin dañar la fibra.", "Protein extraction without damaging the fibre.") },
-          { image: I.step4, lead: L("Cocción.", "Cooking."), text: L("Curvas de temperatura controladas.", "Controlled temperature curves.") },
+        ...method(false, I.highlightMachine),
+        eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+        tags: [
+          { label: L("Partnership para toda la vida", "Partnership for life") },
+          { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") },
+          { label: L("Innovación que crea", "Innovation that creates") },
         ],
+        items: [
+          {
+            title: L("Somos expertos en investigación y desarrollo de vanguardia en tecnología cárnica, con soluciones innovadoras y las mejores prácticas del sector.", "We are experts in cutting-edge research and development in meat technology, dedicated to innovative solutions and industry-leading practices."),
+            text: L("Ponemos a disposición de nuestros clientes un Centro Global de Investigación y Tecnología cárnica para desarrollar nuevos productos, mejorar su calidad y lograr la máxima satisfacción en el proceso productivo.", "Providing our clients with a Global Research and Technology Center for meat to develop new meat products, improve their quality, and achieve maximum satisfaction in the production process."),
+          },
+          {
+            title: L("Desarrollamos sistemas 4.0 totalmente integrados que mejoran la eficiencia operativa e impulsan la innovación gracias a nuestra tecnología propia.", "We specialize in developing fully integrated 4.0 systems that enhance operational efficiency and drive innovation through our proprietary technology."),
+            text: L("Ofrecemos Plantas Completas llave en mano, con automatización total y nuestros propios sistemas de conectividad 4.0 MQC_System: la máxima seguridad técnica y alimentaria en productos cocidos, marinados, curados y snacks. Somos dueños de cada tecnología crítica de nuestros equipos, lo que se traduce en actualizaciones más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin fricciones.", "We offer our clients Complete Plants, turnkey solutions, with total automation and our own 4.0 connectivity systems MQC_System: maximum technical and food safety in cooked, marinated, cured products, and snacks. We own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."),
+          },
+          {
+            title: L("Estamos presentes en todo el mundo y ofrecemos una atención directa y personalizada.", "We are present worldwide and offer direct, personalized care."),
+            text: L("Nuestra tecnología y maquinaria están presentes en plantas cárnicas de todo el mundo. Una amplia red de representantes y agentes exclusivos garantiza una comunicación directa y servicio técnico en cada país.", "Our technology and machinery are present in meat processing plants around the world. A wide network of representatives and exclusive agents ensures direct communication and technical service in every country."),
+          },
+          {
+            title: L("Confiamos en la Creativación para dar forma al futuro de la industria cárnica, impulsando la innovación y la sostenibilidad.", "We rely on Creativation to shape the future of the meat industry, driving innovation and sustainability."),
+            text: L("Basamos nuestra actividad en una estrategia de diferenciación a través de la Creativación (Creatividad x Innovación), junto con la máxima calidad de nuestros equipos, el Diseño Inteligente, el Talento y la Colaboración Abierta con clientes y socios.", "We base our activity on a differentiation strategy through Creativation (Creativity X Innovation) along with the highest quality of our Teams, Intelligent Design, Talent, and Open Collaboration with our clients and partners."),
+          },
+        ],
+      },
+      {
+        type: "products_highlight",
+        eyebrow: L("¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR", "WHAT WE DO? REDEFINING WHAT’S STANDARD"),
+        title_muted: L("Diseñado para el proceso.", "Engineered for the process."),
+        title: L("Construido para durar.", "Built for the long run."),
+        subtitle: L("Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.", "We design and manufacture equipment and process technology for the production of meat and/or protein-based products."),
+        button: null,
+        show_filters: true,
+        all_label: L("TODOS", "ALL"),
+        items: [L("COCIDOS", "COOKED"), L("MARINADOS", "MARINATED"), L("CURADOS", "CURATED"), L("SNACKS", "SNACKS")].flatMap((category) =>
+          [
+            [I.m1, L("Inyectoras de carne", "Meat Injectors"), L("Inyección precisa de salmuera, pieza a pieza.", "Precise brine injection, piece after piece.")],
+            [I.m2, L("Descongelación de carne", "Meat Defrosting"), L("Descongelación controlada que conserva la calidad.", "Controlled defrosting that preserves quality.")],
+            [I.m3, L("Embutidoras de carne", "Meat Stuffers"), L("Embutición continua y precisa.", "Continuous, precise stuffing.")],
+          ].map(([image, name, description]) => ({ image, name, category, description, link: link("", "@page:machine") })),
+        ),
       },
       { type: "gradient_divider", direction: "up" },
       {
-        type: "testimonial",
-        title_muted: L("Nuestros clientes no tienen", "Our customers have"),
-        title: L("margen de error", "no margin for error"),
-        label: L("CON LA CONFIANZA DE LOS LÍDERES DEL SECTOR", "TRUSTED BY INDUSTRY LEADERS"),
-        items: [I.logoA, I.logoB, I.logoC, I.logoD].map((logo, i) => ({
-          logo,
-          name: `Cliente ${i + 1}`,
-          quote: L("Metalquimia nos ayudó a aumentar el rendimiento manteniendo la calidad que esperan nuestros consumidores.", "Metalquimia helped us increase yield while keeping the quality our consumers expect."),
-          author: ["Joan Puig", "Marta Vidal", "Pere Soler", "Anna Roca"][i],
-          role: L("Director de producción", "Production Director"),
-        })),
+        type: "data_highlights",
+        eyebrow: "",
+        title_muted: "",
+        title: L("Estándares altos. Cero concesiones.", "High standards. Zero compromises."),
+        subtitle: "",
+        button: null,
+        items: [
+          { value: "50+", description: L("Años inventando aquello con lo que hoy funciona la industria", "Years inventing what the industry runs on today") },
+          { value: "90+", description: L("Países donde opera la ingeniería de Metalquimia", "Countries where Metalquimia engineering operates") },
+          { value: "+100", description: L("Patentes propias y tecnologías registradas", "Proprietary patents and registered technologies") },
+          { value: "15%", description: L("De la inversión destinada a proyectos de investigación y desarrollo.", "Investment allocated for research and development projects.") },
+        ],
       },
-      caseStudies(),
-      banner(),
-      insights(),
+      {
+        type: "media_text",
+        theme: "light",
+        image_position: "left",
+        eyebrow: L("CREATIVACIÓN", "CREATIVATION"),
+        title_muted: L("Partnership para toda la vida", "Partnership for life"),
+        title: L("que genera inventos", "that produces inventions"),
+        text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+        details: "",
+        button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+        image: I.partner,
+      },
+      {
+        type: "media_text",
+        theme: "light",
+        image_position: "right",
+        eyebrow: L("SOSTENIBILIDAD", "SUSTAINABILITY"),
+        title_muted: "",
+        title: L("Comprometidos con la sociedad y con nuestro entorno.", "We are committed to society and our environment."),
+        text: L("<p>Nuestro Código Ético, el respeto por el Medio Ambiente y los Objetivos de Desarrollo Sostenible (ODS), así como las actividades de nuestra propia Fundación, son algunos ejemplos del compromiso de nuestra empresa con la construcción de un mundo mejor.</p>", "<p>Our Code of Ethics, our respect for the Environment, and the Sustainable Development Goals (SDGs), as well as the activities of our own Foundation, are some examples of our company's commitment to building a better world.</p>"),
+        details: "",
+        button: link(L("descubre más", "discover more"), "@page:about"),
+        image: I.building,
+      },
+      { ...banner(), button: link(L("EXPLORA NUESTRAS TECNOLOGÍAS", "EXPLORE OUR TECHNOLOGIES"), "@page:technologies") },
+      {
+        ...insights(L("Últimas novedades", "Latest Insights")),
+        button: link(L("VER TODOS", "VIEW ALL"), "@page:resources"),
+        items: [
+          [I.insight1, L("Metalquimia estuvo presente en la feria Propak de Filipinas", "Metalquimia attended the Propak trade fair in the Philippines")],
+          [I.insight2, L("Sistema automatizado y continuo para coextrusión y cocción rápida de salchichas", "Automated continuous system for sausage co-extrusion and fast cooking")],
+          [I.insight3, L("Metalquimia estuvo presente de nuevo en la feria IPPE 2026 | Atlanta (USA)", "Metalquimia once again attended IPPE 2026 | Atlanta (USA)")],
+          [I.insight4, L("El socio de ingeniería para la industria cárnica y de proteínas", "The engineering partner for the meat and protein industry")],
+        ].map(([image, title]) => ({ image, category: L("NOTICIAS", "NEWS"), date: L("20 DE JULIO DE 2026", "JULY 20, 2026"), title, link: link("", "@page:insight") })),
+      },
     ],
   },
   {

@@ -43,6 +43,15 @@ return array(
 					'instructions'  => 'PNG recortado con fondo transparente, vertical (≈ 930 × 1260 px).',
 				),
 				array(
+					'key'           => 'field_mq_products_cat_frames',
+					'label'         => 'Fotogramas',
+					'name'          => 'frames',
+					'type'          => 'gallery',
+					'return_format' => 'array',
+					'preview_size'  => 'thumbnail',
+					'instructions'  => 'Opcional. Secuencia de imágenes, en orden, del mismo tamaño que la imagen del producto: al hacer scroll se pasa de una a otra. Si está vacío, la imagen se mueve con un parallax suave.',
+				),
+				array(
 					'key'          => 'field_mq_products_cat_processes',
 					'label'        => 'Procesos',
 					'name'         => 'processes',

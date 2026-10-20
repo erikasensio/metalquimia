@@ -198,11 +198,55 @@
   }
 }
 
+/*
+ * CTA: los colores cambian suave al pasar el ratón y el texto (RollText) gira
+ * como el rodillo de una tragaperras: sale por arriba y su copia (::after) entra
+ * desde abajo. La animación la lanza <Animations> al entrar y al salir el ratón.
+ */
+@utility cta {
+  transition-property: color, background-color, border-color;
+  transition-duration: 650ms;
+  transition-timing-function: cubic-bezier(0.45, 0, 0.2, 1);
+}
+@layer components {
+  .cta-roll {
+    display: inline-flex;
+    overflow: hidden;
+    /* Margen para que el recorte no corte tildes ni descendentes. */
+    padding-block: 0.15em;
+    margin-block: -0.15em;
+  }
+  .cta-roll > span {
+    position: relative;
+    white-space: nowrap;
+  }
+  .cta-roll > span::after {
+    /* El "/ ''" deja la copia fuera de los lectores de pantalla. */
+    content: attr(data-roll) / "";
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.3em);
+  }
+}
+
 /* Disco de franjas horizontales detrás de la imagen del bloque de productos. */
 @utility stripes-disc {
   border-radius: 9999px;
   background: repeating-linear-gradient(to bottom, #f1f1f1 0 6px, transparent 6px 18px);
   mask-image: radial-gradient(circle, #000 55%, transparent 71%);
+}
+
+/* Palabra gigante de fondo repetida encima de las imágenes: solo el contorno, para que se lea a través de ellas.
+   Filtro SVG (#word-outline en el layout) en vez de text-stroke, que perfila cada trazo y marca los solapes (la "k"). */
+@utility word-outline {
+  color: var(--color-medium-grey);
+  filter: url(#word-outline);
+}
+/* La palabra de fondo que queda debajo de un word-outline: el relleno blanco al 35 % del contorno la aclara,
+   así que va más oscura para que, sumados, den el medium-grey de siempre (0.65 × #da + 0.35 × #ff = #e7).
+   Así el relleno solo se nota donde hay imagen detrás. Si cambia la opacidad del filtro, hay que recalcularlo. */
+@utility word-under-outline {
+  color: #dadada;
 }
 
 @keyframes marquee {
@@ -256,11 +300,33 @@
 
 /* Estado inicial de los elementos que se animan al entrar en pantalla (ver components/motion/Animations). */
 @layer base {
-  html.js-motion [data-reveal] {
+  html.js-motion [data-reveal],
+  html.js-motion [data-typewriter-group]:not([data-typed]) [data-char] {
     opacity: 0;
   }
+  /* [data-ink]: el texto empieza gris tenue y el scroll lo pasa a negro palabra a palabra (ver Animations). */
+  html.js-motion [data-ink] [data-word] {
+    color: rgb(33 33 33 / 0.2);
+  }
+  /* Hero con vídeo: sin texto al principio; el scroll trae las frases y el botón (ver HeroScrubVideo). */
+  @media (prefers-reduced-motion: no-preference) {
+    html.js-motion [data-hero-line] [data-word] {
+      color: transparent;
+    }
+    html.js-motion [data-hero-cta] {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
-    html.js-motion [data-reveal] {
+    [data-hero-line]:not(:last-child) {
+      visibility: hidden;
+    }
+    html.js-motion [data-ink] [data-word] {
+      color: var(--color-black);
+    }
+    html.js-motion [data-reveal],
+    html.js-motion [data-typewriter-group]:not([data-typed]) [data-char] {
       opacity: 1;
     }
   }

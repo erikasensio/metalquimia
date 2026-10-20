@@ -45,3 +45,7 @@ next-env.d.ts
 .open-next
 .wrangler
 .dev.vars*
+
+# Imágenes del contenido: viven en la biblioteca de medios de WordPress.
+# seed/images solo sirve en local para subir imágenes nuevas con el seed.
+wordpress/metalquimia-core/seed/images/

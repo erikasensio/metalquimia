@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Notch } from "@/components/ui/Notch";
 import Image from "next/image";
 import { LinkedinLogo, XLogo, InstagramLogo, YoutubeLogo, FacebookLogo } from "@phosphor-icons/react/dist/ssr";
 import type { Global, WpImage, WpLink } from "@/lib/types";
@@ -22,14 +23,14 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
   const hasPrefooter = str("prefooter_title_muted") || str("prefooter_title");
 
   return (
-    <footer className="relative overflow-hidden bg-black text-light-grey" data-footer>
+    <footer className="relative z-[1] overflow-x-clip bg-black text-light-grey" data-footer>
       {/* Brillo diagonal del fondo y recorte blanco de la esquina superior derecha. */}
       <div
         className="pointer-events-none absolute inset-0 opacity-60"
         style={{ background: "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.10) 48%, transparent 62%)" }}
         aria-hidden
       />
-      <div className="absolute right-0 top-0 h-6 w-[38%] bg-white [clip-path:polygon(0_0,100%_0,100%_100%,24px_100%)] lg:h-10" aria-hidden />
+      <Notch corner="top-right" sizeClass="h-[calc(1.5rem+2px)] w-[38%] [--notch-cut:24px] lg:h-[calc(2.5rem+2px)]" />
 
       <div className="site-container relative">
         {hasPrefooter && (

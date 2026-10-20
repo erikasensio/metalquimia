@@ -38,7 +38,7 @@ function resolve(s: Site, value: unknown, lang: Lang): unknown {
     if (value.startsWith("@img:")) {
       const img = s.images[value.slice(5)];
       if (!img || !fs.existsSync(path.join(seedDir, "images", img.file))) return null;
-      return { url: `/api/seed-image/${img.file}`, alt: img.alt?.[lang] ?? "", width: 1600, height: 1200 };
+      return { url: `/api/seed-image/${img.file}`, alt: img.alt?.[lang] ?? "", width: 1600, height: 1200, ...(img.file.endsWith(".mp4") ? { mime: "video/mp4" } : {}) };
     }
     if (value.startsWith("@page:")) {
       const [key, hash] = value.slice(6).split("#");

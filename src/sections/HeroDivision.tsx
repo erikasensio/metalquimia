@@ -16,6 +16,10 @@ type Props = Section & {
 const SPEEDS = [0.08, 0.18, 0.12, 0.22, 0.1];
 const OFFSETS = ["lg:mt-16", "lg:-mt-6", "lg:mt-24", "lg:mt-0", "lg:mt-12"];
 
+// Palabra gigante de fondo (y su contorno, que va encima de los productos).
+const WORD =
+  "pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center font-display text-[6rem] font-semibold leading-none md:text-[11rem] lg:text-[19.375rem] [font-feature-settings:'dlig'_1]";
+
 /**
  * Figma Modulos › 3. Hero Division Carousel (páginas de solución: Cooked, Marinated, Cured…).
  * Palabra gigante de fondo, fila de productos recortados que flotan con parallax y,
@@ -28,10 +32,7 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
     <div className="overflow-hidden bg-white pb-20 pt-10 lg:pb-[120px] lg:pt-16">
       <div className="relative">
         {word && (
-          <p
-            className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center font-display text-[6rem] font-semibold leading-none text-medium-grey md:text-[11rem] lg:text-[19.375rem] [font-feature-settings:'dlig'_1]"
-            aria-hidden
-          >
+          <p className={`${WORD} ${items.length > 0 ? "word-under-outline" : "text-medium-grey"}`} aria-hidden>
             {word}
           </p>
         )}
@@ -60,6 +61,13 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
         ) : (
           // Sin productos: deja aire para que se lea la palabra de fondo.
           word && <div className="h-[160px] lg:h-[420px]" aria-hidden />
+        )}
+
+        {/* La misma palabra encima de los productos, solo con el contorno. */}
+        {word && items.length > 0 && (
+          <p className={`${WORD} word-outline z-[3]`} aria-hidden>
+            {word}
+          </p>
         )}
       </div>
 

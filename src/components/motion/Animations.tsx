@@ -14,9 +14,41 @@ gsap.registerPlugin(ScrollTrigger);
  *   data-split         → el título se revela palabra a palabra (las palabras las parte <SplitWords>).
  *   data-parallax="n"  → se desplaza más lento que el scroll (n = intensidad, 0.1–0.3).
  *   data-stagger       → sus hijos directos aparecen uno detrás de otro.
+ *   data-ink           → el texto se entinta con el scroll palabra a palabra: gris tenue → destello naranja → negro.
+ *   data-typewriter-group → sus textos <Typewriter> se escriben letra a letra, en orden, al entrar en pantalla.
+ * Además, el texto <RollText> de los .cta gira como un rodillo de tragaperras al entrar y salir el ratón.
  */
 export function Animations() {
   const pathname = usePathname();
+
+  // Rodillo de los CTA: siempre hacia arriba, al entrar y al salir. Baja un poco antes de
+  // salir disparado (referencia: botón "BUILD W/ ICOMAT" de icomat.co.uk).
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    function roll(e: PointerEvent) {
+      if (e.pointerType !== "mouse") return;
+      const cta = (e.target as Element).closest?.(".cta");
+      if (!cta || cta.contains(e.relatedTarget as Node | null)) return;
+      const text = cta.querySelector<HTMLElement>(".cta-roll > span");
+      if (!text) return;
+      text.getAnimations().forEach((a) => a.cancel());
+      text.animate(
+        [
+          { transform: "translateY(0)", filter: "blur(0)", easing: "cubic-bezier(0.3, 0, 0.7, 1)" },
+          { transform: "translateY(0.15em)", filter: "blur(0)", offset: 0.3, easing: "cubic-bezier(0.6, 0, 1, 1)" },
+          { transform: "translateY(calc(-50% - 0.15em))", filter: "blur(1.5px)", offset: 0.55, easing: "cubic-bezier(0, 0, 0.2, 1)" },
+          { transform: "translateY(calc(-100% - 0.3em))", filter: "blur(0)" },
+        ],
+        { duration: 450 },
+      );
+    }
+    document.addEventListener("pointerover", roll);
+    document.addEventListener("pointerout", roll);
+    return () => {
+      document.removeEventListener("pointerover", roll);
+      document.removeEventListener("pointerout", roll);
+    };
+  }, []);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -51,6 +83,28 @@ export function Animations() {
           ease: "power3.out",
           stagger: 0.08,
           scrollTrigger: { trigger: el, start: "top 88%", once: true },
+        });
+      });
+
+      // Tinta con el scroll: palabra a palabra, de principio a fin del texto, cada una pasa de gris tenue
+      // a un destello naranja y luego a negro (el naranja va por delante del negro como una ola).
+      gsap.utils.toArray<HTMLElement>("[data-ink]").forEach((el) => {
+        const words = el.querySelectorAll<HTMLElement>("[data-word]");
+        gsap
+          .timeline({ scrollTrigger: { trigger: el, start: "top 85%", end: "top 30%", scrub: true } })
+          .fromTo(words, { color: "rgba(33, 33, 33, 0.2)" }, { color: "#ff2f00", duration: 0.3, stagger: 0.1, ease: "none" }, 0)
+          .to(words, { color: "#010001", duration: 0.3, stagger: 0.1, ease: "none" }, 0.3);
+      });
+
+      // Las letras empiezan ocultas por CSS; al acabar se marca data-typed para que lo que se pinte después se vea ya.
+      gsap.utils.toArray<HTMLElement>("[data-typewriter-group]").forEach((el) => {
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: el, start: "top 80%", once: true },
+          onComplete: () => el.setAttribute("data-typed", ""),
+        });
+        // Cada texto se escribe a la vez que los demás, con un pequeño desfase entre uno y el siguiente.
+        el.querySelectorAll("[data-typewriter]").forEach((text, i) => {
+          tl.to(text.querySelectorAll("[data-char]"), { opacity: 1, duration: 0.01, stagger: 0.03 }, i * 0.08);
         });
       });
 

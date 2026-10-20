@@ -7,9 +7,9 @@ return array(
 	'sub_fields' => array(
 		mq_tab( $l, 'Escenario' ),
 		mq_f( $l, 'eyebrow', 'text', 'Antetítulo', array( 'instructions' => 'Texto pequeño rojo centrado encima (p. ej. INNOVATION).' ) ),
-		mq_f( $l, 'word_top', 'text', 'Palabra de arriba', array( 'placeholder' => 'Meat.', 'instructions' => 'Muy corta: se ve gigante en gris, arriba.' ) ),
-		mq_f( $l, 'word_bottom', 'text', 'Palabra de abajo', array( 'placeholder' => 'The Next.', 'instructions' => 'Muy corta: se ve gigante en blanco, abajo.' ) ),
-		mq_f( $l, 'image', 'image', 'Imagen del producto', array( 'instructions' => 'PNG recortado con fondo transparente (≈ 1200 × 1200 px). Se coloca en el centro, entre las dos palabras.' ) ),
+		mq_f( $l, 'word_top', 'text', 'Palabra de arriba', array( 'placeholder' => 'Meat.', 'instructions' => 'Muy corta: se ve gigante en gris oscuro, arriba, fundida con la imagen. En móvil se une a la de abajo en una sola línea.' ) ),
+		mq_f( $l, 'word_bottom', 'text', 'Palabra de abajo', array( 'placeholder' => 'The Next.', 'instructions' => 'Muy corta: se ve gigante en gris oscuro, abajo, fundida con la imagen.' ) ),
+		mq_f( $l, 'image', 'image', 'Imagen del producto', array( 'instructions' => 'Foto sobre fondo negro o PNG recortado, apaisada (≈ 1400 × 1000 px). Ocupa casi todo el ancho, entre las dos palabras. En móvil no se muestra.' ) ),
 		mq_f(
 			$l,
 			'tags',
@@ -19,7 +19,7 @@ return array(
 				'layout'       => 'table',
 				'max'          => 6,
 				'button_label' => 'Añadir etiqueta',
-				'instructions' => 'Hasta 6 etiquetas cortas que flotan alrededor de la imagen (p. ej. 100% NATURAL).',
+				'instructions' => 'Hasta 6 etiquetas cortas que flotan sobre la imagen (p. ej. PARTNERSHIP FOR LIFE). Lo ideal son 3. En móvil no se muestran.',
 				'sub_fields'   => array(
 					mq_f( $l, 'label', 'text', 'Texto', array(), 'tags' ),
 				),

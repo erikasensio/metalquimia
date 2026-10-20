@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { getGlobal } from "@/lib/wp";
 import { isLocale, locales } from "@/lib/i18n";
 import { Header } from "@/components/layout/Header";
@@ -30,12 +31,29 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       {/* suppressHydrationWarning: el script de abajo añade clases a <html> y las extensiones del navegador (p. ej. ColorZilla) atributos al body. */}
       <body className="flex min-h-dvh flex-col" suppressHydrationWarning>
         {/* Si la pantalla de carga ya se vio en esta visita, se oculta antes de pintar (sin parpadeo). */}
-        <script dangerouslySetInnerHTML={{ __html: "try{sessionStorage.getItem('mq-loader')&&document.documentElement.classList.add('mq-loader-seen')}catch(e){}" }} />
+        {/* next/script (beforeInteractive) y no <script> a pelo: React avisa de los <script> renderizados dentro de componentes. */}
+        <Script id="mq-loader-seen" strategy="beforeInteractive">
+          {"try{sessionStorage.getItem('mq-loader')&&document.documentElement.classList.add('mq-loader-seen')}catch(e){}"}
+        </Script>
         {loaderOn && <Loader textMuted={String(options.loader_text_muted || "Meat.")} text={String(options.loader_text || "The next.")} />}
         <Header global={global} lang={lang} />
         <main className="flex-1">{children}</main>
         <Footer global={global} lang={lang} />
         <Animations />
+        {/* Filtro de la utilidad word-outline: contorno de la silueta del texto (sin las líneas internas donde se solapan
+            los trazos de una letra) y relleno blanco al 35 % por dentro, que se nota sobre las imágenes. */}
+        <svg width="0" height="0" className="absolute" aria-hidden>
+          <filter id="word-outline">
+            <feMorphology in="SourceGraphic" operator="dilate" radius="1.5" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="stroke" />
+            <feFlood floodColor="#fff" floodOpacity="0.35" />
+            <feComposite in2="SourceAlpha" operator="in" result="fill" />
+            <feMerge>
+              <feMergeNode in="fill" />
+              <feMergeNode in="stroke" />
+            </feMerge>
+          </filter>
+        </svg>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { WpImage, WpLink } from "@/lib/types";
 import { Media } from "@/components/ui/Media";
+import { RollText } from "@/components/ui/RollText";
 
 export type InsightItem = { image: WpImage | null; category: string; date: string; title: string; link: WpLink | null };
 
@@ -64,9 +65,9 @@ export function InsightsGridClient({ items, allLabel, loadMoreLabel }: { items: 
           <button
             type="button"
             onClick={() => setCount((c) => c + PAGE)}
-            className="inline-flex items-center justify-center bg-medium-grey px-5 py-[11px] font-mono text-[0.875rem] font-bold uppercase leading-none text-dark-grey transition-colors hover:bg-grey hover:text-white"
+            className="cta inline-flex items-center justify-center bg-medium-grey px-5 py-[11px] font-mono text-[0.875rem] font-bold uppercase leading-none text-dark-grey hover:bg-grey hover:text-white"
           >
-            {loadMoreLabel}
+            <RollText>{loadMoreLabel}</RollText>
           </button>
         </div>
       )}

@@ -1,6 +1,7 @@
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
+import { Notch } from "@/components/ui/Notch";
 
 type Props = Section & {
   image?: (WpImage & { mime?: string }) | null;
@@ -19,18 +20,18 @@ export default function BannerFullScreen({ image, lines, button, corner_color }:
   const corner = corner_color === "black" ? "bg-black" : "bg-white";
 
   return (
-    <div className="relative flex min-h-[640px] items-end overflow-hidden bg-black lg:h-[min(100svh,900px)]">
-      <Media image={image} className="absolute inset-0" parallax sizes="100vw" />
+    // overflow-x-clip (no hidden): la foto y las pestañas sobresalen 1 px arriba y abajo para tapar la fila de
+    // medio píxel con las secciones vecinas; z-[1] las pinta por encima de ellas.
+    <div className="relative z-[1] flex min-h-[640px] items-end overflow-x-clip bg-black lg:h-[min(100svh,900px)]">
+      <Media image={image} className="absolute inset-x-0 -inset-y-px" parallax sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" aria-hidden />
 
       {/* Esquinas recortadas: arriba a la derecha y abajo a la izquierda. */}
-      <div
-        className={`absolute right-0 top-0 z-10 h-6 w-[38%] lg:h-12 ${corner} [clip-path:polygon(0_0,100%_0,100%_100%,1.5rem_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_100%,3rem_100%)]`}
-        aria-hidden
-      />
-      <div
-        className={`absolute bottom-0 left-0 z-10 h-6 w-[30%] lg:h-12 ${corner} [clip-path:polygon(0_0,calc(100%-1.5rem)_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_0,calc(100%-3rem)_0,100%_100%,0_100%)]`}
-        aria-hidden
+      <Notch corner="top-right" colorClass={corner} />
+      <Notch
+        corner="bottom-left"
+        colorClass={corner}
+        sizeClass="h-[calc(1.5rem+2px)] w-[30%] [--notch-cut:1.5rem] lg:h-[calc(3rem+2px)] lg:[--notch-cut:3rem]"
       />
 
       <div className="site-container relative z-10 flex flex-col items-start gap-8 pb-16 pt-32 lg:pb-24">

@@ -26,7 +26,12 @@ export function HeaderShell({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      // Si el hero se queda fijo con el scroll (Hero con vídeo), la cabecera sigue transparente hasta que se suelta.
+      const spacer = document.querySelector("[data-hero-scrub]")?.parentElement;
+      const hold = spacer?.classList.contains("pin-spacer") ? spacer.offsetHeight - (spacer.firstElementChild as HTMLElement).offsetHeight : 0;
+      setScrolled(window.scrollY > hold + 24);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);

@@ -29,7 +29,8 @@ export function Media({ image, className = "", imgClassName = "object-cover", si
   );
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    // Si el contenedor ya trae su posición (absolute/fixed/sticky), no se añade relative: chocarían y quedaría a 0 de alto.
+    <div className={`${/(^|\s)(absolute|fixed|sticky)(\s|$)/.test(className) ? "" : "relative "}overflow-hidden ${className}`}>
       {parallax ? (
         <div className="absolute inset-x-0 -inset-y-[8%]" data-parallax="0.12">
           {inner}

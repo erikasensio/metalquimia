@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Play, X } from "@phosphor-icons/react";
+import { RollText } from "@/components/ui/RollText";
 
 /** Convierte un enlace de YouTube o Vimeo en la URL del reproductor embebido (con autoplay). */
 function embedUrl(url: string): string | null {
@@ -61,10 +62,10 @@ export function VideoModalButton({ url, label }: Props) {
         type="button"
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
-        className="inline-flex items-center gap-2 rounded-full bg-white/90 py-3 pl-4 pr-5 font-mono text-[0.875rem] font-bold uppercase leading-none text-black backdrop-blur-[20px] transition-colors hover:bg-white"
+        className="cta inline-flex items-center gap-2 rounded-full bg-white/90 py-3 pl-4 pr-5 font-mono text-[0.875rem] font-bold uppercase leading-none text-black backdrop-blur-[20px] hover:bg-white"
       >
         <Play size={16} weight="fill" aria-hidden />
-        <span>{label}</span>
+        <RollText>{label}</RollText>
       </button>
 
       {open &&
