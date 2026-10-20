@@ -3,6 +3,13 @@ import type { Global, Page } from "./types";
 
 const WP_URL = (process.env.WP_URL ?? "http://metalquimia.local").replace(/\/$/, "");
 
+/**
+ * WordPress protegido con contraseña (p. ej. Live Link de LocalWP): WP_AUTH=usuario:contraseña.
+ * Las imágenes se sirven entonces a través de /wp-content/uploads del propio front, que añade la cabecera.
+ */
+export const wpAuthHeaders: HeadersInit = process.env.WP_AUTH ? { Authorization: `Basic ${btoa(process.env.WP_AUTH)}` } : {};
+const UPLOADS = `${WP_URL}/wp-content/uploads/`;
+
 /** Etiquetas de caché que el plugin de WordPress invalida al guardar. */
 export const tags = {
   page: (lang: string, path: string) => `page:${lang}:${path || "/"}`,
@@ -15,10 +22,12 @@ async function wpFetch<T>(endpoint: string, params: Record<string, string>, cach
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
 
   try {
-    const res = await fetch(url, { next: { tags: [tags.all, ...cacheTags], revalidate: 3600 } });
+    const res = await fetch(url, { headers: wpAuthHeaders, next: { tags: [tags.all, ...cacheTags], revalidate: 3600 } });
     if (res.status === 404) return null;
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    return (await res.json()) as T;
+    if (!process.env.WP_AUTH) return (await res.json()) as T;
+    const body = (await res.text()).replaceAll(UPLOADS.replaceAll("/", "\\/"), "\\/wp-content\\/uploads\\/").replaceAll(UPLOADS, "/wp-content/uploads/");
+    return JSON.parse(body) as T;
   } catch (error) {
     console.error(`[wp] ${url.toString()}:`, error);
     return null;

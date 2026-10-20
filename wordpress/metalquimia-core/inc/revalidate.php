@@ -1,25 +1,28 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
-/** Avisa al front para que regenere lo que ha cambiado. */
+/** Avisa al front para que regenere lo que ha cambiado. MQ_FRONT_URL admite varias URLs separadas por comas. */
 function mq_revalidate( array $tags ): void {
 	if ( ! defined( 'MQ_FRONT_URL' ) || ! defined( 'MQ_REVALIDATE_SECRET' ) ) {
 		return;
 	}
-	wp_remote_post(
-		untrailingslashit( MQ_FRONT_URL ) . '/api/revalidate',
+	$body = wp_json_encode(
 		array(
-			'blocking' => false,
-			'timeout'  => 5,
-			'headers'  => array( 'Content-Type' => 'application/json' ),
-			'body'     => wp_json_encode(
-				array(
-					'secret' => MQ_REVALIDATE_SECRET,
-					'tags'   => array_values( array_unique( $tags ) ),
-				)
-			),
+			'secret' => MQ_REVALIDATE_SECRET,
+			'tags'   => array_values( array_unique( $tags ) ),
 		)
 	);
+	foreach ( array_filter( array_map( 'trim', explode( ',', MQ_FRONT_URL ) ) ) as $front ) {
+		wp_remote_post(
+			untrailingslashit( $front ) . '/api/revalidate',
+			array(
+				'blocking' => false,
+				'timeout'  => 5,
+				'headers'  => array( 'Content-Type' => 'application/json' ),
+				'body'     => $body,
+			)
+		);
+	}
 }
 
 // Páginas: se invalida la propia página. Si cambia el slug o se borra, todo (afecta a enlaces y menús).

@@ -57,6 +57,27 @@ Copia a `public/fonts/`:
 
 Ahora son las versiones Trial; para producción hay que cambiarlas por las de licencia web con el mismo nombre. Sin archivos se usa la fuente del sistema.
 
+## Despliegue (Cloudflare Workers)
+
+El front se despliega en Cloudflare Workers con [OpenNext](https://opennext.js.org/cloudflare) (`wrangler.jsonc`, `open-next.config.ts`). La caché de páginas y las etiquetas de revalidación viven en KV. WordPress no va en Cloudflare: necesita un hosting PHP con URL pública.
+
+1. Crea `.env.production.local` (no se sube al repo; tiene prioridad sobre `.env.local` al hacer el build):
+   ```bash
+   WP_URL=https://cms.ejemplo.com
+   NEXT_PUBLIC_LOCALES=es,en
+   REVALIDATE_SECRET=el-mismo-que-en-wp-config
+   # WP_AUTH=usuario:contraseña   # solo si el WordPress pide contraseña (Live Link de LocalWP)
+   ```
+   Copia el mismo contenido a `.dev.vars` para `npm run preview`.
+2. `npm run preview` prueba el Worker en local (http://localhost:8787).
+3. `npm run deploy` construye y publica en https://metalquimia.4sens.workers.dev.
+4. En `wp-config.php`, añade la URL del front a `MQ_FRONT_URL` (admite varias separadas por comas):
+   ```php
+   define( 'MQ_FRONT_URL', 'http://localhost:3000,https://metalquimia.4sens.workers.dev' );
+   ```
+
+Con `WP_AUTH` las imágenes de WordPress se sirven a través de `/wp-content/uploads` del propio front y no se optimizan. Sin `WP_AUTH` se optimizan con Cloudflare Images.
+
 ## Añadir un módulo (sección)
 
 1. `wordpress/metalquimia-core/sections/<nombre>.php`: devuelve el layout con sus campos (copia `rich_text.php`). Usa claves `field_mq_<nombre>_<campo>` únicas.

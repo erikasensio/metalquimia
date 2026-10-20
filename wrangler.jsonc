@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "metalquimia",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    // Autorreferencia que usa OpenNext para la caché; debe coincidir con "name"
+    { "binding": "WORKER_SELF_REFERENCE", "service": "metalquimia" }
+  ],
+  "kv_namespaces": [
+    // Caché de páginas y fetch de WordPress
+    { "binding": "NEXT_INC_CACHE_KV", "id": "4bc208aeeab748908e543eef64ad7e2d" },
+    // Etiquetas que invalida /api/revalidate
+    { "binding": "NEXT_TAG_CACHE_KV", "id": "9a9d6af7402446ff85b69054ee4d3304" }
+  ],
+  // Optimización de next/image con Cloudflare Images
+  "images": { "binding": "IMAGES" },
+  // Valores no secretos; REVALIDATE_SECRET va con `wrangler secret put`
+  "vars": {
+    "NEXT_PUBLIC_LOCALES": "es,en"
+  },
+  "observability": { "enabled": true }
+}
