@@ -16,6 +16,9 @@ gsap.registerPlugin(ScrollTrigger);
  *   data-stagger       → sus hijos directos aparecen uno detrás de otro.
  *   data-ink           → el texto se entinta con el scroll palabra a palabra: gris tenue → destello naranja → negro.
  *   data-typewriter-group → sus textos <Typewriter> se escriben letra a letra, en orden, al entrar en pantalla.
+ *     + data-typewriter-sequence (uno detrás de otro), data-typewriter-delay="s" y un hijo data-typewriter-line
+ *       (línea que crece de izquierda a derecha antes del texto). Dentro también valen data-typewriter-html
+ *       (HTML que se teclea) y data-paint (título <SplitWords> que se pinta de gris clarito a su color).
  * Además, el texto <RollText> de los .cta gira como un rodillo de tragaperras al entrar y salir el ratón.
  */
 export function Animations() {
@@ -102,9 +105,34 @@ export function Animations() {
           scrollTrigger: { trigger: el, start: "top 80%", once: true },
           onComplete: () => el.setAttribute("data-typed", ""),
         });
-        // Cada texto se escribe a la vez que los demás, con un pequeño desfase entre uno y el siguiente.
-        el.querySelectorAll("[data-typewriter]").forEach((text, i) => {
-          tl.to(text.querySelectorAll("[data-char]"), { opacity: 1, duration: 0.01, stagger: 0.03 }, i * 0.08);
+        let at = parseFloat(el.dataset.typewriterDelay || "0");
+        // data-typewriter-line: la línea crece de izquierda a derecha antes de que empiece a escribirse.
+        const line = el.querySelector("[data-typewriter-line]");
+        if (line) {
+          tl.fromTo(line, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "none" }, at);
+          at += 0.2;
+        }
+        // data-typewriter-html: HTML del editor (párrafos, negritas…) que se parte aquí en letras, una sola vez.
+        el.querySelectorAll<HTMLElement>("[data-typewriter-html]:not([data-typewriter])").forEach(splitChars);
+        el.querySelectorAll<HTMLElement>("[data-typewriter], [data-paint]").forEach((text, i) => {
+          // data-paint: el título se pinta palabra a palabra, de gris muy clarito a su color.
+          if (text.hasAttribute("data-paint")) {
+            const words = text.querySelectorAll("[data-word]");
+            tl.to(words, { opacity: 1, duration: 0.35, stagger: 0.06, ease: "none" }, at);
+            at += words.length * 0.06;
+            return;
+          }
+          const chars = text.querySelectorAll("[data-char]");
+          if (el.hasAttribute("data-typewriter-sequence")) {
+            // En secuencia: cada texto empieza al acabar el anterior; los largos se teclean más rápido
+            // (máximo ~1,2 s por texto) para que un párrafo no se eternice.
+            const stagger = Math.min(0.03, 1.2 / Math.max(chars.length, 1));
+            tl.to(chars, { opacity: 1, duration: 0.01, stagger }, at);
+            at += chars.length * stagger;
+          } else {
+            // Cada texto se escribe a la vez que los demás, con un pequeño desfase entre uno y el siguiente.
+            tl.to(chars, { opacity: 1, duration: 0.01, stagger: 0.03 }, at + i * 0.08);
+          }
         });
       });
 
@@ -128,4 +156,22 @@ export function Animations() {
   }, [pathname]);
 
   return null;
+}
+
+/** Envuelve cada letra de los textos de `el` en un span data-char (respeta etiquetas) y lo marca como data-typewriter. */
+function splitChars(el: HTMLElement) {
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  const nodes: Text[] = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+  nodes.forEach((node) => {
+    const frag = document.createDocumentFragment();
+    Array.from(node.data).forEach((char) => {
+      const span = document.createElement("span");
+      span.setAttribute("data-char", "");
+      span.textContent = char;
+      frag.appendChild(span);
+    });
+    node.replaceWith(frag);
+  });
+  el.setAttribute("data-typewriter", "");
 }

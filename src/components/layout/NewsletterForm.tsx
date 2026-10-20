@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Play } from "@phosphor-icons/react";
+import { PaperPlaneRight } from "@phosphor-icons/react";
 
 type Props = { lang: string; label: string; placeholder: string; termsHtml: string; success: string; submitLabel: string };
 
@@ -29,31 +29,36 @@ export function NewsletterForm({ lang, label, placeholder, termsHtml, success, s
 
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-3" data-newsletter>
-      <label htmlFor="newsletter-email" className="font-mono text-[0.75rem] uppercase text-grey">
+      <label htmlFor="newsletter-email" className="font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-grey">
         {label}
       </label>
-      <div className="flex h-10 w-full max-w-[300px] items-center bg-black-grey pl-3 pr-1">
+      {/* Figma: caja de cristal #444 al 50 % con esquinas de 8 px y botón blanco cuadrado de 40 px. */}
+      <div className="glass flex w-full max-w-[370px] items-center gap-2 rounded-lg bg-dark-grey/50 py-1 pl-4 pr-1">
         <input
           id="newsletter-email"
           name="email"
           type="email"
           required
           placeholder={placeholder}
-          className="min-w-0 flex-1 bg-transparent text-body-s text-white placeholder:text-grey focus:outline-none"
+          className="text-title-xs min-w-0 flex-1 bg-transparent text-light-grey placeholder:text-grey focus:outline-none"
         />
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
         <button
           type="submit"
           aria-label={submitLabel}
           disabled={state === "sending"}
-          className="flex size-8 items-center justify-center bg-white text-black transition-colors hover:bg-red hover:text-white disabled:opacity-50"
+          className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-white text-black transition-colors hover:bg-red hover:text-white disabled:opacity-50"
         >
-          <Play size={12} weight="fill" />
+          <PaperPlaneRight size={16} weight="fill" />
         </button>
       </div>
       {termsHtml && (
-        <label className="flex items-start gap-2 text-body-xs text-grey">
-          <input type="checkbox" required className="mt-0.5 accent-red" />
+        <label className="flex items-center gap-1.5 text-body-xs text-grey">
+          <input
+            type="checkbox"
+            required
+            className="size-4 shrink-0 cursor-pointer appearance-none rounded-[3px] border-[1.5px] border-grey transition-colors checked:border-red checked:bg-red"
+          />
           <span className="[&_a]:underline" dangerouslySetInnerHTML={{ __html: termsHtml.replace(/<\/?p>/g, "") }} />
         </label>
       )}

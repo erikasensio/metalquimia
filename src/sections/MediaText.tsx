@@ -30,14 +30,15 @@ export default function MediaText({ theme, image_position, eyebrow, title_muted,
           sizes="(min-width: 1024px) 50vw, 100vw"
           parallax
         />
-        <div className="flex flex-col items-start gap-8">
-          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size="l" />
+        {/* Antetítulo a máquina, título que se pinta y cuerpo tecleado de principio a fin, uno detrás de otro. */}
+        <div className="flex flex-col items-start gap-8" data-typewriter-group data-typewriter-sequence>
+          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size="l" motion="type" />
           {text && (
             <div
               className={`text-body-l max-w-[56ch] space-y-4 [&_a]:underline [&_a]:underline-offset-2 [&_li]:ml-5 [&_ol]:list-decimal [&_strong]:font-semibold [&_ul]:list-disc ${
                 dark ? "text-grey [&_strong]:text-light-grey" : "text-dark-grey [&_strong]:text-black"
               }`}
-              data-reveal
+              data-typewriter-html
               dangerouslySetInnerHTML={{ __html: text }}
             />
           )}

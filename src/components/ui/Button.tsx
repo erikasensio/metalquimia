@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { RollText } from "./RollText";
 
-type Variant = "outline" | "solid" | "pill" | "red" | "light" | "dark";
+type Variant = "outline" | "solid" | "pill" | "red" | "light" | "dark" | "black";
 type Size = "sm" | "md";
 
 const variants: Record<Variant, string> = {
@@ -21,6 +21,9 @@ const variants: Record<Variant, string> = {
     "justify-center bg-white/90 px-5 py-[11px] font-mono text-[0.875rem] font-bold uppercase leading-none text-black backdrop-blur-[20px] hover:bg-white",
   /** Gris oscuro sobre fondo negro ("GO TO FORM", botones de tarjetas negras). */
   dark: "justify-center bg-dark-grey px-5 py-[11px] font-mono text-[0.875rem] font-bold uppercase leading-none text-light-grey hover:bg-grey",
+  /** Casi negro sobre cristal gris ("DISCOVER OUR MODEL" de la ventana de Highlight). */
+  black:
+    "justify-center bg-black-grey px-5 py-[11px] font-mono text-[0.875rem] font-bold uppercase leading-none text-light-grey backdrop-blur-[20px] hover:bg-black",
 };
 
 const sizes: Record<Size, string> = { sm: "text-[0.75rem]", md: "text-[0.875rem]" };

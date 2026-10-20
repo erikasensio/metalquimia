@@ -311,10 +311,38 @@ export const pages = [
       {
         ...method(false, I.highlightMachine),
         eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+        // Cada etiqueta abre su propia ventana (Figma 446:35255).
         tags: [
-          { label: L("Partnership para toda la vida", "Partnership for life") },
-          { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") },
-          { label: L("Innovación que crea", "Innovation that creates") },
+          {
+            label: L("Partnership para toda la vida", "Partnership for life"),
+            title: L("Partnership para toda la vida", "Partnership for life"),
+            text: L(
+              "Creamos la tecnología. Por eso somos los únicos que podemos hacerla evolucionar contigo de verdad. Nuestro compromiso no termina con la entrega: empieza ahí.\n\nSoporte de ingeniería, optimización de procesos y mejora continua, durante todo el tiempo que trabajes con nuestros equipos.",
+              "We created the technology. That's why we're the only ones who can truly evolve it with you. Our commitment doesn't end at delivery — it starts there.\n\nEngineering support, process optimization, and continuous upgrade, for as long as you run our equipment.",
+            ),
+            button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+            image: I.partner,
+          },
+          {
+            label: L("Dando forma al futuro de la alimentación", "Shaping the future of food"),
+            title: L("Dando forma al futuro de la alimentación", "Shaping the future of food"),
+            text: L(
+              "Nuestro Centro Global de Investigación y Tecnología cárnica trabaja con cada cliente para desarrollar nuevos productos y mejorar los que ya tiene.\n\nProteínas alternativas, recetas más limpias y procesos más eficientes, probados en planta piloto antes de llegar a tu línea.",
+              "Our Global Meat Research and Technology Center works with every customer to develop new products and improve existing ones.\n\nAlternative proteins, cleaner recipes and more efficient processes, proven in our pilot plant before they reach your line.",
+            ),
+            button: link(L("Conoce el centro", "Visit the center"), "@page:innovation"),
+            image: I.lab,
+          },
+          {
+            label: L("Innovación que crea", "Innovation that creates"),
+            title: L("Innovación que crea", "Innovation that creates"),
+            text: L(
+              "Somos dueños de cada tecnología crítica de nuestros equipos. Diseñamos, patentamos y fabricamos cada componente.\n\nEso significa actualizaciones más rápidas, un conocimiento más profundo del proceso y una línea que evoluciona sin empezar de cero.",
+              "We own every critical technology in our equipment. We design, patent and build every component.\n\nThat means faster upgrades, deeper process knowledge and a line that evolves without starting from scratch.",
+            ),
+            button: link(L("Nuestra tecnología", "Our technology"), "@page:technologies"),
+            image: I.engineer,
+          },
         ],
         items: [
           {

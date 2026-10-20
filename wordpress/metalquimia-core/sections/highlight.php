@@ -16,12 +16,17 @@ return array(
 			'repeater',
 			'Etiquetas flotantes',
 			array(
-				'layout'       => 'table',
+				'layout'       => 'block',
+				'collapsed'    => 'field_mq_' . $l . '_tags_label',
 				'max'          => 6,
 				'button_label' => 'Añadir etiqueta',
-				'instructions' => 'Hasta 6 etiquetas cortas que flotan sobre la imagen (p. ej. PARTNERSHIP FOR LIFE). Lo ideal son 3. En móvil no se muestran.',
+				'instructions' => 'Hasta 6 etiquetas cortas de cristal que flotan sobre la imagen (p. ej. PARTNERSHIP FOR LIFE). Lo ideal son 3. Al pulsar una se abre su ventana con título, texto, botón e imagen. En móvil no se muestran.',
 				'sub_fields'   => array(
-					mq_f( $l, 'label', 'text', 'Texto', array(), 'tags' ),
+					mq_f( $l, 'label', 'text', 'Texto de la etiqueta', array( 'required' => 1 ), 'tags' ),
+					mq_f( $l, 'title', 'text', 'Título de la ventana', array( 'instructions' => 'Si dejas vacía la ventana de esta etiqueta, se usa la de la pestaña "Ventana por defecto". Si las dos están vacías, la etiqueta es solo decorativa.' ), 'tags' ),
+					mq_f( $l, 'text', 'textarea', 'Texto de la ventana', array( 'rows' => 4, 'instructions' => 'Deja una línea en blanco para separar párrafos.' ), 'tags' ),
+					mq_f( $l, 'button', 'link', 'Botón de la ventana', array(), 'tags' ),
+					mq_f( $l, 'image', 'image', 'Imagen de la ventana', array( 'preview_size' => 'thumbnail', 'instructions' => 'Horizontal 4:3 (≈ 840 × 630 px). Va abajo del todo.' ), 'tags' ),
 				),
 			)
 		),
@@ -41,10 +46,10 @@ return array(
 				),
 			)
 		),
-		mq_tab( $l, 'Ventana emergente' ),
-		mq_f( $l, 'overlay_title', 'text', 'Título', array( 'instructions' => 'Si rellenas esta pestaña, al pulsar cualquier etiqueta se abre una tarjeta blanca con esta información. Déjala vacía para que las etiquetas sean solo decorativas.' ) ),
+		mq_tab( $l, 'Ventana por defecto' ),
+		mq_f( $l, 'overlay_title', 'text', 'Título', array( 'instructions' => 'Ventana para las etiquetas que no tengan la suya propia. Déjala vacía si cada etiqueta lleva su contenido.' ) ),
 		mq_f( $l, 'overlay_text', 'textarea', 'Texto' ),
-		mq_f( $l, 'overlay_image', 'image', 'Imagen', array( 'instructions' => 'Vertical u horizontal, ≈ 600 × 600 px.' ) ),
+		mq_f( $l, 'overlay_image', 'image', 'Imagen', array( 'instructions' => 'Horizontal 4:3 (≈ 840 × 630 px).' ) ),
 		mq_f( $l, 'overlay_button', 'link', 'Botón' ),
 	),
 );

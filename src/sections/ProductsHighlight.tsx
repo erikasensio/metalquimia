@@ -14,8 +14,8 @@ type Props = Section & {
 };
 
 /**
- * Figma Modulos › 21. Products Highlight.
- * Rejilla de máquinas sobre negro con filtros opcionales por categoría.
+ * Figma Modulos › 21. Products Highlight (rediseño 325:2237).
+ * Cabecera centrada, filtros por categoría y carrusel de máquinas sobre negro.
  */
 export default function ProductsHighlight({ eyebrow, title_muted, title, subtitle, button, show_filters, all_label, items }: Props) {
   const list: MachineItem[] = (Array.isArray(items) ? items : [])
@@ -29,11 +29,22 @@ export default function ProductsHighlight({ eyebrow, title_muted, title, subtitl
     }));
 
   return (
-    <div className="bg-black py-20 text-light-grey lg:py-[120px]">
-      <div className="site-container flex flex-col gap-10 lg:gap-16">
-        <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} dark />
-        {list.length > 0 && <ProductsHighlightClient items={list} showFilters={!!show_filters} allLabel={all_label || "ALL"} />}
-      </div>
+    <div className="flex flex-col gap-12 bg-black py-20 text-light-grey lg:gap-16 lg:py-[120px]">
+      <SectionHeader
+        eyebrow={eyebrow}
+        titleMuted={title_muted}
+        title={title}
+        subtitle={subtitle}
+        button={button}
+        dark
+        align="center"
+        className="site-container"
+      />
+      {list.length > 0 && (
+        <div data-reveal>
+          <ProductsHighlightClient items={list} showFilters={!!show_filters} allLabel={all_label || "ALL"} label={title || "Máquinas"} />
+        </div>
+      )}
     </div>
   );
 }

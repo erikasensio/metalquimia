@@ -12,20 +12,20 @@ type Props = Section & {
   items?: Item[] | null;
 };
 
-/** Figma Modulos › 8. Data Highlights: cifras que cuentan hacia arriba al aparecer. */
+/** Figma Modulos › 8. Data Highlights: título pequeño en una línea y cifras que cuentan hacia arriba al aparecer. */
 export default function DataHighlights({ eyebrow, title_muted, title, subtitle, button, items }: Props) {
   const list = (items || []).filter((i) => i?.value || i?.description);
 
   return (
-    <div className="bg-white py-20 lg:py-[120px]">
-      <div className="site-container flex flex-col gap-12 lg:gap-20">
-        <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} />
+    <div className="bg-white pb-20 pt-6 lg:pb-[120px] lg:pt-10">
+      <div className="site-container flex flex-col gap-10 lg:gap-12">
+        <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} size="s" />
         {list.length > 0 && (
           <ul className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-6" data-stagger>
             {list.map((item, i) => (
-              <li key={i} className="flex flex-col gap-3 border-l border-medium-grey pl-4">
-                {item.value && <CountUp value={item.value} className="text-title-xl text-black" />}
-                {item.description && <p className="text-body-m max-w-[28ch] text-grey">{item.description}</p>}
+              <li key={i} className="flex flex-col gap-3 border-l border-medium-grey pl-6">
+                {item.value && <CountUp value={item.value} className="text-title-l text-black" />}
+                {item.description && <p className="text-body-m max-w-[30ch] text-grey">{item.description}</p>}
               </li>
             ))}
           </ul>

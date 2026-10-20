@@ -2409,13 +2409,37 @@
       "image": "@img:highlight-machine",
       "tags": [
        {
-        "label": "Partnership para toda la vida"
+        "label": "Partnership para toda la vida",
+        "title": "Partnership para toda la vida",
+        "text": "Creamos la tecnología. Por eso somos los únicos que podemos hacerla evolucionar contigo de verdad. Nuestro compromiso no termina con la entrega: empieza ahí.\n\nSoporte de ingeniería, optimización de procesos y mejora continua, durante todo el tiempo que trabajes con nuestros equipos.",
+        "button": {
+         "title": "Descubre nuestro modelo",
+         "url": "@page:partnership",
+         "target": ""
+        },
+        "image": "@img:partner"
        },
        {
-        "label": "Dando forma al futuro de la alimentación"
+        "label": "Dando forma al futuro de la alimentación",
+        "title": "Dando forma al futuro de la alimentación",
+        "text": "Nuestro Centro Global de Investigación y Tecnología cárnica trabaja con cada cliente para desarrollar nuevos productos y mejorar los que ya tiene.\n\nProteínas alternativas, recetas más limpias y procesos más eficientes, probados en planta piloto antes de llegar a tu línea.",
+        "button": {
+         "title": "Conoce el centro",
+         "url": "@page:innovation",
+         "target": ""
+        },
+        "image": "@img:lab"
        },
        {
-        "label": "Innovación que crea"
+        "label": "Innovación que crea",
+        "title": "Innovación que crea",
+        "text": "Somos dueños de cada tecnología crítica de nuestros equipos. Diseñamos, patentamos y fabricamos cada componente.\n\nEso significa actualizaciones más rápidas, un conocimiento más profundo del proceso y una línea que evoluciona sin empezar de cero.",
+        "button": {
+         "title": "Nuestra tecnología",
+         "url": "@page:technologies",
+         "target": ""
+        },
+        "image": "@img:engineer"
        }
       ],
       "items": [
@@ -3343,13 +3367,37 @@
       "image": "@img:highlight-machine",
       "tags": [
        {
-        "label": "Partnership for life"
+        "label": "Partnership for life",
+        "title": "Partnership for life",
+        "text": "We created the technology. That's why we're the only ones who can truly evolve it with you. Our commitment doesn't end at delivery — it starts there.\n\nEngineering support, process optimization, and continuous upgrade, for as long as you run our equipment.",
+        "button": {
+         "title": "Discover our model",
+         "url": "@page:partnership",
+         "target": ""
+        },
+        "image": "@img:partner"
        },
        {
-        "label": "Shaping the future of food"
+        "label": "Shaping the future of food",
+        "title": "Shaping the future of food",
+        "text": "Our Global Meat Research and Technology Center works with every customer to develop new products and improve existing ones.\n\nAlternative proteins, cleaner recipes and more efficient processes, proven in our pilot plant before they reach your line.",
+        "button": {
+         "title": "Visit the center",
+         "url": "@page:innovation",
+         "target": ""
+        },
+        "image": "@img:lab"
        },
        {
-        "label": "Innovation that creates"
+        "label": "Innovation that creates",
+        "title": "Innovation that creates",
+        "text": "We own every critical technology in our equipment. We design, patent and build every component.\n\nThat means faster upgrades, deeper process knowledge and a line that evolves without starting from scratch.",
+        "button": {
+         "title": "Our technology",
+         "url": "@page:technologies",
+         "target": ""
+        },
+        "image": "@img:engineer"
        }
       ],
       "items": [
