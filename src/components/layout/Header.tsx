@@ -21,7 +21,7 @@ export function Header({ global, lang }: { global: Global | null; lang: string }
 
   return (
     <HeaderShell>
-      <div className="hidden h-6 items-center justify-end gap-6 bg-black px-10 xl:flex">
+      <div className="hidden h-6 items-center justify-end gap-6 bg-black px-10 transition-colors duration-300 group-data-[theme=dark]:bg-transparent xl:flex">
         {top.map((item) => (
           <Link
             key={item.url + item.label}
