@@ -69,10 +69,28 @@ function mq_normalize( $value ) {
 
 /** Convierte una URL del propio WordPress en ruta relativa para que el front la sirva. */
 function mq_relative_url( string $url ): string {
-	$home = untrailingslashit( home_url() );
-	if ( str_starts_with( $url, $home ) && ! str_contains( $url, '/wp-content/' ) ) {
-		$path = substr( $url, strlen( $home ) );
-		return '/' . trim( $path, '/' );
+	$parts = wp_parse_url( $url );
+	if ( empty( $parts['host'] ) || str_contains( $url, '/wp-content/' ) || ! in_array( strtolower( $parts['host'] ), mq_own_hosts(), true ) ) {
+		return $url;
 	}
-	return $url;
+	$path = '/' . trim( $parts['path'] ?? '', '/' );
+	return $path . ( isset( $parts['query'] ) ? '?' . $parts['query'] : '' ) . ( isset( $parts['fragment'] ) ? '#' . $parts['fragment'] : '' );
+}
+
+/**
+ * Dominios del propio WordPress. Además del de home_url() se lee el guardado en la base de datos sin filtros:
+ * con Live Link (u otro proxy) home_url() devuelve el dominio público, pero los enlaces guardados en los campos
+ * siguen llevando el original (p. ej. metalquimia.local).
+ */
+function mq_own_hosts(): array {
+	static $hosts = null;
+	if ( null === $hosts ) {
+		global $wpdb;
+		$stored = $wpdb->get_col( "SELECT option_value FROM {$wpdb->options} WHERE option_name IN ('home', 'siteurl')" );
+		$hosts  = array_values( array_unique( array_filter( array_map(
+			fn( $u ) => strtolower( (string) wp_parse_url( $u, PHP_URL_HOST ) ),
+			array_merge( array( home_url(), site_url() ), $stored )
+		) ) ) );
+	}
+	return $hosts;
 }
