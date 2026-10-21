@@ -404,6 +404,11 @@
   }
 }
 
+/* Pestaña del pie: del color de la sección de encima. Si la última sección acaba con fondo negro, negra. */
+html:has(main [data-section]:last-of-type > :last-child[class~="bg-black"]) [data-footer-notch] {
+  background-color: var(--color-black);
+}
+
 /* Estado inicial de los elementos que se animan al entrar en pantalla (ver components/motion/Animations). */
 @layer base {
   /* Letras y palabras ocultas hasta que su grupo (o el propio texto suelto) se marca data-typed. */

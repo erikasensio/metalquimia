@@ -59,10 +59,10 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
           </Carousel>
         </div>
       ) : (
-        // Sin filtros (Figma División 325:10130): rejilla de cuatro columnas.
-        <ul className="site-container grid gap-x-4 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-16" aria-label={label}>
+        // Sin filtros (Figma División 325:10130): filas de cuatro; si faltan máquinas, la fila queda centrada.
+        <ul className="site-container flex flex-wrap justify-center gap-x-4 gap-y-12 lg:gap-y-16" aria-label={label}>
           {items.map((item, i) => (
-            <li key={`${item.name}-${i}`}>
+            <li key={`${item.name}-${i}`} className="w-full sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)]">
               <MachineCard item={item} />
             </li>
           ))}

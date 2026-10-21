@@ -33,7 +33,8 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
         <Image src="/brand/footer-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-black/[0.74]" />
       </div>
-      <Notch corner="top-right" sizeClass="h-[calc(1.5rem+2px)] w-[38%] [--notch-cut:24px] lg:h-[calc(2.5rem+2px)]" />
+      {/* Blanca por defecto; negra si la última sección de la página acaba en negro (data-footer-notch en globals.css). */}
+      <Notch corner="top-right" sizeClass="h-[calc(1.5rem+2px)] w-[38%] [--notch-cut:24px] lg:h-[calc(2.5rem+2px)]" data-footer-notch />
 
       <div className="site-container relative">
         {hasPrefooter && (

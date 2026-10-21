@@ -908,6 +908,302 @@
    },
    "find": "Cut-out stainless injector on transparent (Figma División › product-highlight)"
   },
+  "marinated-product-1": {
+   "file": "marinated-product-1.webp",
+   "alt": {
+    "es": "Pechuga de pollo marinada",
+    "en": "Marinated chicken breast"
+   },
+   "find": "Cut-out product, transparent (Figma División Marinated › hero-division)"
+  },
+  "marinated-product-2": {
+   "file": "marinated-product-2.webp",
+   "alt": {
+    "es": "Chuletón marinado con especias",
+    "en": "Spiced marinated rib-eye steak"
+   },
+   "find": "Cut-out product, transparent (Figma División Marinated › hero-division)"
+  },
+  "marinated-product-3": {
+   "file": "marinated-product-3.webp",
+   "alt": {
+    "es": "Lomos de salmón y pescado blanco marinados",
+    "en": "Marinated salmon and white fish fillets"
+   },
+   "find": "Cut-out product, transparent (Figma División Marinated › hero-division)"
+  },
+  "marinated-step-1": {
+   "file": "marinated-step-1.jpg",
+   "alt": {
+    "es": "Técnico ajustando una pieza circular a contraluz",
+    "en": "Technician adjusting a circular part against the light"
+   },
+   "find": "Process photo (Figma División Marinated › steps-carousel)"
+  },
+  "marinated-step-2": {
+   "file": "marinated-step-2.jpg",
+   "alt": {
+    "es": "Inyectora Movimax Zero",
+    "en": "Movimax Zero injector"
+   },
+   "find": "Process photo (Figma División Marinated › steps-carousel)"
+  },
+  "marinated-step-3": {
+   "file": "marinated-step-3.jpg",
+   "alt": {
+    "es": "Robot industrial en una sala blanca",
+    "en": "Industrial robot in a clean room"
+   },
+   "find": "Process photo (Figma División Marinated › steps-carousel)"
+  },
+  "marinated-step-4": {
+   "file": "marinated-step-4.jpg",
+   "alt": {
+    "es": "Servomotor de una máquina Metalquimia",
+    "en": "Servo motor of a Metalquimia machine"
+   },
+   "find": "Process photo (Figma División Marinated › steps-carousel)"
+  },
+  "marinated-step-5": {
+   "file": "marinated-step-5.jpg",
+   "alt": {
+    "es": "Técnica revisando un armario de control",
+    "en": "Technician checking a control cabinet"
+   },
+   "find": "Process photo (Figma División Marinated › steps-carousel)"
+  },
+  "marinated-plate-1": {
+   "file": "marinated-plate-1.jpg",
+   "alt": {
+    "es": "Muslos de pollo marinados con patatas",
+    "en": "Marinated chicken drumsticks with potatoes"
+   },
+   "find": "Food photo on white (Figma División Marinated › highlight-carousel)"
+  },
+  "marinated-plate-2": {
+   "file": "marinated-plate-2.jpg",
+   "alt": {
+    "es": "Plato de salmón marinado",
+    "en": "Plate of marinated salmon"
+   },
+   "find": "Food photo on white (Figma División Marinated › highlight-carousel)"
+  },
+  "marinated-plate-3": {
+   "file": "marinated-plate-3.jpg",
+   "alt": {
+    "es": "Rosbif marinado en lonchas",
+    "en": "Sliced marinated roast beef"
+   },
+   "find": "Food photo on white (Figma División Marinated › highlight-carousel)"
+  },
+  "marinated-highlight": {
+   "file": "marinated-highlight.webp",
+   "alt": {
+    "es": "Lomos de salmón y pescado blanco marinados",
+    "en": "Marinated salmon and white fish fillets"
+   },
+   "find": "Cut-out marinated fish, transparent (Figma División Marinated › Hightlights)"
+  },
+  "cured-product-1": {
+   "file": "cured-product-1.webp",
+   "alt": {
+    "es": "Lonchas de chorizo curado",
+    "en": "Cured chorizo slices"
+   },
+   "find": "Cut-out product, transparent (Figma División Cured › hero-division)"
+  },
+  "cured-product-2": {
+   "file": "cured-product-2.webp",
+   "alt": {
+    "es": "Dados de jamón curado",
+    "en": "Cured ham cubes"
+   },
+   "find": "Cut-out product, transparent (Figma División Cured › hero-division)"
+  },
+  "cured-product-3": {
+   "file": "cured-product-3.webp",
+   "alt": {
+    "es": "Lonchas de salchichón",
+    "en": "Salchichón slices"
+   },
+   "find": "Cut-out product, transparent (Figma División Cured › hero-division)"
+  },
+  "cured-product-4": {
+   "file": "cured-product-4.webp",
+   "alt": {
+    "es": "Lonchas de salami a la pimienta",
+    "en": "Peppered salami slices"
+   },
+   "find": "Cut-out product, transparent (Figma División Cured › hero-division)"
+  },
+  "cured-product-5": {
+   "file": "cured-product-5.webp",
+   "alt": {
+    "es": "Lonchas de salami",
+    "en": "Salami slices"
+   },
+   "find": "Cut-out product, transparent (Figma División Cured › hero-division)"
+  },
+  "cured-highlight": {
+   "file": "cured-highlight.webp",
+   "alt": {
+    "es": "Lonchas de chorizo curado flotando",
+    "en": "Floating cured chorizo slices"
+   },
+   "find": "Cut-out floating chorizo slices, transparent (Figma División Cured › Hightlights)"
+  },
+  "snacks-product-1": {
+   "file": "snacks-product-1.webp",
+   "alt": {
+    "es": "Chips verdes de proteína",
+    "en": "Green protein chips"
+   },
+   "find": "Cut-out product, transparent (Figma División Snacks › hero-division)"
+  },
+  "snacks-product-2": {
+   "file": "snacks-product-2.webp",
+   "alt": {
+    "es": "Palitos de carne curada",
+    "en": "Cured meat sticks"
+   },
+   "find": "Cut-out product, transparent (Figma División Snacks › hero-division)"
+  },
+  "snacks-product-3": {
+   "file": "snacks-product-3.webp",
+   "alt": {
+    "es": "Chips de carne crujientes",
+    "en": "Crispy meat chips"
+   },
+   "find": "Cut-out product, transparent (Figma División Snacks › hero-division)"
+  },
+  "snacks-step-1": {
+   "file": "snacks-step-1.jpg",
+   "alt": {
+    "es": "Técnico ajustando una pieza circular a contraluz",
+    "en": "Technician adjusting a circular part against the light"
+   },
+   "find": "Process photo (Figma División Snacks › steps-carousel)"
+  },
+  "snacks-step-2": {
+   "file": "snacks-step-2.jpg",
+   "alt": {
+    "es": "Loncheadora QDS de Metalquimia",
+    "en": "Metalquimia QDS slicer"
+   },
+   "find": "Process photo (Figma División Snacks › steps-carousel)"
+  },
+  "snacks-step-3": {
+   "file": "snacks-step-3.jpg",
+   "alt": {
+    "es": "Robot de procesado en una sala blanca",
+    "en": "Processing robot in a clean room"
+   },
+   "find": "Process photo (Figma División Snacks › steps-carousel)"
+  },
+  "snacks-step-4": {
+   "file": "snacks-step-4.jpg",
+   "alt": {
+    "es": "Motor de una máquina sobre fondo negro",
+    "en": "Machine motor on a black background"
+   },
+   "find": "Process photo (Figma División Snacks › steps-carousel)"
+  },
+  "snacks-step-5": {
+   "file": "snacks-step-5.jpg",
+   "alt": {
+    "es": "Técnica revisando un armario de control",
+    "en": "Technician checking a control cabinet"
+   },
+   "find": "Process photo (Figma División Snacks › steps-carousel)"
+  },
+  "sausages-product-1": {
+   "file": "sausages-product-1.webp",
+   "alt": {
+    "es": "Salchichas cocidas",
+    "en": "Cooked sausages"
+   },
+   "find": "Cut-out sausages, transparent (Figma División Sausages › hero-division)"
+  },
+  "sausages-step-1": {
+   "file": "sausages-step-1.jpg",
+   "alt": {
+    "es": "Técnico ajustando una pieza circular a contraluz",
+    "en": "Technician adjusting a circular part against the light"
+   },
+   "find": "Process photo (Figma División Sausages › steps-carousel)"
+  },
+  "sausages-step-2": {
+   "file": "sausages-step-2.jpg",
+   "alt": {
+    "es": "Motor de accionamiento de una máquina Metalquimia",
+    "en": "Drive motor of a Metalquimia machine"
+   },
+   "find": "Process photo (Figma División Sausages › steps-carousel)"
+  },
+  "sausages-step-3": {
+   "file": "sausages-step-3.jpg",
+   "alt": {
+    "es": "Robot industrial en una sala blanca",
+    "en": "Industrial robot in a clean room"
+   },
+   "find": "Process photo (Figma División Sausages › steps-carousel)"
+  },
+  "sausages-step-4": {
+   "file": "sausages-step-4.jpg",
+   "alt": {
+    "es": "Motor de accionamiento sobre fondo negro",
+    "en": "Drive motor on a black background"
+   },
+   "find": "Process photo (Figma División Sausages › steps-carousel)"
+  },
+  "sausages-step-5": {
+   "file": "sausages-step-5.jpg",
+   "alt": {
+    "es": "Técnica revisando un armario de control",
+    "en": "Technician checking a control cabinet"
+   },
+   "find": "Process photo (Figma División Sausages › steps-carousel)"
+  },
+  "sausages-highlight": {
+   "file": "sausages-highlight.webp",
+   "alt": {
+    "es": "Salchichas cocidas flotando",
+    "en": "Floating cooked sausages"
+   },
+   "find": "Cut-out sausages, transparent (Figma División Sausages › Hightlights)"
+  },
+  "petfood-product-1": {
+   "file": "petfood-product-1.webp",
+   "alt": {
+    "es": "Snacks para mascotas apilados",
+    "en": "Stacked pet treats"
+   },
+   "find": "Cut-out stacked pet biscuits, transparent (Figma División Pet food › hero)"
+  },
+  "petfood-plate-1": {
+   "file": "petfood-plate-1.jpg",
+   "alt": {
+    "es": "Tiras de carne tipo jerky sobre una tabla",
+    "en": "Jerky-style meat strips on a board"
+   },
+   "find": "Snack photo on stone board (Figma División Pet food › highlight-carousel)"
+  },
+  "petfood-plate-2": {
+   "file": "petfood-plate-2.jpg",
+   "alt": {
+    "es": "Chips de pescado sobre una tabla",
+    "en": "Fish chips on a board"
+   },
+   "find": "Snack photo on stone board (Figma División Pet food › highlight-carousel)"
+  },
+  "petfood-plate-3": {
+   "file": "petfood-plate-3.jpg",
+   "alt": {
+    "es": "Chips crujientes de carne",
+    "en": "Crispy meat chips"
+   },
+   "find": "Snack photo on stone board (Figma División Pet food › highlight-carousel)"
+  },
   "plate-1": {
    "file": "plate-1.jpg",
    "alt": {
@@ -4809,18 +5105,18 @@
       "word": "Marinated",
       "images": [
        {
-        "image": "@img:marinated"
+        "image": "@img:marinated-product-1"
        },
        {
-        "image": "@img:chicken"
+        "image": "@img:marinated-product-2"
        },
        {
-        "image": "@img:salmon"
+        "image": "@img:marinated-product-3"
        }
       ],
       "title_muted": "Sabor uniforme, de la primera",
       "title": "pieza a la última.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "text": "Los equipos de marinado de Metalquimia permiten inyectar y retener en la carne todo tipo de salmueras y adobos, con un reparto espectacular, sin zonas muertas, un goteo de salmuera mínimo y un respeto total por la morfología y la textura del músculo.",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -4830,36 +5126,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
+      "eyebrow": "INGENIERÍA DE PROCESO DE PRINCIPIO A FIN",
       "title_muted": "La uniformidad del sabor a escala no es suerte.",
       "title": "Es un proceso que perfeccionamos.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "image": "@img:marinated-step-1",
+        "lead": "Preparación del adobo.",
+        "text": "Formulación controlada de adobos líquidos y secos: temperatura, viscosidad y homogeneidad gestionadas con precisión antes de que el producto entre en la línea."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:marinated-step-2",
+        "lead": "Marinado por inyección.",
+        "text": "Para una penetración profunda y uniforme en músculo entero y piezas con hueso: sistemas de inyección calibrados según la densidad y la geometría de cada tipo de producto."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:marinated-step-3",
+        "lead": "Masaje y absorción.",
+        "text": "Acción mecánica que abre la estructura de la fibra muscular y lleva el adobo a toda la pieza, no solo a la superficie."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:marinated-step-4",
+        "lead": "Recubrimiento y aplicación en superficie.",
+        "text": "Para productos con sazonado o recubrimiento visible: sistemas de aplicación precisos y repetibles que mantienen la uniformidad de cada porción a plena producción."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:marinated-step-5",
+        "lead": "Control de proceso conectado.",
+        "text": "MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso."
        }
       ]
      },
@@ -4870,53 +5166,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
       "title": "Un producto final totalmente uniforme",
-      "subtitle": "",
+      "subtitle": "Diseñados específicamente para marinar carnes (cerdo, vacuno, aves enteras y en piezas), los equipos de marinado de Metalquimia logran un reparto espectacular de salmueras y adobos sin zonas muertas, con un goteo mínimo y un respeto total por la morfología y la textura del músculo. También ofrecemos opciones para marinar pescado, una apuesta de futuro.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-4",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-1",
+        "lead": "Marinado de carnes frescas de ave",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-5",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-2",
+        "lead": "Marinado de pescado",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
-        "link": null
-       },
-       {
-        "image": "@img:plate-5",
-        "lead": "Sabor constante.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-3",
+        "lead": "Marinado de carne fresca",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE MARINADOS",
       "title_muted": "Los equipos detrás de los marinados",
       "title": "más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4924,10 +5214,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "image": "@img:machine-tumbler",
+        "name": "Preparación de salmueras",
+        "category": "",
+        "description": "Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4935,10 +5225,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
+        "image": "@img:machine-injector",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Reparto espectacular de la salmuera y uniformidad de color",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4946,10 +5236,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
+        "image": "@img:machine-defroster",
+        "name": "Marinado de carne",
+        "category": "",
+        "description": "Mejora del rendimiento y reducción de las mermas de cocción",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4957,10 +5247,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
+        "image": "@img:machine-defroster",
+        "name": "Tenderizado de carne",
+        "category": "",
+        "description": "Mejora del rendimiento y reducción de las mermas de cocción",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4968,10 +5258,10 @@
         }
        },
        {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
+        "image": "@img:machine-tumbler",
+        "name": "Masaje de carne",
+        "category": "",
+        "description": "Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4979,10 +5269,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
+        "image": "@img:machine-injector",
+        "name": "Embutición de carne",
+        "category": "",
+        "description": "Embutidoras continuas al vacío para músculo entero",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4990,10 +5280,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "",
+        "name": "Cocción de carne",
+        "category": "",
+        "description": "Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5004,40 +5294,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:marinated-highlight",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Penetración profunda.",
+        "text": "Los sistemas de inyección y masaje de Metalquimia trabajan en secuencia para llevar el adobo más allá de la capa superficial: sabor y humedad uniformes en todo el espesor del músculo, sin corazones secos ni sazonado desigual."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Recetas repetibles.",
+        "text": "Cada parámetro del marinado (ritmo de inyección, tiempo de masaje, nivel de vacío, temperatura) se controla digitalmente y se guarda por receta en MQConnect. Con el mismo producto en otro turno, el resultado es idéntico."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Control del rendimiento.",
+        "text": "La tecnología de inyección autorregulada se adapta continuamente a las variaciones de densidad y tamaño de la materia prima, y mantiene la absorción de adobo objetivo pese a la variabilidad natural del producto que entra."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Diseño higiénico.",
+        "text": "Todas las superficies en contacto con el producto están pensadas para una limpieza rápida y fiable, clave en el marinado, donde hay que controlar los restos líquidos y el riesgo biológico. Desmontaje sin herramientas y arquitectura compatible con CIP en toda la máquina."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -5060,10 +5347,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Tu receta evoluciona.",
       "title": "Tu proceso también debería.",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "text": "<p>Nuevas especificaciones de la distribución, nuevos formatos, nuevas fuentes de materia prima: las exigencias sobre tu línea de marinado nunca se detienen. Con el modelo de partnership de Metalquimia, nuestros ingenieros de proceso siguen a tu lado a medida que evoluciona tu gama.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -5135,18 +5422,18 @@
       "word": "Marinated",
       "images": [
        {
-        "image": "@img:marinated"
+        "image": "@img:marinated-product-1"
        },
        {
-        "image": "@img:chicken"
+        "image": "@img:marinated-product-2"
        },
        {
-        "image": "@img:salmon"
+        "image": "@img:marinated-product-3"
        }
       ],
       "title_muted": "Uniform flavor, from the",
       "title": "first piece to the last.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "text": "Metalquimia marinating equipment allows for the injection and retention of all types of brines and marinades in the meat, with spectacular distribution, no dead zones, minimal brine drainage, and complete respect for the morphology and muscle texture.",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -5156,36 +5443,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
+      "eyebrow": "END-TO-END PROCESS ENGINEERING",
       "title_muted": "Flavor uniformity at scale isn't luck.",
       "title": "It's a process we engineer to perfection.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "image": "@img:marinated-step-1",
+        "lead": "Marinade preparation.",
+        "text": "Controlled formulation of liquid and dry marinades — temperature, viscosity, and homogeneity precisely managed before the product ever enters the line."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:marinated-step-2",
+        "lead": "Injection marination.",
+        "text": "For deep, uniform penetration on whole muscle and bone-in cuts — injection systems calibrated to the specific density and geometry of each product type."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:marinated-step-3",
+        "lead": "Tumbling and absorption.",
+        "text": "Mechanical action that opens the muscle fiber structure and drives marinade absorption throughout, not just on the surface."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:marinated-step-4",
+        "lead": "Coating and surface application.",
+        "text": "For products requiring visible seasoning or coating — precise, repeatable application systems that maintain portion consistency at throughput."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:marinated-step-5",
+        "lead": "Connected process control.",
+        "text": "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement."
        }
       ]
      },
@@ -5196,53 +5483,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
       "title": "Completely uniform final product",
-      "subtitle": "",
+      "subtitle": "Specifically designed for marinating meats (pork, beef, whole poultry, and parts), Metalquimia's marinating equipment achieves a spectacular distribution of brines and marinades without dead zones, minimal drainage, and complete respect for muscle morphology and texture. We also offer options for marinating fish meats, a bet on the future.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-4",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-1",
+        "lead": "Fresh poultry marinating",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-5",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-2",
+        "lead": "Fish marinating",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
-        "link": null
-       },
-       {
-        "image": "@img:plate-5",
-        "lead": "Consistent flavour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-3",
+        "lead": "Fresh meat marinating",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR MARINATED PROCESSING",
       "title_muted": "The equipment behind the world's",
       "title": "most consistent marinated products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5250,10 +5531,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "image": "@img:machine-tumbler",
+        "name": "Preparation of Brines",
+        "category": "",
+        "description": "Quick, controlled, and efficient preparation of any type of brine and marinade",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5261,10 +5542,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
+        "image": "@img:machine-injector",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spectacular distribution of brine and uniformity of color",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5272,10 +5553,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
+        "image": "@img:machine-defroster",
+        "name": "Meat marinade",
+        "category": "",
+        "description": "Improvement of yield and reduction of cooking losses",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5283,10 +5564,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Tenderization",
+        "category": "",
+        "description": "Improvement of yield and reduction of cooking losses",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5294,10 +5575,10 @@
         }
        },
        {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
+        "image": "@img:machine-tumbler",
+        "name": "Meat Massage",
+        "category": "",
+        "description": "Automatic vacuum reactors with a cooling jacket, fully versatile",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5305,10 +5586,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
+        "image": "@img:machine-injector",
+        "name": "Meat Stuffing",
+        "category": "",
+        "description": "Continuous vacuum stuffers for whole muscle",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5316,10 +5597,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "",
+        "name": "Meat Cooking",
+        "category": "",
+        "description": "Smart cooking with monitoring and recording of all technical parameters of the process",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5330,40 +5611,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:marinated-highlight",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "Deep Penetration.",
+        "text": "Metalquimia's injection and tumbling systems work in sequence to drive marinade absorption beyond the surface layer — achieving uniform flavor and moisture distribution through the full muscle depth, eliminating dry cores and uneven seasoning."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Recipe Repeatability.",
+        "text": "Every marination parameter — injection rate, tumbling time, vacuum level, temperature — is digitally controlled and stored per recipe via MQConnect. Run the same product on a different shift, and the result is identical."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Yield Control.",
+        "text": "Self-regulating injection technology continuously adjusts to variation in raw material density and piece size — maintaining target marinade uptake regardless of the natural variability in incoming product."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Hygienic Design.",
+        "text": "All product-contact surfaces are engineered for fast, reliable cleaning — critical in marination where liquid residue and biological risk must be controlled. Tool-free disassembly and CIP-compatible architecture throughout."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -5386,10 +5664,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Your recipe evolves.",
       "title": "Your process should too.",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "text": "<p>New retail specifications, new product formats, new raw material sources — the demands on your marination line never stand still. Metalquimia's partnership model means our process engineers stay involved as your range evolves.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },
@@ -5465,18 +5743,30 @@
       "word": "Cured",
       "images": [
        {
-        "image": "@img:salami"
+        "image": "@img:ham-slices"
        },
        {
-        "image": "@img:chorizo"
+        "image": "@img:cured-product-1"
        },
        {
-        "image": "@img:salami"
+        "image": "@img:cured-product-2"
+       },
+       {
+        "image": "@img:cured-product-3"
+       },
+       {
+        "image": "@img:cured-product-4"
+       },
+       {
+        "image": "@img:ham-slices"
+       },
+       {
+        "image": "@img:cured-product-5"
        }
       ],
-      "title_muted": "El tiempo hace el curado.",
-      "title": "Nosotros lo hacemos constante.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "title_muted": "QDS Process. La tradición perfeccionada con",
+      "title": "precisión de ingeniería.",
+      "text": "Curado acelerado de productos cárnicos loncheados que se aplica justo después de la cocción: reduce drásticamente la fase de secado y maduración, simplifica mucho el proceso y mejora notablemente la eficiencia energética.",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -5486,36 +5776,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
-      "title_muted": "Del salado al secado,",
-      "title": "cada etapa bajo control.",
+      "eyebrow": "INGENIERÍA DE PROCESO DE PRINCIPIO A FIN",
+      "title_muted": "El curado es un proceso lento. Controlar cada",
+      "title": "variable es lo que crea la calidad.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "image": "@img:marinated-step-1",
+        "lead": "Formulación de salmuera y curado.",
+        "text": "Preparación precisa de las salmueras de curado, controladas según especificación antes del contacto con el producto, para eliminar la variabilidad que nace en la formulación."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:marinated-step-2",
+        "lead": "Inyección multiaguja.",
+        "text": "Reparto uniforme de la salmuera en todo el músculo, sea cual sea el tamaño o la forma de la pieza, para eliminar la variabilidad del rendimiento desde el origen."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:marinated-step-3",
+        "lead": "Reposo y estabilización.",
+        "text": "Periodos de reposo controlados para que los agentes de curado migren y se estabilicen en toda la estructura del músculo, según la especificación de cada producto."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "",
+        "lead": "Embutido y formado.",
+        "text": "Llenado y formado precisos para productos curados de músculo entero, manteniendo la integridad estructural que exigen las especificaciones premium de retail y foodservice."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:marinated-step-5",
+        "lead": "Control de proceso conectado.",
+        "text": "MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso."
        }
       ]
      },
@@ -5526,47 +5816,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
-      "title": "Curación homogénea en cada pieza",
-      "subtitle": "",
+      "title": "Aportamos una mejora notable en la constancia de la calidad del producto, mejorando la seguridad alimentaria y reduciendo el riesgo de alteraciones del producto final.",
+      "subtitle": "La rapidez del QDS Process® elimina por completo la formación de moho en superficie y mejora notablemente el color y el aspecto del producto final, gracias a un menor grado de oxidación.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-3",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:marinated-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE CURADOS",
       "title_muted": "Los equipos detrás de los curados",
       "title": "más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5574,76 +5864,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Fiambres y snacks",
+        "category": "",
+        "description": "Conectividad total 4.0: la curación del futuro.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5654,40 +5878,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:cured-highlight",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Distribución uniforme.",
+        "text": "Un reparto constante de los agentes de curado en toda la profundidad del músculo es a la vez un requisito de calidad y un imperativo de seguridad alimentaria."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Reposo controlado.",
+        "text": "Nuestra ingeniería de proceso define los parámetros exactos de temperatura, humedad y duración para cada producto, y MQConnect vigila cada variable durante todo el proceso y avisa de cualquier desviación antes de que se pierda un lote."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Trazabilidad de la seguridad.",
+        "text": "Trazabilidad digital completa de cada parámetro de curado por lote: concentración de nitritos, uniformidad de inyección, duración del reposo y curva de temperatura. Datos listos para auditoría que cumplen los requisitos más exigentes de seguridad alimentaria y de la distribución."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Formado de precisión.",
+        "text": "La tecnología de embutido y formado de Metalquimia para productos curados mantiene la integridad estructural del músculo, clave en productos loncheados y porcionados donde la presentación y la exactitud de la porción no se negocian."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -5708,12 +5929,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "La tradición pide paciencia.",
-      "title": "La producción pide precisión.",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "title_muted": "Partnership para toda la vida",
+      "title": "que genera inventos",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -5785,18 +6006,30 @@
       "word": "Cured",
       "images": [
        {
-        "image": "@img:salami"
+        "image": "@img:ham-slices"
        },
        {
-        "image": "@img:chorizo"
+        "image": "@img:cured-product-1"
        },
        {
-        "image": "@img:salami"
+        "image": "@img:cured-product-2"
+       },
+       {
+        "image": "@img:cured-product-3"
+       },
+       {
+        "image": "@img:cured-product-4"
+       },
+       {
+        "image": "@img:ham-slices"
+       },
+       {
+        "image": "@img:cured-product-5"
        }
       ],
-      "title_muted": "Time makes the cure.",
-      "title": "We make it consistent.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "title_muted": "QDS Process. Tradition perfected through",
+      "title": "engineering precision.",
+      "text": "Accelerated curing of sliced meat products that is applied directly after cooking, drastically reducing the drying and maturation phase, greatly simplifying the process and significantly improving energy efficiency.",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -5806,36 +6039,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
-      "title_muted": "From salting to drying,",
-      "title": "every stage under control.",
+      "eyebrow": "END-TO-END PROCESS ENGINEERING",
+      "title_muted": "Curing is a slow process. Controlling every",
+      "title": "variable in it is where quality is made.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "image": "@img:marinated-step-1",
+        "lead": "Brine and cure formulation.",
+        "text": "Precision preparation of curing brines and controlled to specification before product contact, eliminating the variability that begins at the formulation stage."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:marinated-step-2",
+        "lead": "Multi-needle injection.",
+        "text": "Uniform brine distribution throughout the whole muscle, regardless of piece size or shape, engineered to eliminate yield variability at the source."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:marinated-step-3",
+        "lead": "Resting and equalization.",
+        "text": "Controlled holding periods that allow curing agents to migrate and stabilize throughout the muscle structure to specification for each product type."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "",
+        "lead": "Stuffing and forming.",
+        "text": "Precise filling and forming for cured whole muscle products, maintaining the structural integrity that premium retail and food service specifications require."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:marinated-step-5",
+        "lead": "Connected process control.",
+        "text": "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement."
        }
       ]
      },
@@ -5846,47 +6079,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
-      "title": "Even curing in every piece",
-      "subtitle": "",
+      "title": "We provide a notable boost in product quality consistency, improving food safety and lowering the risk of final product changes.",
+      "subtitle": "The speed of the QDS Process® completely eliminates the formation of surface mold and allows for a significant improvement in the color and appearance of the final product, resulting from a lower degree of oxidation.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-3",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
+        "image": "@img:marinated-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR CURED PROCESSING",
       "title_muted": "The equipment behind the world's",
       "title": "most consistent cured products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5894,76 +6127,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Deli Meats and Snacks",
+        "category": "",
+        "description": "Total Connectivity 4.0: The Curation of the Future.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -5974,40 +6141,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:cured-highlight",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "Uniform Distribution.",
+        "text": "Consistent curing agent distribution through the full muscle depth is both a quality requirement and a food safety imperative."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Controlled Resting.",
+        "text": "Our process engineering defines the precise temperature, humidity, and duration parameters for each product, and MQConnect monitors every variable throughout, alerting to deviation before it becomes a batch loss."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Safety Traceability.",
+        "text": "Full digital traceability of every curing parameter per batch — nitrite concentration, injection uniformity, resting duration, temperature curve. Audit-ready data that satisfies the most demanding food safety and retailer compliance requirements."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Precision Forming.",
+        "text": "Metalquimia's stuffing and forming technology for cured products maintains the structural integrity of the muscle, critical for sliced and portioned products where visual presentation and portion accuracy are non-negotiable."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -6028,12 +6192,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "Tradition asks for patience.",
-      "title": "Production asks for precision.",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "title_muted": "Partnership for life",
+      "title": "that produces inventions",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },
@@ -6109,18 +6273,18 @@
       "word": "Snacks",
       "images": [
        {
-        "image": "@img:snacks"
+        "image": "@img:snacks-product-1"
        },
        {
-        "image": "@img:bacon"
+        "image": "@img:snacks-product-2"
        },
        {
-        "image": "@img:snacks"
+        "image": "@img:snacks-product-3"
        }
       ],
-      "title_muted": "Formatos pequeños,",
-      "title": "exigencias enormes.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "title_muted": "Uniformidad impecable",
+      "title": "en cada porción.",
+      "text": "QDSnacks® permite elaborar alimentos más saludables, ricos en proteína, bajos en hidratos de carbono y sin grasas trans, que ya están transformando el mercado mundial de la alimentación.",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -6130,36 +6294,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
-      "title_muted": "Geometría exacta y textura perfecta",
-      "title": "en cada unidad.",
+      "eyebrow": "INGENIERÍA DEL PROCESO DE SNACKS DE PRINCIPIO A FIN",
+      "title_muted": "Producir snacks a escala exige un",
+      "title": "proceso en el que cada variable esté controlada.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "image": "@img:marinated-step-1",
+        "lead": "Preparación de la materia prima.",
+        "text": "Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la constancia de la materia prima."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:snacks-step-2",
+        "lead": "Loncheado y corte de alta precisión.",
+        "text": "El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:marinated-step-3",
+        "lead": "Sazonado y recubrimiento.",
+        "text": "Aplicación controlada de especias secas, marinadas líquidas y sistemas de recubrimiento, con una presentación visual repetible en cada lote."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:marinated-step-4",
+        "lead": "Secado y tratamiento térmico.",
+        "text": "Perfiles de secado y cocción específicos para snacks, diseñados para la actividad de agua, la textura y la vida útil objetivo, con control total durante todo el proceso térmico."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:marinated-step-5",
+        "lead": "Control de peso y porción.",
+        "text": "MQConnect integra en tiempo real los datos de peso del loncheado y el porcionado en un control de lazo cerrado, con trazabilidad completa de la producción."
        }
       ]
      },
@@ -6170,47 +6334,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
-      "title": "Cada snack igual que el anterior",
-      "subtitle": "",
+      "title": "Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.",
+      "subtitle": "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-4",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE SNACKS",
       "title_muted": "Los equipos detrás de los snacks",
       "title": "más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6218,76 +6382,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Fiambres y snacks",
+        "category": "",
+        "description": "Conectividad total 4.0: la curación del futuro.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6298,40 +6396,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:snacks-product-2",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Precisión QDS.",
+        "text": "El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para producir snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial, con formatos de tolerancias dimensionales que marcan la calidad en el lineal y la exactitud de cada porción."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Velocidad sin desviaciones.",
+        "text": "Las líneas de snacks de gran producción tienden a desviarse dimensionalmente al aumentar la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control de lazo cerrado."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Flexibilidad de formatos.",
+        "text": "Los equipos de la división Snacks están pensados para cambiar de formato rápidamente (grosores, geometrías y tamaños de porción distintos) sin paradas importantes. Clave para quien gestiona varias referencias en una sola línea o desarrolla nuevos formatos para su lanzamiento."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Control del sobrepeso.",
+        "text": "En la producción de snacks, el sobrepeso regalado es la principal variable de coste y la mayoría lo da por inevitable. El control de peso integrado de Metalquimia y el circuito de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala industrial."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -6352,12 +6447,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "Nuevos formatos,",
-      "title": "el mismo socio.",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "title_muted": "La industria avanza rápido.",
+      "title": "Nosotros avanzamos con ella.",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -6429,18 +6524,18 @@
       "word": "Snacks",
       "images": [
        {
-        "image": "@img:snacks"
+        "image": "@img:snacks-product-1"
        },
        {
-        "image": "@img:bacon"
+        "image": "@img:snacks-product-2"
        },
        {
-        "image": "@img:snacks"
+        "image": "@img:snacks-product-3"
        }
       ],
-      "title_muted": "Small formats,",
-      "title": "huge demands.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "title_muted": "Flawless uniformity",
+      "title": "in every portion.",
+      "text": "QDSnacks® enables the production of healthier foods that are high in protein, low in carbohydrates, and free from trans fats, which are already transforming the global food market.",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -6450,36 +6545,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
-      "title_muted": "Exact geometry and perfect texture",
-      "title": "in every unit.",
+      "eyebrow": "END-TO-END SNACK PROCESS ENGINEERING",
+      "title_muted": "Snack production at scale demands a",
+      "title": "process where every variable is controlled.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "image": "@img:marinated-step-1",
+        "lead": "Raw material preparation.",
+        "text": "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:snacks-step-2",
+        "lead": "High-precision slicing and cutting.",
+        "text": "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:marinated-step-3",
+        "lead": "Seasoning and coating.",
+        "text": "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:marinated-step-4",
+        "lead": "Drying and thermal treatment.",
+        "text": "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life with full control throughout the thermal process."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:marinated-step-5",
+        "lead": "Weight and portion control.",
+        "text": "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability."
        }
       ]
      },
@@ -6490,47 +6585,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
-      "title": "Every snack just like the last",
-      "subtitle": "",
+      "title": "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips.",
+      "subtitle": "The new QDSnacks technology offers universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and accelerated new product development.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-4",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR SNACK PROCESSING",
       "title_muted": "The equipment behind the world's",
-      "title": "most consistent meat snacks.",
+      "title": "most consistent snack products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6538,76 +6633,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Deli Meats and Snacks",
+        "category": "",
+        "description": "Total Connectivity 4.0: The Curation of the Future.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6618,40 +6647,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:snacks-product-2",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "QDS Precision.",
+        "text": "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Speed Without Drift.",
+        "text": "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Format Flexibility.",
+        "text": "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Giveaway Control.",
+        "text": "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -6672,12 +6698,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "New formats,",
-      "title": "the same partner.",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "title_muted": "The industry moves fast.",
+      "title": "We move with it.",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },
@@ -6753,18 +6779,12 @@
       "word": "Sausages",
       "images": [
        {
-        "image": "@img:sausages"
-       },
-       {
-        "image": "@img:chorizo"
-       },
-       {
-        "image": "@img:sausages"
+        "image": "@img:sausages-product-1"
        }
       ],
-      "title_muted": "Calibre, color y textura,",
-      "title": "idénticos en cada lote.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "title_muted": "Definiendo el bocado perfecto",
+      "title": "en cada pieza de proteína.",
+      "text": "Equipos y tecnología para la elaboración de salchichas cocidas: embutición, cocción y control de cada lote para un calibre, un color y una textura idénticos.",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -6774,36 +6794,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
-      "title_muted": "De la emulsión a la cocción,",
-      "title": "un proceso continuo.",
+      "eyebrow": "INGENIERÍA DE PROCESO DE SNACKS DE PRINCIPIO A FIN",
+      "title_muted": "La uniformidad no surge por casualidad.",
+      "title": "Exige un proceso perfectamente controlado.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "image": "@img:sausages-step-1",
+        "lead": "Preparación de la materia prima.",
+        "text": "Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la constancia de la materia prima."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:sausages-step-2",
+        "lead": "Loncheado y corte de alta precisión.",
+        "text": "El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:sausages-step-3",
+        "lead": "Sazonado y recubrimiento.",
+        "text": "Aplicación controlada de especias secas, marinados líquidos y sistemas de recubrimiento, con una presentación visual repetible en cada tanda de producción."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:sausages-step-4",
+        "lead": "Secado y tratamiento térmico.",
+        "text": "Perfiles de secado y cocción específicos para snacks, diseñados para la actividad de agua, la textura y la vida útil deseadas, con control total durante todo el proceso térmico."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:sausages-step-5",
+        "lead": "Control de peso y porción.",
+        "text": "MQConnect integra los datos de peso en tiempo real del loncheado y el porcionado en un sistema de control en lazo cerrado, con trazabilidad completa de la producción."
        }
       ]
      },
@@ -6814,47 +6834,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
-      "title": "Salchichas perfectamente uniformes",
-      "subtitle": "",
+      "title": "Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.",
+      "subtitle": "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-3",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE SALCHICHAS",
       "title_muted": "Los equipos detrás de las salchichas",
       "title": "más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6862,10 +6882,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "image": "@img:machine-tumbler",
+        "name": "Cocción de carne",
+        "category": "",
+        "description": "Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6873,65 +6893,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "@img:machine-injector",
+        "name": "Salchichas cocidas",
+        "category": "",
+        "description": "Máximo rendimiento del producto y flexibilidad operativa",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -6942,40 +6907,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:sausages-highlight",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Precisión QDS.",
+        "text": "El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para la producción de snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial y permite formatos con tolerancias dimensionales que definen la presentación en el lineal y la exactitud de cada porción."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Velocidad sin desviaciones.",
+        "text": "Las líneas de snacks de alta producción son vulnerables a la deriva dimensional a medida que aumenta la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control en lazo cerrado."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Flexibilidad de formato.",
+        "text": "Los equipos de la división de Snacks están pensados para cambiar de formato rápidamente —distintos grosores, geometrías y porciones— sin paradas significativas. Algo clave para quien gestiona varias referencias en una sola línea o desarrolla nuevos formatos de snack para su lanzamiento en distribución."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Control del sobrepeso.",
+        "text": "En la producción de snacks, el sobrepeso regalado es la principal variable de coste que la mayoría de fabricantes da por inevitable. El control de peso integrado de Metalquimia y el lazo de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala de producción."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -6996,12 +6958,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "Más capacidad,",
-      "title": "menos merma.",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "title_muted": "La industria avanza rápido.",
+      "title": "Nosotros avanzamos con ella.",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -7073,18 +7035,12 @@
       "word": "Sausages",
       "images": [
        {
-        "image": "@img:sausages"
-       },
-       {
-        "image": "@img:chorizo"
-       },
-       {
-        "image": "@img:sausages"
+        "image": "@img:sausages-product-1"
        }
       ],
-      "title_muted": "Calibre, colour and texture,",
-      "title": "identical in every batch.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "title_muted": "Defining the perfect bite",
+      "title": "in every protein piece.",
+      "text": "Equipment and technology for cooked sausage production: stuffing, cooking and control of every batch for identical calibre, colour and texture.",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -7094,36 +7050,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
-      "title_muted": "From emulsion to cooking,",
-      "title": "one continuous process.",
+      "eyebrow": "END-TO-END SNACK PROCESS ENGINEERING",
+      "title_muted": "Uniformity doesn't just happen.",
+      "title": "It requires a perfectly controlled process.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "image": "@img:sausages-step-1",
+        "lead": "Raw material preparation.",
+        "text": "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:sausages-step-2",
+        "lead": "High-precision slicing and cutting.",
+        "text": "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:sausages-step-3",
+        "lead": "Seasoning and coating.",
+        "text": "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:sausages-step-4",
+        "lead": "Drying and thermal treatment.",
+        "text": "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life, with full control throughout the thermal process."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:sausages-step-5",
+        "lead": "Weight and portion control.",
+        "text": "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability."
        }
       ]
      },
@@ -7134,47 +7090,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
-      "title": "Perfectly uniform sausages",
-      "subtitle": "",
+      "title": "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips.",
+      "subtitle": "The new QDSnacks technology brings universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and faster development of new products.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-3",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR SAUSAGE PROCESSING",
       "title_muted": "The equipment behind the world's",
-      "title": "most consistent sausages.",
+      "title": "most consistent sausage products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7182,10 +7138,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "image": "@img:machine-tumbler",
+        "name": "Meat Cooking",
+        "category": "",
+        "description": "Smart cooking with monitoring and recording of all technical parameters of the process",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7193,65 +7149,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "@img:machine-injector",
+        "name": "Cooked sausages",
+        "category": "",
+        "description": "Maximize product performance and operational flexibility",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7262,40 +7163,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:sausages-highlight",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "QDS Precision.",
+        "text": "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Speed Without Drift.",
+        "text": "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Format Flexibility.",
+        "text": "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Giveaway Control.",
+        "text": "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -7316,12 +7214,12 @@
       "theme": "light",
       "image_position": "left",
       "eyebrow": "PARTNERSHIP FOR LIFE",
-      "title_muted": "More capacity,",
-      "title": "less waste.",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "title_muted": "The industry moves fast.",
+      "title": "We move with it.",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },
@@ -7397,18 +7295,12 @@
       "word": "Pet food",
       "images": [
        {
-        "image": "@img:petfood"
-       },
-       {
-        "image": "@img:snacks"
-       },
-       {
-        "image": "@img:petfood"
+        "image": "@img:petfood-product-1"
        }
       ],
-      "title_muted": "La precisión de inyección y cocción",
-      "title": "que exigen los snacks premium para mascotas.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "title_muted": "Ingeniería avanzada",
+      "title": "para la nutrición premium de mascotas.",
+      "text": "",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -7418,36 +7310,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
-      "title_muted": "Geometría exacta para chews, dental sticks",
-      "title": "y snacks de alto valor.",
+      "eyebrow": "INGENIERÍA DE PROCESO DE SNACKS DE PRINCIPIO A FIN",
+      "title_muted": "Producir nutrición para mascotas a escala no es fácil.",
+      "title": "Es un proceso que perfeccionamos con ingeniería.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "image": "@img:marinated-step-1",
+        "lead": "Preparación de la materia prima.",
+        "text": "Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la regularidad de la materia prima."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:marinated-step-2",
+        "lead": "Loncheado y corte de alta precisión.",
+        "text": "El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:marinated-step-3",
+        "lead": "Sazonado y recubrimiento.",
+        "text": "Aplicación controlada de especias secas, marinados líquidos y sistemas de recubrimiento, con una presentación visual repetible en cada lote."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:marinated-step-4",
+        "lead": "Secado y tratamiento térmico.",
+        "text": "Perfiles de secado y cocción específicos para snacks, pensados para la actividad de agua, la textura y la vida útil objetivo, con control total de todo el proceso térmico."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:marinated-step-5",
+        "lead": "Control de peso y porción.",
+        "text": "MQConnect integra en tiempo real los datos de peso del loncheado y el porcionado en un sistema de control en lazo cerrado, con trazabilidad completa de la producción."
        }
       ]
      },
@@ -7458,47 +7350,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
-      "title": "Snacks para mascotas de calidad constante",
-      "subtitle": "",
+      "title": "Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.",
+      "subtitle": "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-1",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
-      "title_muted": "Los equipos detrás de los snacks",
-      "title": "para mascotas más constantes.",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE PET FOOD",
+      "title_muted": "Los equipos detrás de los productos",
+      "title": "para mascotas más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7506,10 +7398,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Fiambres y snacks",
+        "category": "",
+        "description": "Conectividad total 4.0: la curación del futuro.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7517,65 +7409,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "@img:machine-injector",
+        "name": "Pet food",
+        "category": "",
+        "description": "Máximo rendimiento del producto y flexibilidad operativa",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7586,40 +7423,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:petfood-product-1",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Precisión QDS.",
+        "text": "El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para producir snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial, con tolerancias dimensionales que definen la presentación en el lineal y la exactitud de cada porción."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Velocidad sin desviaciones.",
+        "text": "Las líneas de snacks de alta producción tienden a desviarse dimensionalmente al subir la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control en lazo cerrado."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Flexibilidad de formatos.",
+        "text": "Los equipos de la división Snacks están pensados para cambiar de formato rápidamente: distintos grosores, geometrías y tamaños de porción sin grandes paradas. Clave para quien produce varias referencias en una sola línea o desarrolla nuevos formatos de snack para su lanzamiento."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Control del sobrepeso.",
+        "text": "En la producción de snacks, el sobrepeso es la principal variable de coste que la mayoría de fabricantes da por inevitable. El control de peso integrado de Metalquimia y el circuito de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala industrial."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -7642,10 +7476,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "La industria avanza rápido.",
       "title": "Nosotros avanzamos con ella.",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -7717,18 +7551,12 @@
       "word": "Pet food",
       "images": [
        {
-        "image": "@img:petfood"
-       },
-       {
-        "image": "@img:snacks"
-       },
-       {
-        "image": "@img:petfood"
+        "image": "@img:petfood-product-1"
        }
       ],
-      "title_muted": "The injection and cooking precision",
-      "title": "that premium pet treats demand.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "title_muted": "Advanced engineering",
+      "title": "for premium pet nutrition.",
+      "text": "",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -7738,36 +7566,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
-      "title_muted": "Exact geometry for chews, dental sticks,",
-      "title": "and high-value snack formats.",
+      "eyebrow": "END-TO-END SNACK PROCESS ENGINEERING",
+      "title_muted": "Pet nutrition at scale isn't easy.",
+      "title": "It's a process we engineer to perfection.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
-        "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "image": "@img:marinated-step-1",
+        "lead": "Raw material preparation.",
+        "text": "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:marinated-step-2",
+        "lead": "High-precision slicing and cutting.",
+        "text": "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:marinated-step-3",
+        "lead": "Seasoning and coating.",
+        "text": "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:marinated-step-4",
+        "lead": "Drying and thermal treatment.",
+        "text": "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life, with full control throughout the thermal process."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:marinated-step-5",
+        "lead": "Weight and portion control.",
+        "text": "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability."
        }
       ]
      },
@@ -7778,47 +7606,47 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
-      "title": "Pet treats with consistent quality",
-      "subtitle": "",
+      "title": "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips.",
+      "subtitle": "The new QDSnacks technology brings universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and faster development of new products.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-1",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-4",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
+        "image": "@img:petfood-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR PET FOOD PROCESSING",
       "title_muted": "The equipment behind the world's",
-      "title": "most consistent pet treats.",
+      "title": "most consistent pet food products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7826,10 +7654,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "image": "@img:machine-tumbler",
+        "name": "QDSolutions - Deli Meats and Snacks",
+        "category": "",
+        "description": "Total Connectivity 4.0: The Curation of the Future.",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7837,65 +7665,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "@img:machine-injector",
+        "name": "Pet food",
+        "category": "",
+        "description": "Maximize product performance and operational flexibility",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -7906,40 +7679,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
+      "image": "@img:petfood-product-1",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "QDS Precision.",
+        "text": "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Speed Without Drift.",
+        "text": "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Format Flexibility.",
+        "text": "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Giveaway Control.",
+        "text": "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -7962,10 +7732,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "The industry moves fast.",
       "title": "We move with it.",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },

@@ -13,7 +13,10 @@ type Props = {
   label?: string;
 };
 
-/** Carrusel horizontal con desplazamiento táctil y flechas (anterior / siguiente) abajo a la derecha. */
+/**
+ * Carrusel horizontal con desplazamiento táctil y flechas (anterior / siguiente) abajo a la derecha.
+ * Si todo cabe a la vez (p. ej. 3 tarjetas en escritorio) no hay nada que pasar y las flechas no se muestran.
+ */
 export function Carousel({ children, dark, caret, trackClassName = "gap-4", label = "Carrusel" }: Props) {
   const track = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
@@ -24,10 +27,13 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", labe
     const update = () => setEdges({ start: el.scrollLeft < 4, end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 4 });
     update();
     el.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    // Cambios de ancho de la pista o de sus tarjetas (ventana, imágenes que cargan…).
+    const resize = new ResizeObserver(update);
+    resize.observe(el);
+    Array.from(el.children).forEach((child) => resize.observe(child));
     return () => {
       el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      resize.disconnect();
     };
   }, []);
 
@@ -49,7 +55,7 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", labe
       <div ref={track} className={`relative flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-none ${trackClassName}`}>
         {children}
       </div>
-      <div className="site-container flex justify-end gap-1">
+      <div className={`site-container flex justify-end gap-1 ${edges.start && edges.end ? "hidden" : ""}`}>
         <button type="button" className={btn} onClick={() => go(-1)} disabled={edges.start} aria-label="Anterior" data-carousel-prev>
           {caret ? <CaretLeft size={14} /> : <ArrowLeft size={14} />}
         </button>

@@ -97,6 +97,63 @@ const I = {
   machineDefroster: img("machine-defroster", "machine-defroster.webp", "Descongeladora de bloques de carne", "Meat block defroster", "Cut-out stainless machine on transparent (Figma División › product-highlight)"),
   machineTumbler: img("machine-tumbler", "machine-tumbler.webp", "Bombo de masaje al vacío", "Vacuum tumbler", "Cut-out stainless tumbler on transparent (Figma División › product-highlight)"),
   machineInjector: img("machine-injector", "machine-injector.webp", "Inyectora de salmuera", "Brine injector", "Cut-out stainless injector on transparent (Figma División › product-highlight)"),
+  // Página Marinados (Figma Páginas › División 325:5629).
+  marinatedProducts: [
+    ["Pechuga de pollo marinada", "Marinated chicken breast"],
+    ["Chuletón marinado con especias", "Spiced marinated rib-eye steak"],
+    ["Lomos de salmón y pescado blanco marinados", "Marinated salmon and white fish fillets"],
+  ].map(([es, en], i) => img(`marinated-product-${i + 1}`, `marinated-product-${i + 1}.webp`, es, en, "Cut-out product, transparent (Figma División Marinated › hero-division)")),
+  marinatedSteps: [
+    ["Técnico ajustando una pieza circular a contraluz", "Technician adjusting a circular part against the light"],
+    ["Inyectora Movimax Zero", "Movimax Zero injector"],
+    ["Robot industrial en una sala blanca", "Industrial robot in a clean room"],
+    ["Servomotor de una máquina Metalquimia", "Servo motor of a Metalquimia machine"],
+    ["Técnica revisando un armario de control", "Technician checking a control cabinet"],
+  ].map(([es, en], i) => img(`marinated-step-${i + 1}`, `marinated-step-${i + 1}.jpg`, es, en, "Process photo (Figma División Marinated › steps-carousel)")),
+  marinatedPlates: [
+    ["Muslos de pollo marinados con patatas", "Marinated chicken drumsticks with potatoes"],
+    ["Plato de salmón marinado", "Plate of marinated salmon"],
+    ["Rosbif marinado en lonchas", "Sliced marinated roast beef"],
+  ].map(([es, en], i) => img(`marinated-plate-${i + 1}`, `marinated-plate-${i + 1}.jpg`, es, en, "Food photo on white (Figma División Marinated › highlight-carousel)")),
+  marinatedHighlight: img("marinated-highlight", "marinated-highlight.webp", "Lomos de salmón y pescado blanco marinados", "Marinated salmon and white fish fillets", "Cut-out marinated fish, transparent (Figma División Marinated › Hightlights)"),
+  curedProducts: [
+    ["Lonchas de chorizo curado", "Cured chorizo slices"],
+    ["Dados de jamón curado", "Cured ham cubes"],
+    ["Lonchas de salchichón", "Salchichón slices"],
+    ["Lonchas de salami a la pimienta", "Peppered salami slices"],
+    ["Lonchas de salami", "Salami slices"],
+  ].map(([es, en], i) => img(`cured-product-${i + 1}`, `cured-product-${i + 1}.webp`, es, en, "Cut-out product, transparent (Figma División Cured › hero-division)")),
+  curedHighlight: img("cured-highlight", "cured-highlight.webp", "Lonchas de chorizo curado flotando", "Floating cured chorizo slices", "Cut-out floating chorizo slices, transparent (Figma División Cured › Hightlights)"),
+  // Página Snacks (Figma Páginas › División 325:7403).
+  snacksProducts: [
+    ["Chips verdes de proteína", "Green protein chips"],
+    ["Palitos de carne curada", "Cured meat sticks"],
+    ["Chips de carne crujientes", "Crispy meat chips"],
+  ].map(([es, en], i) => img(`snacks-product-${i + 1}`, `snacks-product-${i + 1}.webp`, es, en, "Cut-out product, transparent (Figma División Snacks › hero-division)")),
+  snacksSteps: [
+    ["Técnico ajustando una pieza circular a contraluz", "Technician adjusting a circular part against the light"],
+    ["Loncheadora QDS de Metalquimia", "Metalquimia QDS slicer"],
+    ["Robot de procesado en una sala blanca", "Processing robot in a clean room"],
+    ["Motor de una máquina sobre fondo negro", "Machine motor on a black background"],
+    ["Técnica revisando un armario de control", "Technician checking a control cabinet"],
+  ].map(([es, en], i) => img(`snacks-step-${i + 1}`, `snacks-step-${i + 1}.jpg`, es, en, "Process photo (Figma División Snacks › steps-carousel)")),
+  sausagesProducts: [img("sausages-product-1", "sausages-product-1.webp", "Salchichas cocidas", "Cooked sausages", "Cut-out sausages, transparent (Figma División Sausages › hero-division)")],
+  sausagesSteps: [
+    ["Técnico ajustando una pieza circular a contraluz", "Technician adjusting a circular part against the light"],
+    ["Motor de accionamiento de una máquina Metalquimia", "Drive motor of a Metalquimia machine"],
+    ["Robot industrial en una sala blanca", "Industrial robot in a clean room"],
+    ["Motor de accionamiento sobre fondo negro", "Drive motor on a black background"],
+    ["Técnica revisando un armario de control", "Technician checking a control cabinet"],
+  ].map(([es, en], i) => img(`sausages-step-${i + 1}`, `sausages-step-${i + 1}.jpg`, es, en, "Process photo (Figma División Sausages › steps-carousel)")),
+  sausagesHighlight: img("sausages-highlight", "sausages-highlight.webp", "Salchichas cocidas flotando", "Floating cooked sausages", "Cut-out sausages, transparent (Figma División Sausages › Hightlights)"),
+  // Página Pet food (Figma Páginas › División 558:25933).
+  // Único recorte del hero (y el mismo de "Meat. The Next."); en el Figma solo está a 342 × 504 px.
+  petfoodProducts: [img("petfood-product-1", "petfood-product-1.webp", "Snacks para mascotas apilados", "Stacked pet treats", "Cut-out stacked pet biscuits, transparent (Figma División Pet food › hero)")],
+  petfoodPlates: [
+    ["Tiras de carne tipo jerky sobre una tabla", "Jerky-style meat strips on a board"],
+    ["Chips de pescado sobre una tabla", "Fish chips on a board"],
+    ["Chips crujientes de carne", "Crispy meat chips"],
+  ].map(([es, en], i) => img(`petfood-plate-${i + 1}`, `petfood-plate-${i + 1}.jpg`, es, en, "Snack photo on stone board (Figma División Pet food › highlight-carousel)")),
   plate1: img("plate-1", "plate-1.jpg", "Lonchas de jamón cocido en un plato", "Cooked ham slices on a plate", "Overhead plate with cooked ham slices on linen"),
   plate2: img("plate-2", "plate-2.jpg", "Pechuga de pavo loncheada", "Sliced turkey breast", "Sliced turkey/ham on a plate, soft light"),
   plate3: img("plate-3", "plate-3.jpg", "Mortadela en bloque", "Mortadella block", "Pink mortadella/ham blocks on white"),
@@ -139,6 +196,14 @@ const I = {
   methodCard1: img("method-1", "method-1.jpg", "Engineering Mindset", "Engineering Mindset", "Man in suit in front of industrial robots, blue light"),
   methodCard2: img("method-2", "method-2.jpg", "Tecnologías propias", "Proprietary technologies", "Large stainless machine in grey showroom"),
 };
+
+// Fotos que el Figma repite entre divisiones: una sola imagen en la biblioteca.
+I.curedSteps = [0, 1, 2, 4].map((i) => I.marinatedSteps[i]);
+I.petfoodSteps = I.marinatedSteps;
+I.snacksSteps = [I.marinatedSteps[0], I.snacksSteps[1], I.marinatedSteps[2], I.marinatedSteps[3], I.marinatedSteps[4]];
+I.curedPlates = I.marinatedPlates;
+I.snacksPlates = I.petfoodPlates;
+I.sausagesPlates = I.petfoodPlates;
 
 // ---------- Bloques repetidos ----------
 const logos = (title = L("Con la confianza de los líderes del sector", "Trusted by industry leaders")) => ({
@@ -362,6 +427,287 @@ const cooked = {
   },
 };
 
+const marinated = {
+  hero: {
+    text: L(
+      "Los equipos de marinado de Metalquimia permiten inyectar y retener en la carne todo tipo de salmueras y adobos, con un reparto espectacular, sin zonas muertas, un goteo de salmuera mínimo y un respeto total por la morfología y la textura del músculo.",
+      "Metalquimia marinating equipment allows for the injection and retention of all types of brines and marinades in the meat, with spectacular distribution, no dead zones, minimal brine drainage, and complete respect for the morphology and muscle texture.",
+    ),
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DE PROCESO DE PRINCIPIO A FIN", "END-TO-END PROCESS ENGINEERING"),
+    items: [
+      [L("Preparación del adobo.", "Marinade preparation."), L("Formulación controlada de adobos líquidos y secos: temperatura, viscosidad y homogeneidad gestionadas con precisión antes de que el producto entre en la línea.", "Controlled formulation of liquid and dry marinades — temperature, viscosity, and homogeneity precisely managed before the product ever enters the line.")],
+      [L("Marinado por inyección.", "Injection marination."), L("Para una penetración profunda y uniforme en músculo entero y piezas con hueso: sistemas de inyección calibrados según la densidad y la geometría de cada tipo de producto.", "For deep, uniform penetration on whole muscle and bone-in cuts — injection systems calibrated to the specific density and geometry of each product type.")],
+      [L("Masaje y absorción.", "Tumbling and absorption."), L("Acción mecánica que abre la estructura de la fibra muscular y lleva el adobo a toda la pieza, no solo a la superficie.", "Mechanical action that opens the muscle fiber structure and drives marinade absorption throughout, not just on the surface.")],
+      [L("Recubrimiento y aplicación en superficie.", "Coating and surface application."), L("Para productos con sazonado o recubrimiento visible: sistemas de aplicación precisos y repetibles que mantienen la uniformidad de cada porción a plena producción.", "For products requiring visible seasoning or coating — precise, repeatable application systems that maintain portion consistency at throughput.")],
+      [L("Control de proceso conectado.", "Connected process control."), L("MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso.", "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement.")],
+    ].map(([lead, text], i) => ({ image: I.marinatedSteps[i], lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    subtitle: L(
+      "Diseñados específicamente para marinar carnes (cerdo, vacuno, aves enteras y en piezas), los equipos de marinado de Metalquimia logran un reparto espectacular de salmueras y adobos sin zonas muertas, con un goteo mínimo y un respeto total por la morfología y la textura del músculo. También ofrecemos opciones para marinar pescado, una apuesta de futuro.",
+      "Specifically designed for marinating meats (pork, beef, whole poultry, and parts), Metalquimia's marinating equipment achieves a spectacular distribution of brines and marinades without dead zones, minimal drainage, and complete respect for muscle morphology and texture. We also offer options for marinating fish meats, a bet on the future.",
+    ),
+    // Figma: tres tarjetas con rótulo arriba (texto negro sobre foto clara).
+    items: [
+      L("Marinado de carnes frescas de ave", "Fresh poultry marinating"),
+      L("Marinado de pescado", "Fish marinating"),
+      L("Marinado de carne fresca", "Fresh meat marinating"),
+    ].map((lead, i) => ({ image: I.marinatedPlates[i], lead, text: "", link: null })),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE MARINADOS", "EQUIPMENT FOR MARINATED PROCESSING"),
+    show_filters: false,
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("Preparación de salmueras", "Preparation of Brines"), L("Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo", "Quick, controlled, and efficient preparation of any type of brine and marinade")],
+      [I.machineInjector, L("Inyectoras de carne", "Meat Injectors"), L("Reparto espectacular de la salmuera y uniformidad de color", "Spectacular distribution of brine and uniformity of color")],
+      // Figma repite aquí la descripción del tenderizado.
+      [I.machineDefroster, L("Marinado de carne", "Meat marinade"), L("Mejora del rendimiento y reducción de las mermas de cocción", "Improvement of yield and reduction of cooking losses")],
+      [I.machineDefroster, L("Tenderizado de carne", "Meat Tenderization"), L("Mejora del rendimiento y reducción de las mermas de cocción", "Improvement of yield and reduction of cooking losses")],
+      [I.machineTumbler, L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with a cooling jacket, fully versatile")],
+      [I.machineInjector, L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle")],
+      ["", L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    image: I.marinatedHighlight,
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Penetración profunda.", "Deep Penetration."), text: L("Los sistemas de inyección y masaje de Metalquimia trabajan en secuencia para llevar el adobo más allá de la capa superficial: sabor y humedad uniformes en todo el espesor del músculo, sin corazones secos ni sazonado desigual.", "Metalquimia's injection and tumbling systems work in sequence to drive marinade absorption beyond the surface layer — achieving uniform flavor and moisture distribution through the full muscle depth, eliminating dry cores and uneven seasoning.") },
+      { title: L("Recetas repetibles.", "Recipe Repeatability."), text: L("Cada parámetro del marinado (ritmo de inyección, tiempo de masaje, nivel de vacío, temperatura) se controla digitalmente y se guarda por receta en MQConnect. Con el mismo producto en otro turno, el resultado es idéntico.", "Every marination parameter — injection rate, tumbling time, vacuum level, temperature — is digitally controlled and stored per recipe via MQConnect. Run the same product on a different shift, and the result is identical.") },
+      { title: L("Control del rendimiento.", "Yield Control."), text: L("La tecnología de inyección autorregulada se adapta continuamente a las variaciones de densidad y tamaño de la materia prima, y mantiene la absorción de adobo objetivo pese a la variabilidad natural del producto que entra.", "Self-regulating injection technology continuously adjusts to variation in raw material density and piece size — maintaining target marinade uptake regardless of the natural variability in incoming product.") },
+      { title: L("Diseño higiénico.", "Hygienic Design."), text: L("Todas las superficies en contacto con el producto están pensadas para una limpieza rápida y fiable, clave en el marinado, donde hay que controlar los restos líquidos y el riesgo biológico. Desmontaje sin herramientas y arquitectura compatible con CIP en toda la máquina.", "All product-contact surfaces are engineered for fast, reliable cleaning — critical in marination where liquid residue and biological risk must be controlled. Tool-free disassembly and CIP-compatible architecture throughout.") },
+    ],
+  },
+  partnership: {
+    text: L(
+      "<p>Nuevas especificaciones de la distribución, nuevos formatos, nuevas fuentes de materia prima: las exigencias sobre tu línea de marinado nunca se detienen. Con el modelo de partnership de Metalquimia, nuestros ingenieros de proceso siguen a tu lado a medida que evoluciona tu gama.</p>",
+      "<p>New retail specifications, new product formats, new raw material sources — the demands on your marination line never stand still. Metalquimia's partnership model means our process engineers stay involved as your range evolves.</p>",
+    ),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
+
+const cured = {
+  hero: {
+    text: L(
+      "Curado acelerado de productos cárnicos loncheados que se aplica justo después de la cocción: reduce drásticamente la fase de secado y maduración, simplifica mucho el proceso y mejora notablemente la eficiencia energética.",
+      "Accelerated curing of sliced meat products that is applied directly after cooking, drastically reducing the drying and maturation phase, greatly simplifying the process and significantly improving energy efficiency.",
+    ),
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DE PROCESO DE PRINCIPIO A FIN", "END-TO-END PROCESS ENGINEERING"),
+    items: [
+      [I.curedSteps[0], L("Formulación de salmuera y curado.", "Brine and cure formulation."), L("Preparación precisa de las salmueras de curado, controladas según especificación antes del contacto con el producto, para eliminar la variabilidad que nace en la formulación.", "Precision preparation of curing brines and controlled to specification before product contact, eliminating the variability that begins at the formulation stage.")],
+      [I.curedSteps[1], L("Inyección multiaguja.", "Multi-needle injection."), L("Reparto uniforme de la salmuera en todo el músculo, sea cual sea el tamaño o la forma de la pieza, para eliminar la variabilidad del rendimiento desde el origen.", "Uniform brine distribution throughout the whole muscle, regardless of piece size or shape, engineered to eliminate yield variability at the source.")],
+      [I.curedSteps[2], L("Reposo y estabilización.", "Resting and equalization."), L("Periodos de reposo controlados para que los agentes de curado migren y se estabilicen en toda la estructura del músculo, según la especificación de cada producto.", "Controlled holding periods that allow curing agents to migrate and stabilize throughout the muscle structure to specification for each product type.")],
+      ["", L("Embutido y formado.", "Stuffing and forming."), L("Llenado y formado precisos para productos curados de músculo entero, manteniendo la integridad estructural que exigen las especificaciones premium de retail y foodservice.", "Precise filling and forming for cured whole muscle products, maintaining the structural integrity that premium retail and food service specifications require.")],
+      [I.curedSteps[3], L("Control de proceso conectado.", "Connected process control."), L("MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso.", "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement.")],
+    ].map(([image, lead, text]) => ({ image, lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    // Título de tres líneas todo en blanco: sin parte gris.
+    title_muted: "",
+    title: L(
+      "Aportamos una mejora notable en la constancia de la calidad del producto, mejorando la seguridad alimentaria y reduciendo el riesgo de alteraciones del producto final.",
+      "We provide a notable boost in product quality consistency, improving food safety and lowering the risk of final product changes.",
+    ),
+    subtitle: L(
+      "La rapidez del QDS Process® elimina por completo la formación de moho en superficie y mejora notablemente el color y el aspecto del producto final, gracias a un menor grado de oxidación.",
+      "The speed of the QDS Process® completely eliminates the formation of surface mold and allows for a significant improvement in the color and appearance of the final product, resulting from a lower degree of oxidation.",
+    ),
+    items: I.curedPlates.map((image) => ({ image, lead: "", text: "", link: null })),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE CURADOS", "EQUIPMENT FOR CURED PROCESSING"),
+    show_filters: false,
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("QDSolutions - Fiambres y snacks", "QDSolutions - Deli Meats and Snacks"), L("Conectividad total 4.0: la curación del futuro.", "Total Connectivity 4.0: The Curation of the Future.")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    image: I.curedHighlight,
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Distribución uniforme.", "Uniform Distribution."), text: L("Un reparto constante de los agentes de curado en toda la profundidad del músculo es a la vez un requisito de calidad y un imperativo de seguridad alimentaria.", "Consistent curing agent distribution through the full muscle depth is both a quality requirement and a food safety imperative.") },
+      { title: L("Reposo controlado.", "Controlled Resting."), text: L("Nuestra ingeniería de proceso define los parámetros exactos de temperatura, humedad y duración para cada producto, y MQConnect vigila cada variable durante todo el proceso y avisa de cualquier desviación antes de que se pierda un lote.", "Our process engineering defines the precise temperature, humidity, and duration parameters for each product, and MQConnect monitors every variable throughout, alerting to deviation before it becomes a batch loss.") },
+      { title: L("Trazabilidad de la seguridad.", "Safety Traceability."), text: L("Trazabilidad digital completa de cada parámetro de curado por lote: concentración de nitritos, uniformidad de inyección, duración del reposo y curva de temperatura. Datos listos para auditoría que cumplen los requisitos más exigentes de seguridad alimentaria y de la distribución.", "Full digital traceability of every curing parameter per batch — nitrite concentration, injection uniformity, resting duration, temperature curve. Audit-ready data that satisfies the most demanding food safety and retailer compliance requirements.") },
+      { title: L("Formado de precisión.", "Precision Forming."), text: L("La tecnología de embutido y formado de Metalquimia para productos curados mantiene la integridad estructural del músculo, clave en productos loncheados y porcionados donde la presentación y la exactitud de la porción no se negocian.", "Metalquimia's stuffing and forming technology for cured products maintains the structural integrity of the muscle, critical for sliced and portioned products where visual presentation and portion accuracy are non-negotiable.") },
+    ],
+  },
+  partnership: {
+    text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
+
+const snacks = {
+  hero: {
+    text: L(
+      "QDSnacks® permite elaborar alimentos más saludables, ricos en proteína, bajos en hidratos de carbono y sin grasas trans, que ya están transformando el mercado mundial de la alimentación.",
+      "QDSnacks® enables the production of healthier foods that are high in protein, low in carbohydrates, and free from trans fats, which are already transforming the global food market.",
+    ),
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DEL PROCESO DE SNACKS DE PRINCIPIO A FIN", "END-TO-END SNACK PROCESS ENGINEERING"),
+    items: [
+      [L("Preparación de la materia prima.", "Raw material preparation."), L("Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la constancia de la materia prima.", "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency.")],
+      [L("Loncheado y corte de alta precisión.", "High-precision slicing and cutting."), L("El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional.", "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance.")],
+      [L("Sazonado y recubrimiento.", "Seasoning and coating."), L("Aplicación controlada de especias secas, marinadas líquidas y sistemas de recubrimiento, con una presentación visual repetible en cada lote.", "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run.")],
+      [L("Secado y tratamiento térmico.", "Drying and thermal treatment."), L("Perfiles de secado y cocción específicos para snacks, diseñados para la actividad de agua, la textura y la vida útil objetivo, con control total durante todo el proceso térmico.", "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life with full control throughout the thermal process.")],
+      [L("Control de peso y porción.", "Weight and portion control."), L("MQConnect integra en tiempo real los datos de peso del loncheado y el porcionado en un control de lazo cerrado, con trazabilidad completa de la producción.", "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability.")],
+    ].map(([lead, text], i) => ({ image: I.snacksSteps[i], lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    subtitle: L(
+      "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
+      "The new QDSnacks technology offers universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and accelerated new product development.",
+    ),
+    items: I.snacksPlates.map((image) => ({ image, lead: "", text: "", link: null })),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE SNACKS", "EQUIPMENT FOR SNACK PROCESSING"),
+    show_filters: false,
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("QDSolutions - Fiambres y snacks", "QDSolutions - Deli Meats and Snacks"), L("Conectividad total 4.0: la curación del futuro.", "Total Connectivity 4.0: The Curation of the Future.")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    image: I.snacksProducts[1],
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Precisión QDS.", "QDS Precision."), text: L("El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para producir snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial, con formatos de tolerancias dimensionales que marcan la calidad en el lineal y la exactitud de cada porción.", "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy.") },
+      { title: L("Velocidad sin desviaciones.", "Speed Without Drift."), text: L("Las líneas de snacks de gran producción tienden a desviarse dimensionalmente al aumentar la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control de lazo cerrado.", "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control.") },
+      { title: L("Flexibilidad de formatos.", "Format Flexibility."), text: L("Los equipos de la división Snacks están pensados para cambiar de formato rápidamente (grosores, geometrías y tamaños de porción distintos) sin paradas importantes. Clave para quien gestiona varias referencias en una sola línea o desarrolla nuevos formatos para su lanzamiento.", "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch.") },
+      { title: L("Control del sobrepeso.", "Giveaway Control."), text: L("En la producción de snacks, el sobrepeso regalado es la principal variable de coste y la mayoría lo da por inevitable. El control de peso integrado de Metalquimia y el circuito de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala industrial.", "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale.") },
+    ],
+  },
+  partnership: {
+    text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
+
+const sausages = {
+  hero: {
+    // Figma: "Lorem". Texto provisional propio, no del Figma.
+    text: L(
+      "Equipos y tecnología para la elaboración de salchichas cocidas: embutición, cocción y control de cada lote para un calibre, un color y una textura idénticos.",
+      "Equipment and technology for cooked sausage production: stuffing, cooking and control of every batch for identical calibre, colour and texture.",
+    ),
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DE PROCESO DE SNACKS DE PRINCIPIO A FIN", "END-TO-END SNACK PROCESS ENGINEERING"),
+    items: [
+      [L("Preparación de la materia prima.", "Raw material preparation."), L("Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la constancia de la materia prima.", "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency.")],
+      [L("Loncheado y corte de alta precisión.", "High-precision slicing and cutting."), L("El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional.", "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance.")],
+      [L("Sazonado y recubrimiento.", "Seasoning and coating."), L("Aplicación controlada de especias secas, marinados líquidos y sistemas de recubrimiento, con una presentación visual repetible en cada tanda de producción.", "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run.")],
+      [L("Secado y tratamiento térmico.", "Drying and thermal treatment."), L("Perfiles de secado y cocción específicos para snacks, diseñados para la actividad de agua, la textura y la vida útil deseadas, con control total durante todo el proceso térmico.", "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life, with full control throughout the thermal process.")],
+      [L("Control de peso y porción.", "Weight and portion control."), L("MQConnect integra los datos de peso en tiempo real del loncheado y el porcionado en un sistema de control en lazo cerrado, con trazabilidad completa de la producción.", "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability.")],
+    ].map(([lead, text], i) => ({ image: I.sausagesSteps[i], lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    title_muted: "",
+    // Figma: el subtítulo ya venía en español.
+    subtitle: L(
+      "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
+      "The new QDSnacks technology brings universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and faster development of new products.",
+    ),
+    // Figma: etiquetas de Marinados en las tarjetas (placeholder) → sin texto.
+    items: I.sausagesPlates.map((image) => ({ image, lead: "", text: "", link: null })),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE SALCHICHAS", "EQUIPMENT FOR SAUSAGE PROCESSING"),
+    show_filters: false,
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
+      [I.machineInjector, L("Salchichas cocidas", "Cooked sausages"), L("Máximo rendimiento del producto y flexibilidad operativa", "Maximize product performance and operational flexibility")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    image: I.sausagesHighlight,
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Precisión QDS.", "QDS Precision."), text: L("El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para la producción de snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial y permite formatos con tolerancias dimensionales que definen la presentación en el lineal y la exactitud de cada porción.", "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy.") },
+      { title: L("Velocidad sin desviaciones.", "Speed Without Drift."), text: L("Las líneas de snacks de alta producción son vulnerables a la deriva dimensional a medida que aumenta la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control en lazo cerrado.", "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control.") },
+      { title: L("Flexibilidad de formato.", "Format Flexibility."), text: L("Los equipos de la división de Snacks están pensados para cambiar de formato rápidamente —distintos grosores, geometrías y porciones— sin paradas significativas. Algo clave para quien gestiona varias referencias en una sola línea o desarrolla nuevos formatos de snack para su lanzamiento en distribución.", "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch.") },
+      { title: L("Control del sobrepeso.", "Giveaway Control."), text: L("En la producción de snacks, el sobrepeso regalado es la principal variable de coste que la mayoría de fabricantes da por inevitable. El control de peso integrado de Metalquimia y el lazo de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala de producción.", "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale.") },
+    ],
+  },
+  partnership: {
+    text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
+
+const petfood = {
+  hero: {
+    // El hero del Figma no tiene párrafo: solo título y botón.
+    text: "",
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DE PROCESO DE SNACKS DE PRINCIPIO A FIN", "END-TO-END SNACK PROCESS ENGINEERING"),
+    items: [
+      [L("Preparación de la materia prima.", "Raw material preparation."), L("Acondicionamiento preciso del producto antes del corte, porque la calidad del snack empieza por la regularidad de la materia prima.", "Precise conditioning of input product before cutting begins, because snack quality starts with raw material consistency.")],
+      [L("Loncheado y corte de alta precisión.", "High-precision slicing and cutting."), L("El sistema QDS de Metalquimia consigue una geometría exacta a gran velocidad, manteniendo la tolerancia dimensional.", "Metalquimia's QDS System delivers exact geometry at high output speeds, maintaining dimensional tolerance.")],
+      [L("Sazonado y recubrimiento.", "Seasoning and coating."), L("Aplicación controlada de especias secas, marinados líquidos y sistemas de recubrimiento, con una presentación visual repetible en cada lote.", "Controlled application of dry rubs, liquid marinades, coating systems and repeatable visual presentation across every production run.")],
+      [L("Secado y tratamiento térmico.", "Drying and thermal treatment."), L("Perfiles de secado y cocción específicos para snacks, pensados para la actividad de agua, la textura y la vida útil objetivo, con control total de todo el proceso térmico.", "Snack-specific drying and cooking profiles engineered for target water activity, texture, and shelf life, with full control throughout the thermal process.")],
+      [L("Control de peso y porción.", "Weight and portion control."), L("MQConnect integra en tiempo real los datos de peso del loncheado y el porcionado en un sistema de control en lazo cerrado, con trazabilidad completa de la producción.", "MQConnect integrates real-time weight data from slicing and portioning into a closed-loop control system, providing full production traceability.")],
+    ].map(([lead, text], i) => ({ image: I.petfoodSteps[i], lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    // Título en dos líneas, todo en blanco (sin parte gris).
+    title_muted: "",
+    // El subtítulo del Figma ya viene en español en los dos idiomas.
+    subtitle: L(
+      "La nueva tecnología QDSnacks permite una versatilidad y flexibilidad universales, posibilidad de trabajar con todo tipo de formatos y matrices proteicas y el desarrollo acelerado de nuevos productos.",
+      "The new QDSnacks technology brings universal versatility and flexibility, the ability to work with all kinds of formats and protein matrices, and faster development of new products.",
+    ),
+    // Las etiquetas de las tarjetas parecen de relleno (marinados): se dejan sin texto, como en Cocidos.
+    items: I.petfoodPlates.map((image) => ({ image, lead: "", text: "", link: null })),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE PET FOOD", "EQUIPMENT FOR PET FOOD PROCESSING"),
+    show_filters: false,
+    // Solo 3 máquinas (una fila), con las mismas imágenes que Cocidos.
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("QDSolutions - Fiambres y snacks", "QDSolutions - Deli Meats and Snacks"), L("Conectividad total 4.0: la curación del futuro.", "Total Connectivity 4.0: The Curation of the Future.")],
+      [I.machineInjector, "Pet food", L("Máximo rendimiento del producto y flexibilidad operativa", "Maximize product performance and operational flexibility")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    image: I.petfoodProducts[0],
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Precisión QDS.", "QDS Precision."), text: L("El sistema QDS es un invento de Metalquimia: una tecnología de corte y formado desarrollada específicamente para producir snacks cárnicos de alta precisión. Consigue una geometría exacta a velocidad industrial, con tolerancias dimensionales que definen la presentación en el lineal y la exactitud de cada porción.", "The QDS System is a Metalquimia invention — a cutting and forming technology developed specifically for high-precision meat snack production. It delivers exact geometry at industrial speeds, enabling snack formats with dimensional tolerances that define shelf presentation quality and portion accuracy.") },
+      { title: L("Velocidad sin desviaciones.", "Speed Without Drift."), text: L("Las líneas de snacks de alta producción tienden a desviarse dimensionalmente al subir la velocidad. Los sistemas de loncheado y formado de Metalquimia mantienen la precisión geométrica durante toda la producción, no solo al arrancar, gracias a la realimentación mecánica continua y al control en lazo cerrado.", "High-output snack lines are vulnerable to dimensional drift as line speed increases. Metalquimia's slicing and forming systems maintain geometric precision across the full production run — not just at startup — through continuous mechanical feedback and closed-loop control.") },
+      { title: L("Flexibilidad de formatos.", "Format Flexibility."), text: L("Los equipos de la división Snacks están pensados para cambiar de formato rápidamente: distintos grosores, geometrías y tamaños de porción sin grandes paradas. Clave para quien produce varias referencias en una sola línea o desarrolla nuevos formatos de snack para su lanzamiento.", "The Snacks division equipment is designed for rapid format changeover — different thicknesses, geometries, and portion sizes without significant downtime. Critical for processors managing multiple SKUs on a single line, or developing new snack formats for retail launch.") },
+      { title: L("Control del sobrepeso.", "Giveaway Control."), text: L("En la producción de snacks, el sobrepeso es la principal variable de coste que la mayoría de fabricantes da por inevitable. El control de peso integrado de Metalquimia y el circuito de datos de MQConnect lo tratan como un problema de ingeniería, con objetivos de reducción medibles y alcanzables a escala industrial.", "In snack production, giveaway is the primary cost variable that most processors accept as unavoidable. Metalquimia's integrated weight control and MQConnect data loop treats it as an engineering problem — with measurable, achievable targets for reduction at production scale.") },
+    ],
+  },
+  partnership: {
+    // Imagen: la misma foto de I.partner (hombre de traje junto a la máquina).
+    text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
+
 // ---------- Páginas ----------
 export const pages = [
   {
@@ -555,11 +901,12 @@ export const pages = [
     ],
   },
   division({ key: "cooked", slugEs: "cocidos", slugEn: "cooked", word: "Cooked", nameEs: "Cocidos", products: I.cookedProducts, heroMuted: L("La ingeniería de la precisión", "Engineering the precision"), heroTitle: L("detrás de cada loncha.", "behind every slice."), stepsMuted: L("No vendemos máquinas para cada paso.", "We don't sell machines for each step."), stepsTitle: L("Diseñamos todo el proceso del cocido.", "We engineer the entire cooked process."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los cocidos", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cooked products."), recipeMuted: L("Partnership para toda la vida", "Partnership for life"), recipeTitle: L("que genera inventos", "that produces inventions"), plates: I.cookedPlates, custom: cooked }),
-  division({ key: "marinated", slugEs: "marinados", slugEn: "marinated", word: "Marinated", nameEs: "Marinados", products: [I.marinated, I.chicken, I.salmon], heroMuted: L("Sabor uniforme, de la primera", "Uniform flavor, from the"), heroTitle: L("pieza a la última.", "first piece to the last."), stepsMuted: L("La uniformidad del sabor a escala no es suerte.", "Flavor uniformity at scale isn't luck."), stepsTitle: L("Es un proceso que perfeccionamos.", "It's a process we engineer to perfection."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los marinados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent marinated products."), recipeMuted: L("Tu receta evoluciona.", "Your recipe evolves."), recipeTitle: L("Tu proceso también debería.", "Your process should too."), plates: [I.plate4, I.plate5, I.plate4, I.plate5] }),
-  division({ key: "cured", slugEs: "curados", slugEn: "cured", word: "Cured", nameEs: "Curados", products: [I.salami, I.chorizo, I.salami], heroMuted: L("El tiempo hace el curado.", "Time makes the cure."), heroTitle: L("Nosotros lo hacemos constante.", "We make it consistent."), stepsMuted: L("Del salado al secado,", "From salting to drying,"), stepsTitle: L("cada etapa bajo control.", "every stage under control."), uniform: L("Curación homogénea en cada pieza", "Even curing in every piece"), equipMuted: L("Los equipos detrás de los curados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cured products."), recipeMuted: L("La tradición pide paciencia.", "Tradition asks for patience."), recipeTitle: L("La producción pide precisión.", "Production asks for precision."), plates: [I.plate3, I.plate1, I.plate3] }),
-  division({ key: "snacks", slugEs: "snacks", slugEn: "snacks", word: "Snacks", nameEs: "Snacks", products: [I.snacks, I.bacon, I.snacks], heroMuted: L("Formatos pequeños,", "Small formats,"), heroTitle: L("exigencias enormes.", "huge demands."), stepsMuted: L("Geometría exacta y textura perfecta", "Exact geometry and perfect texture"), stepsTitle: L("en cada unidad.", "in every unit."), uniform: L("Cada snack igual que el anterior", "Every snack just like the last"), equipMuted: L("Los equipos detrás de los snacks", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent meat snacks."), recipeMuted: L("Nuevos formatos,", "New formats,"), recipeTitle: L("el mismo socio.", "the same partner."), plates: [I.plate4, I.plate2, I.plate4] }),
-  division({ key: "sausages", slugEs: "salchichas", slugEn: "sausages", word: "Sausages", nameEs: "Salchichas", products: [I.sausages, I.chorizo, I.sausages], heroMuted: L("Calibre, color y textura,", "Calibre, colour and texture,"), heroTitle: L("idénticos en cada lote.", "identical in every batch."), stepsMuted: L("De la emulsión a la cocción,", "From emulsion to cooking,"), stepsTitle: L("un proceso continuo.", "one continuous process."), uniform: L("Salchichas perfectamente uniformes", "Perfectly uniform sausages"), equipMuted: L("Los equipos detrás de las salchichas", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent sausages."), recipeMuted: L("Más capacidad,", "More capacity,"), recipeTitle: L("menos merma.", "less waste."), plates: [I.plate3, I.plate2, I.plate3] }),
-  division({ key: "petfood", slugEs: "pet-food", slugEn: "pet-food", word: "Pet food", nameEs: "Pet food", products: [I.petfood, I.snacks, I.petfood], heroMuted: L("La precisión de inyección y cocción", "The injection and cooking precision"), heroTitle: L("que exigen los snacks premium para mascotas.", "that premium pet treats demand."), stepsMuted: L("Geometría exacta para chews, dental sticks", "Exact geometry for chews, dental sticks,"), stepsTitle: L("y snacks de alto valor.", "and high-value snack formats."), uniform: L("Snacks para mascotas de calidad constante", "Pet treats with consistent quality"), equipMuted: L("Los equipos detrás de los snacks", "The equipment behind the world's"), equipTitle: L("para mascotas más constantes.", "most consistent pet treats."), recipeMuted: L("La industria avanza rápido.", "The industry moves fast."), recipeTitle: L("Nosotros avanzamos con ella.", "We move with it."), plates: [I.plate1, I.plate4, I.plate1] }),
+  division({ key: "marinated", slugEs: "marinados", slugEn: "marinated", word: "Marinated", nameEs: "Marinados", products: I.marinatedProducts, heroMuted: L("Sabor uniforme, de la primera", "Uniform flavor, from the"), heroTitle: L("pieza a la última.", "first piece to the last."), stepsMuted: L("La uniformidad del sabor a escala no es suerte.", "Flavor uniformity at scale isn't luck."), stepsTitle: L("Es un proceso que perfeccionamos.", "It's a process we engineer to perfection."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los marinados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent marinated products."), recipeMuted: L("Tu receta evoluciona.", "Your recipe evolves."), recipeTitle: L("Tu proceso también debería.", "Your process should too."), plates: I.marinatedPlates, custom: marinated }),
+  division({ key: "cured", slugEs: "curados", slugEn: "cured", word: "Cured", nameEs: "Curados", products: [I.hamSlices, ...I.curedProducts.slice(0, 4), I.hamSlices, I.curedProducts[4]], heroMuted: L("QDS Process. La tradición perfeccionada con", "QDS Process. Tradition perfected through"), heroTitle: L("precisión de ingeniería.", "engineering precision."), stepsMuted: L("El curado es un proceso lento. Controlar cada", "Curing is a slow process. Controlling every"), stepsTitle: L("variable es lo que crea la calidad.", "variable in it is where quality is made."), uniform: "", equipMuted: L("Los equipos detrás de los curados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cured products."), recipeMuted: L("Partnership para toda la vida", "Partnership for life"), recipeTitle: L("que genera inventos", "that produces inventions"), plates: I.curedPlates, custom: cured }),
+  division({ key: "snacks", slugEs: "snacks", slugEn: "snacks", word: "Snacks", nameEs: "Snacks", products: I.snacksProducts, heroMuted: L("Uniformidad impecable", "Flawless uniformity"), heroTitle: L("en cada porción.", "in every portion."), stepsMuted: L("Producir snacks a escala exige un", "Snack production at scale demands a"), stepsTitle: L("proceso en el que cada variable esté controlada.", "process where every variable is controlled."), uniform: L("Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.", "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips."), equipMuted: L("Los equipos detrás de los snacks", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent snack products."), recipeMuted: L("La industria avanza rápido.", "The industry moves fast."), recipeTitle: L("Nosotros avanzamos con ella.", "We move with it."), plates: I.snacksPlates, custom: snacks }),
+  // Copy provisional: en el Figma casi todo el texto de Salchichas y Pet food está copiado de Snacks (nota "Info Sausages i Pet food per procés i característiques").
+  division({ key: "sausages", slugEs: "salchichas", slugEn: "sausages", word: "Sausages", nameEs: "Salchichas", products: I.sausagesProducts, heroMuted: L("Definiendo el bocado perfecto", "Defining the perfect bite"), heroTitle: L("en cada pieza de proteína.", "in every protein piece."), stepsMuted: L("La uniformidad no surge por casualidad.", "Uniformity doesn't just happen."), stepsTitle: L("Exige un proceso perfectamente controlado.", "It requires a perfectly controlled process."), uniform: L("Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.", "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips."), equipMuted: L("Los equipos detrás de las salchichas", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent sausage products."), recipeMuted: L("La industria avanza rápido.", "The industry moves fast."), recipeTitle: L("Nosotros avanzamos con ella.", "We move with it."), plates: I.sausagesPlates, custom: sausages }),
+  division({ key: "petfood", slugEs: "pet-food", slugEn: "pet-food", word: "Pet food", nameEs: "Pet food", products: I.petfoodProducts, heroMuted: L("Ingeniería avanzada", "Advanced engineering"), heroTitle: L("para la nutrición premium de mascotas.", "for premium pet nutrition."), stepsMuted: L("Producir nutrición para mascotas a escala no es fácil.", "Pet nutrition at scale isn't easy."), stepsTitle: L("Es un proceso que perfeccionamos con ingeniería.", "It's a process we engineer to perfection."), uniform: L("Ofrecemos soluciones para producir snacks tipo jerky, productos extrusionados y chips crujientes.", "We offer solutions for the production of Jerky-style snacks, extruded products, and crispy chips."), equipMuted: L("Los equipos detrás de los productos", "The equipment behind the world's"), equipTitle: L("para mascotas más constantes del mundo.", "most consistent pet food products."), recipeMuted: L("La industria avanza rápido.", "The industry moves fast."), recipeTitle: L("Nosotros avanzamos con ella.", "We move with it."), plates: I.petfoodPlates, custom: petfood }),
   {
     key: "meat-injection",
     es: { title: "Inyección de carne", slug: "inyeccion-de-carne" },
