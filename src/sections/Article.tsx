@@ -1,5 +1,7 @@
 import type { Section, WpImage } from "@/lib/types";
 import { Media } from "@/components/ui/Media";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Block = {
   type?: "heading" | "text" | "image" | "quote";
@@ -35,28 +37,57 @@ export default function Article({ category, date, title, intro, author, image, a
     <article className="bg-white py-20 lg:py-[120px]">
       <div className="site-container flex flex-col gap-16 lg:gap-24">
         <header className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="flex flex-col items-start gap-6" data-reveal>
+          <div className="flex flex-col items-start gap-6" data-typewriter-group data-typewriter-sequence>
             {(category || date) && (
               <p className={mono}>
-                {category && <span className="text-red">{category}</span>}
-                {category && date && <span className="text-grey"> · </span>}
-                {date && <span className="text-grey">{date}</span>}
+                {category && (
+                  <span className="text-red">
+                    <Typewriter text={category} />
+                  </span>
+                )}
+                {category && date && (
+                  <span className="text-grey">
+                    <Typewriter text=" · " />
+                  </span>
+                )}
+                {date && (
+                  <span className="text-grey">
+                    <Typewriter text={date} />
+                  </span>
+                )}
               </p>
             )}
-            {title && <h1 className="text-title-l text-black [font-feature-settings:'dlig'_1]">{title}</h1>}
-            {intro && <p className="text-body-l text-dark-grey">{intro}</p>}
+            {title && (
+              <h1 className="text-title-l text-black [font-feature-settings:'dlig'_1]" data-paint>
+                <SplitWords text={title} />
+              </h1>
+            )}
+            {intro && (
+              <p className="text-body-l text-dark-grey">
+                <Typewriter text={intro} />
+              </p>
+            )}
             {(author || date) && (
-              <dl className="mt-2 flex flex-wrap gap-x-12 gap-y-4 border-t border-medium-grey pt-6">
+              <dl className="relative mt-2 flex flex-wrap gap-x-12 gap-y-4 pt-6">
+                <span className="absolute inset-x-0 top-0 h-px bg-medium-grey" aria-hidden data-rule />
                 {author && (
                   <div className="flex flex-col gap-1">
-                    <dt className={`${mono} text-grey`}>{author_label || "Author"}</dt>
-                    <dd className="text-body-m text-black">{author}</dd>
+                    <dt className={`${mono} text-grey`}>
+                      <Typewriter text={author_label || "Author"} />
+                    </dt>
+                    <dd className="text-body-m text-black">
+                      <Typewriter text={author} />
+                    </dd>
                   </div>
                 )}
                 {date && (
                   <div className="flex flex-col gap-1">
-                    <dt className={`${mono} text-grey`}>{date_label || "Published"}</dt>
-                    <dd className="text-body-m text-black">{date}</dd>
+                    <dt className={`${mono} text-grey`}>
+                      <Typewriter text={date_label || "Published"} />
+                    </dt>
+                    <dd className="text-body-m text-black">
+                      <Typewriter text={date} />
+                    </dd>
                   </div>
                 )}
               </dl>
@@ -82,25 +113,43 @@ function ArticleBlock({ block }: { block: Block }) {
     case "heading":
       if (!block.title) return null;
       return (
-        <div className="flex flex-col gap-2 pt-4" data-reveal>
-          <h2 className="text-title-m text-black">{block.title}</h2>
-          {block.subtitle && <p className="text-body-l text-grey">{block.subtitle}</p>}
+        <div className="flex flex-col gap-2 pt-4" data-typewriter-group data-typewriter-sequence>
+          <h2 className="text-title-m text-black" data-paint>
+            <SplitWords text={block.title} />
+          </h2>
+          {block.subtitle && (
+            <p className="text-body-l text-grey">
+              <Typewriter text={block.subtitle} />
+            </p>
+          )}
         </div>
       );
     case "image":
       if (!block.image?.url) return null;
       return (
-        <figure className="flex flex-col gap-3" data-reveal>
-          <Media image={block.image} className="aspect-[16/9]" sizes="(min-width: 800px) 760px, 100vw" />
-          {block.caption && <figcaption className="font-mono text-[0.75rem] uppercase text-grey">{block.caption}</figcaption>}
+        <figure className="flex flex-col gap-3" data-typewriter-group>
+          <div data-reveal>
+            <Media image={block.image} className="aspect-[16/9]" sizes="(min-width: 800px) 760px, 100vw" />
+          </div>
+          {block.caption && (
+            <figcaption className="font-mono text-[0.75rem] uppercase text-grey">
+              <Typewriter text={block.caption} />
+            </figcaption>
+          )}
         </figure>
       );
     case "quote":
       if (!block.quote) return null;
       return (
-        <figure className="flex flex-col gap-4 bg-light-grey p-8" data-reveal>
-          <blockquote className="text-quote text-black">{block.quote}</blockquote>
-          {block.caption && <figcaption className="font-mono text-[0.75rem] uppercase text-grey">{block.caption}</figcaption>}
+        <figure className="flex flex-col gap-4 bg-light-grey p-8" data-typewriter-group data-typewriter-sequence>
+          <blockquote className="text-quote text-black" data-paint>
+            <SplitWords text={block.quote} />
+          </blockquote>
+          {block.caption && (
+            <figcaption className="font-mono text-[0.75rem] uppercase text-grey">
+              <Typewriter text={block.caption} />
+            </figcaption>
+          )}
         </figure>
       );
     default:

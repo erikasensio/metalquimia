@@ -3,6 +3,8 @@ import { Envelope, MapPin, Phone, WhatsappLogo } from "@phosphor-icons/react/dis
 import type { Section, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Icon = "phone" | "email" | "whatsapp" | "location";
 
@@ -41,15 +43,25 @@ export default function ContactCards({ eyebrow, title_muted, title, highlight_ti
 
         <ul className="grid gap-4 md:grid-cols-3" data-stagger>
           {hasHighlight && (
-            <li className="flex min-h-[220px] flex-col items-start justify-between gap-6 bg-black p-6">
+            <li className="flex min-h-[220px] flex-col items-start justify-between gap-6 bg-black p-6" data-typewriter-group data-typewriter-sequence>
               <div className="flex flex-col gap-3">
-                {highlight_title && <h3 className="text-title-xs text-light-grey">{highlight_title}</h3>}
-                {highlight_text && <p className="text-body-s text-grey">{highlight_text}</p>}
+                {highlight_title && (
+                  <h3 className="text-title-xs text-light-grey" data-paint>
+                    <SplitWords text={highlight_title} />
+                  </h3>
+                )}
+                {highlight_text && (
+                  <p className="text-body-s text-grey">
+                    <Typewriter text={highlight_text} />
+                  </p>
+                )}
               </div>
               {highlight_button?.url && (
-                <Button href={highlight_button.url} target={highlight_button.target} variant="dark">
-                  {highlight_button.title}
-                </Button>
+                <div data-reveal>
+                  <Button href={highlight_button.url} target={highlight_button.target} variant="dark">
+                    {highlight_button.title}
+                  </Button>
+                </div>
               )}
             </li>
           )}
@@ -61,13 +73,21 @@ export default function ContactCards({ eyebrow, title_muted, title, highlight_ti
               <>
                 <Icon size={28} className="text-black transition-colors group-hover:text-red" aria-hidden />
                 <div className="flex flex-col gap-1">
-                  {item.label && <p className="text-body-s text-black">{item.label}</p>}
-                  {item.value && <p className="break-words text-body-s text-grey">{item.value}</p>}
+                  {item.label && (
+                    <p className="text-body-s text-black">
+                      <Typewriter text={item.label} />
+                    </p>
+                  )}
+                  {item.value && (
+                    <p className="break-words text-body-s text-grey">
+                      <Typewriter text={item.value} />
+                    </p>
+                  )}
                 </div>
               </>
             );
             return (
-              <li key={i}>
+              <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={((i + (hasHighlight ? 1 : 0)) % 3) * 0.1}>
                 {href ? (
                   <Link href={href.url} target={href.target || undefined} className={`${card} transition-colors hover:bg-medium-grey`}>
                     {content}

@@ -18,7 +18,7 @@ return array(
 					'collapsed'    => 'field_mq_' . $l . '_items_lead',
 					'button_label' => 'Añadir tarjeta',
 					'sub_fields'   => array(
-						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Vertical 3:4, mínimo 900 × 1200 px (JPG o WebP). El texto va encima de la parte de abajo, que se oscurece.' ), 'items' ),
+						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Vertical ≈ 9:10, mínimo 960 × 1080 px (JPG o WebP). Si la tarjeta lleva texto, va arriba sobre un degradado oscuro.' ), 'items' ),
 						mq_f( $l, 'lead', 'text', 'Texto destacado', array(), 'items' ),
 						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),
 						mq_f( $l, 'link', 'link', 'Enlace', array( 'instructions' => 'Opcional: toda la tarjeta lleva a esta página.' ), 'items' ),

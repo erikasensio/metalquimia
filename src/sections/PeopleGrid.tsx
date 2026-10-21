@@ -3,6 +3,8 @@ import { LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Item = { photo?: WpImage | null; name?: string; role?: string; link?: WpLink | null };
 type Props = Section & {
@@ -25,12 +27,20 @@ export default function PeopleGrid({ eyebrow, title_muted, title, subtitle, butt
         {list.length > 0 && (
           <ul className="grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4" data-stagger>
             {list.map((item, i) => (
-              <li key={i} className="flex flex-col gap-4">
+              <li key={i} className="flex flex-col gap-4" data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 4) * 0.1}>
                 <Media image={item.photo} className="aspect-[4/5] bg-light-grey" sizes="(min-width: 1024px) 25vw, 50vw" />
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex min-w-0 flex-col gap-1">
-                    {item.name && <h3 className="text-title-xs text-black">{item.name}</h3>}
-                    {item.role && <p className="text-body-s text-grey">{item.role}</p>}
+                    {item.name && (
+                      <h3 className="text-title-xs text-black" data-paint>
+                        <SplitWords text={item.name} />
+                      </h3>
+                    )}
+                    {item.role && (
+                      <p className="text-body-s text-grey">
+                        <Typewriter text={item.role} />
+                      </p>
+                    )}
                   </div>
                   {item.link?.url && (
                     <Link

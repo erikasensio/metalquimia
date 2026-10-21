@@ -45,7 +45,8 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", labe
 
   return (
     <div className="flex flex-col gap-6" role="region" aria-roledescription="carousel" aria-label={label}>
-      <div ref={track} className={`flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-none ${trackClassName}`}>
+      {/* relative: el recorte también alcanza a lo posicionado de dentro (p. ej. el texto sr-only de <Typewriter>), si no ensancha la página. */}
+      <div ref={track} className={`relative flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-none ${trackClassName}`}>
         {children}
       </div>
       <div className="site-container flex justify-end gap-1">

@@ -52,7 +52,7 @@ const I = {
     const n = String(i + 1).padStart(2, "0");
     return img(`ham-frame-${n}`, `ham-frame-${n}.webp`, "Lonchas de jamón cocido", "Cooked ham slices", "Video frame of cooked ham slices stacking, transparent");
   }),
-  hamSlices: img("ham-slices", "ham-slices.png", "Lonchas de jamón cocido", "Cooked ham slices", "Cut-out PNG floating slices of cooked ham, transparent"),
+  hamSlices: img("ham-slices", "ham-slices.webp", "Lonchas de jamón cocido", "Cooked ham slices", "Cut-out floating slices of cooked ham, transparent (Figma División › Hightlights)"),
   turkey: img("turkey", "turkey.png", "Pechuga de pavo", "Turkey breast", "Cut-out PNG cooked turkey breast, transparent"),
   bacon: img("bacon", "bacon.png", "Bacon", "Bacon", "Cut-out PNG bacon strips, transparent"),
   salami: img("salami", "salami.png", "Salami curado en lonchas", "Sliced cured salami", "Cut-out PNG stack of salami slices, transparent"),
@@ -70,6 +70,33 @@ const I = {
   solutionSnacks: img("solution-snacks", "solution-snacks.png", "Tiras de bacon", "Bacon strips", "Cut-out PNG floating bacon strips (Figma Soluciones)"),
   solutionSausages: img("solution-sausages", "solution-sausages.png", "Salchichas", "Sausages", "Cut-out PNG frankfurter sausages (Figma Soluciones)"),
   solutionPetfood: img("solution-petfood", "solution-petfood.png", "Snacks para mascotas", "Pet treats", "Cut-out PNG stacked pet food treats (Figma Soluciones)"),
+  // Página Cocidos (Figma Páginas › División 177:735).
+  cookedProducts: [
+    ["Costilla de vacuno marinada envasada al vacío", "Vacuum-packed marinated beef rib"],
+    ["Bloque de carne congelada", "Frozen meat block"],
+    ["Jamón cocido con lonchas", "Cooked ham with slices"],
+    ["Lonchas de jamón cocido y pieza redonda", "Cooked ham slices and round ham"],
+    ["Tiras de bacon", "Bacon strips"],
+    ["Chuletón envasado al vacío", "Vacuum-packed rib steak"],
+    ["Salchichas cocidas", "Cooked sausages"],
+  ].map(([es, en], i) => img(`cooked-product-${i + 1}`, `cooked-product-${i + 1}.webp`, es, en, "Cut-out product, transparent (Figma División › hero-division)")),
+  cookedSteps: [
+    ["Operario ajustando una línea de preparación de salmuera", "Operator adjusting a brine preparation line"],
+    ["Agujas de una inyectora multiaguja", "Needles of a multi-needle injector"],
+    ["Interior de un bombo de masaje de acero inoxidable", "Inside a stainless steel tumbling drum"],
+    ["Técnica trabajando en una línea de cocción", "Technician working on a cooking line"],
+    ["Pantalla táctil de MQConnect en una máquina", "MQConnect touch screen on a machine"],
+  ].map(([es, en], i) => img(`cooked-step-${i + 1}`, `cooked-step-${i + 1}.jpg`, es, en, "Process photo (Figma División › steps-carousel)")),
+  cookedPlates: [
+    ["Jamón cocido de músculo entero con lonchas en un plato", "Whole muscle cooked ham with slices on a plate"],
+    ["Plato de lonchas de jamón cocido", "Plate of cooked ham slices"],
+    ["Bloques de fiambre cocido", "Cooked meat logs"],
+    ["Jamón cocido y lonchas en un plato", "Cooked ham and slices on a plate"],
+    ["Paleta cocida y lonchas en un plato", "Cooked shoulder and slices on a plate"],
+  ].map(([es, en], i) => img(`cooked-plate-${i + 1}`, `cooked-plate-${i + 1}.jpg`, es, en, "Food photo on white (Figma División › highlight-carousel)")),
+  machineDefroster: img("machine-defroster", "machine-defroster.webp", "Descongeladora de bloques de carne", "Meat block defroster", "Cut-out stainless machine on transparent (Figma División › product-highlight)"),
+  machineTumbler: img("machine-tumbler", "machine-tumbler.webp", "Bombo de masaje al vacío", "Vacuum tumbler", "Cut-out stainless tumbler on transparent (Figma División › product-highlight)"),
+  machineInjector: img("machine-injector", "machine-injector.webp", "Inyectora de salmuera", "Brine injector", "Cut-out stainless injector on transparent (Figma División › product-highlight)"),
   plate1: img("plate-1", "plate-1.jpg", "Lonchas de jamón cocido en un plato", "Cooked ham slices on a plate", "Overhead plate with cooked ham slices on linen"),
   plate2: img("plate-2", "plate-2.jpg", "Pechuga de pavo loncheada", "Sliced turkey breast", "Sliced turkey/ham on a plate, soft light"),
   plate3: img("plate-3", "plate-3.jpg", "Mortadela en bloque", "Mortadella block", "Pink mortadella/ham blocks on white"),
@@ -217,7 +244,8 @@ const machines = (titleMuted, title, n = 8) => ({
 });
 
 // ---------- Páginas de soluciones (misma plantilla, distinto contenido) ----------
-const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, heroTitle, stepsMuted, stepsTitle, uniform, equipMuted, equipTitle, recipeMuted, recipeTitle, plates }) => ({
+// `custom` sustituye campos de una sección concreta (hero, steps, results, machines, method, partnership) cuando la página tiene textos propios en el Figma.
+const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, heroTitle, stepsMuted, stepsTitle, uniform, equipMuted, equipTitle, recipeMuted, recipeTitle, plates, custom = {} }) => ({
   key,
   parent: "solutions",
   es: { title: nameEs, slug: slugEs },
@@ -234,6 +262,7 @@ const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, hero
         "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
       ),
       button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFO"), "@page:contact#form"),
+      ...custom.hero,
     },
     {
       type: "steps_carousel",
@@ -250,6 +279,7 @@ const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, hero
         { image: I.step4, lead: L("Cocción.", "Cooking."), text: L("Curvas de temperatura controladas.", "Controlled temperature curves.") },
         { image: I.step5, lead: L("Loncheado y envasado.", "Slicing and packing."), text: L("Rendimiento máximo al final de la línea.", "Maximum yield at the end of the line.") },
       ],
+      ...custom.steps,
     },
     { type: "gradient_divider", direction: "down" },
     {
@@ -266,14 +296,71 @@ const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, hero
         text: L("Cada lote igual que el anterior.", "Every batch just like the last."),
         link: null,
       })),
+      ...custom.results,
     },
-    machines(equipMuted, equipTitle),
-    method(true),
+    { ...machines(equipMuted, equipTitle), ...custom.machines },
+    { ...method(true), ...custom.method },
     { type: "gradient_divider", direction: "up" },
-    partnership(recipeMuted, recipeTitle),
+    { ...partnership(recipeMuted, recipeTitle), ...custom.partnership },
     insights(),
   ],
 });
+
+// Textos e imágenes propios de Cocidos (Figma Páginas › División 177:735).
+const cooked = {
+  hero: {
+    text: L(
+      "Productos cárnicos cocidos de músculo entero / Embutidos cocidos. Ofrecemos los equipos y la tecnología más avanzados para la elaboración de productos cárnicos cocidos de músculo entero (jamón cocido, paleta cocida, bacon, etc.), junto con los últimos sistemas de embutido y cocción de salchichas.",
+      "Cooked meat products from whole muscle / Cooked Sausages. We offer the most advanced equipment and technology for the production of cooked meat products from whole muscle (cooked ham, cooked shoulder, bacon, etc.), along with the latest loading and cooking systems for sausages.",
+    ),
+  },
+  steps: {
+    eyebrow: L("INGENIERÍA DE PROCESO DE PRINCIPIO A FIN", "END-TO-END PROCESS ENGINEERING"),
+    items: [
+      [L("Preparación de salmuera.", "Brine preparation."), L("Formulación precisa para la inyección, con control total sobre la base de cada producto cocido constante.", "Precision formulation for injection, giving you full control over the foundation of every consistent cooked product.")],
+      [L("Inyección multiaguja.", "Multi-needle injection."), L("Reparto uniforme de la salmuera en todo el músculo, sea cual sea el tamaño o la forma de la pieza, para eliminar la variabilidad del rendimiento desde el origen.", "Uniform brine distribution throughout the whole muscle, regardless of piece size or shape, engineered to eliminate yield variability at the source.")],
+      [L("Masaje y malaxado.", "Tumbling and massaging."), L("Acción mecánica controlada que asegura la extracción de proteína, el ligado de la salmuera y el desarrollo de la textura con tecnología de bombo refrigerado.", "Controlled mechanical action that ensures protein extraction, brine binding, and texture development with refrigerated drum technology.")],
+      [L("Tratamiento térmico.", "Thermal processing."), L("Ciclos de cocción, ahumado y enfriamiento diseñados para una temperatura uniforme en el corazón y una textura óptima, configurables para cada especificación de producto.", "Cooking, smoking, and chilling cycles designed for uniform core temperature and optimal texture retention — configurable for each product specification.")],
+      [L("Control de proceso conectado.", "Connected process control."), L("MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso.", "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement.")],
+    ].map(([lead, text], i) => ({ image: I.cookedSteps[i], lead, text })),
+  },
+  results: {
+    eyebrow: L("APLICACIONES", "APPLICATIONS"),
+    items: I.cookedPlates.map((image) => ({ image, lead: "", text: "", link: null })),
+    subtitle: L(
+      "Soluciones Metalquimia para elaborar la más amplia gama de productos cárnicos cocidos de músculo entero, en todas las categorías de rendimiento: desde la descongelación de bloques de carne hasta la inyección de jamón y paleta cocidos de músculo entero, la producción de bacon, la cocción de salchichas y la cocción de productos al vacío.",
+      "Metalquimia solutions for the production of the widest range of cooked whole muscle meat products, covering all performance categories: from meat block thawing to the injection of whole muscle cooked ham and shoulder, bacon production, sausage cooking and the cooking of sous-vide products.",
+    ),
+  },
+  machines: {
+    eyebrow: L("EQUIPOS PARA EL PROCESADO DE COCIDOS", "EQUIPMENT FOR COOKED PROCESSING"),
+    show_filters: false,
+    items: [
+      [I.machineDefroster, L("Descongelación de carne", "Meat Defrosting"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality")],
+      [I.machineTumbler, L("Preparación de salmueras", "Preparation of Brines"), L("Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo", "Quick, controlled, and efficient preparation of any type of brine and marinade")],
+      [I.machineInjector, L("Inyectoras de carne", "Meat Injectors"), L("Reparto espectacular de la salmuera y uniformidad de color", "Spectacular distribution of brine and uniformity of color")],
+      [I.machineDefroster, L("Tenderizado de carne", "Meat Tenderization"), L("Mejora del rendimiento y reducción de las mermas de cocción", "Improvement of yield and reduction of cooking losses")],
+      [I.machineDefroster, L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with a cooling jacket, fully versatile")],
+      [I.machineTumbler, L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle")],
+      [I.machineInjector, L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
+      ["", L("Plantas automáticas de cocción y marinado", "Automatic Cooking and Marinating Plants"), L("Conectividad inteligente", "Smart connectivity")],
+    ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
+  },
+  method: {
+    eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+    tags: [{ label: L("Partnership para toda la vida", "Partnership for life") }, { label: L("Dando forma al futuro de la alimentación", "Shaping the future of food") }, { label: L("Innovación que crea", "Innovation that creates") }],
+    items: [
+      { title: L("Masaje refrigerado.", "Refrigerated Tumbling."), text: L("Metalquimia fue pionera en el bombo de masaje refrigerado, una tecnología que controla con precisión la temperatura de extracción de la proteína, elimina el riesgo microbiológico y maximiza el ligado de la salmuera y la textura final.", "Metalquimia pioneered the refrigerated massage drum — a technology that controls protein extraction temperature with precision, eliminating microbial risk while maximizing brine binding and final texture quality.") },
+      { title: L("Inyección de precisión.", "Precision Injection."), text: L("Nuestros sistemas de inyección multiaguja reparten la salmuera de forma uniforme en músculos de geometría irregular: una variable crítica que los inyectores estándar dejan al azar y que nosotros hemos convertido en un parámetro controlable.", "Our multi-needle injection systems are engineered for uniform brine distribution across irregular muscle geometries — a critical variable that standard injectors leave to chance, and we've turned into a controllable parameter.") },
+      { title: L("Inteligencia térmica.", "Thermal Intelligence."), text: L("Nuestros sistemas de cocción y enfriamiento modelan la transferencia de calor en toda la pieza, no solo en la superficie. El resultado: proceso uniforme en el corazón, ciclos más cortos y una textura constante del borde al centro.", "Our cooking and chilling systems model heat transfer across the whole piece — not just surface temperature. The result is uniform core processing, reduced cycle time, and consistent texture from edge to center.") },
+      { title: L("Control conectado.", "Connected Control."), text: L("MQConnect enlaza en tiempo real cada parámetro del proceso de cocidos: ritmo de inyección, ciclos de masaje, curva térmica y velocidad de enfriamiento. Trazabilidad completa, alertas de proceso y datos continuos para optimizar el rendimiento.", "MQConnect links every cooked process parameter in real time — injection rate, tumbling cycles, thermal curve, chilling speed. Full traceability, process alerts, and continuous data for ongoing yield optimization.") },
+    ],
+  },
+  partnership: {
+    text: L("<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>", "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>"),
+    button: link(L("Descubre nuestro modelo", "Discover our model"), "@page:partnership"),
+  },
+};
 
 // ---------- Páginas ----------
 export const pages = [
@@ -467,7 +554,7 @@ export const pages = [
       },
     ],
   },
-  division({ key: "cooked", slugEs: "cocidos", slugEn: "cooked", word: "Cooked", nameEs: "Cocidos", products: [I.ham, I.hamSlices, I.bacon, I.turkey], heroMuted: L("La ingeniería de la precisión", "Engineering the precision"), heroTitle: L("detrás de cada loncha.", "behind every slice."), stepsMuted: L("No vendemos máquinas para cada paso.", "We don't sell machines for each step."), stepsTitle: L("Diseñamos todo el proceso del cocido.", "We engineer the entire cooked process."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los cocidos", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cooked products."), recipeMuted: L("Partnership para toda la vida", "Partnership for life"), recipeTitle: L("que genera inventos", "that produces inventions"), plates: [I.plate1, I.plate2, I.plate3, I.plate1, I.plate2] }),
+  division({ key: "cooked", slugEs: "cocidos", slugEn: "cooked", word: "Cooked", nameEs: "Cocidos", products: I.cookedProducts, heroMuted: L("La ingeniería de la precisión", "Engineering the precision"), heroTitle: L("detrás de cada loncha.", "behind every slice."), stepsMuted: L("No vendemos máquinas para cada paso.", "We don't sell machines for each step."), stepsTitle: L("Diseñamos todo el proceso del cocido.", "We engineer the entire cooked process."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los cocidos", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cooked products."), recipeMuted: L("Partnership para toda la vida", "Partnership for life"), recipeTitle: L("que genera inventos", "that produces inventions"), plates: I.cookedPlates, custom: cooked }),
   division({ key: "marinated", slugEs: "marinados", slugEn: "marinated", word: "Marinated", nameEs: "Marinados", products: [I.marinated, I.chicken, I.salmon], heroMuted: L("Sabor uniforme, de la primera", "Uniform flavor, from the"), heroTitle: L("pieza a la última.", "first piece to the last."), stepsMuted: L("La uniformidad del sabor a escala no es suerte.", "Flavor uniformity at scale isn't luck."), stepsTitle: L("Es un proceso que perfeccionamos.", "It's a process we engineer to perfection."), uniform: L("Un producto final totalmente uniforme", "Completely uniform final product"), equipMuted: L("Los equipos detrás de los marinados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent marinated products."), recipeMuted: L("Tu receta evoluciona.", "Your recipe evolves."), recipeTitle: L("Tu proceso también debería.", "Your process should too."), plates: [I.plate4, I.plate5, I.plate4, I.plate5] }),
   division({ key: "cured", slugEs: "curados", slugEn: "cured", word: "Cured", nameEs: "Curados", products: [I.salami, I.chorizo, I.salami], heroMuted: L("El tiempo hace el curado.", "Time makes the cure."), heroTitle: L("Nosotros lo hacemos constante.", "We make it consistent."), stepsMuted: L("Del salado al secado,", "From salting to drying,"), stepsTitle: L("cada etapa bajo control.", "every stage under control."), uniform: L("Curación homogénea en cada pieza", "Even curing in every piece"), equipMuted: L("Los equipos detrás de los curados", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent cured products."), recipeMuted: L("La tradición pide paciencia.", "Tradition asks for patience."), recipeTitle: L("La producción pide precisión.", "Production asks for precision."), plates: [I.plate3, I.plate1, I.plate3] }),
   division({ key: "snacks", slugEs: "snacks", slugEn: "snacks", word: "Snacks", nameEs: "Snacks", products: [I.snacks, I.bacon, I.snacks], heroMuted: L("Formatos pequeños,", "Small formats,"), heroTitle: L("exigencias enormes.", "huge demands."), stepsMuted: L("Geometría exacta y textura perfecta", "Exact geometry and perfect texture"), stepsTitle: L("en cada unidad.", "in every unit."), uniform: L("Cada snack igual que el anterior", "Every snack just like the last"), equipMuted: L("Los equipos detrás de los snacks", "The equipment behind the world's"), equipTitle: L("más constantes del mundo.", "most consistent meat snacks."), recipeMuted: L("Nuevos formatos,", "New formats,"), recipeTitle: L("el mismo socio.", "the same partner."), plates: [I.plate4, I.plate2, I.plate4] }),

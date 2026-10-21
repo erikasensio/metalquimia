@@ -15,7 +15,7 @@ type Props = Section & {
 
 /**
  * Figma Modulos › 21. Products Highlight (rediseño 325:2237).
- * Cabecera centrada, filtros por categoría y carrusel de máquinas sobre negro.
+ * Cabecera centrada y máquinas sobre negro: filtros por categoría con carrusel, o rejilla de cuatro columnas sin filtros.
  */
 export default function ProductsHighlight({ eyebrow, title_muted, title, subtitle, button, show_filters, all_label, items }: Props) {
   const list: MachineItem[] = (Array.isArray(items) ? items : [])
@@ -38,10 +38,12 @@ export default function ProductsHighlight({ eyebrow, title_muted, title, subtitl
         button={button}
         dark
         align="center"
+        stacked
         className="site-container"
       />
       {list.length > 0 && (
-        <div data-reveal>
+        // Grupo de escritura: al acabar queda data-typed y las tarjetas que aparezcan al filtrar ya se ven.
+        <div data-typewriter-group>
           <ProductsHighlightClient items={list} showFilters={!!show_filters} allLabel={all_label || "ALL"} label={title || "Máquinas"} />
         </div>
       )}

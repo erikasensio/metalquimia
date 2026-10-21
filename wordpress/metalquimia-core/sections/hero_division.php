@@ -3,7 +3,7 @@
 $l = 'hero_division';
 return array(
 	'name'       => $l,
-	'label'      => 'Hero de solución (productos flotando)',
+	'label'      => 'Hero de solución (carrusel de productos flotando)',
 	'sub_fields' => array(
 		mq_tab( $l, 'Imágenes' ),
 		mq_f( $l, 'word', 'text', 'Palabra de fondo', array( 'instructions' => 'Una palabra corta que se ve enorme en gris claro detrás de los productos (p. ej. Cooked).' ) ),
@@ -15,11 +15,11 @@ return array(
 			array(
 				'layout'       => 'table',
 				'min'          => 0,
-				'max'          => 5,
+				'max'          => 12,
 				'button_label' => 'Añadir producto',
-				'instructions' => 'Entre 3 y 5 productos. Arrastra para cambiar el orden.',
+				'instructions' => 'Entre 4 y 12 productos: pasan solos en bucle, flotando. Arrastra para cambiar el orden.',
 				'sub_fields'   => array(
-					mq_f( $l, 'image', 'image', 'Imagen', array( 'preview_size' => 'thumbnail', 'instructions' => 'PNG recortado con fondo transparente, ≈ 900 × 900 px.' ), 'images' ),
+					mq_f( $l, 'image', 'image', 'Imagen', array( 'preview_size' => 'thumbnail', 'instructions' => 'PNG o WebP recortado con fondo transparente, vertical ≈ 760 × 950 px.' ), 'images' ),
 				),
 			)
 		),

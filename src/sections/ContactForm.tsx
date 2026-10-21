@@ -1,5 +1,6 @@
 import type { Section } from "@/lib/types";
 import { ContactFormClient, type ContactTexts } from "./parts/ContactFormClient";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & { title?: string; countries?: string } & Partial<Record<keyof ContactTexts, string>>;
 
@@ -54,8 +55,8 @@ export default function ContactForm(props: Props) {
       <div className="stripes-disc-dark absolute left-1/2 top-1/2 size-[900px] -translate-x-1/2 -translate-y-1/2 lg:size-[1300px]" aria-hidden />
       <div className="site-container relative flex flex-col gap-10 lg:gap-14">
         {props.title && (
-          <h2 className="text-center text-title-l text-light-grey [font-feature-settings:'dlig'_1]" data-reveal>
-            {props.title}
+          <h2 className="text-center text-title-l text-light-grey [font-feature-settings:'dlig'_1]" data-paint>
+            <SplitWords text={props.title} />
           </h2>
         )}
         <ContactFormClient texts={texts} countries={countries} />

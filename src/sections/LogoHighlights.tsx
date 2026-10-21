@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Section, WpImage } from "@/lib/types";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Logo = { image?: WpImage | null; name?: string; url?: string };
 type Props = Section & { title?: string; logos?: Logo[] };
@@ -49,7 +50,11 @@ export default function LogoHighlights({ title, logos = [] }: Props) {
 
   return (
     <div className="flex flex-col gap-10 overflow-hidden bg-white py-20">
-      {title && <h2 className="site-container text-title-s text-black sm:whitespace-nowrap">{title}</h2>}
+      {title && (
+        <h2 className="site-container text-title-s text-black sm:whitespace-nowrap" data-paint>
+          <SplitWords text={title} />
+        </h2>
+      )}
       {items.length > 0 && (
         <div className="group relative flex pl-5 lg:pl-6">
           {/* La lista se duplica para que el desplazamiento sea continuo; se pausa con hover o foco. */}

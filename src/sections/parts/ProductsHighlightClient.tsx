@@ -8,10 +8,12 @@ import type { WpImage, WpLink } from "@/lib/types";
 import { Carousel } from "@/components/ui/Carousel";
 import { carouselGutter } from "@/components/ui/carouselGutter";
 import { useGlassSpot } from "@/components/ui/useGlassSpot";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 export type MachineItem = { image: WpImage | null; name: string; category: string; description: string; link: WpLink | null };
 
-/** Pestañas de filtro + carrusel de máquinas de <ProductsHighlight>. */
+/** Pestañas de filtro + carrusel de máquinas de <ProductsHighlight>, o rejilla si no hay filtros. */
 export function ProductsHighlightClient({ items, showFilters, allLabel, label }: { items: MachineItem[]; showFilters: boolean; allLabel: string; label: string }) {
   const [active, setActive] = useState<string | null>(null);
   const categories = useMemo(() => Array.from(new Set(items.map((item) => item.category).filter(Boolean))), [items]);
@@ -46,15 +48,26 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
         </div>
       )}
 
-      <div key={active ?? "all"} className="animate-[fade-in_0.4s_ease-out]">
-        <Carousel dark caret trackClassName={`gap-4 ${carouselGutter}`} label={label}>
-          {visible.map((item, i) => (
-            <div key={`${item.name}-${i}`} className="w-[80vw] shrink-0 snap-start sm:w-[353px]">
+      {showFilters ? (
+        <div key={active ?? "all"} className="animate-[fade-in_0.4s_ease-out]">
+          <Carousel dark caret trackClassName={`gap-4 ${carouselGutter}`} label={label}>
+            {visible.map((item, i) => (
+              <div key={`${item.name}-${i}`} className="w-[80vw] shrink-0 snap-start sm:w-[353px]">
+                <MachineCard item={item} />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      ) : (
+        // Sin filtros (Figma División 325:10130): rejilla de cuatro columnas.
+        <ul className="site-container grid gap-x-4 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-16" aria-label={label}>
+          {items.map((item, i) => (
+            <li key={`${item.name}-${i}`}>
               <MachineCard item={item} />
-            </div>
+            </li>
           ))}
-        </Carousel>
-      </div>
+        </ul>
+      )}
     </div>
   );
 }
@@ -62,7 +75,7 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
 function MachineCard({ item }: { item: MachineItem }) {
   const content = (
     <>
-      <div className="relative h-[400px] overflow-hidden rounded-lg bg-gradient-to-b from-black-grey/0 to-black-grey/70 lg:h-[450px]">
+      <div className="spotlight h-[400px] overflow-hidden rounded-lg bg-gradient-to-b from-black-grey/0 to-black-grey/70 lg:h-[450px]">
         {item.image && (
           // Caja centrada de ≈ 314 × 338 px dentro de la tarjeta de 353 × 450 px, como en el Figma.
           <div className="absolute inset-x-[5.5%] inset-y-[12.5%] transition-transform duration-500 ease-out group-hover:scale-105">
@@ -71,15 +84,21 @@ function MachineCard({ item }: { item: MachineItem }) {
         )}
       </div>
       <div className="mt-6 flex items-center justify-between gap-3">
-        <h3 className="text-title-xs text-white">{item.name}</h3>
+        <h3 className="text-title-xs text-white" data-paint>
+          <SplitWords text={item.name} />
+        </h3>
         {item.link && (
           <span className="flex shrink-0 items-center justify-center bg-black-grey p-[9px] text-light-grey transition-colors group-hover:bg-red" aria-hidden>
             <CaretRight size={12} />
           </span>
         )}
       </div>
-      <hr className="mt-6 border-dark-grey" />
-      {item.description && <p className="mt-6 line-clamp-3 text-body-m font-medium text-grey">{item.description}</p>}
+      <span className="mt-6 block h-px bg-dark-grey" aria-hidden data-typewriter-line />
+      {item.description && (
+        <p className="mt-6 line-clamp-3 text-body-m font-medium text-grey">
+          <Typewriter text={item.description} />
+        </p>
+      )}
     </>
   );
 

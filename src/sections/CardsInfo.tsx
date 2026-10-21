@@ -3,6 +3,8 @@ import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
 import { Button } from "@/components/ui/Button";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Item = { image?: (WpImage & { mime?: string }) | null; title?: string; text?: string; link?: WpLink | null };
 type Props = Section & {
@@ -26,9 +28,11 @@ export default function CardsInfo({ columns, eyebrow, title_muted, title, subtit
         <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
           <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} />
           {button?.url && (
-            <Button href={button.url} target={button.target} variant="solid" className="shrink-0">
-              {button.title}
-            </Button>
+            <div className="shrink-0" data-reveal>
+              <Button href={button.url} target={button.target} variant="solid">
+                {button.title}
+              </Button>
+            </div>
           )}
         </div>
         {list.length > 0 && (
@@ -44,13 +48,22 @@ export default function CardsInfo({ columns, eyebrow, title_muted, title, subtit
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    {item.title && <h3 className="text-title-s text-black">{item.title}</h3>}
-                    {item.text && <p className="text-body-m text-grey">{item.text}</p>}
+                    {item.title && (
+                      <h3 className="text-title-s text-black" data-paint>
+                        <SplitWords text={item.title} />
+                      </h3>
+                    )}
+                    {item.text && (
+                      <p className="text-body-m text-grey">
+                        <Typewriter text={item.text} />
+                      </p>
+                    )}
                   </div>
                 </>
               );
               return (
-                <li key={i}>
+                // La tarjeta entra escalonada (data-stagger) y su título y texto se escriben detrás.
+                <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % (four ? 4 : 3)) * 0.1}>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className="group flex flex-col gap-5">
                       {content}

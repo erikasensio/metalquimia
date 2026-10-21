@@ -1,5 +1,6 @@
 import type { Section, WpImage } from "@/lib/types";
 import { Media } from "@/components/ui/Media";
+import { Typewriter } from "@/components/motion/Typewriter";
 
 type Props = Section & {
   theme?: "light" | "dark" | "";
@@ -25,7 +26,11 @@ export default function TwoColumnMedia({ theme, items }: Props) {
               className="aspect-[4/3] rounded-xl lg:aspect-[16/11]"
               sizes={list.length > 1 ? "(min-width: 1024px) 50vw, 100vw" : "100vw"}
             />
-            {item.caption && <figcaption className="text-body-s text-grey">{item.caption}</figcaption>}
+            {item.caption && (
+              <figcaption className="text-body-s text-grey">
+                <Typewriter text={item.caption} />
+              </figcaption>
+            )}
           </figure>
         ))}
       </div>

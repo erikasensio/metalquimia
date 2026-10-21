@@ -16,14 +16,18 @@ type Props = {
   eyebrowColor?: "red" | "grey";
   as?: "h1" | "h2";
   size?: "xl" | "l" | "m" | "s";
-  /** "type": antetítulo a máquina de escribir y título que se pinta de gris clarito a su color (va dentro de un [data-typewriter-group]). */
-  motion?: "reveal" | "type";
+  /** Parte gris y parte negra/blanca del título cada una en su línea (cabeceras centradas del Figma de División). */
+  stacked?: boolean;
   className?: string;
 };
 
 const sizes = { xl: "text-title-xl", l: "text-title-l", m: "text-title-m", s: "text-title-s" };
 
-/** Antetítulo + título en dos tonos (gris + negro/blanco) + subtítulo + botón, como en todos los módulos del Figma. */
+/**
+ * Antetítulo + título en dos tonos (gris + negro/blanco) + subtítulo + botón, como en todos los módulos del Figma.
+ * Al entrar en pantalla, uno detrás de otro: antetítulo y subtítulo a máquina de escribir, título (Lay Grotesk)
+ * palabra a palabra con destello naranja y el botón con fundido. Dentro de otro grupo de escritura se suma a su secuencia.
+ */
 export function SectionHeader({
   eyebrow,
   titleMuted,
@@ -35,29 +39,36 @@ export function SectionHeader({
   eyebrowColor = "red",
   as: Tag = "h2",
   size = "l",
-  motion = "reveal",
+  stacked,
   className = "",
 }: Props) {
   if (!eyebrow && !titleMuted && !title && !subtitle && !button?.url) return null;
   const center = align === "center";
-  const type = motion === "type";
 
   return (
-    <div className={`flex flex-col gap-5 ${center ? "items-center text-center" : "items-start"} ${className}`} data-reveal={type ? undefined : ""}>
+    <div className={`flex flex-col gap-5 ${center ? "items-center text-center" : "items-start"} ${className}`} data-typewriter-group data-typewriter-sequence>
       {eyebrow && (
-        <p className={`text-eyebrow ${eyebrowColor === "red" ? "text-red" : "text-grey"}`}>{type ? <Typewriter text={eyebrow} /> : eyebrow}</p>
+        <p className={`text-eyebrow ${eyebrowColor === "red" ? "text-red" : "text-grey"}`}>
+          <Typewriter text={eyebrow} />
+        </p>
       )}
       {(titleMuted || title) && (
-        <Tag className={`${sizes[size]} ${size === "s" ? "" : "max-w-[22ch]"} tracking-[-0.01em] [font-feature-settings:'dlig'_1] ${center ? "mx-auto" : ""}`} data-split={type ? undefined : ""} data-paint={type ? "" : undefined}>
-          {titleMuted && <SplitWords text={`${titleMuted} `} className="text-grey" />}
+        <Tag className={`${sizes[size]} ${size === "s" ? "" : stacked ? "max-w-[966px]" : "max-w-[22ch]"} tracking-[-0.01em] [font-feature-settings:'dlig'_1] ${center ? "mx-auto" : ""}`} data-paint>
+          {titleMuted && <SplitWords text={`${titleMuted} `} className={`text-grey ${stacked ? "block" : ""}`} />}
           {title && <SplitWords text={title} className={dark ? "text-light-grey" : "text-black"} />}
         </Tag>
       )}
-      {subtitle && <p className={`text-body-l max-w-[56ch] ${dark ? "text-grey" : "text-dark-grey"}`}>{subtitle}</p>}
+      {subtitle && (
+        <p className={`text-body-l max-w-[56ch] ${dark ? "text-grey" : "text-dark-grey"}`}>
+          <Typewriter text={subtitle} />
+        </p>
+      )}
       {button?.url && (
-        <Button href={button.url} target={button.target} variant={dark ? "dark" : "solid"} className="mt-2">
-          {button.title}
-        </Button>
+        <div className="mt-2" data-reveal>
+          <Button href={button.url} target={button.target} variant={dark ? "dark" : "solid"}>
+            {button.title}
+          </Button>
+        </div>
       )}
     </div>
   );

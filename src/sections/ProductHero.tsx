@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & {
   image?: WpImage | null;
@@ -38,10 +40,10 @@ export default function ProductHero({ image, image_mobile, title_top, title_bott
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/40" aria-hidden />
 
-      <div className="site-container relative flex flex-1 flex-col justify-between gap-16 pb-6 pt-[120px] lg:pt-[140px]">
+      <div className="site-container relative flex flex-1 flex-col justify-between gap-16 pb-6 pt-[120px] lg:pt-[140px]" data-typewriter-group data-typewriter-sequence>
         {title_top && (
-          <h1 className="text-title-xxl break-words tracking-[-0.02em] text-white [font-feature-settings:'dlig'_1]" data-reveal>
-            {title_top}
+          <h1 className="text-title-xxl break-words tracking-[-0.02em] text-white [font-feature-settings:'dlig'_1]" data-paint>
+            <SplitWords text={title_top} />
             {/* El nombre completo se lee junto para los lectores de pantalla. */}
             {title_bottom && <span className="sr-only"> {title_bottom}</span>}
           </h1>
@@ -49,16 +51,21 @@ export default function ProductHero({ image, image_mobile, title_top, title_bott
 
         <div className="flex flex-col gap-8 lg:pr-[460px]">
           {(title_bottom || subtitle) && (
-            <div className="flex flex-col gap-4" data-reveal>
+            <div className="flex flex-col gap-4">
               {title_bottom && (
                 <p
                   className="text-title-xxl break-words tracking-[-0.02em] text-white [font-feature-settings:'dlig'_1]"
                   aria-hidden={title_top ? true : undefined}
+                  data-paint
                 >
-                  {title_bottom}
+                  <SplitWords text={title_bottom} />
                 </p>
               )}
-              {subtitle && <p className="text-body-l max-w-[48ch] text-grey">{subtitle}</p>}
+              {subtitle && (
+                <p className="text-body-l max-w-[48ch] text-grey">
+                  <Typewriter text={subtitle} />
+                </p>
+              )}
             </div>
           )}
 

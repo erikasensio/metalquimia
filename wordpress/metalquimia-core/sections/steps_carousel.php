@@ -19,7 +19,7 @@ return array(
 					'button_label' => 'Añadir paso',
 					'instructions' => 'Se numeran solos ([01], [02]…).',
 					'sub_fields'   => array(
-						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Horizontal 4:3, mínimo 1000 × 750 px (JPG o WebP).' ), 'items' ),
+						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Horizontal 3:2, mínimo 1000 × 670 px (JPG o WebP).' ), 'items' ),
 						mq_f( $l, 'lead', 'text', 'Texto destacado', array(), 'items' ),
 						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),
 					),

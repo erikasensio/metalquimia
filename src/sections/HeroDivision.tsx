@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { SplitWords } from "@/components/motion/SplitWords";
+import { Typewriter } from "@/components/motion/Typewriter";
 
 type Props = Section & {
   word?: string;
@@ -12,24 +13,32 @@ type Props = Section & {
   button?: WpLink | null;
 };
 
-// Velocidad de parallax y desplazamiento vertical de cada producto, para que "floten" a ritmos distintos.
-const SPEEDS = [0.08, 0.18, 0.12, 0.22, 0.1];
-const OFFSETS = ["lg:mt-16", "lg:-mt-6", "lg:mt-24", "lg:mt-0", "lg:mt-12"];
+// Ritmo del vaivén de cada producto, para que no floten todos a la vez.
+const FLOAT = [
+  { duration: "6s", delay: "0s" },
+  { duration: "7.5s", delay: "-2.4s" },
+  { duration: "6.8s", delay: "-4.1s" },
+  { duration: "8s", delay: "-1.2s" },
+  { duration: "7s", delay: "-5.3s" },
+];
 
-// Palabra gigante de fondo (y su contorno, que va encima de los productos).
+// Palabra gigante de fondo (y su contorno, que va encima de los productos), como en el bloque de soluciones de la home.
+// Figma: 310 px sobre 1512, centrada en vertical respecto a la fila de productos.
 const WORD =
-  "pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center font-display text-[6rem] font-semibold leading-none md:text-[11rem] lg:text-[19.375rem] [font-feature-settings:'dlig'_1]";
+  "pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[24vw] font-semibold leading-none lg:text-[min(20.5vw,19.375rem)] [font-feature-settings:'dlig'_1]";
 
 /**
- * Figma Modulos › 3. Hero Division Carousel (páginas de solución: Cooked, Marinated, Cured…).
- * Palabra gigante de fondo, fila de productos recortados que flotan con parallax y,
+ * Figma Páginas › División (177:735) › hero-division (páginas de solución: Cooked, Marinated, Cured…).
+ * Palabra gigante de fondo con contorno encima, carrusel infinito de productos recortados que flotan y,
  * debajo, título en dos tonos + texto + botón centrados.
  */
 export default function HeroDivision({ word, images, title_muted, title, text, button }: Props) {
-  const items = (Array.isArray(images) ? images : []).filter((item) => item?.image?.url).slice(0, 5);
+  const items = (Array.isArray(images) ? images : []).filter((item) => item?.image?.url);
+  // Con pocos productos una copia no llenaría pantallas anchas: se repiten hasta tener al menos 7 por copia.
+  const loop = items.length ? Array.from({ length: Math.ceil(7 / items.length) }, () => items).flat() : [];
 
   return (
-    <div className="overflow-hidden bg-white pb-20 pt-10 lg:pb-[120px] lg:pt-16">
+    <div className="overflow-hidden bg-white pb-20 pt-10 lg:pb-[120px] lg:pt-[100px]">
       <div className="relative">
         {word && (
           <p className={`${WORD} ${items.length > 0 ? "word-under-outline" : "text-medium-grey"}`} aria-hidden>
@@ -37,27 +46,37 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
           </p>
         )}
 
-        {items.length > 0 ? (
-          <ul className="relative flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 scrollbar-none md:justify-center md:overflow-visible lg:gap-0 lg:px-6">
-            {items.map((item, i) => (
-              <li
-                key={i}
-                className={`relative w-[62vw] shrink-0 snap-center md:w-[24%] lg:w-[22%] lg:max-w-[340px] ${i > 0 ? "lg:-ml-[3%]" : ""} ${OFFSETS[i]}`}
-                style={{ zIndex: i % 2 ? 2 : 1 }}
+        {loop.length > 0 ? (
+          // La lista se duplica para que el desplazamiento sea continuo; cada producto tiene su propio vaivén.
+          <div className="relative flex">
+            {[0, 1].map((copy) => (
+              <ul
+                key={copy}
+                aria-hidden={copy === 1}
+                className="flex shrink-0 animate-[marquee_var(--marquee)_linear_infinite] motion-reduce:animate-none"
+                style={{ "--marquee": `${loop.length * 5}s` } as React.CSSProperties}
               >
-                <div className="relative aspect-square" data-parallax={SPEEDS[i]}>
-                  <Image
-                    src={item.image!.url}
-                    alt={item.image!.alt || ""}
-                    fill
-                    priority={i < 3}
-                    sizes="(min-width: 1024px) 340px, (min-width: 768px) 24vw, 62vw"
-                    className="object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.12)]"
-                  />
-                </div>
-              </li>
+                {loop.map((item, i) => (
+                  // Figma: huecos de 320 × 440 separados 80 px sobre 1512 de ancho.
+                  <li key={i} className="w-[56vw] shrink-0 pr-[10vw] md:w-[30vw] md:pr-[6vw] lg:w-[min(26.45vw,400px)] lg:pr-[min(5.29vw,80px)]">
+                    <div
+                      className="relative aspect-[320/440] animate-[float_var(--float-duration)_ease-in-out_infinite] motion-reduce:animate-none"
+                      style={{ "--float-duration": FLOAT[i % FLOAT.length].duration, animationDelay: FLOAT[i % FLOAT.length].delay } as React.CSSProperties}
+                    >
+                      <Image
+                        src={item.image!.url}
+                        alt={copy === 1 ? "" : item.image!.alt || ""}
+                        fill
+                        priority={copy === 0 && i < 4}
+                        sizes="(min-width: 1024px) 320px, (min-width: 768px) 24vw, 46vw"
+                        className="object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.12)]"
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
             ))}
-          </ul>
+          </div>
         ) : (
           // Sin productos: deja aire para que se lea la palabra de fondo.
           word && <div className="h-[160px] lg:h-[420px]" aria-hidden />
@@ -72,16 +91,17 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
       </div>
 
       {(title_muted || title || text || button?.url) && (
-        <div className="site-container mt-12 flex flex-col items-center gap-6 text-center lg:mt-20">
+        // Título (Lay Grotesk) que aparece con destello naranja y, detrás, el texto a máquina de escribir.
+        <div className="site-container mt-10 flex flex-col items-center gap-8 text-center lg:mt-4" data-typewriter-group data-typewriter-sequence>
           {(title_muted || title) && (
-            <h1 className="text-title-l mx-auto max-w-[22ch] tracking-[-0.01em] [font-feature-settings:'dlig'_1]" data-split>
+            <h1 className="text-title-l mx-auto max-w-[758px] tracking-[-0.01em] [font-feature-settings:'dlig'_1]" data-paint>
               {title_muted && <SplitWords text={`${title_muted} `} className="text-grey" />}
               {title && <SplitWords text={title} className="text-black" />}
             </h1>
           )}
           {text && (
-            <p className="text-body-l max-w-[60ch] text-grey" data-reveal>
-              {text}
+            <p className="text-body-m max-w-[692px] text-black/30">
+              <Typewriter text={text} />
             </p>
           )}
           {button?.url && (

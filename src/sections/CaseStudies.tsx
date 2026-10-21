@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Section, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & {
   eyebrow?: string;
@@ -30,8 +32,16 @@ export default function CaseStudies({ eyebrow, title_muted, title, subtitle, but
               const content = (
                 <>
                   <div className="flex flex-col gap-4">
-                    {item.category && <p className="font-mono text-[0.75rem] uppercase text-red">{item.category}</p>}
-                    <h3 className="text-title-s text-black transition-colors duration-300 group-hover:text-light-grey">{item.title}</h3>
+                    {item.category && (
+                      <p className="font-mono text-[0.75rem] uppercase text-red">
+                        <Typewriter text={item.category} />
+                      </p>
+                    )}
+                    {item.title && (
+                      <h3 className="text-title-s text-black transition-colors duration-300 group-hover:text-light-grey" data-paint>
+                        <SplitWords text={item.title} />
+                      </h3>
+                    )}
                   </div>
                   <span className="self-start bg-medium-grey px-3 py-2 font-mono text-[0.75rem] font-bold uppercase leading-none text-dark-grey transition-colors duration-300 group-hover:bg-dark-grey group-hover:text-light-grey">
                     {read_label || "READ CASE"}
@@ -40,7 +50,7 @@ export default function CaseStudies({ eyebrow, title_muted, title, subtitle, but
               );
               const card = "group flex h-full min-h-[320px] flex-col justify-between gap-8 p-6 transition-colors duration-300 hover:bg-black";
               return (
-                <li key={i} className="border-l border-medium-grey">
+                <li key={i} className="border-l border-medium-grey" data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 3) * 0.1}>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className={card}>
                       {content}

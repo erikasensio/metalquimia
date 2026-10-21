@@ -4,6 +4,8 @@ import { Media } from "@/components/ui/Media";
 import { Button } from "@/components/ui/Button";
 import { Carousel } from "@/components/ui/Carousel";
 import { carouselGutter } from "@/components/ui/carouselGutter";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Item = {
   image?: (WpImage & { mime?: string }) | null;
@@ -21,14 +23,21 @@ export default function InsightsCarousel({ title, button, items }: Props) {
   return (
     <div className="bg-white py-20 lg:py-[120px]">
       {(title || button?.url) && (
-        <div className="site-container" data-reveal>
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-medium-grey pb-6">
-            {title && <h2 className="min-w-0 break-words text-title-l text-black [font-feature-settings:'dlig'_1]">{title}</h2>}
-            {button?.url && (
-              <Button href={button.url} target={button.target} variant="solid" className="shrink-0">
-                {button.title}
-              </Button>
+        <div className="site-container">
+          <div className="relative mb-10 flex flex-wrap items-end justify-between gap-6 pb-6">
+            {title && (
+              <h2 className="min-w-0 break-words text-title-l text-black [font-feature-settings:'dlig'_1]" data-paint>
+                <SplitWords text={title} />
+              </h2>
             )}
+            {button?.url && (
+              <div className="shrink-0" data-reveal>
+                <Button href={button.url} target={button.target} variant="solid">
+                  {button.title}
+                </Button>
+              </div>
+            )}
+            <span className="absolute inset-x-0 bottom-0 h-px bg-medium-grey" aria-hidden data-rule />
           </div>
         </div>
       )}
@@ -44,21 +53,33 @@ export default function InsightsCarousel({ title, button, items }: Props) {
                   <div className="relative m-4 flex max-w-[calc(100%-2rem)] flex-col gap-3 bg-black/70 p-4 backdrop-blur-md">
                     {(item.category || item.date) && (
                       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[0.75rem] uppercase">
-                        {item.category && <span className="text-red">{item.category}</span>}
-                        {item.date && <span className="text-grey">{item.date}</span>}
+                        {item.category && (
+                          <span className="text-red">
+                            <Typewriter text={item.category} />
+                          </span>
+                        )}
+                        {item.date && (
+                          <span className="text-grey">
+                            <Typewriter text={item.date} />
+                          </span>
+                        )}
                       </div>
                     )}
-                    {item.title && <h3 className="text-title-xs line-clamp-3 text-light-grey">{item.title}</h3>}
+                    {item.title && (
+                      <h3 className="text-title-xs line-clamp-3 text-light-grey" data-paint>
+                        <SplitWords text={item.title} />
+                      </h3>
+                    )}
                   </div>
                 </>
               );
               const cls = "group relative flex aspect-[4/5] w-[80vw] shrink-0 snap-start flex-col justify-end overflow-hidden sm:w-[360px] lg:w-[440px]";
               return item.link?.url ? (
-                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls}>
+                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} data-typewriter-group data-typewriter-sequence data-typewriter-delay={i * 0.12}>
                   {content}
                 </Link>
               ) : (
-                <article key={i} className={cls}>
+                <article key={i} className={cls} data-typewriter-group data-typewriter-sequence data-typewriter-delay={i * 0.12}>
                   {content}
                 </article>
               );

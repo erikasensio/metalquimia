@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
+import { Typewriter } from "@/components/motion/Typewriter";
 
 type Item = { icon?: WpImage | null; lead?: string; text?: string };
 type Props = Section & {
@@ -25,15 +26,21 @@ export default function FeatureHighlights({ eyebrow, title_muted, title, subtitl
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Media image={image} className="aspect-[4/5] rounded-xl md:aspect-square" sizes="(min-width: 1024px) 50vw, 100vw" parallax />
           {list.length > 0 && (
-            <ul className="flex flex-col" data-stagger>
+            <ul className="flex flex-col">
+              {/* Cada fila: la línea de arriba crece de izquierda a derecha y el texto se teclea. */}
               {list.map((item, i) => (
-                <li key={i} className="flex flex-col gap-6 border-t border-white/10 py-8 lg:py-10">
+                <li key={i} className="relative flex flex-col gap-6 py-8 lg:py-10" data-typewriter-group data-typewriter-sequence>
+                  <span className="absolute inset-x-0 top-0 h-px bg-white/10" aria-hidden data-typewriter-line />
                   {item.icon?.url && (
                     <Image src={item.icon.url} alt={item.icon.alt || ""} width={32} height={32} className="size-8 object-contain" />
                   )}
                   <p className="text-body-l max-w-[44ch] text-grey">
-                    {item.lead && <strong className="font-semibold text-light-grey">{item.lead} </strong>}
-                    {item.text}
+                    {item.lead && (
+                      <strong className="font-semibold text-light-grey">
+                        <Typewriter text={`${item.lead} `} />
+                      </strong>
+                    )}
+                    {item.text && <Typewriter text={item.text} />}
                   </p>
                 </li>
               ))}

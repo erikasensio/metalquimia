@@ -613,12 +613,12 @@
    "find": "Video frame of cooked ham slices stacking, transparent"
   },
   "ham-slices": {
-   "file": "ham-slices.png",
+   "file": "ham-slices.webp",
    "alt": {
     "es": "Lonchas de jamón cocido",
     "en": "Cooked ham slices"
    },
-   "find": "Cut-out PNG floating slices of cooked ham, transparent"
+   "find": "Cut-out floating slices of cooked ham, transparent (Figma División › Hightlights)"
   },
   "turkey": {
    "file": "turkey.png",
@@ -747,6 +747,166 @@
     "en": "Pet treats"
    },
    "find": "Cut-out PNG stacked pet food treats (Figma Soluciones)"
+  },
+  "cooked-product-1": {
+   "file": "cooked-product-1.webp",
+   "alt": {
+    "es": "Costilla de vacuno marinada envasada al vacío",
+    "en": "Vacuum-packed marinated beef rib"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-2": {
+   "file": "cooked-product-2.webp",
+   "alt": {
+    "es": "Bloque de carne congelada",
+    "en": "Frozen meat block"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-3": {
+   "file": "cooked-product-3.webp",
+   "alt": {
+    "es": "Jamón cocido con lonchas",
+    "en": "Cooked ham with slices"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-4": {
+   "file": "cooked-product-4.webp",
+   "alt": {
+    "es": "Lonchas de jamón cocido y pieza redonda",
+    "en": "Cooked ham slices and round ham"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-5": {
+   "file": "cooked-product-5.webp",
+   "alt": {
+    "es": "Tiras de bacon",
+    "en": "Bacon strips"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-6": {
+   "file": "cooked-product-6.webp",
+   "alt": {
+    "es": "Chuletón envasado al vacío",
+    "en": "Vacuum-packed rib steak"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-product-7": {
+   "file": "cooked-product-7.webp",
+   "alt": {
+    "es": "Salchichas cocidas",
+    "en": "Cooked sausages"
+   },
+   "find": "Cut-out product, transparent (Figma División › hero-division)"
+  },
+  "cooked-step-1": {
+   "file": "cooked-step-1.jpg",
+   "alt": {
+    "es": "Operario ajustando una línea de preparación de salmuera",
+    "en": "Operator adjusting a brine preparation line"
+   },
+   "find": "Process photo (Figma División › steps-carousel)"
+  },
+  "cooked-step-2": {
+   "file": "cooked-step-2.jpg",
+   "alt": {
+    "es": "Agujas de una inyectora multiaguja",
+    "en": "Needles of a multi-needle injector"
+   },
+   "find": "Process photo (Figma División › steps-carousel)"
+  },
+  "cooked-step-3": {
+   "file": "cooked-step-3.jpg",
+   "alt": {
+    "es": "Interior de un bombo de masaje de acero inoxidable",
+    "en": "Inside a stainless steel tumbling drum"
+   },
+   "find": "Process photo (Figma División › steps-carousel)"
+  },
+  "cooked-step-4": {
+   "file": "cooked-step-4.jpg",
+   "alt": {
+    "es": "Técnica trabajando en una línea de cocción",
+    "en": "Technician working on a cooking line"
+   },
+   "find": "Process photo (Figma División › steps-carousel)"
+  },
+  "cooked-step-5": {
+   "file": "cooked-step-5.jpg",
+   "alt": {
+    "es": "Pantalla táctil de MQConnect en una máquina",
+    "en": "MQConnect touch screen on a machine"
+   },
+   "find": "Process photo (Figma División › steps-carousel)"
+  },
+  "cooked-plate-1": {
+   "file": "cooked-plate-1.jpg",
+   "alt": {
+    "es": "Jamón cocido de músculo entero con lonchas en un plato",
+    "en": "Whole muscle cooked ham with slices on a plate"
+   },
+   "find": "Food photo on white (Figma División › highlight-carousel)"
+  },
+  "cooked-plate-2": {
+   "file": "cooked-plate-2.jpg",
+   "alt": {
+    "es": "Plato de lonchas de jamón cocido",
+    "en": "Plate of cooked ham slices"
+   },
+   "find": "Food photo on white (Figma División › highlight-carousel)"
+  },
+  "cooked-plate-3": {
+   "file": "cooked-plate-3.jpg",
+   "alt": {
+    "es": "Bloques de fiambre cocido",
+    "en": "Cooked meat logs"
+   },
+   "find": "Food photo on white (Figma División › highlight-carousel)"
+  },
+  "cooked-plate-4": {
+   "file": "cooked-plate-4.jpg",
+   "alt": {
+    "es": "Jamón cocido y lonchas en un plato",
+    "en": "Cooked ham and slices on a plate"
+   },
+   "find": "Food photo on white (Figma División › highlight-carousel)"
+  },
+  "cooked-plate-5": {
+   "file": "cooked-plate-5.jpg",
+   "alt": {
+    "es": "Paleta cocida y lonchas en un plato",
+    "en": "Cooked shoulder and slices on a plate"
+   },
+   "find": "Food photo on white (Figma División › highlight-carousel)"
+  },
+  "machine-defroster": {
+   "file": "machine-defroster.webp",
+   "alt": {
+    "es": "Descongeladora de bloques de carne",
+    "en": "Meat block defroster"
+   },
+   "find": "Cut-out stainless machine on transparent (Figma División › product-highlight)"
+  },
+  "machine-tumbler": {
+   "file": "machine-tumbler.webp",
+   "alt": {
+    "es": "Bombo de masaje al vacío",
+    "en": "Vacuum tumbler"
+   },
+   "find": "Cut-out stainless tumbler on transparent (Figma División › product-highlight)"
+  },
+  "machine-injector": {
+   "file": "machine-injector.webp",
+   "alt": {
+    "es": "Inyectora de salmuera",
+    "en": "Brine injector"
+   },
+   "find": "Cut-out stainless injector on transparent (Figma División › product-highlight)"
   },
   "plate-1": {
    "file": "plate-1.jpg",
@@ -3963,21 +4123,30 @@
       "word": "Cooked",
       "images": [
        {
-        "image": "@img:ham"
+        "image": "@img:cooked-product-1"
        },
        {
-        "image": "@img:ham-slices"
+        "image": "@img:cooked-product-2"
        },
        {
-        "image": "@img:bacon"
+        "image": "@img:cooked-product-3"
        },
        {
-        "image": "@img:turkey"
+        "image": "@img:cooked-product-4"
+       },
+       {
+        "image": "@img:cooked-product-5"
+       },
+       {
+        "image": "@img:cooked-product-6"
+       },
+       {
+        "image": "@img:cooked-product-7"
        }
       ],
       "title_muted": "La ingeniería de la precisión",
       "title": "detrás de cada loncha.",
-      "text": "Diseñamos y fabricamos toda la línea: preparación de salmuera, inyección, masaje, cocción y loncheado, conectados y bajo control.",
+      "text": "Productos cárnicos cocidos de músculo entero / Embutidos cocidos. Ofrecemos los equipos y la tecnología más avanzados para la elaboración de productos cárnicos cocidos de músculo entero (jamón cocido, paleta cocida, bacon, etc.), junto con los últimos sistemas de embutido y cocción de salchichas.",
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -3987,36 +4156,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "UN SOLO SOCIO PARA TODO EL PROCESO",
+      "eyebrow": "INGENIERÍA DE PROCESO DE PRINCIPIO A FIN",
       "title_muted": "No vendemos máquinas para cada paso.",
       "title": "Diseñamos todo el proceso del cocido.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
+        "image": "@img:cooked-step-1",
         "lead": "Preparación de salmuera.",
-        "text": "Disolución homogénea y a la temperatura correcta."
+        "text": "Formulación precisa para la inyección, con control total sobre la base de cada producto cocido constante."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Inyección.",
-        "text": "Reparto uniforme en cada pieza."
+        "image": "@img:cooked-step-2",
+        "lead": "Inyección multiaguja.",
+        "text": "Reparto uniforme de la salmuera en todo el músculo, sea cual sea el tamaño o la forma de la pieza, para eliminar la variabilidad del rendimiento desde el origen."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Masaje y reposo.",
-        "text": "Extracción de proteína sin dañar la fibra."
+        "image": "@img:cooked-step-3",
+        "lead": "Masaje y malaxado.",
+        "text": "Acción mecánica controlada que asegura la extracción de proteína, el ligado de la salmuera y el desarrollo de la textura con tecnología de bombo refrigerado."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cocción.",
-        "text": "Curvas de temperatura controladas."
+        "image": "@img:cooked-step-4",
+        "lead": "Tratamiento térmico.",
+        "text": "Ciclos de cocción, ahumado y enfriamiento diseñados para una temperatura uniforme en el corazón y una textura óptima, configurables para cada especificación de producto."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Loncheado y envasado.",
-        "text": "Rendimiento máximo al final de la línea."
+        "image": "@img:cooked-step-5",
+        "lead": "Control de proceso conectado.",
+        "text": "MQConnect integra los datos de cada etapa en un único panel para una trazabilidad completa y la mejora continua del proceso."
        }
       ]
      },
@@ -4027,59 +4196,59 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULTADO",
+      "eyebrow": "APLICACIONES",
       "title_muted": "",
       "title": "Un producto final totalmente uniforme",
-      "subtitle": "",
+      "subtitle": "Soluciones Metalquimia para elaborar la más amplia gama de productos cárnicos cocidos de músculo entero, en todas las categorías de rendimiento: desde la descongelación de bloques de carne hasta la inyección de jamón y paleta cocidos de músculo entero, la producción de bacon, la cocción de salchichas y la cocción de productos al vacío.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-1",
-        "lead": "Textura firme.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:cooked-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Color homogéneo.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:cooked-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Loncheado limpio.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:cooked-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Sabor constante.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:cooked-plate-4",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Menos merma.",
-        "text": "Cada lote igual que el anterior.",
+        "image": "@img:cooked-plate-5",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "EQUIPOS PARA EL PROCESADO DE COCIDOS",
       "title_muted": "Los equipos detrás de los cocidos",
       "title": "más constantes del mundo.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "image": "@img:machine-defroster",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Masaje muy suave: producto descongelado de la máxima calidad",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4087,10 +4256,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "image": "@img:machine-tumbler",
+        "name": "Preparación de salmueras",
+        "category": "",
+        "description": "Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4098,10 +4267,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
+        "image": "@img:machine-injector",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Reparto espectacular de la salmuera y uniformidad de color",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4109,10 +4278,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
+        "image": "@img:machine-defroster",
+        "name": "Tenderizado de carne",
+        "category": "",
+        "description": "Mejora del rendimiento y reducción de las mermas de cocción",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4120,10 +4289,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COCCIÓN",
-        "description": "Cocción controlada para un producto uniforme.",
+        "image": "@img:machine-defroster",
+        "name": "Masaje de carne",
+        "category": "",
+        "description": "Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4131,10 +4300,10 @@
         }
        },
        {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INYECCIÓN",
-        "description": "Alta capacidad para grandes producciones.",
+        "image": "@img:machine-tumbler",
+        "name": "Embutición de carne",
+        "category": "",
+        "description": "Embutidoras continuas al vacío para músculo entero",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4142,10 +4311,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "EMBUTICIÓN",
-        "description": "Embutición continua y precisa.",
+        "image": "@img:machine-injector",
+        "name": "Cocción de carne",
+        "category": "",
+        "description": "Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4153,10 +4322,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "SALMUERAS",
-        "description": "Preparación automática de salmueras.",
+        "image": "",
+        "name": "Plantas automáticas de cocción y marinado",
+        "category": "",
+        "description": "Conectividad inteligente",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4167,40 +4336,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
       "image": "@img:ham-slices",
       "tags": [
        {
-        "label": "Inyección precisa"
+        "label": "Partnership para toda la vida"
        },
        {
-        "label": "Masaje refrigerado"
+        "label": "Dando forma al futuro de la alimentación"
        },
        {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
+        "label": "Innovación que crea"
        }
       ],
       "items": [
        {
         "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "text": "Metalquimia fue pionera en el bombo de masaje refrigerado, una tecnología que controla con precisión la temperatura de extracción de la proteína, elimina el riesgo microbiológico y maximiza el ligado de la salmuera y la textura final."
        },
        {
         "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "text": "Nuestros sistemas de inyección multiaguja reparten la salmuera de forma uniforme en músculos de geometría irregular: una variable crítica que los inyectores estándar dejan al azar y que nosotros hemos convertido en un parámetro controlable."
        },
        {
         "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "text": "Nuestros sistemas de cocción y enfriamiento modelan la transferencia de calor en toda la pieza, no solo en la superficie. El resultado: proceso uniforme en el corazón, ciclos más cortos y una textura constante del borde al centro."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Control conectado.",
+        "text": "MQConnect enlaza en tiempo real cada parámetro del proceso de cocidos: ritmo de inyección, ciclos de masaje, curva térmica y velocidad de enfriamiento. Trazabilidad completa, alertas de proceso y datos continuos para optimizar el rendimiento."
        }
       ],
       "overlay_title": "Partnership para toda la vida",
@@ -4223,10 +4389,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership para toda la vida",
       "title": "que genera inventos",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -4298,21 +4464,30 @@
       "word": "Cooked",
       "images": [
        {
-        "image": "@img:ham"
+        "image": "@img:cooked-product-1"
        },
        {
-        "image": "@img:ham-slices"
+        "image": "@img:cooked-product-2"
        },
        {
-        "image": "@img:bacon"
+        "image": "@img:cooked-product-3"
        },
        {
-        "image": "@img:turkey"
+        "image": "@img:cooked-product-4"
+       },
+       {
+        "image": "@img:cooked-product-5"
+       },
+       {
+        "image": "@img:cooked-product-6"
+       },
+       {
+        "image": "@img:cooked-product-7"
        }
       ],
       "title_muted": "Engineering the precision",
       "title": "behind every slice.",
-      "text": "We design and build the whole line: brine preparation, injection, tumbling, cooking and slicing, connected and under control.",
+      "text": "Cooked meat products from whole muscle / Cooked Sausages. We offer the most advanced equipment and technology for the production of cooked meat products from whole muscle (cooked ham, cooked shoulder, bacon, etc.), along with the latest loading and cooking systems for sausages.",
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -4322,36 +4497,36 @@
      {
       "type": "steps_carousel",
       "theme": "light",
-      "eyebrow": "ONE PARTNER FOR THE WHOLE PROCESS",
+      "eyebrow": "END-TO-END PROCESS ENGINEERING",
       "title_muted": "We don't sell machines for each step.",
       "title": "We engineer the entire cooked process.",
       "subtitle": "",
       "button": null,
       "items": [
        {
-        "image": "@img:step-1",
+        "image": "@img:cooked-step-1",
         "lead": "Brine preparation.",
-        "text": "Homogeneous dissolution at the right temperature."
+        "text": "Precision formulation for injection, giving you full control over the foundation of every consistent cooked product."
        },
        {
-        "image": "@img:step-2",
-        "lead": "Injection.",
-        "text": "Even distribution in every piece."
+        "image": "@img:cooked-step-2",
+        "lead": "Multi-needle injection.",
+        "text": "Uniform brine distribution throughout the whole muscle, regardless of piece size or shape, engineered to eliminate yield variability at the source."
        },
        {
-        "image": "@img:step-3",
-        "lead": "Tumbling and resting.",
-        "text": "Protein extraction without damaging the fibre."
+        "image": "@img:cooked-step-3",
+        "lead": "Tumbling and massaging.",
+        "text": "Controlled mechanical action that ensures protein extraction, brine binding, and texture development with refrigerated drum technology."
        },
        {
-        "image": "@img:step-4",
-        "lead": "Cooking.",
-        "text": "Controlled temperature curves."
+        "image": "@img:cooked-step-4",
+        "lead": "Thermal processing.",
+        "text": "Cooking, smoking, and chilling cycles designed for uniform core temperature and optimal texture retention — configurable for each product specification."
        },
        {
-        "image": "@img:step-5",
-        "lead": "Slicing and packing.",
-        "text": "Maximum yield at the end of the line."
+        "image": "@img:cooked-step-5",
+        "lead": "Connected process control.",
+        "text": "MQConnect integrates data from every stage into a single dashboard for full traceability and continuous process improvement."
        }
       ]
      },
@@ -4362,59 +4537,59 @@
      {
       "type": "highlights_carousel",
       "theme": "dark",
-      "eyebrow": "RESULT",
+      "eyebrow": "APPLICATIONS",
       "title_muted": "",
       "title": "Completely uniform final product",
-      "subtitle": "",
+      "subtitle": "Metalquimia solutions for the production of the widest range of cooked whole muscle meat products, covering all performance categories: from meat block thawing to the injection of whole muscle cooked ham and shoulder, bacon production, sausage cooking and the cooking of sous-vide products.",
       "button": null,
       "items": [
        {
-        "image": "@img:plate-1",
-        "lead": "Firm texture.",
-        "text": "Every batch just like the last.",
+        "image": "@img:cooked-plate-1",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Even colour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:cooked-plate-2",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-3",
-        "lead": "Clean slicing.",
-        "text": "Every batch just like the last.",
+        "image": "@img:cooked-plate-3",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-1",
-        "lead": "Consistent flavour.",
-        "text": "Every batch just like the last.",
+        "image": "@img:cooked-plate-4",
+        "lead": "",
+        "text": "",
         "link": null
        },
        {
-        "image": "@img:plate-2",
-        "lead": "Less waste.",
-        "text": "Every batch just like the last.",
+        "image": "@img:cooked-plate-5",
+        "lead": "",
+        "text": "",
         "link": null
        }
       ]
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "EQUIPMENT FOR COOKED PROCESSING",
       "title_muted": "The equipment behind the world's",
       "title": "most consistent cooked products.",
       "subtitle": "",
       "button": null,
-      "show_filters": true,
+      "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Very gentle massage: thawed product of the highest quality",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4422,10 +4597,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "image": "@img:machine-tumbler",
+        "name": "Preparation of Brines",
+        "category": "",
+        "description": "Quick, controlled, and efficient preparation of any type of brine and marinade",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4433,10 +4608,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
+        "image": "@img:machine-injector",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spectacular distribution of brine and uniformity of color",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4444,10 +4619,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Tenderization",
+        "category": "",
+        "description": "Improvement of yield and reduction of cooking losses",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4455,10 +4630,10 @@
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movicook",
-        "category": "COOKING",
-        "description": "Controlled cooking for a uniform product.",
+        "image": "@img:machine-defroster",
+        "name": "Meat Massage",
+        "category": "",
+        "description": "Automatic vacuum reactors with a cooling jacket, fully versatile",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4466,10 +4641,10 @@
         }
        },
        {
-        "image": "@img:m-1",
-        "name": "Movimax Zero",
-        "category": "INJECTION",
-        "description": "High capacity for large productions.",
+        "image": "@img:machine-tumbler",
+        "name": "Meat Stuffing",
+        "category": "",
+        "description": "Continuous vacuum stuffers for whole muscle",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4477,10 +4652,10 @@
         }
        },
        {
-        "image": "@img:m-3",
-        "name": "Movistuff",
-        "category": "STUFFING",
-        "description": "Continuous, precise stuffing.",
+        "image": "@img:machine-injector",
+        "name": "Meat Cooking",
+        "category": "",
+        "description": "Smart cooking with monitoring and recording of all technical parameters of the process",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4488,10 +4663,10 @@
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Moviprep",
-        "category": "BRINES",
-        "description": "Automatic brine preparation.",
+        "image": "",
+        "name": "Automatic Cooking and Marinating Plants",
+        "category": "",
+        "description": "Smart connectivity",
         "link": {
          "title": "",
          "url": "@page:machine",
@@ -4502,40 +4677,37 @@
      },
      {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
       "word_top": "Meat.",
       "word_bottom": "The Next.",
       "image": "@img:ham-slices",
       "tags": [
        {
-        "label": "Precision injection"
+        "label": "Partnership for life"
        },
        {
-        "label": "Refrigerated tumbling"
+        "label": "Shaping the future of food"
        },
        {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
+        "label": "Innovation that creates"
        }
       ],
       "items": [
        {
         "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "text": "Metalquimia pioneered the refrigerated massage drum — a technology that controls protein extraction temperature with precision, eliminating microbial risk while maximizing brine binding and final texture quality."
        },
        {
         "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "text": "Our multi-needle injection systems are engineered for uniform brine distribution across irregular muscle geometries — a critical variable that standard injectors leave to chance, and we've turned into a controllable parameter."
        },
        {
         "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "text": "Our cooking and chilling systems model heat transfer across the whole piece — not just surface temperature. The result is uniform core processing, reduced cycle time, and consistent texture from edge to center."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "Connected Control.",
+        "text": "MQConnect links every cooked process parameter in real time — injection rate, tumbling cycles, thermal curve, chilling speed. Full traceability, process alerts, and continuous data for ongoing yield optimization."
        }
       ],
       "overlay_title": "Partnership for life",
@@ -4558,10 +4730,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership for life",
       "title": "that produces inventions",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },

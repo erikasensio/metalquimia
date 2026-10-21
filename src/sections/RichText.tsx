@@ -1,4 +1,5 @@
 import type { Section } from "@/lib/types";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & { title?: string; content?: string };
 
@@ -6,7 +7,11 @@ type Props = Section & { title?: string; content?: string };
 export default function RichText({ title, content }: Props) {
   return (
     <div className="site-container py-16 lg:py-24">
-      {title && <h2 className="text-title-l mb-6">{title}</h2>}
+      {title && (
+        <h2 className="text-title-l mb-6" data-paint>
+          <SplitWords text={title} />
+        </h2>
+      )}
       {content && (
         <div className="text-body-l max-w-3xl space-y-4" dangerouslySetInnerHTML={{ __html: content }} />
       )}

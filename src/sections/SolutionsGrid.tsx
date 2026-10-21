@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FollowCursor } from "./parts/FollowCursor";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & {
   eyebrow?: string;
@@ -25,7 +27,7 @@ export default function SolutionsGrid({ eyebrow, title_muted, title, subtitle, b
       <div className="site-container flex flex-col gap-12 lg:gap-20">
         {/* Antetítulo a máquina y título que se pinta, uno detrás de otro. */}
         <div data-typewriter-group data-typewriter-sequence>
-          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} align="center" motion="type" />
+          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} align="center" />
         </div>
 
         {list.length > 0 && (
@@ -47,14 +49,20 @@ export default function SolutionsGrid({ eyebrow, title_muted, title, subtitle, b
                     )}
                   </div>
                   <div className="flex flex-col gap-3">
-                    <h3 className="text-title-xs text-black-grey">{item.name}</h3>
-                    {item.text && <p className="text-body-m text-dark-grey">{item.text}</p>}
+                    <h3 className="text-title-xs text-black-grey" data-paint>
+                      <SplitWords text={item.name!} />
+                    </h3>
+                    {item.text && (
+                      <p className="text-body-m text-dark-grey">
+                        <Typewriter text={item.text} />
+                      </p>
+                    )}
                   </div>
                 </>
               );
               const card = "group flex h-full flex-col gap-6";
               return (
-                <li key={i}>
+                <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 3) * 0.1}>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className={card}>
                       {content}

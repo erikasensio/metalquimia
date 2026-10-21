@@ -3,6 +3,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
 import { Button } from "@/components/ui/Button";
 import { MediaTextLines } from "./parts/MediaTextLines";
+import { Typewriter } from "@/components/motion/Typewriter";
 
 type Props = Section & {
   theme?: "light" | "dark";
@@ -34,7 +35,7 @@ export default function MediaText({ theme, image_position, eyebrow, title_muted,
         />
         {/* Antetítulo a máquina, título que se pinta y cuerpo tecleado de principio a fin, uno detrás de otro. */}
         <div className="flex flex-col items-start gap-8" data-typewriter-group data-typewriter-sequence>
-          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size="l" motion="type" />
+          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size="l" />
           {text && (
             <div
               className={`text-body-l max-w-[56ch] space-y-4 [&_a]:underline [&_a]:underline-offset-2 [&_li]:ml-5 [&_ol]:list-decimal [&_strong]:font-semibold [&_ul]:list-disc ${
@@ -45,14 +46,16 @@ export default function MediaText({ theme, image_position, eyebrow, title_muted,
             />
           )}
           {details && (
-            <p className="text-body-s whitespace-pre-line text-grey" data-reveal>
-              {details}
+            <p className="text-body-s whitespace-pre-line text-grey">
+              <Typewriter text={details} />
             </p>
           )}
           {button?.url && (
-            <Button href={button.url} target={button.target} variant={dark ? "dark" : "solid"}>
-              {button.title}
-            </Button>
+            <div data-reveal>
+              <Button href={button.url} target={button.target} variant={dark ? "dark" : "solid"}>
+                {button.title}
+              </Button>
+            </div>
           )}
         </div>
       </div>

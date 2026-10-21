@@ -3,6 +3,8 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Item = { avatar?: WpImage | null; name?: string; role?: string; link?: WpLink | null };
 type Props = Section & {
@@ -24,14 +26,23 @@ export default function LinkList({ align, eyebrow, title_muted, title, subtitle,
       <div className="site-container flex flex-col gap-12 lg:gap-16">
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} align={center ? "center" : "left"} />
         {list.length > 0 && (
-          <ul className={`w-full max-w-[880px] border-t border-medium-grey ${center ? "mx-auto" : ""}`} data-stagger>
+          <ul className={`relative w-full max-w-[880px] ${center ? "mx-auto" : ""}`}>
+            <span className="absolute inset-x-0 top-0 h-px bg-medium-grey" aria-hidden data-rule />
             {list.map((item, i) => {
               const content = (
                 <>
                   {item.avatar?.url && <Media image={item.avatar} className="size-12 shrink-0 rounded-full" sizes="48px" />}
                   <div className="flex min-w-0 flex-1 flex-col gap-1">
-                    {item.name && <span className="text-title-xs text-black">{item.name}</span>}
-                    {item.role && <span className="text-body-s text-grey">{item.role}</span>}
+                    {item.name && (
+                      <span className="text-title-xs text-black" data-paint>
+                        <SplitWords text={item.name} />
+                      </span>
+                    )}
+                    {item.role && (
+                      <span className="text-body-s text-grey">
+                        <Typewriter text={item.role} />
+                      </span>
+                    )}
                   </div>
                   {item.link?.url && (
                     <span className="flex size-10 shrink-0 items-center justify-center bg-medium-grey text-dark-grey transition-colors group-hover:bg-black group-hover:text-white" aria-hidden>
@@ -42,7 +53,9 @@ export default function LinkList({ align, eyebrow, title_muted, title, subtitle,
               );
               const cls = "group flex items-center gap-4 py-5";
               return (
-                <li key={i} className="border-b border-medium-grey">
+                // Nombre con destello, cargo a máquina y la línea de abajo creciendo de izquierda a derecha.
+                <li key={i} className="relative" data-typewriter-group data-typewriter-sequence>
+                  <span className="absolute inset-x-0 bottom-0 h-px bg-medium-grey" aria-hidden data-typewriter-line />
                   {item.link?.url ? (
                     <Link
                       href={item.link.url}

@@ -2,6 +2,7 @@ import type { Section, WpImage, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 import { SplitWords } from "@/components/motion/SplitWords";
+import { Typewriter } from "@/components/motion/Typewriter";
 
 type Props = Section & {
   title?: string;
@@ -26,29 +27,39 @@ export default function SecondaryHero({ title, subtitle_muted, subtitle, button,
 
   return (
     <div className={`bg-white pt-10 lg:pt-16 ${image?.url ? "" : "pb-20 lg:pb-[120px]"}`}>
-      <div className="site-container flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+      <div className="site-container flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16" data-typewriter-group data-typewriter-sequence>
         {title && (
           <h1
             className={`min-w-0 whitespace-pre-line tracking-[-0.02em] text-black [font-feature-settings:'dlig'_1] [--hero-max:4rem] [--hero-space:calc(100vw-40px)] lg:[--hero-max:10rem] lg:[--hero-space:calc(min(100vw,94.5rem)-48px-424px)] ${long ? "text-title-l max-w-[24ch]" : "text-title-xxl"}`}
             style={fit}
-            data-split
+            data-paint
           >
             <SplitWords text={title} />
           </h1>
         )}
 
         {(subtitle_muted || subtitle || button?.url) && (
-          <div className="flex w-full max-w-[360px] shrink-0 flex-col items-start gap-6 lg:pb-3" data-reveal>
+          <div className="flex w-full max-w-[360px] shrink-0 flex-col items-start gap-6 lg:pb-3">
             {(subtitle_muted || subtitle) && (
               <p className="text-body-l font-medium">
-                {subtitle_muted && <span className="text-grey">{subtitle_muted} </span>}
-                {subtitle && <span className="text-black">{subtitle}</span>}
+                {subtitle_muted && (
+                  <span className="text-grey">
+                    <Typewriter text={`${subtitle_muted} `} />
+                  </span>
+                )}
+                {subtitle && (
+                  <span className="text-black">
+                    <Typewriter text={subtitle} />
+                  </span>
+                )}
               </p>
             )}
             {button?.url && (
-              <Button href={button.url} target={button.target} variant="solid">
-                {button.title}
-              </Button>
+              <div data-reveal>
+                <Button href={button.url} target={button.target} variant="solid">
+                  {button.title}
+                </Button>
+              </div>
             )}
           </div>
         )}

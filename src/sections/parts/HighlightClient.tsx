@@ -49,7 +49,8 @@ export function HighlightTags({ tags }: { tags: HighlightTag[] }) {
               onClick={(e) => setOpen({ index: i, origin: e.currentTarget })}
               aria-haspopup="dialog"
               aria-expanded={open?.index === i}
-              className={`${pill} cursor-pointer`}
+              // La etiqueta se convierte en la ventana: no se ve mientras está abierta (al cerrar vuelve con un fundido, ver HighlightModal).
+              className={`${pill} cursor-pointer ${open?.index === i ? "opacity-0" : ""}`}
             >
               <Square size={12} weight="fill" className="shrink-0" aria-hidden />
               {tag.label}
@@ -80,6 +81,7 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
   const veil = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const closing = useRef(false);
+  const reveal = useRef<Animation | null>(null);
 
   // Transformación que lleva la ventana (en su sitio final) a la posición y el tamaño de la etiqueta.
   const fromOrigin = () => {
@@ -114,6 +116,8 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
       );
     }
     veil.current?.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300, easing: "ease-out" });
+    // Al desmontar (en el mismo render que vuelve a mostrar la etiqueta) se quita su fundido de vuelta.
+    return () => reveal.current?.cancel();
     // fromOrigin y reduced solo leen el DOM en el momento de abrir.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -123,6 +127,14 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
     if (!el || closing.current) return;
     closing.current = true;
     const fast = reduced();
+    const duration = fast ? 200 : ZOOM_MS * 0.8;
+    // La etiqueta reaparece mientras la ventana se funde sobre ella (desde el 65 % del cierre).
+    reveal.current = origin.animate([{ opacity: 0 }, { opacity: 1 }], {
+      delay: fast ? 0 : duration * 0.65,
+      duration: fast ? duration : duration * 0.35,
+      easing: "ease-out",
+      fill: "forwards",
+    });
     const anim = el.animate(
       fast
         ? [{ opacity: 1 }, { opacity: 0 }]
@@ -132,7 +144,7 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
             { opacity: 1, offset: 0.65 },
             { transform: fromOrigin(), opacity: 0 },
           ],
-      { duration: fast ? 200 : ZOOM_MS * 0.8, easing: EASE, fill: "forwards" },
+      { duration, easing: EASE, fill: "forwards" },
     );
     veil.current?.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 350, easing: "ease-in", fill: "forwards" });
     anim.onfinish = () => {
@@ -165,7 +177,8 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
         aria-modal="true"
         aria-label={overlay.title || undefined}
         onClick={(e) => e.stopPropagation()}
-        className="glass flex max-h-full min-h-[min(770px,100%)] w-[468px] max-w-full flex-col gap-6 overflow-y-auto rounded-[12px] bg-dark-grey/50 p-6 text-light-grey scrollbar-none"
+        // Con imagen, alto fijo de Figma (la imagen va abajo); sin ella, lo que ocupe el texto, centrada.
+        className={`glass flex max-h-full ${overlay.image ? "min-h-[min(770px,100%)]" : ""} w-[468px] max-w-full flex-col gap-6 overflow-y-auto rounded-[12px] bg-dark-grey/50 p-6 text-light-grey scrollbar-none`}
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex flex-col items-start gap-6">

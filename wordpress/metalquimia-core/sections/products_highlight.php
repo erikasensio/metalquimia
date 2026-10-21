@@ -8,7 +8,7 @@ return array(
 		mq_tab( $l, 'Cabecera' ),
 		...mq_heading_fields( $l ),
 		mq_tab( $l, 'Máquinas' ),
-		mq_f( $l, 'show_filters', 'true_false', 'Mostrar filtros por categoría', array( 'default_value' => 1, 'instructions' => 'Añade encima del carrusel una pestaña por cada categoría distinta que hayas escrito en las máquinas.' ) ),
+		mq_f( $l, 'show_filters', 'true_false', 'Mostrar filtros por categoría', array( 'default_value' => 1, 'instructions' => 'Sí: carrusel con una pestaña por cada categoría distinta que hayas escrito en las máquinas. No: rejilla de cuatro columnas.' ) ),
 		mq_f(
 			$l,
 			'all_label',

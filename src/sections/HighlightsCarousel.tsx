@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
 import { Carousel } from "@/components/ui/Carousel";
 import { carouselGutter } from "@/components/ui/carouselGutter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Item = { image?: (WpImage & { mime?: string }) | null; lead?: string; text?: string; link?: WpLink | null };
 type Props = Section & {
@@ -16,13 +17,13 @@ type Props = Section & {
   items?: Item[] | null;
 };
 
-/** Figma Modulos › 11. Highlights Carousel: tarjetas altas con imagen y texto sobre degradado. */
+/** Figma Modulos › 11. Highlights Carousel (División 818:26709): cabecera centrada y tarjetas altas con imagen. */
 export default function HighlightsCarousel({ theme, eyebrow, title_muted, title, subtitle, button, items }: Props) {
   const dark = theme !== "light";
   const list = (items || []).filter((i) => i?.image?.url || i?.lead || i?.text);
 
   return (
-    <div className={`flex flex-col gap-12 py-20 lg:gap-16 lg:py-[120px] ${dark ? "bg-black text-light-grey" : "bg-white text-black-grey"}`}>
+    <div className={`flex flex-col gap-12 py-20 lg:gap-20 lg:py-[120px] ${dark ? "bg-black text-light-grey" : "bg-white text-black-grey"}`}>
       <SectionHeader
         eyebrow={eyebrow}
         titleMuted={title_muted}
@@ -30,6 +31,8 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
         subtitle={subtitle}
         button={button}
         dark={dark}
+        align="center"
+        stacked
         className="site-container"
       />
       {list.length > 0 && (
@@ -39,24 +42,28 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
               const content = (
                 <>
                   <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.04]">
-                    <Media image={item.image} className="size-full" sizes="(min-width: 640px) 420px, 85vw" />
+                    <Media image={item.image} className="size-full" sizes="(min-width: 1024px) 480px, (min-width: 640px) 420px, 85vw" />
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black via-black/60 to-transparent" aria-hidden />
                   {(item.lead || item.text) && (
-                    <p className="text-body-m relative max-w-[36ch] p-6 text-grey lg:p-8">
-                      {item.lead && <strong className="font-semibold text-light-grey">{item.lead} </strong>}
-                      {item.text}
-                    </p>
+                    <>
+                      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/60 to-transparent" aria-hidden />
+                      <p className="text-title-xs relative max-w-[36ch] p-6 text-grey lg:p-8" data-paint>
+                        {item.lead && <SplitWords text={`${item.lead} `} className="text-light-grey" />}
+                        {item.text && <SplitWords text={item.text} />}
+                      </p>
+                    </>
                   )}
                 </>
               );
-              const cls = "group relative flex aspect-[3/4] w-[85vw] shrink-0 snap-start flex-col justify-end overflow-hidden sm:w-[420px]";
+              // Figma (División 818:26709): tarjetas de 477 × 540 px con esquinas de 12 px y el texto arriba.
+              const cls =
+                "group relative flex aspect-[477/540] w-[85vw] shrink-0 snap-start flex-col justify-start overflow-hidden rounded-xl sm:w-[420px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)]";
               return item.link?.url ? (
-                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} aria-label={item.link.title || item.lead || undefined}>
+                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} aria-label={item.link.title || item.lead || undefined} data-typewriter-group data-typewriter-delay={i * 0.12}>
                   {content}
                 </Link>
               ) : (
-                <div key={i} className={cls}>
+                <div key={i} className={cls} data-typewriter-group data-typewriter-delay={i * 0.12}>
                   {content}
                 </div>
               );

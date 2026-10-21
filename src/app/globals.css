@@ -255,6 +255,19 @@
   }
 }
 
+/* Vaivén de los productos recortados (con translate/rotate sueltos para no pisar otros transform). */
+@keyframes float {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: -1.5deg;
+  }
+  50% {
+    translate: 0 -16px;
+    rotate: 1.5deg;
+  }
+}
+
 @layer base {
   body {
     @apply bg-white text-black-grey text-body-m antialiased;
@@ -340,6 +353,32 @@
 }
 
 /* Frase del banner pintada con un degradado blanco → transparente entre --a y --b (BannerReveal los anima). */
+/*
+ * Tarjetas grises sobre fondo negro: bajo el cursor, un punto de luz muy discreto con algo de ruido.
+ * <Animations> escribe --sx / --sy (posición del cursor dentro de la tarjeta); se enciende al pasar por encima.
+ */
+@utility spotlight {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      radial-gradient(240px circle at var(--sx, 50%) var(--sy, 50%), rgb(255 255 255 / 0.07), transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mask: radial-gradient(240px circle at var(--sx, 50%) var(--sy, 50%), #000, transparent 70%);
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+  @media (hover: hover) {
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
 @utility sweep-text {
   --a: 100%;
   --b: 160%;
@@ -367,14 +406,20 @@
 
 /* Estado inicial de los elementos que se animan al entrar en pantalla (ver components/motion/Animations). */
 @layer base {
+  /* Letras y palabras ocultas hasta que su grupo (o el propio texto suelto) se marca data-typed. */
   html.js-motion [data-reveal],
-  html.js-motion [data-typewriter-group]:not([data-typed]) [data-char] {
+  html.js-motion [data-char]:not([data-typed] *) {
     opacity: 0;
   }
-  html.js-motion [data-typewriter-group]:not([data-typed]) [data-typewriter-line] {
+  html.js-motion [data-typewriter-line]:not([data-typed] *),
+  html.js-motion [data-rule] {
     transform: scaleX(0);
   }
-  html.js-motion [data-typewriter-group]:not([data-typed]) [data-paint] [data-word] {
+  [data-typewriter-line],
+  [data-rule] {
+    transform-origin: left;
+  }
+  html.js-motion [data-paint] [data-word]:not([data-typed] *) {
     opacity: 0.15;
   }
   /* HTML que se teclea: oculto hasta que Animations lo parte en letras (así no parpadea entero). */
@@ -404,13 +449,14 @@
       color: var(--color-black);
     }
     html.js-motion [data-reveal],
-    html.js-motion [data-typewriter-group]:not([data-typed]) [data-char] {
+    html.js-motion [data-char]:not([data-typed] *) {
       opacity: 1;
     }
-    html.js-motion [data-typewriter-group]:not([data-typed]) [data-typewriter-line] {
+    html.js-motion [data-typewriter-line]:not([data-typed] *),
+    html.js-motion [data-rule] {
       transform: none;
     }
-    html.js-motion [data-typewriter-group]:not([data-typed]) [data-paint] [data-word] {
+    html.js-motion [data-paint] [data-word]:not([data-typed] *) {
       opacity: 1;
     }
     html.js-motion [data-typewriter-html]:not([data-typewriter]) {

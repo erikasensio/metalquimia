@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { WpImage, WpLink } from "@/lib/types";
 import { Media } from "@/components/ui/Media";
 import { RollText } from "@/components/ui/RollText";
+import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 export type InsightItem = { image: WpImage | null; category: string; date: string; title: string; link: WpLink | null };
 
@@ -84,11 +86,23 @@ function InsightCard({ item }: { item: InsightItem }) {
       <div className="relative m-4 flex max-w-[calc(100%-2rem)] flex-col gap-3 bg-black/70 p-4 backdrop-blur-md">
         {(item.category || item.date) && (
           <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[0.75rem] uppercase">
-            {item.category && <span className="text-red">{item.category}</span>}
-            {item.date && <span className="text-grey">{item.date}</span>}
+            {item.category && (
+              <span className="text-red">
+                <Typewriter text={item.category} />
+              </span>
+            )}
+            {item.date && (
+              <span className="text-grey">
+                <Typewriter text={item.date} />
+              </span>
+            )}
           </div>
         )}
-        {item.title && <h3 className="line-clamp-3 text-title-xs text-light-grey">{item.title}</h3>}
+        {item.title && (
+          <h3 className="line-clamp-3 text-title-xs text-light-grey" data-paint>
+            <SplitWords text={item.title} />
+          </h3>
+        )}
       </div>
     </>
   );

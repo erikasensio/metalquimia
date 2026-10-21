@@ -17,7 +17,7 @@ export function TestimonialAccordion({ items }: { items: TestimonialItem[] }) {
         const open = i === active;
         const panelId = `${id}-panel-${i}`;
         return (
-          <li key={i} className={`transition-colors duration-500 ${open ? "bg-white" : "bg-black-grey hover:bg-dark-grey"}`}>
+          <li key={i} className={`transition-colors duration-500 ${open ? "bg-white" : "spotlight bg-black-grey hover:bg-dark-grey"}`}>
             <button
               type="button"
               aria-expanded={open}

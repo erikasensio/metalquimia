@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { HighlightTags, type HighlightOverlay } from "./parts/HighlightClient";
 import { Typewriter } from "@/components/motion/Typewriter";
+import { SplitWords } from "@/components/motion/SplitWords";
 
 type Props = Section & {
   eyebrow?: string;
@@ -63,8 +64,8 @@ export default function Highlight(props: Props) {
         )}
 
         {eyebrow && (
-          <p className="absolute inset-x-0 top-[9.3%] text-center font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-red" data-reveal>
-            {eyebrow}
+          <p className="absolute inset-x-0 top-[9.3%] text-center font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-red">
+            <Typewriter text={eyebrow} />
           </p>
         )}
         {word_top && (
@@ -82,15 +83,16 @@ export default function Highlight(props: Props) {
 
       {features.length > 0 && (
         <ol className="mx-auto mt-12 grid w-full max-w-[1512px] gap-10 px-6 pb-20 lg:mt-0 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-0 lg:px-[9.72%] lg:pb-6 lg:pt-6">
-          {/* Cada característica se escribe sola al entrar: la línea crece de izquierda a derecha y luego
-              número, título y texto se teclean uno detrás de otro (la segunda columna arranca un poco después). */}
+          {/* Cada característica entra sola, rápido: la línea crece de izquierda a derecha, se teclea el número,
+              el título aparece con destello naranja y el texto se teclea (la segunda columna arranca un poco después). */}
           {features.map((item, i) => (
             <li
               key={i}
               className="relative grid grid-cols-[36px_1fr] gap-x-4 pt-4 lg:grid-cols-[107px_1fr] lg:pb-16"
               data-typewriter-group
               data-typewriter-sequence
-              data-typewriter-delay={(i % 2) * 0.2}
+              data-typewriter-delay={(i % 2) * 0.15}
+              data-typewriter-speed={1.6}
             >
               <span className="absolute inset-x-0 top-0 h-px origin-left bg-dark-grey" aria-hidden data-typewriter-line />
               <span className="font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-grey">
@@ -98,8 +100,8 @@ export default function Highlight(props: Props) {
               </span>
               <div className="flex max-w-[477px] flex-col gap-2 lg:gap-4">
                 {item.title && (
-                  <h3 className="font-display text-[1.125rem] font-semibold leading-[1.2] text-light-grey [font-feature-settings:'dlig'_1] lg:text-[1.5rem]">
-                    <Typewriter text={item.title} />
+                  <h3 className="font-display text-[1.125rem] font-semibold leading-[1.2] text-light-grey [font-feature-settings:'dlig'_1] lg:text-[1.5rem]" data-paint>
+                    <SplitWords text={item.title} />
                   </h3>
                 )}
                 {item.text && (
