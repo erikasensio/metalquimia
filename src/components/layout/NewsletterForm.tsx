@@ -2,11 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import { PaperPlaneRight } from "@phosphor-icons/react";
+import { useStrings } from "@/components/ui/Strings";
 
 type Props = { lang: string; label: string; placeholder: string; termsHtml: string; success: string; submitLabel: string };
 
 /** Alta a la newsletter del pie: email + aceptación. Se envía a /api/newsletter. */
 export function NewsletterForm({ lang, label, placeholder, termsHtml, success, submitLabel }: Props) {
+  const { t } = useStrings();
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -62,7 +64,7 @@ export function NewsletterForm({ lang, label, placeholder, termsHtml, success, s
           <span className="[&_a]:underline" dangerouslySetInnerHTML={{ __html: termsHtml.replace(/<\/?p>/g, "") }} />
         </label>
       )}
-      {state === "error" && <p className="text-body-xs text-red">Error</p>}
+      {state === "error" && <p className="text-body-xs text-red" role="alert">{t("newsletter_error", "No se ha podido enviar. Inténtalo de nuevo.")}</p>}
     </form>
   );
 }

@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import { useStrings } from "@/components/ui/Strings";
 import { Square, X } from "@phosphor-icons/react";
 import type { WpImage, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
@@ -77,6 +78,7 @@ export function HighlightTags({ tags }: { tags: HighlightTag[] }) {
  * a su sitio) y al cerrarse hace el camino inverso antes de desmontarse.
  */
 function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverlay; origin: HTMLElement; onClose: () => void }) {
+  const { t } = useStrings();
   const panel = useRef<HTMLDivElement>(null);
   const veil = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -194,7 +196,7 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
             ref={closeRef}
             type="button"
             onClick={close}
-            aria-label="Cerrar"
+            aria-label={t("close", "Cerrar")}
             className="flex shrink-0 cursor-pointer items-center justify-center bg-black-grey p-[11px] text-light-grey backdrop-blur-[20px] transition-colors hover:bg-black"
           >
             <X size={14} />

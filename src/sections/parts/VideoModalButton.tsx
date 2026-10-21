@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Square, X } from "@phosphor-icons/react";
+import { useStrings } from "@/components/ui/Strings";
 import { RollText } from "@/components/ui/RollText";
 
 /** Convierte un enlace de YouTube o Vimeo en la URL del reproductor embebido (con autoplay). */
@@ -18,6 +19,7 @@ type Props = { url: string; label: string };
 
 /** Botón "WATCH VIDEO" (Figma full-screen-video 325:12801: cristal gris, cuadrado y texto mono) que abre el vídeo en una ventana modal (Esc o clic fuera para cerrar). */
 export function VideoModalButton({ url, label }: Props) {
+  const { t } = useStrings();
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const close = useRef<HTMLButtonElement>(null);
@@ -82,7 +84,7 @@ export function VideoModalButton({ url, label }: Props) {
               ref={close}
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Cerrar vídeo"
+              aria-label={t("close_video", "Cerrar vídeo")}
               className="absolute right-4 top-4 flex size-10 items-center justify-center bg-black-grey text-light-grey transition-colors hover:bg-dark-grey"
             >
               <X size={18} />

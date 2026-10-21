@@ -30,7 +30,7 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
     <footer className="relative z-[1] overflow-x-clip bg-black text-light-grey" data-footer>
       {/* Fondo: foto del pliegue de luz con un velo negro al 74 % encima. */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <Image src="/brand/footer-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
+        <Image src={(o.footer_image as WpImage | null)?.url || "/brand/footer-bg.jpg"} alt="" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-black/[0.74]" />
       </div>
       {/* Blanca por defecto; negra si la última sección de la página acaba en negro (data-footer-notch en globals.css). */}
@@ -64,7 +64,7 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
                   label={str("newsletter_label")}
                   placeholder={str("newsletter_placeholder") || "johndoe@mail.com"}
                   termsHtml={str("newsletter_terms")}
-                  success={str("newsletter_success") || t(global, "newsletter_thanks", "Thank you!")}
+                  success={str("newsletter_success") || "Thank you!"}
                   submitLabel={t(global, "newsletter_submit", "Subscribe")}
                 />
               )}

@@ -203,12 +203,7 @@ function mq_rest_global( WP_REST_Request $request ) {
 	}
 
 	$options = function_exists( 'get_fields' ) ? ( get_fields( mq_options_id( $lang ) ) ?: array() ) : array();
-	$strings = array();
-	foreach ( (array) ( $options['strings'] ?? array() ) as $row ) {
-		if ( ! empty( $row['key'] ) ) {
-			$strings[ $row['key'] ] = (string) $row['value'];
-		}
-	}
+	$strings = array_filter( array_map( 'strval', (array) ( $options['strings'] ?? array() ) ), 'strlen' );
 	unset( $options['strings'] );
 
 	return array(

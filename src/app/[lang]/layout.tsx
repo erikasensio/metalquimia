@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Animations } from "@/components/motion/Animations";
 import { Loader } from "@/components/motion/Loader";
+import { StringsProvider } from "@/components/ui/Strings";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -37,10 +38,12 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <Script id="mq-loader-seen" strategy="beforeInteractive">
           {"document.documentElement.classList.add('js-motion');try{sessionStorage.getItem('mq-loader')&&document.documentElement.classList.add('mq-loader-seen')}catch(e){}"}
         </Script>
+        <StringsProvider lang={lang} strings={global?.strings ?? {}}>
         {loaderOn && <Loader textMuted={String(options.loader_text_muted || "Meat.")} text={String(options.loader_text || "The next.")} />}
         <Header global={global} lang={lang} />
         <main className="flex-1">{children}</main>
         <Footer global={global} lang={lang} />
+        </StringsProvider>
         <Animations />
         {/* Filtro de la utilidad word-outline: contorno de la silueta del texto (sin las líneas internas donde se solapan
             los trazos de una letra) y relleno blanco al 35 % por dentro, que se nota sobre las imágenes. */}

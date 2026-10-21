@@ -88,7 +88,7 @@ export function mockGlobal(lang: Lang): Global {
       children: menu(item.children),
     }));
   const options = (resolve(s, s.options[lang] ?? s.options[defaultLocale] ?? {}, lang) ?? {}) as Record<string, unknown>;
-  const strings = Object.fromEntries(((options.strings as { key: string; value: string }[]) ?? []).map((r) => [r.key, r.value]));
+  const strings = (options.strings ?? {}) as Record<string, string>;
   delete options.strings;
   return {
     lang,

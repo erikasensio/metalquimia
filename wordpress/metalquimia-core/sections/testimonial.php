@@ -9,6 +9,7 @@ return array(
 		mq_f( $l, 'title_muted', 'textarea', 'Título (parte en gris)', array( 'rows' => 2, 'instructions' => 'Primera parte del título, en gris. Puede quedar vacía.' ) ),
 		mq_f( $l, 'title', 'textarea', 'Título (parte destacada)', array( 'rows' => 2 ) ),
 		mq_f( $l, 'label', 'text', 'Etiqueta sobre los testimonios', array( 'placeholder' => 'TRUSTED BY INDUSTRY LEADERS' ) ),
+		mq_f( $l, 'background', 'image', 'Foto de fondo', array( 'preview_size' => 'medium', 'instructions' => 'Horizontal, mínimo 2400 px de ancho. Se oscurece automáticamente. Vacío = foto por defecto.' ) ),
 		mq_tab( $l, 'Testimonios' ),
 		mq_f(
 			$l,

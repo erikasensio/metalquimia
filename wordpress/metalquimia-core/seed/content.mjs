@@ -2044,11 +2044,21 @@ export const options = {
   loader_enabled: true,
   loader_text_muted: "Meat.",
   loader_text: "The next.",
-  strings: [
-    { key: "discover_all", value: L("Ver todas las soluciones", "Discover all solutions") },
-    { key: "menu", value: L("Menú", "Menu") },
-    { key: "newsletter_submit", value: L("Suscribirme", "Subscribe") },
-  ],
+  strings: {
+    discover_all: L("Ver todas las soluciones", "Discover all solutions"),
+    menu: L("Menú", "Menu"),
+    nav_label: L("Menú principal", "Main menu"),
+    newsletter_submit: L("Suscribirme", "Subscribe"),
+    newsletter_error: L("No se ha podido enviar. Inténtalo de nuevo.", "It could not be sent. Please try again."),
+    prev: L("Anterior", "Previous"),
+    next: L("Siguiente", "Next"),
+    carousel: L("Carrusel", "Carousel"),
+    close: L("Cerrar", "Close"),
+    close_video: L("Cerrar vídeo", "Close video"),
+    not_found_title: L("Página no encontrada", "Page not found"),
+    not_found_text: L("La página que buscas no existe o ha cambiado de dirección.", "The page you are looking for does not exist or has moved."),
+    not_found_button: L("Volver al inicio", "Back to home"),
+  },
 };
 
 // ---------- Menús ----------

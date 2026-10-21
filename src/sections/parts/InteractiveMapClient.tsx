@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
 import { Envelope, EnvelopeSimple, MagnifyingGlass, Phone, X } from "@phosphor-icons/react";
+import { useStrings } from "@/components/ui/Strings";
 import type { WpImage } from "@/lib/types";
 
 export type MapLocation = {
@@ -46,6 +47,7 @@ export function InteractiveMapClient({
   bleed?: boolean;
   children: ReactNode;
 }) {
+  const { t } = useStrings();
   const [selected, setSelected] = useState<number | null>(null);
   const [query, setQuery] = useState("");
   const popupRef = useRef<HTMLDivElement>(null);
@@ -111,7 +113,7 @@ export function InteractiveMapClient({
             <button
               type="button"
               onClick={() => setSelected(null)}
-              aria-label="Cerrar"
+              aria-label={t("close", "Cerrar")}
               className="absolute right-2 top-2 flex size-8 items-center justify-center text-black transition-colors hover:bg-light-grey"
             >
               <X size={16} />

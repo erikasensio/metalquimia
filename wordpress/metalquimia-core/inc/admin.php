@@ -23,3 +23,8 @@ add_action(
 		}
 	}
 );
+
+// Las páginas se montan solo con el campo "Secciones": fuera el editor de bloques (y su ventana de patrones)
+// y el cuadro de contenido, que el front no usa.
+add_filter( 'use_block_editor_for_post_type', fn( $use, $post_type ) => 'page' === $post_type ? false : $use, 10, 2 );
+add_action( 'init', fn() => remove_post_type_support( 'page', 'editor' ) );

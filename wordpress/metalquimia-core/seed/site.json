@@ -2484,20 +2484,21 @@
    "loader_enabled": true,
    "loader_text_muted": "Meat.",
    "loader_text": "The next.",
-   "strings": [
-    {
-     "key": "discover_all",
-     "value": "Ver todas las soluciones"
-    },
-    {
-     "key": "menu",
-     "value": "Menú"
-    },
-    {
-     "key": "newsletter_submit",
-     "value": "Suscribirme"
-    }
-   ]
+   "strings": {
+    "discover_all": "Ver todas las soluciones",
+    "menu": "Menú",
+    "nav_label": "Menú principal",
+    "newsletter_submit": "Suscribirme",
+    "newsletter_error": "No se ha podido enviar. Inténtalo de nuevo.",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "carousel": "Carrusel",
+    "close": "Cerrar",
+    "close_video": "Cerrar vídeo",
+    "not_found_title": "Página no encontrada",
+    "not_found_text": "La página que buscas no existe o ha cambiado de dirección.",
+    "not_found_button": "Volver al inicio"
+   }
   },
   "en": {
    "logo": "",
@@ -2545,20 +2546,21 @@
    "loader_enabled": true,
    "loader_text_muted": "Meat.",
    "loader_text": "The next.",
-   "strings": [
-    {
-     "key": "discover_all",
-     "value": "Discover all solutions"
-    },
-    {
-     "key": "menu",
-     "value": "Menu"
-    },
-    {
-     "key": "newsletter_submit",
-     "value": "Subscribe"
-    }
-   ]
+   "strings": {
+    "discover_all": "Discover all solutions",
+    "menu": "Menu",
+    "nav_label": "Main menu",
+    "newsletter_submit": "Subscribe",
+    "newsletter_error": "It could not be sent. Please try again.",
+    "prev": "Previous",
+    "next": "Next",
+    "carousel": "Carousel",
+    "close": "Close",
+    "close_video": "Close video",
+    "not_found_title": "Page not found",
+    "not_found_text": "The page you are looking for does not exist or has moved.",
+    "not_found_button": "Back to home"
+   }
   }
  },
  "menus": {
