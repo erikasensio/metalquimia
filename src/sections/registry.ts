@@ -26,6 +26,7 @@ import MediaText from "./MediaText";
 import PageTitle from "./PageTitle";
 import PeopleGrid from "./PeopleGrid";
 import ProductHero from "./ProductHero";
+import ProductIntro from "./ProductIntro";
 import Products from "./Products";
 import ProductsHighlight from "./ProductsHighlight";
 import RichText from "./RichText";
@@ -69,6 +70,7 @@ export const sections: Record<string, ComponentType<any>> = {
   page_title: PageTitle,
   people_grid: PeopleGrid,
   product_hero: ProductHero,
+  product_intro: ProductIntro,
   products: Products,
   products_highlight: ProductsHighlight,
   rich_text: RichText,

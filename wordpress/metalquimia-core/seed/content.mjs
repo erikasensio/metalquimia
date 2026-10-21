@@ -97,6 +97,13 @@ const I = {
   machineDefroster: img("machine-defroster", "machine-defroster.webp", "Descongeladora de bloques de carne", "Meat block defroster", "Cut-out stainless machine on transparent (Figma División › product-highlight)"),
   machineTumbler: img("machine-tumbler", "machine-tumbler.webp", "Bombo de masaje al vacío", "Vacuum tumbler", "Cut-out stainless tumbler on transparent (Figma División › product-highlight)"),
   machineInjector: img("machine-injector", "machine-injector.webp", "Inyectora de salmuera", "Brine injector", "Cut-out stainless injector on transparent (Figma División › product-highlight)"),
+  // Página Inyección de carne (Figma Páginas › 443:16228 › product-highlight). Signature Edition y Movimax Zero usan la misma foto en el Figma.
+  movistickClassic: img("movistick-classic", "movistick-classic.png", "Inyectora Movistick Classic", "Movistick Classic injector", "Cut-out PNG Movistick Classic injector, transparent"),
+  movistickTriplex: img("movistick-triplex", "movistick-triplex.png", "Inyectora Movistick Triplex", "Movistick Triplex injector", "Cut-out PNG Movistick Triplex injector, transparent"),
+  moviplusSignature: img("moviplus-signature", "moviplus-signature.png", "Inyectora Moviplus 4.0 Signature Edition", "Moviplus 4.0 Signature Edition injector", "Cut-out PNG Moviplus 4.0 Signature Edition injector, transparent"),
+  moviplus40: img("moviplus-40", "moviplus-40.png", "Inyectora Moviplus 4.0", "Moviplus 4.0 injector", "Cut-out PNG Moviplus 4.0 injector (drum), transparent"),
+  movimaxZero: img("movimax-zero", "movimax-zero.png", "Inyectora Movimax Zero", "Movimax Zero injector", "Cut-out PNG Movimax Zero injector, transparent"),
+  productIntro: img("product-intro-engineering", "product-intro-engineering.webp", "Ingeniera revisando un diseño en CAD", "Engineer reviewing a CAD design", "Woman at two monitors with 3D CAD of machine parts (Figma Página de máquina › feature-highlight)"),
   // Página Marinados (Figma Páginas › División 325:5629).
   marinatedProducts: [
     ["Pechuga de pollo marinada", "Marinated chicken breast"],
@@ -708,6 +715,243 @@ const petfood = {
   },
 };
 
+// ---------- Páginas de máquina (Figma Páginas › Página de máquina 193:4073) ----------
+// Misma plantilla para todas las inyectoras de la categoría Inyección de carne. Textos del Figma (Movistick Triplex)
+// y, para el resto, de las fichas de metalquimia.com.
+const machinePage = ({ key, slug, name, image, subtitle, intro, characteristics }) => ({
+  key,
+  parent: "meat-injection",
+  es: { title: name, slug },
+  en: { title: name, slug },
+  sections: [
+    {
+      type: "product_hero",
+      image,
+      title: name,
+      subtitle,
+      card_image: "",
+      card_text: L("Pide más información sobre este producto", "Get more information about this product"),
+      card_button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFORMATION"), "@page:contact#form"),
+    },
+    { type: "product_intro", image: I.productIntro, text: intro },
+    {
+      type: "characteristics",
+      eyebrow: L("EL PRODUCTO", "THE PRODUCT"),
+      title: L("Características principales", "Main characteristics"),
+      items: characteristics.map((text) => ({ text })),
+      button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFORMATION"), "@page:contact#form"),
+      file: "",
+      button_label: L("DESCARGAR FICHA", "DOWNLOAD DATASHEET"),
+    },
+    {
+      type: "highlight",
+      eyebrow: L("INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL", "TOP NOTCH MACHINE ENGINEERING"),
+      word_top: "",
+      word_bottom: "",
+      title_muted: L("El método de ingeniería Metalquimia", "Metalquimia engineering method"),
+      title: L("que genera inventos", "that produces inventions"),
+      button: link(L("DESCUBRE CÓMO PENSAMOS", "SEE HOW WE THINK"), "@page:engineering"),
+      image: "",
+      tags: [],
+      items: [
+        {
+          title: L("Precisión que nunca sacrifica el rendimiento", "Precision that never compromises yield"),
+          text: L("Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza.", "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."),
+        },
+        {
+          title: L("Fiabilidad integrada en el diseño", "Reliability built into the design"),
+          text: L("Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería.", "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."),
+        },
+        {
+          title: L("Tecnología propia", "Proprietary technology"),
+          text: L("A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos.", "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."),
+        },
+        {
+          title: L("Un socio que inventó el proceso", "A partner who invented the process"),
+          text: L("Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar.", "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."),
+        },
+      ],
+      overlay_title: "",
+      overlay_text: "",
+      overlay_image: "",
+      overlay_button: null,
+    },
+    {
+      type: "products_highlight",
+      eyebrow: L("¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR", "WHAT WE DO? REDEFINING WHAT’S STANDARD"),
+      title_muted: L("Diseñado para el proceso.", "Engineered for the process."),
+      title: L("Construido para durar.", "Built for the long run."),
+      subtitle: L("Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.", "We design and manufacture equipment and process technology for the production of meat and/or protein-based products."),
+      button: null,
+      // Sin categorías no salen pestañas: queda el carrusel solo, como en el Figma.
+      show_filters: true,
+      all_label: L("TODOS", "ALL"),
+      items: [0, 1].flatMap(() =>
+        [
+          [I.m1, L("Inyectoras de carne", "Meat Injectors"), L("Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.", "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale."), "@page:meat-injection"],
+          [I.m2, L("Descongelación de carne", "Meat Defrosting"), L("Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.", "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput."), "#"],
+          [I.m3, L("Embutidoras de carne", "Meat Stuffers"), L("Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.", "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput."), "#"],
+        ].map(([image, name, description, url]) => ({ image, name, category: "", description, link: link("", url) })),
+      ),
+    },
+  ],
+});
+
+const machinePages = [
+  machinePage({
+    key: "machine-classic",
+    slug: "movistick-classic",
+    name: "Movistick Classic",
+    image: I.movistickClassic,
+    subtitle: L("Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.", "Uniform distribution of brine and maximum precision in meat injection."),
+    intro: L(
+      "Las inyectoras MOVISTICK CLASSIC son máquinas totalmente hidráulicas y autopilotadas, con la bomba de salmuera incorporada, que inyectan la salmuera a presión constante a través de múltiples orificios y consiguen un reparto uniforme, sin zonas muertas, en carne con o sin hueso.\n\nSus sistemas de filtrado independientes o el filtro automático autolimpiable opcional permiten trabajar 24 horas sin paradas con todo tipo de salmueras.",
+      "MOVISTICK CLASSIC injectors are fully hydraulic, self-piloted machines with a built-in brine pump that inject brine at constant pressure through multiple holes, achieving a uniform distribution with no dead zones in boneless or bone-in meat.\n\nIndependent filtering systems or the optional self-cleaning automatic filter allow 24-hour non-stop operation with all types of brines.",
+    ),
+    characteristics: [
+      L("Amplio margen de porcentajes de inyección.", "Wide range of injection percentages."),
+      L("Mínimo goteo de salmuera.", "Minimal brine drainage."),
+      L("Mejor reparto de la salmuera en el músculo.", "Better distribution of brine within the muscle."),
+      L("Máxima precisión de inyección.", "Maximum injection precision."),
+      L("Inyección regulable.", "Adjustable injection."),
+      L("Inyección de ingredientes insolubles dispersos.", "Injection of dispersed insoluble ingredients."),
+      L("Agujas intercambiables según el tipo de carne.", "Interchangeable needles depending on the type of meat."),
+      L("Para inyección con hueso (modelos CR) / sin hueso.", "For injection with bone (CR models) / without bone."),
+      L("Cabezal tenderizador opcional (según modelo).", "Optional tenderizer head (depending on model)."),
+      L("Mayor rendimiento final.", "Higher final yield."),
+      L("Diseño higiénico orientado a la seguridad alimentaria.", "Hygienic design focused on food safety."),
+      L("Dispositivo UP&DOWN opcional (excepto modelos CR).", "Optional UP&DOWN device (except CR models)."),
+      L("Regulación opcional de la presión de inyección por efecto spray.", "Optional injection pressure regulation by spray effect."),
+    ],
+  }),
+  machinePage({
+    key: "machine",
+    slug: "movistick-triplex",
+    name: "Movistick Triplex",
+    image: I.movistickTriplex,
+    subtitle: L("La MOVISTICK TRIPLEX es la inyectora hidráulica autopilotada que incorpora hasta 3 cabezales de inyección.", "The MOVISTICK TRIPLEX is the self-piloted hydraulic injector that incorporates up to 3 injection heads."),
+    intro: L(
+      "Sin duda, la inyectora para productos cárnicos (con o sin hueso) con mayor potencial de inyección del sector cárnico mundial. Equipada con una bomba hidráulica de triple pistón, ofrece los mayores índices de productividad del mercado y los mejores rendimientos finales con la máxima precisión de inyección, con un reparto espectacular de la salmuera y uniformidad de color, para responder a los exigentes retos exponenciales de la industria cárnica del futuro.\n\nEl diseño único de sus cabezales permite inyectar productos con avances de cinta de hasta 120 mm, lo que se traduce en una gran capacidad de producción.",
+      "Without a doubt, the injector for meat products (with or without bones) with the greatest injection potential in the global meat sector, equipped with a triple hydraulic piston pump, provides the highest productivity rates in the market and the best final yields with maximum injection precision, achieving a spectacular distribution of brine and color uniformity, thus addressing the demanding exponential challenges of the future meat industry.\n\nThe unique design of its heads allows for the injection of products with conveyor advances of up to 120 mm, resulting in a high production capacity.",
+    ),
+    characteristics: [
+      L("Inyección regulable del 15 al 160 % por pasada según el tipo de carne.", "Adjustable injection from 15 to 160% per pass depending on the type of meat."),
+      L("Reparto uniforme de la salmuera sin zonas muertas.", "Uniform distribution of brine with no dead zones."),
+      L("Inyección de ingredientes insolubles dispersos.", "Injection of dispersed insoluble ingredients."),
+      L("Mínimo goteo de salmuera.", "Minimal brine drainage."),
+      L("Filtro automático autolimpiable opcional, pensado para trabajar 24 horas sin paradas con todo tipo de salmueras.", "Optional self-cleaning automatic filter, specially designed to operate 24 hours without stops with all types of brines."),
+      L("Para inyección con hueso (modelos CR) / sin hueso.", "For injection with bone (CR models) / without bone."),
+      L("Autopilotada totalmente hidráulica, bombas de salmuera incluidas.", "Fully hydraulic autopilot, including brine pumps."),
+      L("Tres cabezales de agujas alternativos para una inyección exponencial.", "Three alternative needle heads for exponential injection."),
+      L("Cabezales de doble funcionamiento: triple o doble cabezal.", "Heads with dual operation: Triple or Double Head operation."),
+      L("Dispositivo de regulación de la presión de inyección por efecto spray.", "Injection Pressure Regulation Device by Spray Effect."),
+      L("Separación optimizada entre cabezales para piezas de gran longitud.", "Optimized spacing between heads for long dimension pieces."),
+      L("Cinta de transporte tipo SINGER.", "SINGER type transport belt."),
+      L("Soporte independiente para cada grupo de agujas.", "Independent holder for each group of needles."),
+      L("Aprovechamiento total de la salmuera.", "Total utilization of brine."),
+      L("Máxima facilidad de mantenimiento, limpieza y desinfección.", "Maximum ease of maintenance, cleaning, and disinfection."),
+    ],
+  }),
+  machinePage({
+    key: "machine-signature",
+    slug: "moviplus-4-0-signature-edition",
+    name: "Moviplus 4.0 Signature Edition",
+    image: I.moviplusSignature,
+    subtitle: L("La inyección, lo siguiente: excelencia en diseño inteligente.", "Injection Molding, the Next: Excellence in Smart Design."),
+    intro: L(
+      "La MOVIPLUS 4.0 Signature Edition forma parte de la línea Signature de Metalquimia, junto con el reactor de masaje TURBOMEAT 4.0 y la embutidora automática de músculo entero TWINVAC 4.0, galardonada con el Red Dot Award 2019 de diseño industrial.\n\nUne conectividad 4.0 total, un sistema de inyección autorregulado y la tecnología SPRAYPLUS® en un diseño inteligente e higiénico, pensado para la máxima productividad.",
+      "The MOVIPLUS 4.0 Signature Edition is part of Metalquimia's Signature line, together with the TURBOMEAT 4.0 massage reactor and the TWINVAC 4.0 automatic whole muscle stuffer, winner of the 2019 Red Dot Award for industrial design.\n\nIt brings together total 4.0 connectivity, a self-regulating injection system and SPRAYPLUS® technology in a smart, hygienic design built for maximum productivity.",
+    ),
+    characteristics: [
+      L("Conectividad 4.0 total: la inyección del futuro.", "Total 4.0 connectivity: the injection of the future."),
+      L("Sistema de inyección autorregulado: precisión incomparable.", "Self-regulating injection system: incomparable precision."),
+      L("Tecnología SPRAYPLUS®: reparto de la salmuera inmejorable.", "SPRAYPLUS® technology: unbeatable brine distribution."),
+      L("Más ciclos de trabajo: mayor productividad.", "More operating cycles: higher productivity."),
+      L("Diseño inteligente e higiénico: Signature Edition.", "Smart & hygienic design: Signature Edition."),
+      L("Red Dot Award 2019 al diseño industrial.", "2019 Red Dot Award for industrial design."),
+    ],
+  }),
+  machinePage({
+    key: "machine-moviplus",
+    slug: "moviplus-4-0",
+    name: "Moviplus 4.0",
+    image: I.moviplus40,
+    subtitle: L("La nueva versión 4.0 de la Moviplus, diseñada especialmente para la ciberindustria del futuro.", "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future."),
+    intro: L(
+      "La MOVIPLUS 4.0 inyecta la salmuera a presión constante en cualquier tipo de carne sin hueso (cerdo, vacuno, aves…) con su sistema spray inteligente, y consigue un reparto uniforme de la salmuera y del color, una gran productividad y los mejores rendimientos finales.\n\nLa inyección es regulable del 10 al 100 % por pasada, según el modelo y el tipo de carne.",
+      "The MOVIPLUS 4.0 injects brine at constant pressure into any type of boneless meat (pork, beef, poultry…) with its smart spray system, achieving a uniform distribution of brine and colour, high productivity and the best final yields.\n\nInjection is adjustable from 10 to 100% per pass, depending on the model and the type of meat.",
+    ),
+    characteristics: [
+      L("Funcionamiento electrohidráulico controlado por autómata y pantalla táctil.", "Electro-hydraulic operation controlled by PLC and touch screen."),
+      L("Ciclos de trabajo más largos para una mayor productividad.", "Longer operating cycles for higher productivity."),
+      L("Selección de inyección con uno o dos cabezales.", "Single or double head injection selection."),
+      L("Separación regulable entre cabezales para una inyección diferencial.", "Adjustable spacing between heads for differential injection."),
+      L("Cabezal tenderizador regulable en ciclos para una mayor extracción de proteína.", "Cycle-adjustable tenderizer head for greater protein extraction."),
+      L("Regulación de la presión de inyección por efecto spray.", "Injection pressure regulation by spray effect."),
+      L("Tecnología de reparto SPRAYPLUS® opcional.", "Optional SPRAYPLUS® distribution technology."),
+      L("Sistema UP&DOWN opcional para productos con corteza.", "Optional UP&DOWN system for skin-on products."),
+      L("Para inyección con hueso (modelos CR) / sin hueso.", "For injection with bone (CR models) / without bone."),
+      L("Agujas fáciles de extraer para su control, limpieza y desinfección.", "Easy-to-extract needles for control, cleaning and disinfection."),
+      L("Diseño higiénico orientado a la seguridad alimentaria.", "Hygienic design focused on food safety."),
+      L("Agujas flexibles con «efecto memoria».", "Flexible “memory effect” needles."),
+      L("Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL.", "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."),
+    ],
+  }),
+  machinePage({
+    key: "machine-moviplus-e",
+    slug: "moviplus-e",
+    name: "Moviplus-E",
+    image: I.moviplus40,
+    subtitle: L("Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.", "New line of meat injectors with a fully electric drive system."),
+    intro: L(
+      "Las nuevas inyectoras MOVIPLUS-e son la apuesta definitiva por una inyección de carne sostenible: su accionamiento totalmente eléctrico y la sencillez tecnológica de todos sus componentes se traducen en eficiencia energética, ahorro de salmuera, productividad, reciclabilidad y un mantenimiento mínimo.\n\nSu cabezal de inyección por efecto spray ofrece un reparto de la salmuera y una uniformidad de color sin rival, con gran versatilidad de porcentajes, un goteo mínimo y los mejores rendimientos finales.",
+      "The new MOVIPLUS-e injectors are the ultimate commitment to sustainable meat injection: their fully electric drive system and the technological simplicity of all their components bring energy efficiency, brine savings, productivity, recyclability and minimal maintenance.\n\nIts spray-effect injection head provides unrivalled brine distribution and colour uniformity, with wide versatility of injection percentages, minimal drip loss and the best final yields.",
+    ),
+    characteristics: [
+      L("Funcionamiento totalmente eléctrico controlado por PLC y pantalla.", "Fully electric operation controlled by PLC and display."),
+      L("Todos los movimientos con servomotores = mayor precisión.", "All movements with servomotors = greater precision."),
+      L("Tecnología SPRAYPLUS® para optimizar el reparto.", "SPRAYPLUS® technology to optimise distribution."),
+      L("Sistema UP&DOWN para productos con corteza.", "UP&DOWN system for skin-on products."),
+      L("Dispositivo de regulación de la presión de inyección por efecto spray.", "Injection pressure regulation device by spray effect."),
+      L("Agujas flexibles «efecto memoria» con retorno a la posición original.", "Flexible “memory effect” needles that return to their original position."),
+      L("Para inyección con hueso / sin hueso.", "For injection with bone / without bone."),
+      L("Sistema de conectividad inteligente MQConnect incorporado.", "Built-in MQConnect smart connectivity system."),
+      L("Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL.", "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."),
+    ],
+  }),
+  machinePage({
+    key: "machine-movimax",
+    slug: "movimax-zero",
+    name: "Movimax Zero",
+    image: I.movimaxZero,
+    subtitle: L("La inyectora de carne con menor huella de carbono del mercado.", "The Carbon-Neutral Meat Injector."),
+    intro: L(
+      "La Movimax Zero 5500 es la inyectora con menor huella de carbono del mercado. Con dos cabezales y 3.312 puntos de inyección spray, su bomba de doble servopistón volumétrico ofrece la máxima eficiencia energética, precisión de inyección y una temperatura de emisión reducida sin competencia.\n\nAdemás, el rediseño completo de todo el sistema de inyección y filtrado reduce al mínimo la salmuera sobrante tras cada lote (Zero Waste), y la tecnología de sus cabezales logra un reparto de la salmuera y una uniformidad de color sin rival en el mercado.",
+      "The Movimax Zero 5500 is the lowest carbon footprint injector on the market. Equipped with two heads and 3,312 spray injection points, its double volumetric servo-piston pump provides maximum energy efficiency, injection precision and reduced emission temperatures without competition.\n\nA complete redesign of the entire injection and filtering system also minimises the excess brine after each batch (Zero Waste), and its head technology provides brine distribution and colour uniformity without competition in the market.",
+    ),
+    characteristics: [
+      L("Funcionamiento totalmente eléctrico controlado por PLC y pantalla.", "Fully electric operation controlled by PLC and display."),
+      L("Todos los movimientos con servomotores = mayor precisión.", "All movements with servomotors = greater precision."),
+      L("Circuito de salmuera reducido.", "Reduced brine circuit."),
+      L("Mayor aprovechamiento de la salmuera (Zero Waste).", "Greater use of brine (Zero Waste)."),
+      L("Filtro de banda integrado = menos espacio alrededor de la máquina.", "Built-in band filter = less space needed around the machine."),
+      L("Extracción lateral del filtro para su limpieza y desinfección.", "Lateral filter extraction for cleaning and disinfection."),
+      L("Selección del modo de trabajo: un cabezal, dos cabezales o solo cinta.", "Work mode selection: one head, two heads or belt only."),
+      L("Cabezal tenderizador regulable en ciclos.", "Cycle-adjustable tenderizer head."),
+      L("Posibilidad de trabajar solo con el cabezal tenderizador (opcional).", "Option to work with the tenderizer head only (optional)."),
+      L("Sistema UP&DOWN para productos con corteza, regulable en cuatro posiciones: 0, 4, 8 y 12 mm.", "UP&DOWN system for skin-on products, adjustable in four positions: 0, 4, 8 and 12 mm."),
+      L("Dispositivo de regulación de la presión de inyección por efecto spray.", "Injection pressure regulation device by spray effect."),
+      L("Agujas «efecto memoria» con retorno a la posición original.", "“Memory effect” needles that return to their original position."),
+      L("Inyección con hueso y sin hueso (según modelo).", "Injection with and without bone (depending on model)."),
+      L("Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL.", "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."),
+      L("Sistema de conectividad inteligente MQConnect incorporado.", "Built-in MQConnect smart connectivity system."),
+    ],
+  }),
+];
+
+/** Página de cada máquina por su nombre (tarjetas de la categoría Inyección de carne). */
+const machineKey = Object.fromEntries(machinePages.map((p) => [p.es.title.toLowerCase(), p.key]));
+
 // ---------- Páginas ----------
 export const pages = [
   {
@@ -912,45 +1156,64 @@ export const pages = [
     es: { title: "Inyección de carne", slug: "inyeccion-de-carne" },
     en: { title: "Meat injection", slug: "meat-injection" },
     sections: [
-      { type: "hero_secondary", title: L("Inyección de carne", "Meat injection"), subtitle_muted: L("La inyección de salmuera, del principio al fin,", "Brine injection, from start to finish,"), subtitle: L("con la precisión que tu producto necesita.", "with the precision your product needs."), button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFO"), "@page:contact#form"), image: "", image_fit: "contain" },
-      { type: "gradient_divider", direction: "down" },
-      { ...machines(L("Movistick", "Movistick"), L("Inyectoras de carne", "Meat Injectors"), 2), eyebrow: "", show_filters: false, subtitle: L("Inyectoras de agujas para piezas enteras con dosificación precisa.", "Needle injectors for whole muscle pieces with precise dosing.") },
-      { ...machines(L("Moviplus 4.0", "Moviplus 4.0"), L("Inyectoras de carne", "Meat Injectors"), 3), eyebrow: "", show_filters: false, subtitle: L("Inyección inteligente y conectada.", "Smart, connected injection.") },
-      { ...machines(L("Movimax Zero", "Movimax Zero"), L("Inyectoras de carne", "Meat Injectors"), 1), eyebrow: "", show_filters: false, subtitle: L("Alta capacidad para grandes producciones.", "High capacity for large productions.") },
-      { type: "gradient_divider", direction: "up" },
-      partnership(),
-    ],
-  },
-  {
-    key: "machine",
-    parent: "meat-injection",
-    es: { title: "Movistick Tinder", slug: "movistick-tinder" },
-    en: { title: "Movistick Tinder", slug: "movistick-tinder" },
-    sections: [
-      { type: "product_hero", image: I.machineHero, image_mobile: "", title_top: "Movistick", title_bottom: "Tinder", subtitle: L("Inyectora de agujas de alta precisión para productos de músculo entero.", "High-precision needle injector for whole muscle products."), card_image: I.thumb, card_text: L("Pide más información sobre este producto", "Get more information about this product"), card_button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFORMATION"), "@page:contact#form") },
+      // Figma Páginas › 443:16228. El hero se queda fijo mientras el scroll ilumina el texto de la derecha.
       {
-        type: "characteristics",
-        eyebrow: L("FICHA", "SPECS"),
-        title: L("Características principales", "Main characteristics"),
-        items: [
-          L("Cabezal de agujas de acero inoxidable de fácil limpieza", "Easy-clean stainless steel needle head"),
-          L("Dosificación de salmuera regulable pieza a pieza", "Adjustable brine dosing piece by piece"),
-          L("Conexión a MQConnect para monitorizar la producción", "MQConnect connection to monitor production"),
-          L("Sistema de filtrado continuo de la salmuera", "Continuous brine filtering system"),
-          L("Diseño higiénico según normativa europea", "Hygienic design to European standards"),
-          L("Cambio rápido de formato", "Quick format change"),
-          L("Bajo consumo energético", "Low energy consumption"),
-          L("Capacidad hasta 3.000 kg/h", "Capacity up to 3,000 kg/h"),
-        ].map((text) => ({ text })),
-        button: link(L("DESCARGAR FICHA", "DOWNLOAD DATASHEET"), "#"),
-        file: "",
-        button_label: L("DESCARGAR FICHA", "DOWNLOAD DATASHEET"),
+        type: "hero_secondary",
+        title: L("Inyección de carne", "Meat injection"),
+        subtitle_muted: L("Ventajas significativas en la", "Significant advantages in"),
+        subtitle: L("inyección por spray de la carne", "spray-injection of meat"),
+        subtitle_end: L("con los equipos y la tecnología de Metalquimia.", "using Metalquimia's equipment and technology."),
+        scroll_highlight: true,
+        lines: true,
+        button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFO"), "@page:contact#form"),
+        image: "",
+        image_fit: "contain",
       },
-      { type: "media_text", theme: "dark", image_position: "left", eyebrow: "MQCONNECT", title_muted: L("Toda la línea", "The whole line"), title: L("en una sola pantalla.", "on a single screen."), text: L("<p>Monitoriza la inyección, ajusta parámetros y registra cada lote desde MQConnect. Integración completa para la supervisión en tiempo real, el registro de parámetros y el diagnóstico remoto.</p>", "<p>Monitor injection, adjust parameters and log every batch from MQConnect. Full integration for real-time monitoring, parameter logging and remote diagnostics.</p>"), details: "", button: null, image: I.software },
-      method(false),
-      { ...machines(L("Diseñado para el proceso.", "Engineered for the process."), L("Construido para durar.", "Built for the long run."), 4), show_filters: false },
+      { type: "gradient_divider", direction: "down" },
+      ...[
+        [
+          "Movistick",
+          L("Distribución uniforme de la salmuera y máxima precisión de inyección gracias al efecto spray.", "Uniform distribution of brine and maximum injection precision through the spray effect."),
+          [
+            [I.movistickClassic, "Movistick Classic", L("Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.", "Uniform distribution of brine and maximum precision in meat injection.")],
+            [I.movistickTriplex, "Movistick triplex", L("La MOVISTICK TRIPLEX es una inyectora hidráulica autopropulsada que puede equiparse con hasta 3 cabezales de inyección.", "The MOVISTICK TRIPLEX is a self-propelled hydraulic injection machine that can be equipped with up to 3 injection heads.")],
+          ],
+        ],
+        [
+          "Moviplus 4.0",
+          // Texto tal cual del Figma (repite el de la Movistick Triplex).
+          L("La MOVISTICK TRIPLEX es una inyectora hidráulica autopropulsada que puede equiparse con hasta 3 cabezales de inyección.", "The MOVISTICK TRIPLEX is a self-propelled hydraulic injection machine that can be equipped with up to 3 injection heads."),
+          [
+            [I.moviplusSignature, "Moviplus 4.0 Signature Edition", L("Injection Molding, the Next: excelencia en diseño inteligente.", "Injection Molding, the Next: Excellence in Smart Design.")],
+            [I.moviplus40, "Moviplus 4.0", L("La nueva Moviplus 4.0 se ha diseñado especialmente para la ciberindustria del futuro.", "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.")],
+            [I.moviplus40, "Moviplus-E", L("Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.", "New line of meat injectors with a fully electric drive system.")],
+          ],
+        ],
+        [
+          "Movimax Zero",
+          L("La inyectora de carne con menor huella de carbono del mercado.", "The meat injector with the lowest carbon footprint on the market."),
+          [[I.movimaxZero, "Movimax Zero", L("La inyectora de carne neutra en carbono.", "The Carbon-Neutral Meat Injector.")]],
+        ],
+      ].map(([name, subtitle, items]) => ({
+        ...machines(L("Inyectoras de carne", "Meat Injectors"), name),
+        eyebrow: "",
+        muted_last: true,
+        show_filters: false,
+        subtitle,
+        items: items.map(([image, itemName, description]) => ({ image, name: itemName, category: L("INYECCIÓN", "INJECTION"), description, link: link("", `@page:${machineKey[itemName.toLowerCase()]}`) })),
+      })),
+      { type: "gradient_divider", direction: "up" },
+      {
+        ...partnership(),
+        text: L(
+          "<p>La Creativación es el enfoque de Metalquimia para la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica convergen para crear soluciones que antes no existían.</p>",
+          "<p>Creativation is Metalquimia's approach to R&amp;D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
+        ),
+        button: link(L("DESCUBRE NUESTRO MODELO", "DISCOVER OUR MODEL"), "@page:partnership"),
+      },
     ],
   },
+  ...machinePages,
   {
     key: "industry",
     es: { title: "Pet care", slug: "industria-pet-care" },

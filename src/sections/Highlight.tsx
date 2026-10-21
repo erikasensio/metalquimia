@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { HighlightTags, type HighlightOverlay } from "./parts/HighlightClient";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Typewriter } from "@/components/motion/Typewriter";
 import { SplitWords } from "@/components/motion/SplitWords";
 
@@ -8,6 +9,9 @@ type Props = Section & {
   eyebrow?: string;
   word_top?: string;
   word_bottom?: string;
+  title_muted?: string;
+  title?: string;
+  button?: WpLink | null;
   image?: WpImage | null;
   tags?: { label?: string; title?: string; text?: string; image?: WpImage | null; button?: WpLink | null }[] | null | false | "";
   items?: { title?: string; text?: string }[] | null | false | "";
@@ -24,9 +28,12 @@ type Props = Section & {
  * fundidas, como si estuvieran detrás. Etiquetas que flotan (abren una tarjeta si hay ventana emergente) y,
  * debajo, características numeradas en dos columnas.
  * Móvil (Figma 609:80536): solo texto; antetítulo y las dos palabras en una línea, sin imagen ni etiquetas.
+ * Sin palabras ni imagen (Figma Página de máquina › Hightlights 325:12743): cabecera centrada con título en dos
+ * tonos y botón en lugar del escenario, y las características debajo.
  */
 export default function Highlight(props: Props) {
-  const { eyebrow, word_top, word_bottom, image, tags, items, overlay_title, overlay_text, overlay_image, overlay_button } = props;
+  const { eyebrow, word_top, word_bottom, title_muted, title, button, image, tags, items, overlay_title, overlay_text, overlay_image, overlay_button } = props;
+  const headerOnly = !word_top && !word_bottom && !image?.url;
   const features = (Array.isArray(items) ? items : []).filter((item) => item?.title || item?.text);
   // Ventana de cada etiqueta: la suya propia o, si no tiene contenido, la ventana común de la sección.
   const toOverlay = (o: { title?: string; text?: string; image?: WpImage | null; button?: WpLink | null }): HighlightOverlay | null =>
@@ -43,52 +50,68 @@ export default function Highlight(props: Props) {
 
   return (
     <div className="overflow-hidden bg-black text-light-grey">
-      {/* Móvil */}
-      <div className="flex flex-col gap-3 px-6 pt-20 lg:hidden">
-        {eyebrow && <p className="font-display text-[0.75rem] font-semibold uppercase leading-[1.2] tracking-[0.02em] text-red">{eyebrow}</p>}
-        {(word_top || word_bottom) && (
-          <h2 className="font-display text-[2.25rem] font-semibold leading-[1.1] text-light-grey [font-feature-settings:'dlig'_1]">
-            {[word_top, word_bottom].filter(Boolean).join(" ")}
-          </h2>
-        )}
-      </div>
-
-      {/* Escritorio: escenario 1512 × 1000 de Figma, escalado al ancho. */}
-      <div className="relative mx-auto hidden aspect-[1512/1000] w-full max-w-[1512px] lg:block">
-        {image?.url && (
-          <div className="pointer-events-none absolute left-[7.2%] top-[5%] h-[92.4%] w-[85.57%]">
-            <div className="relative size-full" data-parallax="0.12">
-              <Image src={image.url} alt={image.alt || ""} fill sizes="(min-width: 1512px) 1294px, 86vw" className="object-contain" />
-            </div>
+      {headerOnly ? (
+        <SectionHeader
+          eyebrow={eyebrow}
+          titleMuted={title_muted}
+          title={title}
+          button={button}
+          buttonVariant="black"
+          dark
+          align="center"
+          stacked
+          className="site-container pt-20 [&_h2]:max-w-[744px]"
+        />
+      ) : (
+        <>
+          {/* Móvil */}
+          <div className="flex flex-col gap-3 px-6 pt-20 lg:hidden">
+            {eyebrow && <p className="font-display text-[0.75rem] font-semibold uppercase leading-[1.2] tracking-[0.02em] text-red">{eyebrow}</p>}
+            {(word_top || word_bottom) && (
+              <h2 className="font-display text-[2.25rem] font-semibold leading-[1.1] text-light-grey [font-feature-settings:'dlig'_1]">
+                {[word_top, word_bottom].filter(Boolean).join(" ")}
+              </h2>
+            )}
           </div>
-        )}
 
-        {eyebrow && (
-          <p className="absolute inset-x-0 top-[9.3%] text-center font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-red">
-            <Typewriter text={eyebrow} />
-          </p>
-        )}
-        {word_top && (
-          <p className={`${word} top-[15.47%]`} aria-hidden={!!word_bottom}>
-            {word_top}
-          </p>
-        )}
-        {word_bottom && <p className={`${word} top-[75.1%]`}>{word_bottom}</p>}
-        {(word_top || word_bottom) && <h2 className="sr-only">{[word_top, word_bottom].filter(Boolean).join(" ")}</h2>}
+          {/* Escritorio: escenario 1512 × 1000 de Figma, escalado al ancho. */}
+          <div className="relative mx-auto hidden aspect-[1512/1000] w-full max-w-[1512px] lg:block">
+            {image?.url && (
+              <div className="pointer-events-none absolute left-[7.2%] top-[5%] h-[92.4%] w-[85.57%]">
+                <div className="relative size-full" data-parallax="0.12">
+                  <Image src={image.url} alt={image.alt || ""} fill sizes="(min-width: 1512px) 1294px, 86vw" className="object-contain" />
+                </div>
+              </div>
+            )}
 
-        {tagList.length > 0 && (
-          <HighlightTags tags={tagList} />
-        )}
-      </div>
+            {eyebrow && (
+              <p className="absolute inset-x-0 top-[9.3%] text-center font-mono text-[0.875rem] uppercase leading-none tracking-[0.02em] text-red">
+                <Typewriter text={eyebrow} />
+              </p>
+            )}
+            {word_top && (
+              <p className={`${word} top-[15.47%]`} aria-hidden={!!word_bottom}>
+                {word_top}
+              </p>
+            )}
+            {word_bottom && <p className={`${word} top-[75.1%]`}>{word_bottom}</p>}
+            {(word_top || word_bottom) && <h2 className="sr-only">{[word_top, word_bottom].filter(Boolean).join(" ")}</h2>}
+
+            {tagList.length > 0 && (
+              <HighlightTags tags={tagList} />
+            )}
+          </div>
+        </>
+      )}
 
       {features.length > 0 && (
-        <ol className="mx-auto mt-12 grid w-full max-w-[1512px] gap-10 px-6 pb-20 lg:mt-0 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-0 lg:px-[9.72%] lg:pb-6 lg:pt-6">
+        <ol className={`mx-auto mt-12 grid w-full max-w-[1512px] gap-10 px-6 pb-20 lg:grid-cols-2 ${headerOnly ? "lg:mt-[120px]" : "lg:mt-0"} lg:gap-x-6 lg:gap-y-0 lg:px-[9.72%] lg:pb-6 lg:pt-6`}>
           {/* Cada característica entra sola, rápido: la línea crece de izquierda a derecha, se teclea el número,
               el título aparece con destello naranja y el texto se teclea (la segunda columna arranca un poco después). */}
           {features.map((item, i) => (
             <li
               key={i}
-              className="relative grid grid-cols-[36px_1fr] gap-x-4 pt-4 lg:grid-cols-[107px_1fr] lg:pb-16"
+              className={`relative grid grid-cols-[36px_1fr] gap-x-4 pt-4 lg:grid-cols-[107px_1fr] lg:pb-16 ${headerOnly ? "lg:min-h-[268px]" : ""}`}
               data-typewriter-group
               data-typewriter-sequence
               data-typewriter-delay={(i % 2) * 0.15}

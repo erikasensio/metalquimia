@@ -9,6 +9,9 @@ return array(
 		mq_f( $l, 'eyebrow', 'text', 'Antetítulo', array( 'instructions' => 'Texto pequeño rojo centrado encima (p. ej. INNOVATION).' ) ),
 		mq_f( $l, 'word_top', 'text', 'Palabra de arriba', array( 'placeholder' => 'Meat.', 'instructions' => 'Muy corta: se ve gigante en gris oscuro, arriba, fundida con la imagen. En móvil se une a la de abajo en una sola línea.' ) ),
 		mq_f( $l, 'word_bottom', 'text', 'Palabra de abajo', array( 'placeholder' => 'The Next.', 'instructions' => 'Muy corta: se ve gigante en gris oscuro, abajo, fundida con la imagen.' ) ),
+		mq_f( $l, 'title_muted', 'textarea', 'Título (parte en gris)', array( 'rows' => 2, 'instructions' => 'Solo si no hay palabras gigantes ni imagen: entonces, en lugar del escenario, se ve una cabecera centrada con este título en dos tonos y el botón (p. ej. «Metalquimia engineering method» + «that produces inventions»).' ) ),
+		mq_f( $l, 'title', 'textarea', 'Título (parte destacada)', array( 'rows' => 2 ) ),
+		mq_f( $l, 'button', 'link', 'Botón', array( 'instructions' => 'Solo en la cabecera centrada (sin palabras gigantes ni imagen).' ) ),
 		mq_f( $l, 'image', 'image', 'Imagen del producto', array( 'instructions' => 'Foto sobre fondo negro o PNG recortado, apaisada (≈ 1400 × 1000 px). Ocupa casi todo el ancho, entre las dos palabras. En móvil no se muestra.' ) ),
 		mq_f(
 			$l,

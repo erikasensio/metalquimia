@@ -1,5 +1,5 @@
 <?php
-// Lista de características principales de una máquina, en dos columnas sobre negro (ficha de máquina › "Main characteristics").
+// Lista de características principales de una máquina sobre negro, con la bola de franjas detrás (Figma Página de máquina › "Main characteristics").
 $l = 'characteristics';
 return array(
 	'name'       => $l,
@@ -15,7 +15,7 @@ return array(
 			array(
 				'layout'       => 'table',
 				'button_label' => 'Añadir característica',
-				'instructions' => 'Una frase por fila. Se reparten en dos columnas en escritorio.',
+				'instructions' => 'Una frase por fila. Se ven en una lista con viñetas.',
 				'sub_fields'   => array(
 					mq_f( $l, 'text', 'text', 'Texto', array(), 'items' ),
 				),

@@ -908,6 +908,54 @@
    },
    "find": "Cut-out stainless injector on transparent (Figma División › product-highlight)"
   },
+  "movistick-classic": {
+   "file": "movistick-classic.png",
+   "alt": {
+    "es": "Inyectora Movistick Classic",
+    "en": "Movistick Classic injector"
+   },
+   "find": "Cut-out PNG Movistick Classic injector, transparent"
+  },
+  "movistick-triplex": {
+   "file": "movistick-triplex.png",
+   "alt": {
+    "es": "Inyectora Movistick Triplex",
+    "en": "Movistick Triplex injector"
+   },
+   "find": "Cut-out PNG Movistick Triplex injector, transparent"
+  },
+  "moviplus-signature": {
+   "file": "moviplus-signature.png",
+   "alt": {
+    "es": "Inyectora Moviplus 4.0 Signature Edition",
+    "en": "Moviplus 4.0 Signature Edition injector"
+   },
+   "find": "Cut-out PNG Moviplus 4.0 Signature Edition injector, transparent"
+  },
+  "moviplus-40": {
+   "file": "moviplus-40.png",
+   "alt": {
+    "es": "Inyectora Moviplus 4.0",
+    "en": "Moviplus 4.0 injector"
+   },
+   "find": "Cut-out PNG Moviplus 4.0 injector (drum), transparent"
+  },
+  "movimax-zero": {
+   "file": "movimax-zero.png",
+   "alt": {
+    "es": "Inyectora Movimax Zero",
+    "en": "Movimax Zero injector"
+   },
+   "find": "Cut-out PNG Movimax Zero injector, transparent"
+  },
+  "product-intro-engineering": {
+   "file": "product-intro-engineering.webp",
+   "alt": {
+    "es": "Ingeniera revisando un diseño en CAD",
+    "en": "Engineer reviewing a CAD design"
+   },
+   "find": "Woman at two monitors with 3D CAD of machine parts (Figma Página de máquina › feature-highlight)"
+  },
   "marinated-product-1": {
    "file": "marinated-product-1.webp",
    "alt": {
@@ -7808,8 +7856,11 @@
      {
       "type": "hero_secondary",
       "title": "Inyección de carne",
-      "subtitle_muted": "La inyección de salmuera, del principio al fin,",
-      "subtitle": "con la precisión que tu producto necesita.",
+      "subtitle_muted": "Ventajas significativas en la",
+      "subtitle": "inyección por spray de la carne",
+      "subtitle_end": "con los equipos y la tecnología de Metalquimia.",
+      "scroll_highlight": true,
+      "lines": true,
       "button": {
        "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
@@ -7825,104 +7876,107 @@
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Movistick",
-      "title": "Inyectoras de carne",
-      "subtitle": "Inyectoras de agujas para piezas enteras con dosificación precisa.",
+      "title_muted": "Inyectoras de carne",
+      "title": "Movistick",
+      "subtitle": "Distribución uniforme de la salmuera y máxima precisión de inyección gracias al efecto spray.",
       "button": null,
       "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:movistick-classic",
+        "name": "Movistick Classic",
         "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "description": "Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-classic",
          "target": ""
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "image": "@img:movistick-triplex",
+        "name": "Movistick triplex",
+        "category": "INYECCIÓN",
+        "description": "La MOVISTICK TRIPLEX es una inyectora hidráulica autopropulsada que puede equiparse con hasta 3 cabezales de inyección.",
         "link": {
          "title": "",
          "url": "@page:machine",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Moviplus 4.0",
-      "title": "Inyectoras de carne",
-      "subtitle": "Inyección inteligente y conectada.",
+      "title_muted": "Inyectoras de carne",
+      "title": "Moviplus 4.0",
+      "subtitle": "La MOVISTICK TRIPLEX es una inyectora hidráulica autopropulsada que puede equiparse con hasta 3 cabezales de inyección.",
       "button": null,
       "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:moviplus-signature",
+        "name": "Moviplus 4.0 Signature Edition",
         "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "description": "Injection Molding, the Next: excelencia en diseño inteligente.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-signature",
          "target": ""
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
+        "image": "@img:moviplus-40",
         "name": "Moviplus 4.0",
         "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
+        "description": "La nueva Moviplus 4.0 se ha diseñado especialmente para la ciberindustria del futuro.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-moviplus",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:moviplus-40",
+        "name": "Moviplus-E",
+        "category": "INYECCIÓN",
+        "description": "Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.",
+        "link": {
+         "title": "",
+         "url": "@page:machine-moviplus-e",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Movimax Zero",
-      "title": "Inyectoras de carne",
-      "subtitle": "Alta capacidad para grandes producciones.",
+      "title_muted": "Inyectoras de carne",
+      "title": "Movimax Zero",
+      "subtitle": "La inyectora de carne con menor huella de carbono del mercado.",
       "button": null,
       "show_filters": false,
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:movimax-zero",
+        "name": "Movimax Zero",
         "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "description": "La inyectora de carne neutra en carbono.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-movimax",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "gradient_divider",
@@ -7935,10 +7989,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership para toda la vida",
       "title": "que genera inventos",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "text": "<p>La Creativación es el enfoque de Metalquimia para la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica convergen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "DESCUBRE NUESTRO MODELO",
        "url": "@page:partnership",
        "target": ""
       },
@@ -7953,8 +8007,11 @@
      {
       "type": "hero_secondary",
       "title": "Meat injection",
-      "subtitle_muted": "Brine injection, from start to finish,",
-      "subtitle": "with the precision your product needs.",
+      "subtitle_muted": "Significant advantages in",
+      "subtitle": "spray-injection of meat",
+      "subtitle_end": "using Metalquimia's equipment and technology.",
+      "scroll_highlight": true,
+      "lines": true,
       "button": {
        "title": "REQUEST INFO",
        "url": "@page:contact#form",
@@ -7970,104 +8027,107 @@
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Movistick",
-      "title": "Meat Injectors",
-      "subtitle": "Needle injectors for whole muscle pieces with precise dosing.",
+      "title_muted": "Meat Injectors",
+      "title": "Movistick",
+      "subtitle": "Uniform distribution of brine and maximum injection precision through the spray effect.",
       "button": null,
       "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:movistick-classic",
+        "name": "Movistick Classic",
         "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "description": "Uniform distribution of brine and maximum precision in meat injection.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-classic",
          "target": ""
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "image": "@img:movistick-triplex",
+        "name": "Movistick triplex",
+        "category": "INJECTION",
+        "description": "The MOVISTICK TRIPLEX is a self-propelled hydraulic injection machine that can be equipped with up to 3 injection heads.",
         "link": {
          "title": "",
          "url": "@page:machine",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Moviplus 4.0",
-      "title": "Meat Injectors",
-      "subtitle": "Smart, connected injection.",
+      "title_muted": "Meat Injectors",
+      "title": "Moviplus 4.0",
+      "subtitle": "The MOVISTICK TRIPLEX is a self-propelled hydraulic injection machine that can be equipped with up to 3 injection heads.",
       "button": null,
       "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:moviplus-signature",
+        "name": "Moviplus 4.0 Signature Edition",
         "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "description": "Injection Molding, the Next: Excellence in Smart Design.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-signature",
          "target": ""
         }
        },
        {
-        "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
-        "link": {
-         "title": "",
-         "url": "@page:machine",
-         "target": ""
-        }
-       },
-       {
-        "image": "@img:m-3",
+        "image": "@img:moviplus-40",
         "name": "Moviplus 4.0",
         "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
+        "description": "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-moviplus",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:moviplus-40",
+        "name": "Moviplus-E",
+        "category": "INJECTION",
+        "description": "New line of meat injectors with a fully electric drive system.",
+        "link": {
+         "title": "",
+         "url": "@page:machine-moviplus-e",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "products_highlight",
       "eyebrow": "",
-      "title_muted": "Movimax Zero",
-      "title": "Meat Injectors",
-      "subtitle": "High capacity for large productions.",
+      "title_muted": "Meat Injectors",
+      "title": "Movimax Zero",
+      "subtitle": "The meat injector with the lowest carbon footprint on the market.",
       "button": null,
       "show_filters": false,
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:m-1",
-        "name": "Movistick",
+        "image": "@img:movimax-zero",
+        "name": "Movimax Zero",
         "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "description": "The Carbon-Neutral Meat Injector.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:machine-movimax",
          "target": ""
         }
        }
-      ]
+      ],
+      "muted_last": true
      },
      {
       "type": "gradient_divider",
@@ -8080,10 +8140,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership for life",
       "title": "that produces inventions",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "text": "<p>Creativation is Metalquimia's approach to R&amp;D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "DISCOVER OUR MODEL",
        "url": "@page:partnership",
        "target": ""
       },
@@ -8093,20 +8153,18 @@
    }
   },
   {
-   "key": "machine",
+   "key": "machine-classic",
    "parent": "meat-injection",
    "es": {
-    "title": "Movistick Tinder",
-    "slug": "movistick-tinder",
+    "title": "Movistick Classic",
+    "slug": "movistick-classic",
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:machine-hero",
-      "image_mobile": "",
-      "title_top": "Movistick",
-      "title_bottom": "Tinder",
-      "subtitle": "Inyectora de agujas de alta precisión para productos de músculo entero.",
-      "card_image": "@img:product-thumb",
+      "image": "@img:movistick-classic",
+      "title": "Movistick Classic",
+      "subtitle": "Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.",
+      "card_image": "",
       "card_text": "Pide más información sobre este producto",
       "card_button": {
        "title": "SOLICITA INFORMACIÓN",
@@ -8115,91 +8173,93 @@
       }
      },
      {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "Las inyectoras MOVISTICK CLASSIC son máquinas totalmente hidráulicas y autopilotadas, con la bomba de salmuera incorporada, que inyectan la salmuera a presión constante a través de múltiples orificios y consiguen un reparto uniforme, sin zonas muertas, en carne con o sin hueso.\n\nSus sistemas de filtrado independientes o el filtro automático autolimpiable opcional permiten trabajar 24 horas sin paradas con todo tipo de salmueras."
+     },
+     {
       "type": "characteristics",
-      "eyebrow": "FICHA",
+      "eyebrow": "EL PRODUCTO",
       "title": "Características principales",
       "items": [
        {
-        "text": "Cabezal de agujas de acero inoxidable de fácil limpieza"
+        "text": "Amplio margen de porcentajes de inyección."
        },
        {
-        "text": "Dosificación de salmuera regulable pieza a pieza"
+        "text": "Mínimo goteo de salmuera."
        },
        {
-        "text": "Conexión a MQConnect para monitorizar la producción"
+        "text": "Mejor reparto de la salmuera en el músculo."
        },
        {
-        "text": "Sistema de filtrado continuo de la salmuera"
+        "text": "Máxima precisión de inyección."
        },
        {
-        "text": "Diseño higiénico según normativa europea"
+        "text": "Inyección regulable."
        },
        {
-        "text": "Cambio rápido de formato"
+        "text": "Inyección de ingredientes insolubles dispersos."
        },
        {
-        "text": "Bajo consumo energético"
+        "text": "Agujas intercambiables según el tipo de carne."
        },
        {
-        "text": "Capacidad hasta 3.000 kg/h"
+        "text": "Para inyección con hueso (modelos CR) / sin hueso."
+       },
+       {
+        "text": "Cabezal tenderizador opcional (según modelo)."
+       },
+       {
+        "text": "Mayor rendimiento final."
+       },
+       {
+        "text": "Diseño higiénico orientado a la seguridad alimentaria."
+       },
+       {
+        "text": "Dispositivo UP&DOWN opcional (excepto modelos CR)."
+       },
+       {
+        "text": "Regulación opcional de la presión de inyección por efecto spray."
        }
       ],
       "button": {
-       "title": "DESCARGAR FICHA",
-       "url": "#",
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
        "target": ""
       },
       "file": "",
       "button_label": "DESCARGAR FICHA"
      },
      {
-      "type": "media_text",
-      "theme": "dark",
-      "image_position": "left",
-      "eyebrow": "MQCONNECT",
-      "title_muted": "Toda la línea",
-      "title": "en una sola pantalla.",
-      "text": "<p>Monitoriza la inyección, ajusta parámetros y registra cada lote desde MQConnect. Integración completa para la supervisión en tiempo real, el registro de parámetros y el diagnóstico remoto.</p>",
-      "details": "",
-      "button": null,
-      "image": "@img:software"
-     },
-     {
       "type": "highlight",
-      "eyebrow": "EL MÉTODO METALQUIMIA",
-      "word_top": "Meat.",
-      "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
-      "tags": [
-       {
-        "label": "Inyección precisa"
-       },
-       {
-        "label": "Masaje refrigerado"
-       },
-       {
-        "label": "Control sin contacto"
-       },
-       {
-        "label": "Inteligencia térmica"
-       }
-      ],
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
       "items": [
        {
-        "title": "Masaje refrigerado.",
-        "text": "Mantenemos la temperatura ideal durante todo el proceso para proteger la textura y la seguridad alimentaria."
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
        },
        {
-        "title": "Inyección de precisión.",
-        "text": "Cada aguja dosifica exactamente la salmuera necesaria para un reparto uniforme pieza a pieza."
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
        },
        {
-        "title": "Inteligencia térmica.",
-        "text": "Sensores y software ajustan la cocción en tiempo real para un producto final constante."
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
        },
        {
-        "title": "Control sin contacto.",
-        "text": "Supervisa y ajusta toda la línea desde MQConnect, sin detener la producción."
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
        }
       ],
       "overlay_title": "",
@@ -8209,55 +8269,77 @@
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPOS",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
       "title_muted": "Diseñado para el proceso.",
       "title": "Construido para durar.",
-      "subtitle": "",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
       "button": null,
-      "show_filters": false,
+      "show_filters": true,
       "all_label": "TODOS",
       "items": [
        {
         "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INYECCIÓN",
-        "description": "Inyectora de agujas para piezas enteras con dosificación precisa.",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:meat-injection",
          "target": ""
         }
        },
        {
         "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "MASAJE",
-        "description": "Masajeadora al vacío con control de temperatura.",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "#",
          "target": ""
         }
        },
        {
         "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INYECCIÓN",
-        "description": "Inyección inteligente conectada a MQConnect.",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "#",
          "target": ""
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZADO",
-        "description": "Tenderizadora para mejorar la textura y la absorción.",
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
          "target": ""
         }
        }
@@ -8266,17 +8348,15 @@
     ]
    },
    "en": {
-    "title": "Movistick Tinder",
-    "slug": "movistick-tinder",
+    "title": "Movistick Classic",
+    "slug": "movistick-classic",
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:machine-hero",
-      "image_mobile": "",
-      "title_top": "Movistick",
-      "title_bottom": "Tinder",
-      "subtitle": "High-precision needle injector for whole muscle products.",
-      "card_image": "@img:product-thumb",
+      "image": "@img:movistick-classic",
+      "title": "Movistick Classic",
+      "subtitle": "Uniform distribution of brine and maximum precision in meat injection.",
+      "card_image": "",
       "card_text": "Get more information about this product",
       "card_button": {
        "title": "REQUEST INFORMATION",
@@ -8285,91 +8365,93 @@
       }
      },
      {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "MOVISTICK CLASSIC injectors are fully hydraulic, self-piloted machines with a built-in brine pump that inject brine at constant pressure through multiple holes, achieving a uniform distribution with no dead zones in boneless or bone-in meat.\n\nIndependent filtering systems or the optional self-cleaning automatic filter allow 24-hour non-stop operation with all types of brines."
+     },
+     {
       "type": "characteristics",
-      "eyebrow": "SPECS",
+      "eyebrow": "THE PRODUCT",
       "title": "Main characteristics",
       "items": [
        {
-        "text": "Easy-clean stainless steel needle head"
+        "text": "Wide range of injection percentages."
        },
        {
-        "text": "Adjustable brine dosing piece by piece"
+        "text": "Minimal brine drainage."
        },
        {
-        "text": "MQConnect connection to monitor production"
+        "text": "Better distribution of brine within the muscle."
        },
        {
-        "text": "Continuous brine filtering system"
+        "text": "Maximum injection precision."
        },
        {
-        "text": "Hygienic design to European standards"
+        "text": "Adjustable injection."
        },
        {
-        "text": "Quick format change"
+        "text": "Injection of dispersed insoluble ingredients."
        },
        {
-        "text": "Low energy consumption"
+        "text": "Interchangeable needles depending on the type of meat."
        },
        {
-        "text": "Capacity up to 3,000 kg/h"
+        "text": "For injection with bone (CR models) / without bone."
+       },
+       {
+        "text": "Optional tenderizer head (depending on model)."
+       },
+       {
+        "text": "Higher final yield."
+       },
+       {
+        "text": "Hygienic design focused on food safety."
+       },
+       {
+        "text": "Optional UP&DOWN device (except CR models)."
+       },
+       {
+        "text": "Optional injection pressure regulation by spray effect."
        }
       ],
       "button": {
-       "title": "DOWNLOAD DATASHEET",
-       "url": "#",
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
        "target": ""
       },
       "file": "",
       "button_label": "DOWNLOAD DATASHEET"
      },
      {
-      "type": "media_text",
-      "theme": "dark",
-      "image_position": "left",
-      "eyebrow": "MQCONNECT",
-      "title_muted": "The whole line",
-      "title": "on a single screen.",
-      "text": "<p>Monitor injection, adjust parameters and log every batch from MQConnect. Full integration for real-time monitoring, parameter logging and remote diagnostics.</p>",
-      "details": "",
-      "button": null,
-      "image": "@img:software"
-     },
-     {
       "type": "highlight",
-      "eyebrow": "THE METALQUIMIA METHOD",
-      "word_top": "Meat.",
-      "word_bottom": "The Next.",
-      "image": "@img:ham-slices",
-      "tags": [
-       {
-        "label": "Precision injection"
-       },
-       {
-        "label": "Refrigerated tumbling"
-       },
-       {
-        "label": "Contactless control"
-       },
-       {
-        "label": "Thermal intelligence"
-       }
-      ],
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
       "items": [
        {
-        "title": "Refrigerated Tumbling.",
-        "text": "We keep the ideal temperature throughout the process to protect texture and food safety."
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
        },
        {
-        "title": "Precision Injection.",
-        "text": "Every needle doses exactly the brine needed for an even distribution, piece after piece."
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
        },
        {
-        "title": "Thermal Intelligence.",
-        "text": "Sensors and software adjust cooking in real time for a consistent final product."
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
        },
        {
-        "title": "Contactless Control.",
-        "text": "Monitor and adjust the whole line from MQConnect, without stopping production."
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
        }
       ],
       "overlay_title": "",
@@ -8379,55 +8461,1975 @@
      },
      {
       "type": "products_highlight",
-      "eyebrow": "EQUIPMENT",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
       "title_muted": "Engineered for the process.",
       "title": "Built for the long run.",
-      "subtitle": "",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
       "button": null,
-      "show_filters": false,
+      "show_filters": true,
       "all_label": "ALL",
       "items": [
        {
         "image": "@img:m-1",
-        "name": "Movistick",
-        "category": "INJECTION",
-        "description": "Needle injector for whole muscle pieces with precise dosing.",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:meat-injection",
          "target": ""
         }
        },
        {
         "image": "@img:m-2",
-        "name": "Movitumbler",
-        "category": "TUMBLING",
-        "description": "Vacuum tumbler with temperature control.",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "#",
          "target": ""
         }
        },
        {
         "image": "@img:m-3",
-        "name": "Moviplus 4.0",
-        "category": "INJECTION",
-        "description": "Smart injection connected to MQConnect.",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "#",
          "target": ""
         }
        },
        {
-        "image": "@img:m-4",
-        "name": "Movitender",
-        "category": "TENDERIZING",
-        "description": "Tenderizer to improve texture and absorption.",
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
         "link": {
          "title": "",
-         "url": "@page:machine",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "machine",
+   "parent": "meat-injection",
+   "es": {
+    "title": "Movistick Triplex",
+    "slug": "movistick-triplex",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:movistick-triplex",
+      "title": "Movistick Triplex",
+      "subtitle": "La MOVISTICK TRIPLEX es la inyectora hidráulica autopilotada que incorpora hasta 3 cabezales de inyección.",
+      "card_image": "",
+      "card_text": "Pide más información sobre este producto",
+      "card_button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "Sin duda, la inyectora para productos cárnicos (con o sin hueso) con mayor potencial de inyección del sector cárnico mundial. Equipada con una bomba hidráulica de triple pistón, ofrece los mayores índices de productividad del mercado y los mejores rendimientos finales con la máxima precisión de inyección, con un reparto espectacular de la salmuera y uniformidad de color, para responder a los exigentes retos exponenciales de la industria cárnica del futuro.\n\nEl diseño único de sus cabezales permite inyectar productos con avances de cinta de hasta 120 mm, lo que se traduce en una gran capacidad de producción."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "EL PRODUCTO",
+      "title": "Características principales",
+      "items": [
+       {
+        "text": "Inyección regulable del 15 al 160 % por pasada según el tipo de carne."
+       },
+       {
+        "text": "Reparto uniforme de la salmuera sin zonas muertas."
+       },
+       {
+        "text": "Inyección de ingredientes insolubles dispersos."
+       },
+       {
+        "text": "Mínimo goteo de salmuera."
+       },
+       {
+        "text": "Filtro automático autolimpiable opcional, pensado para trabajar 24 horas sin paradas con todo tipo de salmueras."
+       },
+       {
+        "text": "Para inyección con hueso (modelos CR) / sin hueso."
+       },
+       {
+        "text": "Autopilotada totalmente hidráulica, bombas de salmuera incluidas."
+       },
+       {
+        "text": "Tres cabezales de agujas alternativos para una inyección exponencial."
+       },
+       {
+        "text": "Cabezales de doble funcionamiento: triple o doble cabezal."
+       },
+       {
+        "text": "Dispositivo de regulación de la presión de inyección por efecto spray."
+       },
+       {
+        "text": "Separación optimizada entre cabezales para piezas de gran longitud."
+       },
+       {
+        "text": "Cinta de transporte tipo SINGER."
+       },
+       {
+        "text": "Soporte independiente para cada grupo de agujas."
+       },
+       {
+        "text": "Aprovechamiento total de la salmuera."
+       },
+       {
+        "text": "Máxima facilidad de mantenimiento, limpieza y desinfección."
+       }
+      ],
+      "button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DESCARGAR FICHA"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
+       },
+       {
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
+       },
+       {
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
+       },
+       {
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Movistick Triplex",
+    "slug": "movistick-triplex",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:movistick-triplex",
+      "title": "Movistick Triplex",
+      "subtitle": "The MOVISTICK TRIPLEX is the self-piloted hydraulic injector that incorporates up to 3 injection heads.",
+      "card_image": "",
+      "card_text": "Get more information about this product",
+      "card_button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "Without a doubt, the injector for meat products (with or without bones) with the greatest injection potential in the global meat sector, equipped with a triple hydraulic piston pump, provides the highest productivity rates in the market and the best final yields with maximum injection precision, achieving a spectacular distribution of brine and color uniformity, thus addressing the demanding exponential challenges of the future meat industry.\n\nThe unique design of its heads allows for the injection of products with conveyor advances of up to 120 mm, resulting in a high production capacity."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "THE PRODUCT",
+      "title": "Main characteristics",
+      "items": [
+       {
+        "text": "Adjustable injection from 15 to 160% per pass depending on the type of meat."
+       },
+       {
+        "text": "Uniform distribution of brine with no dead zones."
+       },
+       {
+        "text": "Injection of dispersed insoluble ingredients."
+       },
+       {
+        "text": "Minimal brine drainage."
+       },
+       {
+        "text": "Optional self-cleaning automatic filter, specially designed to operate 24 hours without stops with all types of brines."
+       },
+       {
+        "text": "For injection with bone (CR models) / without bone."
+       },
+       {
+        "text": "Fully hydraulic autopilot, including brine pumps."
+       },
+       {
+        "text": "Three alternative needle heads for exponential injection."
+       },
+       {
+        "text": "Heads with dual operation: Triple or Double Head operation."
+       },
+       {
+        "text": "Injection Pressure Regulation Device by Spray Effect."
+       },
+       {
+        "text": "Optimized spacing between heads for long dimension pieces."
+       },
+       {
+        "text": "SINGER type transport belt."
+       },
+       {
+        "text": "Independent holder for each group of needles."
+       },
+       {
+        "text": "Total utilization of brine."
+       },
+       {
+        "text": "Maximum ease of maintenance, cleaning, and disinfection."
+       }
+      ],
+      "button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DOWNLOAD DATASHEET"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
+       },
+       {
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
+       },
+       {
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
+       },
+       {
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "machine-signature",
+   "parent": "meat-injection",
+   "es": {
+    "title": "Moviplus 4.0 Signature Edition",
+    "slug": "moviplus-4-0-signature-edition",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-signature",
+      "title": "Moviplus 4.0 Signature Edition",
+      "subtitle": "La inyección, lo siguiente: excelencia en diseño inteligente.",
+      "card_image": "",
+      "card_text": "Pide más información sobre este producto",
+      "card_button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "La MOVIPLUS 4.0 Signature Edition forma parte de la línea Signature de Metalquimia, junto con el reactor de masaje TURBOMEAT 4.0 y la embutidora automática de músculo entero TWINVAC 4.0, galardonada con el Red Dot Award 2019 de diseño industrial.\n\nUne conectividad 4.0 total, un sistema de inyección autorregulado y la tecnología SPRAYPLUS® en un diseño inteligente e higiénico, pensado para la máxima productividad."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "EL PRODUCTO",
+      "title": "Características principales",
+      "items": [
+       {
+        "text": "Conectividad 4.0 total: la inyección del futuro."
+       },
+       {
+        "text": "Sistema de inyección autorregulado: precisión incomparable."
+       },
+       {
+        "text": "Tecnología SPRAYPLUS®: reparto de la salmuera inmejorable."
+       },
+       {
+        "text": "Más ciclos de trabajo: mayor productividad."
+       },
+       {
+        "text": "Diseño inteligente e higiénico: Signature Edition."
+       },
+       {
+        "text": "Red Dot Award 2019 al diseño industrial."
+       }
+      ],
+      "button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DESCARGAR FICHA"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
+       },
+       {
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
+       },
+       {
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
+       },
+       {
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Moviplus 4.0 Signature Edition",
+    "slug": "moviplus-4-0-signature-edition",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-signature",
+      "title": "Moviplus 4.0 Signature Edition",
+      "subtitle": "Injection Molding, the Next: Excellence in Smart Design.",
+      "card_image": "",
+      "card_text": "Get more information about this product",
+      "card_button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "The MOVIPLUS 4.0 Signature Edition is part of Metalquimia's Signature line, together with the TURBOMEAT 4.0 massage reactor and the TWINVAC 4.0 automatic whole muscle stuffer, winner of the 2019 Red Dot Award for industrial design.\n\nIt brings together total 4.0 connectivity, a self-regulating injection system and SPRAYPLUS® technology in a smart, hygienic design built for maximum productivity."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "THE PRODUCT",
+      "title": "Main characteristics",
+      "items": [
+       {
+        "text": "Total 4.0 connectivity: the injection of the future."
+       },
+       {
+        "text": "Self-regulating injection system: incomparable precision."
+       },
+       {
+        "text": "SPRAYPLUS® technology: unbeatable brine distribution."
+       },
+       {
+        "text": "More operating cycles: higher productivity."
+       },
+       {
+        "text": "Smart & hygienic design: Signature Edition."
+       },
+       {
+        "text": "2019 Red Dot Award for industrial design."
+       }
+      ],
+      "button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DOWNLOAD DATASHEET"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
+       },
+       {
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
+       },
+       {
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
+       },
+       {
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "machine-moviplus",
+   "parent": "meat-injection",
+   "es": {
+    "title": "Moviplus 4.0",
+    "slug": "moviplus-4-0",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-40",
+      "title": "Moviplus 4.0",
+      "subtitle": "La nueva versión 4.0 de la Moviplus, diseñada especialmente para la ciberindustria del futuro.",
+      "card_image": "",
+      "card_text": "Pide más información sobre este producto",
+      "card_button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "La MOVIPLUS 4.0 inyecta la salmuera a presión constante en cualquier tipo de carne sin hueso (cerdo, vacuno, aves…) con su sistema spray inteligente, y consigue un reparto uniforme de la salmuera y del color, una gran productividad y los mejores rendimientos finales.\n\nLa inyección es regulable del 10 al 100 % por pasada, según el modelo y el tipo de carne."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "EL PRODUCTO",
+      "title": "Características principales",
+      "items": [
+       {
+        "text": "Funcionamiento electrohidráulico controlado por autómata y pantalla táctil."
+       },
+       {
+        "text": "Ciclos de trabajo más largos para una mayor productividad."
+       },
+       {
+        "text": "Selección de inyección con uno o dos cabezales."
+       },
+       {
+        "text": "Separación regulable entre cabezales para una inyección diferencial."
+       },
+       {
+        "text": "Cabezal tenderizador regulable en ciclos para una mayor extracción de proteína."
+       },
+       {
+        "text": "Regulación de la presión de inyección por efecto spray."
+       },
+       {
+        "text": "Tecnología de reparto SPRAYPLUS® opcional."
+       },
+       {
+        "text": "Sistema UP&DOWN opcional para productos con corteza."
+       },
+       {
+        "text": "Para inyección con hueso (modelos CR) / sin hueso."
+       },
+       {
+        "text": "Agujas fáciles de extraer para su control, limpieza y desinfección."
+       },
+       {
+        "text": "Diseño higiénico orientado a la seguridad alimentaria."
+       },
+       {
+        "text": "Agujas flexibles con «efecto memoria»."
+       },
+       {
+        "text": "Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL."
+       }
+      ],
+      "button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DESCARGAR FICHA"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
+       },
+       {
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
+       },
+       {
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
+       },
+       {
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Moviplus 4.0",
+    "slug": "moviplus-4-0",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-40",
+      "title": "Moviplus 4.0",
+      "subtitle": "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.",
+      "card_image": "",
+      "card_text": "Get more information about this product",
+      "card_button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "The MOVIPLUS 4.0 injects brine at constant pressure into any type of boneless meat (pork, beef, poultry…) with its smart spray system, achieving a uniform distribution of brine and colour, high productivity and the best final yields.\n\nInjection is adjustable from 10 to 100% per pass, depending on the model and the type of meat."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "THE PRODUCT",
+      "title": "Main characteristics",
+      "items": [
+       {
+        "text": "Electro-hydraulic operation controlled by PLC and touch screen."
+       },
+       {
+        "text": "Longer operating cycles for higher productivity."
+       },
+       {
+        "text": "Single or double head injection selection."
+       },
+       {
+        "text": "Adjustable spacing between heads for differential injection."
+       },
+       {
+        "text": "Cycle-adjustable tenderizer head for greater protein extraction."
+       },
+       {
+        "text": "Injection pressure regulation by spray effect."
+       },
+       {
+        "text": "Optional SPRAYPLUS® distribution technology."
+       },
+       {
+        "text": "Optional UP&DOWN system for skin-on products."
+       },
+       {
+        "text": "For injection with bone (CR models) / without bone."
+       },
+       {
+        "text": "Easy-to-extract needles for control, cleaning and disinfection."
+       },
+       {
+        "text": "Hygienic design focused on food safety."
+       },
+       {
+        "text": "Flexible “memory effect” needles."
+       },
+       {
+        "text": "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."
+       }
+      ],
+      "button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DOWNLOAD DATASHEET"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
+       },
+       {
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
+       },
+       {
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
+       },
+       {
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "machine-moviplus-e",
+   "parent": "meat-injection",
+   "es": {
+    "title": "Moviplus-E",
+    "slug": "moviplus-e",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-40",
+      "title": "Moviplus-E",
+      "subtitle": "Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.",
+      "card_image": "",
+      "card_text": "Pide más información sobre este producto",
+      "card_button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "Las nuevas inyectoras MOVIPLUS-e son la apuesta definitiva por una inyección de carne sostenible: su accionamiento totalmente eléctrico y la sencillez tecnológica de todos sus componentes se traducen en eficiencia energética, ahorro de salmuera, productividad, reciclabilidad y un mantenimiento mínimo.\n\nSu cabezal de inyección por efecto spray ofrece un reparto de la salmuera y una uniformidad de color sin rival, con gran versatilidad de porcentajes, un goteo mínimo y los mejores rendimientos finales."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "EL PRODUCTO",
+      "title": "Características principales",
+      "items": [
+       {
+        "text": "Funcionamiento totalmente eléctrico controlado por PLC y pantalla."
+       },
+       {
+        "text": "Todos los movimientos con servomotores = mayor precisión."
+       },
+       {
+        "text": "Tecnología SPRAYPLUS® para optimizar el reparto."
+       },
+       {
+        "text": "Sistema UP&DOWN para productos con corteza."
+       },
+       {
+        "text": "Dispositivo de regulación de la presión de inyección por efecto spray."
+       },
+       {
+        "text": "Agujas flexibles «efecto memoria» con retorno a la posición original."
+       },
+       {
+        "text": "Para inyección con hueso / sin hueso."
+       },
+       {
+        "text": "Sistema de conectividad inteligente MQConnect incorporado."
+       },
+       {
+        "text": "Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL."
+       }
+      ],
+      "button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DESCARGAR FICHA"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
+       },
+       {
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
+       },
+       {
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
+       },
+       {
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Moviplus-E",
+    "slug": "moviplus-e",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:moviplus-40",
+      "title": "Moviplus-E",
+      "subtitle": "New line of meat injectors with a fully electric drive system.",
+      "card_image": "",
+      "card_text": "Get more information about this product",
+      "card_button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "The new MOVIPLUS-e injectors are the ultimate commitment to sustainable meat injection: their fully electric drive system and the technological simplicity of all their components bring energy efficiency, brine savings, productivity, recyclability and minimal maintenance.\n\nIts spray-effect injection head provides unrivalled brine distribution and colour uniformity, with wide versatility of injection percentages, minimal drip loss and the best final yields."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "THE PRODUCT",
+      "title": "Main characteristics",
+      "items": [
+       {
+        "text": "Fully electric operation controlled by PLC and display."
+       },
+       {
+        "text": "All movements with servomotors = greater precision."
+       },
+       {
+        "text": "SPRAYPLUS® technology to optimise distribution."
+       },
+       {
+        "text": "UP&DOWN system for skin-on products."
+       },
+       {
+        "text": "Injection pressure regulation device by spray effect."
+       },
+       {
+        "text": "Flexible “memory effect” needles that return to their original position."
+       },
+       {
+        "text": "For injection with bone / without bone."
+       },
+       {
+        "text": "Built-in MQConnect smart connectivity system."
+       },
+       {
+        "text": "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."
+       }
+      ],
+      "button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DOWNLOAD DATASHEET"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
+       },
+       {
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
+       },
+       {
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
+       },
+       {
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "machine-movimax",
+   "parent": "meat-injection",
+   "es": {
+    "title": "Movimax Zero",
+    "slug": "movimax-zero",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:movimax-zero",
+      "title": "Movimax Zero",
+      "subtitle": "La inyectora de carne con menor huella de carbono del mercado.",
+      "card_image": "",
+      "card_text": "Pide más información sobre este producto",
+      "card_button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "La Movimax Zero 5500 es la inyectora con menor huella de carbono del mercado. Con dos cabezales y 3.312 puntos de inyección spray, su bomba de doble servopistón volumétrico ofrece la máxima eficiencia energética, precisión de inyección y una temperatura de emisión reducida sin competencia.\n\nAdemás, el rediseño completo de todo el sistema de inyección y filtrado reduce al mínimo la salmuera sobrante tras cada lote (Zero Waste), y la tecnología de sus cabezales logra un reparto de la salmuera y una uniformidad de color sin rival en el mercado."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "EL PRODUCTO",
+      "title": "Características principales",
+      "items": [
+       {
+        "text": "Funcionamiento totalmente eléctrico controlado por PLC y pantalla."
+       },
+       {
+        "text": "Todos los movimientos con servomotores = mayor precisión."
+       },
+       {
+        "text": "Circuito de salmuera reducido."
+       },
+       {
+        "text": "Mayor aprovechamiento de la salmuera (Zero Waste)."
+       },
+       {
+        "text": "Filtro de banda integrado = menos espacio alrededor de la máquina."
+       },
+       {
+        "text": "Extracción lateral del filtro para su limpieza y desinfección."
+       },
+       {
+        "text": "Selección del modo de trabajo: un cabezal, dos cabezales o solo cinta."
+       },
+       {
+        "text": "Cabezal tenderizador regulable en ciclos."
+       },
+       {
+        "text": "Posibilidad de trabajar solo con el cabezal tenderizador (opcional)."
+       },
+       {
+        "text": "Sistema UP&DOWN para productos con corteza, regulable en cuatro posiciones: 0, 4, 8 y 12 mm."
+       },
+       {
+        "text": "Dispositivo de regulación de la presión de inyección por efecto spray."
+       },
+       {
+        "text": "Agujas «efecto memoria» con retorno a la posición original."
+       },
+       {
+        "text": "Inyección con hueso y sin hueso (según modelo)."
+       },
+       {
+        "text": "Accesorio opcional: sistema de autorregulación de la inyección DYNAMIC INJECT CONTROL."
+       },
+       {
+        "text": "Sistema de conectividad inteligente MQConnect incorporado."
+       }
+      ],
+      "button": {
+       "title": "SOLICITA INFORMACIÓN",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DESCARGAR FICHA"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "INGENIERÍA DE MAQUINARIA DE PRIMER NIVEL",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "El método de ingeniería Metalquimia",
+      "title": "que genera inventos",
+      "button": {
+       "title": "DESCUBRE CÓMO PENSAMOS",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precisión que nunca sacrifica el rendimiento",
+        "text": "Nuestros equipos están diseñados para trabajar con tolerancias que la maquinaria industrial estándar no alcanza."
+       },
+       {
+        "title": "Fiabilidad integrada en el diseño",
+        "text": "Diseñamos nosotros mismos cada componente. La fiabilidad está desde el principio: no como una promesa de soporte, sino como un estándar de ingeniería."
+       },
+       {
+        "title": "Tecnología propia",
+        "text": "A diferencia de los integradores, cada tecnología crítica de nuestros equipos es nuestra. Eso significa mejoras más rápidas, un conocimiento más profundo del proceso y una evolución de la línea sin saltos."
+       },
+       {
+        "title": "Un socio que inventó el proceso",
+        "text": "Nuestros ingenieros conocen la ciencia exacta detrás del diseño de cada componente. Ese conocimiento nos convierte en el socio capaz de resolver lo que otros solo pueden esquivar."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "¿QUÉ HACEMOS? REDEFINIR LO ESTÁNDAR",
+      "title_muted": "Diseñado para el proceso.",
+      "title": "Construido para durar.",
+      "subtitle": "Diseñamos y fabricamos equipos y tecnología de proceso para la elaboración de productos cárnicos y/o a base de proteínas.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "TODOS",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Inyectoras de carne",
+        "category": "",
+        "description": "Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Descongelación de carne",
+        "category": "",
+        "description": "Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Embutidoras de carne",
+        "category": "",
+        "description": "Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Movimax Zero",
+    "slug": "movimax-zero",
+    "sections": [
+     {
+      "type": "product_hero",
+      "image": "@img:movimax-zero",
+      "title": "Movimax Zero",
+      "subtitle": "The Carbon-Neutral Meat Injector.",
+      "card_image": "",
+      "card_text": "Get more information about this product",
+      "card_button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      }
+     },
+     {
+      "type": "product_intro",
+      "image": "@img:product-intro-engineering",
+      "text": "The Movimax Zero 5500 is the lowest carbon footprint injector on the market. Equipped with two heads and 3,312 spray injection points, its double volumetric servo-piston pump provides maximum energy efficiency, injection precision and reduced emission temperatures without competition.\n\nA complete redesign of the entire injection and filtering system also minimises the excess brine after each batch (Zero Waste), and its head technology provides brine distribution and colour uniformity without competition in the market."
+     },
+     {
+      "type": "characteristics",
+      "eyebrow": "THE PRODUCT",
+      "title": "Main characteristics",
+      "items": [
+       {
+        "text": "Fully electric operation controlled by PLC and display."
+       },
+       {
+        "text": "All movements with servomotors = greater precision."
+       },
+       {
+        "text": "Reduced brine circuit."
+       },
+       {
+        "text": "Greater use of brine (Zero Waste)."
+       },
+       {
+        "text": "Built-in band filter = less space needed around the machine."
+       },
+       {
+        "text": "Lateral filter extraction for cleaning and disinfection."
+       },
+       {
+        "text": "Work mode selection: one head, two heads or belt only."
+       },
+       {
+        "text": "Cycle-adjustable tenderizer head."
+       },
+       {
+        "text": "Option to work with the tenderizer head only (optional)."
+       },
+       {
+        "text": "UP&DOWN system for skin-on products, adjustable in four positions: 0, 4, 8 and 12 mm."
+       },
+       {
+        "text": "Injection pressure regulation device by spray effect."
+       },
+       {
+        "text": "“Memory effect” needles that return to their original position."
+       },
+       {
+        "text": "Injection with and without bone (depending on model)."
+       },
+       {
+        "text": "Optional accessory: DYNAMIC INJECT CONTROL self-regulating injection system."
+       },
+       {
+        "text": "Built-in MQConnect smart connectivity system."
+       }
+      ],
+      "button": {
+       "title": "REQUEST INFORMATION",
+       "url": "@page:contact#form",
+       "target": ""
+      },
+      "file": "",
+      "button_label": "DOWNLOAD DATASHEET"
+     },
+     {
+      "type": "highlight",
+      "eyebrow": "TOP NOTCH MACHINE ENGINEERING",
+      "word_top": "",
+      "word_bottom": "",
+      "title_muted": "Metalquimia engineering method",
+      "title": "that produces inventions",
+      "button": {
+       "title": "SEE HOW WE THINK",
+       "url": "@page:engineering",
+       "target": ""
+      },
+      "image": "",
+      "tags": [],
+      "items": [
+       {
+        "title": "Precision that never compromises yield",
+        "text": "Our equipment is engineered to operate within tolerances that standard industrial machinery can't achieve."
+       },
+       {
+        "title": "Reliability built into the design",
+        "text": "We designed every component ourselves. We built reliability in from the start — not as a support promise, but as an engineering standard."
+       },
+       {
+        "title": "Proprietary technology",
+        "text": "Unlike integrators, we own every critical technology in our equipment. That means faster upgrades, deeper process knowledge, and seamless line evolution."
+       },
+       {
+        "title": "A partner who invented the process",
+        "text": "Our engineers understand the exact science behind the design of every component. That depth of knowledge makes us the partner capable of solving what others can only work around."
+       }
+      ],
+      "overlay_title": "",
+      "overlay_text": "",
+      "overlay_image": "",
+      "overlay_button": null
+     },
+     {
+      "type": "products_highlight",
+      "eyebrow": "WHAT WE DO? REDEFINING WHAT’S STANDARD",
+      "title_muted": "Engineered for the process.",
+      "title": "Built for the long run.",
+      "subtitle": "We design and manufacture equipment and process technology for the production of meat and/or protein-based products.",
+      "button": null,
+      "show_filters": true,
+      "all_label": "ALL",
+      "items": [
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-1",
+        "name": "Meat Injectors",
+        "category": "",
+        "description": "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale.",
+        "link": {
+         "title": "",
+         "url": "@page:meat-injection",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-2",
+        "name": "Meat Defrosting",
+        "category": "",
+        "description": "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
+         "target": ""
+        }
+       },
+       {
+        "image": "@img:m-3",
+        "name": "Meat Stuffers",
+        "category": "",
+        "description": "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput.",
+        "link": {
+         "title": "",
+         "url": "#",
          "target": ""
         }
        }
