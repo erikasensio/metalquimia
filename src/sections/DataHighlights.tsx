@@ -22,9 +22,9 @@ export default function DataHighlights({ eyebrow, title_muted, title, subtitle, 
       <div className="site-container flex flex-col gap-10 lg:gap-12">
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} size="s" />
         {list.length > 0 && (
-          <ul className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-6" data-stagger>
+          <ul className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-6" data-cards>
             {list.map((item, i) => (
-              <li key={i} className="flex flex-col gap-3 border-l border-medium-grey pl-6" data-typewriter-group data-typewriter-delay={(i % 4) * 0.1}>
+              <li key={i} className="flex flex-col gap-3 border-l border-medium-grey pl-6" data-card>
                 {item.value && <CountUp value={item.value} className="text-title-l text-black" />}
                 {item.description && (
                   <p className="text-body-m max-w-[30ch] text-grey">

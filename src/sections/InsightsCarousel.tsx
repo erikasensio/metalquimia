@@ -42,7 +42,7 @@ export default function InsightsCarousel({ title, button, items }: Props) {
         </div>
       )}
       {list.length > 0 && (
-        <div data-reveal>
+        <div data-cards>
           <Carousel trackClassName={`gap-4 ${carouselGutter}`} label={title || "Noticias"}>
             {list.map((item, i) => {
               const content = (
@@ -75,11 +75,11 @@ export default function InsightsCarousel({ title, button, items }: Props) {
               );
               const cls = "group relative flex aspect-[4/5] w-[80vw] shrink-0 snap-start flex-col justify-end overflow-hidden sm:w-[360px] lg:w-[440px]";
               return item.link?.url ? (
-                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} data-typewriter-group data-typewriter-sequence data-typewriter-delay={i * 0.12}>
+                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} data-card>
                   {content}
                 </Link>
               ) : (
-                <article key={i} className={cls} data-typewriter-group data-typewriter-sequence data-typewriter-delay={i * 0.12}>
+                <article key={i} className={cls} data-card>
                   {content}
                 </article>
               );

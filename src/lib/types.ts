@@ -40,6 +40,16 @@ export type MenuItem = {
   /** "Descripción" del elemento en WordPress (texto bajo el título en el menú desplegable). */
   description?: string;
   image?: WpImage | null;
+  /** Icono de la lista con iconos (PNG cuadrado, se ve a 24 px). */
+  icon?: WpImage | null;
+  /** Se pinta en rojo (p. ej. "Pedir recambios"). */
+  highlight?: boolean;
+  /** Campos del panel (solo en los elementos de primer nivel). "" = automático según el contenido. */
+  layout?: "" | "icons" | "cards" | "featured" | "links";
+  eyebrow?: string;
+  title_muted?: string;
+  title?: string;
+  link?: WpLink | null;
   children: MenuItem[];
 };
 

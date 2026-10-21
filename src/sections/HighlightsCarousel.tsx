@@ -36,7 +36,7 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
         className="site-container"
       />
       {list.length > 0 && (
-        <div data-reveal>
+        <div data-cards>
           <Carousel dark={dark} trackClassName={`gap-4 ${carouselGutter}`} label={title || "Destacados"}>
             {list.map((item, i) => {
               const content = (
@@ -59,11 +59,11 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
               const cls =
                 "group relative flex aspect-[477/540] w-[85vw] shrink-0 snap-start flex-col justify-start overflow-hidden rounded-xl sm:w-[420px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)]";
               return item.link?.url ? (
-                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} aria-label={item.link.title || item.lead || undefined} data-typewriter-group data-typewriter-delay={i * 0.12}>
+                <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} aria-label={item.link.title || item.lead || undefined} data-card>
                   {content}
                 </Link>
               ) : (
-                <div key={i} className={cls} data-typewriter-group data-typewriter-delay={i * 0.12}>
+                <div key={i} className={cls} data-card>
                   {content}
                 </div>
               );

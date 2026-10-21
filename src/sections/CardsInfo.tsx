@@ -36,7 +36,7 @@ export default function CardsInfo({ columns, eyebrow, title_muted, title, subtit
           )}
         </div>
         {list.length > 0 && (
-          <ul className={`grid gap-x-4 gap-y-10 md:grid-cols-2 ${four ? "lg:grid-cols-4" : "lg:grid-cols-3"}`} data-stagger>
+          <ul className={`grid gap-x-4 gap-y-10 md:grid-cols-2 ${four ? "lg:grid-cols-4" : "lg:grid-cols-3"}`} data-cards>
             {list.map((item, i) => {
               const content = (
                 <>
@@ -62,8 +62,8 @@ export default function CardsInfo({ columns, eyebrow, title_muted, title, subtit
                 </>
               );
               return (
-                // La tarjeta entra escalonada (data-stagger) y su título y texto se escriben detrás.
-                <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % (four ? 4 : 3)) * 0.1}>
+                // Las tarjetas suben desde abajo una detrás de otra (data-cards); su texto no se anima.
+                <li key={i} data-card>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className="group flex flex-col gap-5">
                       {content}

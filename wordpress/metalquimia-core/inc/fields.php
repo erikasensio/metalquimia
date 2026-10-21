@@ -80,12 +80,68 @@ add_action(
 			)
 		);
 
-		// Imagen opcional de cada elemento de menú (tarjetas del menú desplegable).
+		// Menú desplegable (Figma "Menús" 305:5989). Los campos del panel se rellenan en los elementos de primer nivel
+		// y los de tarjeta / icono en los de dentro; los que no aplican a un elemento se ignoran.
 		acf_add_local_field_group(
 			array(
 				'key'      => 'group_mq_menu_item',
 				'title'    => 'Menú desplegable',
 				'fields'   => array(
+					array(
+						'key'   => 'field_mq_menu_tab_panel',
+						'label' => 'Panel (elementos de primer nivel)',
+						'type'  => 'tab',
+					),
+					array(
+						'key'          => 'field_mq_menu_layout',
+						'label'        => 'Diseño del panel',
+						'name'         => 'menu_layout',
+						'type'         => 'select',
+						'choices'      => array(
+							''         => 'Automático (según el contenido)',
+							'icons'    => 'Lista con iconos en tres columnas (Productos)',
+							'cards'    => 'Fila de tarjetas con imagen (Soluciones)',
+							'featured' => 'Dos tarjetas grandes y lista de enlaces (Nuestro método)',
+							'links'    => 'Enlaces grandes en columnas de seis (Servicio, Empresa)',
+						),
+						'default_value' => '',
+						'allow_null'   => 0,
+						'instructions' => 'Cómo se muestran los elementos de dentro al abrir el desplegable.',
+					),
+					array(
+						'key'          => 'field_mq_menu_eyebrow',
+						'label'        => 'Antetítulo',
+						'name'         => 'menu_eyebrow',
+						'type'         => 'text',
+						'instructions' => 'Texto pequeño en mayúsculas arriba del panel (p. ej. "NUESTROS PRODUCTOS").',
+					),
+					array(
+						'key'          => 'field_mq_menu_title_muted',
+						'label'        => 'Título (parte en gris)',
+						'name'         => 'menu_title_muted',
+						'type'         => 'text',
+						'instructions' => 'Opcional. Primera línea del título, en gris.',
+					),
+					array(
+						'key'          => 'field_mq_menu_title',
+						'label'        => 'Título',
+						'name'         => 'menu_title',
+						'type'         => 'text',
+						'instructions' => 'Opcional. Segunda línea del título, en negro.',
+					),
+					array(
+						'key'           => 'field_mq_menu_link',
+						'label'         => 'Enlace al pie del panel',
+						'name'          => 'menu_link',
+						'type'          => 'link',
+						'return_format' => 'array',
+						'instructions'  => 'Opcional (p. ej. "Descubre todas las soluciones").',
+					),
+					array(
+						'key'   => 'field_mq_menu_tab_item',
+						'label' => 'Elemento del panel',
+						'type'  => 'tab',
+					),
 					array(
 						'key'           => 'field_mq_menu_image',
 						'label'         => 'Imagen',
@@ -93,7 +149,24 @@ add_action(
 						'type'          => 'image',
 						'return_format' => 'array',
 						'preview_size'  => 'thumbnail',
-						'instructions'  => 'Opcional. Si los elementos de un desplegable tienen imagen se muestran como tarjetas (PNG recortado o foto, 600 × 600 px). Si no, se usa la imagen destacada de la página enlazada. La "Descripción" del elemento (Opciones de pantalla → Descripción) aparece debajo del título.',
+						'instructions'  => 'Para los diseños con tarjetas. PNG recortado (Soluciones, 600 × 600 px) o foto (Nuestro método, 800 × 1000 px). Si no hay, se usa la imagen destacada de la página enlazada. La "Descripción" del elemento (Opciones de pantalla → Descripción) aparece debajo del título en la lista con iconos.',
+					),
+					array(
+						'key'           => 'field_mq_menu_icon',
+						'label'         => 'Icono',
+						'name'          => 'menu_icon',
+						'type'          => 'image',
+						'return_format' => 'array',
+						'preview_size'  => 'thumbnail',
+						'instructions'  => 'Para la lista con iconos. PNG transparente cuadrado de 96 × 96 px (se ve a 24 px), con el dibujo centrado.',
+					),
+					array(
+						'key'          => 'field_mq_menu_highlight',
+						'label'        => 'Destacar en rojo',
+						'name'         => 'menu_highlight',
+						'type'         => 'true_false',
+						'ui'           => 1,
+						'instructions' => 'P. ej. "Pedir recambios".',
 					),
 				),
 				'location' => array( array( array( 'param' => 'nav_menu_item', 'operator' => '==', 'value' => 'all' ) ) ),

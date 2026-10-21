@@ -49,10 +49,10 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
       )}
 
       {showFilters ? (
-        <div key={active ?? "all"} className="animate-[fade-in_0.4s_ease-out]">
+        <div key={active ?? "all"} className="animate-[fade-in_0.4s_ease-out]" data-cards>
           <Carousel dark caret trackClassName={`gap-4 ${carouselGutter}`} label={label}>
             {visible.map((item, i) => (
-              <div key={`${item.name}-${i}`} className="w-[80vw] shrink-0 snap-start sm:w-[353px]">
+              <div key={`${item.name}-${i}`} className="w-[80vw] shrink-0 snap-start sm:w-[353px]" data-card>
                 <MachineCard item={item} />
               </div>
             ))}
@@ -60,9 +60,9 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
         </div>
       ) : (
         // Sin filtros (Figma División 325:10130): filas de cuatro; si faltan máquinas, la fila queda centrada.
-        <ul className="site-container flex flex-wrap justify-center gap-x-4 gap-y-12 lg:gap-y-16" aria-label={label}>
+        <ul className="site-container flex flex-wrap justify-center gap-x-4 gap-y-12 lg:gap-y-16" aria-label={label} data-cards>
           {items.map((item, i) => (
-            <li key={`${item.name}-${i}`} className="w-full sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)]">
+            <li key={`${item.name}-${i}`} className="w-full sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)]" data-card>
               <MachineCard item={item} />
             </li>
           ))}

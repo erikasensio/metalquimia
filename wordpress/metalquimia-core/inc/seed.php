@@ -32,13 +32,15 @@ final class MQ_Seed {
 
 		// 1. Páginas vacías primero (para poder enlazarlas entre sí), luego su contenido.
 		$pages = $this->site['pages'] ?? array();
+		// Con --only=menus u options las páginas no se tocan: solo se buscan para poder enlazarlas.
+		$touch = ! $only || array_diff( $only, array( 'menus', 'options' ) );
 		foreach ( $pages as $page ) {
 			foreach ( $langs as $lang ) {
 				if ( isset( $page[ $lang ] ) ) {
-					$this->ids[ $page['key'] ][ $lang ] = $this->ensure_page( $page, $lang );
+					$this->ids[ $page['key'] ][ $lang ] = $touch ? $this->ensure_page( $page, $lang ) : $this->find_page( $page['key'], $lang );
 				}
 			}
-			if ( count( $this->ids[ $page['key'] ] ?? array() ) > 1 ) {
+			if ( $touch && count( $this->ids[ $page['key'] ] ?? array() ) > 1 ) {
 				pll_save_post_translations( $this->ids[ $page['key'] ] );
 			}
 		}
@@ -72,7 +74,7 @@ final class MQ_Seed {
 		}
 
 		// 2. Portada.
-		foreach ( $pages as $page ) {
+		foreach ( $touch ? $pages : array() as $page ) {
 			if ( ! empty( $page['front'] ) ) {
 				$front = $this->ids[ $page['key'] ][ mq_default_language() ] ?? 0;
 				if ( $front ) {
@@ -82,11 +84,29 @@ final class MQ_Seed {
 			}
 		}
 
-		if ( ! $only ) {
+		// --only=menus / --only=options importan solo eso (las claves que no son de página no casan con ninguna).
+		if ( ! $only || in_array( 'options', $only, true ) ) {
 			$this->options( $langs );
+		}
+		if ( ! $only || in_array( 'menus', $only, true ) ) {
 			$this->menus( $langs );
 		}
 		return $this->log;
+	}
+
+	private function find_page( string $key, string $lang ): int {
+		$found = get_posts(
+			array(
+				'post_type'      => 'page',
+				'post_status'    => 'any',
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+				'lang'           => $lang,
+				'meta_key'       => '_mq_seed_key', // phpcs:ignore WordPress.DB.SlowDBQuery
+				'meta_value'     => $key, // phpcs:ignore WordPress.DB.SlowDBQuery
+			)
+		);
+		return (int) ( $found[0] ?? 0 );
 	}
 
 	private function ensure_page( array $page, string $lang ): int {
@@ -211,6 +231,10 @@ final class MQ_Seed {
 		}
 		update_option( 'polylang', $pll );
 		set_theme_mod( 'nav_menu_locations', $locations );
+		// Reutilizar menús no dispara wp_update_nav_menu: se avisa al front a mano.
+		if ( function_exists( 'mq_revalidate' ) ) {
+			mq_revalidate( array( 'wp' ) );
+		}
 	}
 
 	private function menu_items( int $menu_id, array $items, int $parent, string $lang ): void {
@@ -222,20 +246,35 @@ final class MQ_Seed {
 				'menu-item-position'    => $i + 1,
 				'menu-item-status'      => 'publish',
 			);
-			$url = $item['url'] ?? '#';
-			if ( str_starts_with( $url, '@page:' ) && ( $this->ids[ substr( $url, 6 ) ][ $lang ] ?? 0 ) ) {
+			$url  = $item['url'] ?? '#';
+			$page = str_starts_with( $url, '@page:' ) ? explode( '#', substr( $url, 6 ), 2 ) : array();
+			if ( $page && ! isset( $page[1] ) && ( $this->ids[ $page[0] ][ $lang ] ?? 0 ) ) {
 				$args['menu-item-type']      = 'post_type';
 				$args['menu-item-object']    = 'page';
-				$args['menu-item-object-id'] = $this->ids[ substr( $url, 6 ) ][ $lang ];
+				$args['menu-item-object-id'] = $this->ids[ $page[0] ][ $lang ];
 			} else {
+				// Un enlace con ancla (@page:contact#form) va como enlace personalizado a la URL de la página.
 				$args['menu-item-type'] = 'custom';
-				$args['menu-item-url']  = str_starts_with( $url, '@page:' ) ? '#' : $url;
+				$args['menu-item-url']  = $page ? $this->page_url( substr( $url, 6 ), $lang ) : $url;
 			}
 			$item_id = wp_update_nav_menu_item( $menu_id, 0, $args );
-			if ( ! empty( $item['image'] ) && ! is_wp_error( $item_id ) ) {
-				$img = $this->resolve( $item['image'], $lang );
-				if ( $img ) {
-					update_field( 'field_mq_menu_image', $img, $item_id );
+			if ( ! is_wp_error( $item_id ) ) {
+				// Campos del desplegable (ver group_mq_menu_item en fields.php).
+				$fields = array(
+					'image'       => 'field_mq_menu_image',
+					'icon'        => 'field_mq_menu_icon',
+					'highlight'   => 'field_mq_menu_highlight',
+					'layout'      => 'field_mq_menu_layout',
+					'eyebrow'     => 'field_mq_menu_eyebrow',
+					'title_muted' => 'field_mq_menu_title_muted',
+					'title'       => 'field_mq_menu_title',
+					'link'        => 'field_mq_menu_link',
+				);
+				foreach ( $fields as $name => $key ) {
+					$value = isset( $item[ $name ] ) ? $this->resolve( $item[ $name ], $lang ) : null;
+					if ( $value ) {
+						update_field( $key, $value, $item_id );
+					}
 				}
 			}
 			if ( ! empty( $item['children'] ) && ! is_wp_error( $item_id ) ) {

@@ -908,8 +908,8 @@
    },
    "find": "Cut-out stainless injector on transparent (Figma División › product-highlight)"
   },
-  "movistick-classic": {
-   "file": "movistick-classic.png",
+  "machine-movistick-classic": {
+   "file": "machine-movistick-classic.webp",
    "alt": {
     "es": "Inyectora Movistick Classic",
     "en": "Movistick Classic injector"
@@ -924,24 +924,32 @@
    },
    "find": "Cut-out PNG Movistick Triplex injector, transparent"
   },
-  "moviplus-signature": {
-   "file": "moviplus-signature.png",
+  "machine-moviplus-signature-v2": {
+   "file": "machine-moviplus-signature-v2.webp",
    "alt": {
     "es": "Inyectora Moviplus 4.0 Signature Edition",
     "en": "Moviplus 4.0 Signature Edition injector"
    },
-   "find": "Cut-out PNG Moviplus 4.0 Signature Edition injector, transparent"
+   "find": "Cut-out Moviplus 4.0 Signature Edition injector, transparent (metalquimia.com)"
   },
-  "moviplus-40": {
-   "file": "moviplus-40.png",
+  "machine-moviplus-40-v2": {
+   "file": "machine-moviplus-40-v2.webp",
    "alt": {
     "es": "Inyectora Moviplus 4.0",
     "en": "Moviplus 4.0 injector"
    },
-   "find": "Cut-out PNG Moviplus 4.0 injector (drum), transparent"
+   "find": "Cut-out Moviplus 4.0 injector, transparent (metalquimia.com)"
   },
-  "movimax-zero": {
-   "file": "movimax-zero.png",
+  "machine-moviplus-e-v2": {
+   "file": "machine-moviplus-e-v2.webp",
+   "alt": {
+    "es": "Inyectora Moviplus-E",
+    "en": "Moviplus-E injector"
+   },
+   "find": "Cut-out Moviplus-e 120/4500 CR injector, transparent (metalquimia.com)"
+  },
+  "machine-movimax-zero": {
+   "file": "machine-movimax-zero.webp",
    "alt": {
     "es": "Inyectora Movimax Zero",
     "en": "Movimax Zero injector"
@@ -1572,6 +1580,102 @@
    },
    "find": "Man in suit in front of industrial robots, blue light"
   },
+  "menu-icon-thawing": {
+   "file": "menu-icon-thawing.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Thawing (Descongelación), Figma Menús"
+  },
+  "menu-icon-brine": {
+   "file": "menu-icon-brine.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Brine (Salmuera), Figma Menús"
+  },
+  "menu-icon-injection": {
+   "file": "menu-icon-injection.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Injection (Inyección), Figma Menús"
+  },
+  "menu-icon-marinating": {
+   "file": "menu-icon-marinating.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Marinating (Marinado), Figma Menús"
+  },
+  "menu-icon-tenderization": {
+   "file": "menu-icon-tenderization.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Tenderization (Tenderización), Figma Menús"
+  },
+  "menu-icon-massage": {
+   "file": "menu-icon-massage.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Massage (Masaje), Figma Menús"
+  },
+  "menu-icon-stuffing": {
+   "file": "menu-icon-stuffing.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Stuffing (Embutición), Figma Menús"
+  },
+  "menu-icon-cooking": {
+   "file": "menu-icon-cooking.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Cooking (Cocción), Figma Menús"
+  },
+  "menu-icon-cooking-plants": {
+   "file": "menu-icon-cooking-plants.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Cooking plants (Plantas de cocción), Figma Menús"
+  },
+  "menu-icon-sliced": {
+   "file": "menu-icon-sliced.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Sliced meats (Loncheados), Figma Menús"
+  },
+  "menu-icon-sausages": {
+   "file": "menu-icon-sausages.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Sausages (Salchichas), Figma Menús"
+  },
+  "menu-icon-petfood": {
+   "file": "menu-icon-petfood.png",
+   "alt": {
+    "es": "",
+    "en": ""
+   },
+   "find": "Line icon: Pet food (Pet food), Figma Menús"
+  },
   "method-2": {
    "file": "method-2.jpg",
    "alt": {
@@ -1741,110 +1845,138 @@
     {
      "label": "Productos",
      "url": "@page:solutions",
-     "description": "NUESTRAS SOLUCIONES\nProcesado con precisión y control total en cada etapa.",
+     "layout": "cards",
+     "eyebrow": "Nuestros productos",
+     "title_muted": "Procesado con precisión y",
+     "title": "control total en cada etapa.",
+     "link": {
+      "title": "Descubre todos los productos",
+      "url": "@page:solutions",
+      "target": ""
+     },
      "children": [
       {
        "label": "Cocidos",
        "url": "@page:cooked",
-       "image": "@img:ham"
+       "image": "@img:solution-cooked"
       },
       {
        "label": "Marinados",
        "url": "@page:marinated",
-       "image": "@img:marinated"
+       "image": "@img:solution-marinated"
       },
       {
        "label": "Curados",
        "url": "@page:cured",
-       "image": "@img:salami"
+       "image": "@img:solution-cured"
       },
       {
        "label": "Snacks",
        "url": "@page:snacks",
-       "image": "@img:snacks"
+       "image": "@img:solution-snacks"
       },
       {
        "label": "Salchichas",
        "url": "@page:sausages",
-       "image": "@img:sausages"
+       "image": "@img:solution-sausages"
       },
       {
        "label": "Pet food",
        "url": "@page:petfood",
-       "image": "@img:petfood"
+       "image": "@img:solution-petfood"
       }
      ]
     },
     {
      "label": "Soluciones",
      "url": "@page:meat-injection",
-     "description": "NUESTROS PRODUCTOS",
+     "layout": "icons",
+     "eyebrow": "Nuestras soluciones",
+     "link": {
+      "title": "Descubre todas las soluciones",
+      "url": "@page:solutions",
+      "target": ""
+     },
      "children": [
       {
        "label": "Descongelación de carne",
-       "url": "@page:machine",
-       "description": "Descongelación uniforme y sin pérdida de calidad."
+       "url": "@page:cooked",
+       "description": "Masaje muy suave: producto descongelado de la máxima calidad",
+       "icon": "@img:menu-icon-thawing"
       },
       {
        "label": "Preparación de salmueras",
-       "url": "@page:machine",
-       "description": "Disolución homogénea de ingredientes."
+       "url": "@page:meat-injection",
+       "description": "Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo",
+       "icon": "@img:menu-icon-brine"
       },
       {
        "label": "Inyección de carne",
        "url": "@page:meat-injection",
-       "description": "Inyectoras de agujas de alta precisión."
+       "description": "Reparto espectacular de la salmuera y uniformidad de color",
+       "icon": "@img:menu-icon-injection"
       },
       {
        "label": "Marinado de carne",
-       "url": "@page:machine",
-       "description": "Marinado rápido y homogéneo."
+       "url": "@page:marinated",
+       "description": "Marinado de carne con o sin hueso por efecto spray",
+       "icon": "@img:menu-icon-marinating"
       },
       {
        "label": "Tenderización de carne",
-       "url": "@page:machine",
-       "description": "Mejora de la textura y la absorción."
+       "url": "@page:meat-injection",
+       "description": "Más rendimiento y menos mermas de cocción",
+       "icon": "@img:menu-icon-tenderization"
       },
       {
        "label": "Masaje de carne",
-       "url": "@page:machine",
-       "description": "Masaje al vacío con control de temperatura."
+       "url": "@page:cooked",
+       "description": "Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles",
+       "icon": "@img:menu-icon-massage"
       },
       {
        "label": "Embutición de carne",
-       "url": "@page:machine",
-       "description": "Embutición continua y precisa."
+       "url": "@page:cooked",
+       "description": "Embutidoras continuas al vacío para músculo entero",
+       "icon": "@img:menu-icon-stuffing"
       },
       {
        "label": "Cocción de carne",
-       "url": "@page:machine",
-       "description": "Cocción controlada para un producto uniforme."
+       "url": "@page:cooked",
+       "description": "Cocción inteligente con seguimiento y registro de todos los parámetros técnicos del proceso",
+       "icon": "@img:menu-icon-cooking"
       },
       {
-       "label": "Plantas automáticas de cocidos y marinados",
-       "url": "@page:machine",
-       "description": "Plantas llave en mano conectadas."
+       "label": "Plantas automáticas de cocción y marinado",
+       "url": "@page:cooked",
+       "description": "Conectividad inteligente: el jamón hecho a tu medida",
+       "icon": "@img:menu-icon-cooking-plants"
       },
       {
-       "label": "GDSolutions · Loncheados y snacks",
-       "url": "@page:machine",
-       "description": "Loncheado y formatos snack."
+       "label": "QDSolutions · Loncheados y snacks cárnicos",
+       "url": "@page:snacks",
+       "description": "Maximiza el rendimiento del producto y la flexibilidad operativa",
+       "icon": "@img:menu-icon-sliced"
       },
       {
        "label": "Salchichas cocidas",
-       "url": "@page:machine",
-       "description": "Producción continua de salchichas."
+       "url": "@page:sausages",
+       "description": "Producción de salchichas con un sabor y una textura inmejorables",
+       "icon": "@img:menu-icon-sausages"
       },
       {
        "label": "Pet food",
-       "url": "@page:machine",
-       "description": "Equipos para snacks de mascotas."
+       "url": "@page:petfood",
+       "description": "Equipos hechos para condiciones exigentes",
+       "icon": "@img:menu-icon-petfood"
       }
      ]
     },
     {
      "label": "Nuestro método",
      "url": "#",
+     "layout": "featured",
+     "eyebrow": "Nuestro método",
      "children": [
       {
        "label": "Engineering Mindset / Creativació",
@@ -1881,6 +2013,8 @@
     {
      "label": "Servicio",
      "url": "@page:services",
+     "layout": "links",
+     "eyebrow": "Nuestros servicios",
      "children": [
       {
        "label": "Tecnológico",
@@ -1904,13 +2038,16 @@
       },
       {
        "label": "Pedir recambios",
-       "url": "@page:contact#form"
+       "url": "@page:contact#form",
+       "highlight": true
       }
      ]
     },
     {
      "label": "Empresa",
      "url": "@page:about",
+     "layout": "links",
+     "eyebrow": "Sobre nosotros",
      "children": [
       {
        "label": "Sobre Metalquimia",
@@ -1963,110 +2100,138 @@
     {
      "label": "Products",
      "url": "@page:solutions",
-     "description": "OUR SOLUTIONS\nProcessed with precision and full control at every stage.",
+     "layout": "cards",
+     "eyebrow": "Our products",
+     "title_muted": "Processed with precision and",
+     "title": "full control at every stage.",
+     "link": {
+      "title": "Discover all products",
+      "url": "@page:solutions",
+      "target": ""
+     },
      "children": [
       {
        "label": "Cooked",
        "url": "@page:cooked",
-       "image": "@img:ham"
+       "image": "@img:solution-cooked"
       },
       {
        "label": "Marinated",
        "url": "@page:marinated",
-       "image": "@img:marinated"
+       "image": "@img:solution-marinated"
       },
       {
        "label": "Cured",
        "url": "@page:cured",
-       "image": "@img:salami"
+       "image": "@img:solution-cured"
       },
       {
        "label": "Snacks",
        "url": "@page:snacks",
-       "image": "@img:snacks"
+       "image": "@img:solution-snacks"
       },
       {
        "label": "Sausages",
        "url": "@page:sausages",
-       "image": "@img:sausages"
+       "image": "@img:solution-sausages"
       },
       {
        "label": "Pet food",
        "url": "@page:petfood",
-       "image": "@img:petfood"
+       "image": "@img:solution-petfood"
       }
      ]
     },
     {
      "label": "Solutions",
      "url": "@page:meat-injection",
-     "description": "OUR PRODUCTS",
+     "layout": "icons",
+     "eyebrow": "Our solutions",
+     "link": {
+      "title": "Discover all solutions",
+      "url": "@page:solutions",
+      "target": ""
+     },
      "children": [
       {
-       "label": "Meat defrosting",
-       "url": "@page:machine",
-       "description": "Even defrosting without loss of quality."
+       "label": "Meat Thawing",
+       "url": "@page:cooked",
+       "description": "Very gentle massage: thawed product of the highest quality",
+       "icon": "@img:menu-icon-thawing"
       },
       {
-       "label": "Brine preparation",
-       "url": "@page:machine",
-       "description": "Homogeneous dissolution of ingredients."
-      },
-      {
-       "label": "Meat injection",
+       "label": "Preparation of Brines",
        "url": "@page:meat-injection",
-       "description": "High-precision needle injectors."
+       "description": "Quick, controlled, and efficient preparation of any type of brine and marinade",
+       "icon": "@img:menu-icon-brine"
       },
       {
-       "label": "Meat marinating",
-       "url": "@page:machine",
-       "description": "Fast, even marinating."
+       "label": "Meat Injection",
+       "url": "@page:meat-injection",
+       "description": "Spectacular distribution of brine and uniformity of color",
+       "icon": "@img:menu-icon-injection"
       },
       {
-       "label": "Meat tenderizing",
-       "url": "@page:machine",
-       "description": "Better texture and absorption."
+       "label": "Meat Marinating",
+       "url": "@page:marinated",
+       "description": "Meat marinating with or without bone by spray effect",
+       "icon": "@img:menu-icon-marinating"
       },
       {
-       "label": "Meat tumbling",
-       "url": "@page:machine",
-       "description": "Vacuum tumbling with temperature control."
+       "label": "Meat Tenderization",
+       "url": "@page:meat-injection",
+       "description": "Improvement of yield and reduction of cooking losses",
+       "icon": "@img:menu-icon-tenderization"
       },
       {
-       "label": "Meat stuffing",
-       "url": "@page:machine",
-       "description": "Continuous, precise stuffing."
+       "label": "Meat Massage",
+       "url": "@page:cooked",
+       "description": "Automatic vacuum reactors with cooling jacket, fully versatile",
+       "icon": "@img:menu-icon-massage"
       },
       {
-       "label": "Meat cooking",
-       "url": "@page:machine",
-       "description": "Controlled cooking for a uniform product."
+       "label": "Meat Stuffing",
+       "url": "@page:cooked",
+       "description": "Continuous vacuum stuffers for whole muscle",
+       "icon": "@img:menu-icon-stuffing"
       },
       {
-       "label": "Automated cooked and marinated plants",
-       "url": "@page:machine",
-       "description": "Connected turnkey plants."
+       "label": "Meat Cooking",
+       "url": "@page:cooked",
+       "description": "Smart cooking with tracking and recording of all technical parameters of the process",
+       "icon": "@img:menu-icon-cooking"
       },
       {
-       "label": "GDSolutions · Slicing and snacks",
-       "url": "@page:machine",
-       "description": "Slicing and snack formats."
+       "label": "Automatic cooking and marinating plants",
+       "url": "@page:cooked",
+       "description": "Smart connectivity: The ham made to your specifications",
+       "icon": "@img:menu-icon-cooking-plants"
       },
       {
-       "label": "Cooked sausages",
-       "url": "@page:machine",
-       "description": "Continuous sausage production."
+       "label": "QDSolutions - Sliced meats and meat snacks",
+       "url": "@page:snacks",
+       "description": "Maximizes product yield and operational flexibility",
+       "icon": "@img:menu-icon-sliced"
+      },
+      {
+       "label": "Cooked Sausages",
+       "url": "@page:sausages",
+       "description": "Sausage production with unbeatable flavor and texture",
+       "icon": "@img:menu-icon-sausages"
       },
       {
        "label": "Pet food",
-       "url": "@page:machine",
-       "description": "Equipment for pet treats."
+       "url": "@page:petfood",
+       "description": "Equipment built for tough conditions",
+       "icon": "@img:menu-icon-petfood"
       }
      ]
     },
     {
      "label": "Our method",
      "url": "#",
+     "layout": "featured",
+     "eyebrow": "Our method",
      "children": [
       {
        "label": "Engineering Mindset / Creativació",
@@ -2103,6 +2268,8 @@
     {
      "label": "Service",
      "url": "@page:services",
+     "layout": "links",
+     "eyebrow": "Our services",
      "children": [
       {
        "label": "Technological",
@@ -2126,13 +2293,16 @@
       },
       {
        "label": "Order Spare Parts",
-       "url": "@page:contact#form"
+       "url": "@page:contact#form",
+       "highlight": true
       }
      ]
     },
     {
      "label": "Company",
      "url": "@page:about",
+     "layout": "links",
+     "eyebrow": "About us",
      "children": [
       {
        "label": "About Metalquimia",
@@ -7884,7 +8054,7 @@
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:movistick-classic",
+        "image": "@img:machine-movistick-classic",
         "name": "Movistick Classic",
         "category": "INYECCIÓN",
         "description": "Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.",
@@ -7919,7 +8089,7 @@
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:moviplus-signature",
+        "image": "@img:machine-moviplus-signature-v2",
         "name": "Moviplus 4.0 Signature Edition",
         "category": "INYECCIÓN",
         "description": "Injection Molding, the Next: excelencia en diseño inteligente.",
@@ -7930,7 +8100,7 @@
         }
        },
        {
-        "image": "@img:moviplus-40",
+        "image": "@img:machine-moviplus-40-v2",
         "name": "Moviplus 4.0",
         "category": "INYECCIÓN",
         "description": "La nueva Moviplus 4.0 se ha diseñado especialmente para la ciberindustria del futuro.",
@@ -7941,7 +8111,7 @@
         }
        },
        {
-        "image": "@img:moviplus-40",
+        "image": "@img:machine-moviplus-e-v2",
         "name": "Moviplus-E",
         "category": "INYECCIÓN",
         "description": "Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.",
@@ -7965,7 +8135,7 @@
       "all_label": "TODOS",
       "items": [
        {
-        "image": "@img:movimax-zero",
+        "image": "@img:machine-movimax-zero",
         "name": "Movimax Zero",
         "category": "INYECCIÓN",
         "description": "La inyectora de carne neutra en carbono.",
@@ -8035,7 +8205,7 @@
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:movistick-classic",
+        "image": "@img:machine-movistick-classic",
         "name": "Movistick Classic",
         "category": "INJECTION",
         "description": "Uniform distribution of brine and maximum precision in meat injection.",
@@ -8070,7 +8240,7 @@
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:moviplus-signature",
+        "image": "@img:machine-moviplus-signature-v2",
         "name": "Moviplus 4.0 Signature Edition",
         "category": "INJECTION",
         "description": "Injection Molding, the Next: Excellence in Smart Design.",
@@ -8081,7 +8251,7 @@
         }
        },
        {
-        "image": "@img:moviplus-40",
+        "image": "@img:machine-moviplus-40-v2",
         "name": "Moviplus 4.0",
         "category": "INJECTION",
         "description": "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.",
@@ -8092,7 +8262,7 @@
         }
        },
        {
-        "image": "@img:moviplus-40",
+        "image": "@img:machine-moviplus-e-v2",
         "name": "Moviplus-E",
         "category": "INJECTION",
         "description": "New line of meat injectors with a fully electric drive system.",
@@ -8116,7 +8286,7 @@
       "all_label": "ALL",
       "items": [
        {
-        "image": "@img:movimax-zero",
+        "image": "@img:machine-movimax-zero",
         "name": "Movimax Zero",
         "category": "INJECTION",
         "description": "The Carbon-Neutral Meat Injector.",
@@ -8161,7 +8331,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:movistick-classic",
+      "image": "@img:machine-movistick-classic",
       "title": "Movistick Classic",
       "subtitle": "Distribución uniforme de la salmuera y máxima precisión en la inyección de carne.",
       "card_image": "",
@@ -8353,7 +8523,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:movistick-classic",
+      "image": "@img:machine-movistick-classic",
       "title": "Movistick Classic",
       "subtitle": "Uniform distribution of brine and maximum precision in meat injection.",
       "card_image": "",
@@ -8949,7 +9119,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-signature",
+      "image": "@img:machine-moviplus-signature-v2",
       "title": "Moviplus 4.0 Signature Edition",
       "subtitle": "La inyección, lo siguiente: excelencia en diseño inteligente.",
       "card_image": "",
@@ -9120,7 +9290,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-signature",
+      "image": "@img:machine-moviplus-signature-v2",
       "title": "Moviplus 4.0 Signature Edition",
       "subtitle": "Injection Molding, the Next: Excellence in Smart Design.",
       "card_image": "",
@@ -9295,7 +9465,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-40",
+      "image": "@img:machine-moviplus-40-v2",
       "title": "Moviplus 4.0",
       "subtitle": "La nueva versión 4.0 de la Moviplus, diseñada especialmente para la ciberindustria del futuro.",
       "card_image": "",
@@ -9487,7 +9657,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-40",
+      "image": "@img:machine-moviplus-40-v2",
       "title": "Moviplus 4.0",
       "subtitle": "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.",
       "card_image": "",
@@ -9683,7 +9853,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-40",
+      "image": "@img:machine-moviplus-e-v2",
       "title": "Moviplus-E",
       "subtitle": "Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.",
       "card_image": "",
@@ -9863,7 +10033,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:moviplus-40",
+      "image": "@img:machine-moviplus-e-v2",
       "title": "Moviplus-E",
       "subtitle": "New line of meat injectors with a fully electric drive system.",
       "card_image": "",
@@ -10047,7 +10217,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:movimax-zero",
+      "image": "@img:machine-movimax-zero",
       "title": "Movimax Zero",
       "subtitle": "La inyectora de carne con menor huella de carbono del mercado.",
       "card_image": "",
@@ -10245,7 +10415,7 @@
     "sections": [
      {
       "type": "product_hero",
-      "image": "@img:movimax-zero",
+      "image": "@img:machine-movimax-zero",
       "title": "Movimax Zero",
       "subtitle": "The Carbon-Neutral Meat Injector.",
       "card_image": "",

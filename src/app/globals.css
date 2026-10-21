@@ -272,6 +272,12 @@
   body {
     @apply bg-white text-black-grey text-body-m antialiased;
   }
+  /* Las imágenes y los enlaces no se arrastran (en Firefox lo hace <Animations>). */
+  img,
+  video,
+  a {
+    -webkit-user-drag: none;
+  }
 }
 
 /* ---- Utilidades comunes de los módulos ---- */
@@ -412,11 +418,12 @@ html:has(main [data-section]:last-of-type > :last-child[class~="bg-black"]) [dat
 /* Estado inicial de los elementos que se animan al entrar en pantalla (ver components/motion/Animations). */
 @layer base {
   /* Letras y palabras ocultas hasta que su grupo (o el propio texto suelto) se marca data-typed. */
-  html.js-motion [data-reveal],
-  html.js-motion [data-char]:not([data-typed] *) {
+  /* Lo de dentro de una tarjeta [data-card] no se anima aparte: llega con la tarjeta. */
+  html.js-motion [data-reveal]:not([data-card] *),
+  html.js-motion [data-char]:not([data-typed] *, [data-card] *) {
     opacity: 0;
   }
-  html.js-motion [data-typewriter-line]:not([data-typed] *),
+  html.js-motion [data-typewriter-line]:not([data-typed] *, [data-card] *),
   html.js-motion [data-rule] {
     transform: scaleX(0);
   }
@@ -424,11 +431,11 @@ html:has(main [data-section]:last-of-type > :last-child[class~="bg-black"]) [dat
   [data-rule] {
     transform-origin: left;
   }
-  html.js-motion [data-paint] [data-word]:not([data-typed] *) {
+  html.js-motion [data-paint] [data-word]:not([data-typed] *, [data-card] *) {
     opacity: 0.15;
   }
-  /* HTML que se teclea: oculto hasta que Animations lo parte en letras (así no parpadea entero). */
-  html.js-motion [data-typewriter-html]:not([data-typewriter]) {
+  /* HTML del editor: oculto hasta que Animations lo prepara (así no parpadea entero). */
+  html.js-motion [data-typewriter-html]:not([data-typewriter], [data-card] *) {
     visibility: hidden;
   }
   /* [data-ink]: el texto empieza gris tenue y el scroll lo pasa a negro palabra a palabra (ver Animations). */

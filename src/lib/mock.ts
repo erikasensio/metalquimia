@@ -11,7 +11,7 @@ import { defaultLocale, localizedPath } from "./i18n";
 type Lang = string;
 type SeedPage = { key: string; parent?: string; front?: boolean } & Record<Lang, { title: string; slug?: string; sections?: Record<string, unknown>[]; seo_title?: string; seo_description?: string }>;
 type SeedImage = { file: string; alt?: Record<Lang, string> };
-type SeedMenuItem = { label: string; url?: string; description?: string; image?: string; children?: SeedMenuItem[] };
+type SeedMenuItem = Omit<MenuItem, "url" | "image" | "icon" | "children"> & { url?: string; image?: string; icon?: string; children?: SeedMenuItem[] };
 type Site = {
   languages: Lang[];
   images: Record<string, SeedImage>;
@@ -78,6 +78,13 @@ export function mockGlobal(lang: Lang): Global {
       target: "",
       description: item.description ?? "",
       image: (item.image ? resolve(s, item.image, lang) : null) as MenuItem["image"],
+      icon: (item.icon ? resolve(s, item.icon, lang) : null) as MenuItem["icon"],
+      highlight: Boolean(item.highlight),
+      layout: item.layout ?? "",
+      eyebrow: item.eyebrow ?? "",
+      title_muted: item.title_muted ?? "",
+      title: item.title ?? "",
+      link: (item.link ? resolve(s, item.link, lang) : null) as MenuItem["link"],
       children: menu(item.children),
     }));
   const options = (resolve(s, s.options[lang] ?? s.options[defaultLocale] ?? {}, lang) ?? {}) as Record<string, unknown>;

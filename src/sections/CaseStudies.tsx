@@ -27,7 +27,7 @@ export default function CaseStudies({ eyebrow, title_muted, title, subtitle, but
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} align="center" />
 
         {list.length > 0 && (
-          <ul className="grid md:grid-cols-3" data-stagger>
+          <ul className="grid md:grid-cols-3" data-cards>
             {list.map((item, i) => {
               const content = (
                 <>
@@ -50,7 +50,7 @@ export default function CaseStudies({ eyebrow, title_muted, title, subtitle, but
               );
               const card = "group flex h-full min-h-[320px] flex-col justify-between gap-8 p-6 transition-colors duration-300 hover:bg-black";
               return (
-                <li key={i} className="border-l border-medium-grey" data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 3) * 0.1}>
+                <li key={i} className="border-l border-medium-grey" data-card>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className={card}>
                       {content}

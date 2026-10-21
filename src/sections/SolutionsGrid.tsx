@@ -31,7 +31,7 @@ export default function SolutionsGrid({ eyebrow, title_muted, title, subtitle, b
         </div>
 
         {list.length > 0 && (
-          <ul className="mx-auto grid w-full max-w-[1222px] gap-x-4 gap-y-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-[72px]" data-stagger>
+          <ul className="mx-auto grid w-full max-w-[1222px] gap-x-4 gap-y-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-[72px]" data-cards>
             {list.map((item, i) => {
               const content = (
                 <>
@@ -62,7 +62,7 @@ export default function SolutionsGrid({ eyebrow, title_muted, title, subtitle, b
               );
               const card = "group flex h-full flex-col gap-6";
               return (
-                <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 3) * 0.1}>
+                <li key={i} data-card>
                   {item.link?.url ? (
                     <Link href={item.link.url} target={item.link.target || undefined} className={card}>
                       {content}

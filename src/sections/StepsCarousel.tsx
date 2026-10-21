@@ -36,17 +36,14 @@ export default function StepsCarousel({ theme, eyebrow, title_muted, title, subt
         )}
       </div>
       {list.length > 0 && (
-        <div>
+        <div data-cards>
           <Carousel dark={dark} trackClassName={`gap-4 ${carouselGutter}`} label={title || "Pasos"}>
             {list.map((item, i) => (
               // Figma: tres columnas de 477 px en 1464; número, línea, imagen de 320 px de alto y texto de 18 px.
-              // La línea crece de izquierda a derecha, se teclea el número y el texto (Lay Grotesk) aparece con destello.
+              // La tarjeta entera sube desde abajo, una detrás de otra (data-cards); su contenido no se anima.
               <article
                 key={i}
-                className="flex w-[80vw] shrink-0 snap-start flex-col gap-3.5 sm:w-[400px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)]"
-                data-typewriter-group
-                data-typewriter-sequence
-                data-typewriter-delay={i * 0.15}
+                className="flex w-[80vw] shrink-0 snap-start flex-col gap-3.5 sm:w-[400px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)]" data-card
               >
                 <div className="flex flex-col gap-2">
                   <span className="font-mono text-[0.875rem] leading-[1.4] tracking-[-0.01em] text-grey">

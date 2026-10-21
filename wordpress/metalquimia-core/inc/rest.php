@@ -165,12 +165,22 @@ function mq_menu_tree( int $menu_id ): array {
 		$out = array();
 		foreach ( $items as $item ) {
 			if ( (int) $item->menu_item_parent === $parent ) {
-				$out[] = array(
+				$field  = fn( $name ) => function_exists( 'get_field' ) ? get_field( $name, $item->ID ) : null;
+				$icon   = $field( 'menu_icon' );
+				$link   = $field( 'menu_link' );
+				$out[]  = array(
 					'label'       => $item->title,
 					'url'         => mq_relative_url( $item->url ),
 					'target'      => $item->target,
 					'description' => (string) $item->description,
 					'image'       => mq_menu_item_image( $item ),
+					'icon'        => $icon ? mq_normalize( $icon ) : null,
+					'highlight'   => (bool) $field( 'menu_highlight' ),
+					'layout'      => (string) $field( 'menu_layout' ),
+					'eyebrow'     => (string) $field( 'menu_eyebrow' ),
+					'title_muted' => (string) $field( 'menu_title_muted' ),
+					'title'       => (string) $field( 'menu_title' ),
+					'link'        => $link ? mq_normalize( $link ) : null,
 					'children'    => $build( (int) $item->ID ),
 				);
 			}

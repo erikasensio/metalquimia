@@ -29,9 +29,9 @@ export default function BulletPoints({ eyebrow, title_muted, title, subtitle, hi
       <div className="site-container flex flex-col gap-12 lg:gap-16">
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} />
         {(highlight || list.length > 0) && (
-          <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-stagger>
+          <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-cards>
             {highlight && (
-              <li className={`${card} bg-black text-light-grey`} data-typewriter-group data-typewriter-sequence>
+              <li className={`${card} bg-black text-light-grey`} data-card>
                 {highlight_title && (
                   <h3 className="text-title-s max-w-[20ch]" data-paint>
                     <SplitWords text={highlight_title} />
@@ -54,7 +54,7 @@ export default function BulletPoints({ eyebrow, title_muted, title, subtitle, hi
               </li>
             )}
             {list.map((item, i) => (
-              <li key={i} className={`${card} bg-light-grey`} data-typewriter-group data-typewriter-sequence data-typewriter-delay={((i + (highlight ? 1 : 0)) % 3) * 0.1}>
+              <li key={i} className={`${card} bg-light-grey`} data-card>
                 {item.icon?.url ? (
                   <Image src={item.icon.url} alt={item.icon.alt || ""} width={40} height={40} className="size-10 object-contain" />
                 ) : (

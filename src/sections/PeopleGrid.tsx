@@ -25,9 +25,9 @@ export default function PeopleGrid({ eyebrow, title_muted, title, subtitle, butt
       <div className="site-container flex flex-col gap-12 lg:gap-16">
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} align="center" />
         {list.length > 0 && (
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4" data-stagger>
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4" data-cards>
             {list.map((item, i) => (
-              <li key={i} className="flex flex-col gap-4" data-typewriter-group data-typewriter-sequence data-typewriter-delay={(i % 4) * 0.1}>
+              <li key={i} className="flex flex-col gap-4" data-card>
                 <Media image={item.photo} className="aspect-[4/5] bg-light-grey" sizes="(min-width: 1024px) 25vw, 50vw" />
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex min-w-0 flex-col gap-1">

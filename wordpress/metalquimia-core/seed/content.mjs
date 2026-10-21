@@ -98,11 +98,14 @@ const I = {
   machineTumbler: img("machine-tumbler", "machine-tumbler.webp", "Bombo de masaje al vacío", "Vacuum tumbler", "Cut-out stainless tumbler on transparent (Figma División › product-highlight)"),
   machineInjector: img("machine-injector", "machine-injector.webp", "Inyectora de salmuera", "Brine injector", "Cut-out stainless injector on transparent (Figma División › product-highlight)"),
   // Página Inyección de carne (Figma Páginas › 443:16228 › product-highlight). Signature Edition y Movimax Zero usan la misma foto en el Figma.
-  movistickClassic: img("movistick-classic", "movistick-classic.png", "Inyectora Movistick Classic", "Movistick Classic injector", "Cut-out PNG Movistick Classic injector, transparent"),
+  movistickClassic: img("machine-movistick-classic", "machine-movistick-classic.webp", "Inyectora Movistick Classic", "Movistick Classic injector", "Cut-out PNG Movistick Classic injector, transparent"),
   movistickTriplex: img("movistick-triplex", "movistick-triplex.png", "Inyectora Movistick Triplex", "Movistick Triplex injector", "Cut-out PNG Movistick Triplex injector, transparent"),
-  moviplusSignature: img("moviplus-signature", "moviplus-signature.png", "Inyectora Moviplus 4.0 Signature Edition", "Moviplus 4.0 Signature Edition injector", "Cut-out PNG Moviplus 4.0 Signature Edition injector, transparent"),
-  moviplus40: img("moviplus-40", "moviplus-40.png", "Inyectora Moviplus 4.0", "Moviplus 4.0 injector", "Cut-out PNG Moviplus 4.0 injector (drum), transparent"),
-  movimaxZero: img("movimax-zero", "movimax-zero.png", "Inyectora Movimax Zero", "Movimax Zero injector", "Cut-out PNG Movimax Zero injector, transparent"),
+  // Todas las máquinas en un lienzo 1200 × 896 con el mismo encuadre que la Triplex del Figma (así salen del mismo tamaño en
+  // el hero). Moviplus: fotos de metalquimia.com con el fondo blanco recortado (las del Figma eran provisionales).
+  moviplusSignature: img("machine-moviplus-signature-v2", "machine-moviplus-signature-v2.webp", "Inyectora Moviplus 4.0 Signature Edition", "Moviplus 4.0 Signature Edition injector", "Cut-out Moviplus 4.0 Signature Edition injector, transparent (metalquimia.com)"),
+  moviplus40: img("machine-moviplus-40-v2", "machine-moviplus-40-v2.webp", "Inyectora Moviplus 4.0", "Moviplus 4.0 injector", "Cut-out Moviplus 4.0 injector, transparent (metalquimia.com)"),
+  moviplusE: img("machine-moviplus-e-v2", "machine-moviplus-e-v2.webp", "Inyectora Moviplus-E", "Moviplus-E injector", "Cut-out Moviplus-e 120/4500 CR injector, transparent (metalquimia.com)"),
+  movimaxZero: img("machine-movimax-zero", "machine-movimax-zero.webp", "Inyectora Movimax Zero", "Movimax Zero injector", "Cut-out PNG Movimax Zero injector, transparent"),
   productIntro: img("product-intro-engineering", "product-intro-engineering.webp", "Ingeniera revisando un diseño en CAD", "Engineer reviewing a CAD design", "Woman at two monitors with 3D CAD of machine parts (Figma Página de máquina › feature-highlight)"),
   // Página Marinados (Figma Páginas › División 325:5629).
   marinatedProducts: [
@@ -201,6 +204,23 @@ const I = {
   logoI: img("logo-i", "logo-i.png", "Guaraní", "Guaraní", "Client logo PNG transparent (Figma)"),
   highlightMachine: img("highlight-machine", "highlight-machine.jpg", "Embutidora Metalquimia", "Metalquimia stuffer", "Copper and steel stuffing machine on pure black background (Figma Home \"Hightlights\")"),
   methodCard1: img("method-1", "method-1.jpg", "Engineering Mindset", "Engineering Mindset", "Man in suit in front of industrial robots, blue light"),
+  // Iconos del menú Productos (Figma "Menús" 397:40875): PNG transparente de 96 × 96 px, se ven a 24 px.
+  menuIcons: Object.fromEntries(
+    [
+      ["thawing", "Descongelación", "Thawing"],
+      ["brine", "Salmuera", "Brine"],
+      ["injection", "Inyección", "Injection"],
+      ["marinating", "Marinado", "Marinating"],
+      ["tenderization", "Tenderización", "Tenderization"],
+      ["massage", "Masaje", "Massage"],
+      ["stuffing", "Embutición", "Stuffing"],
+      ["cooking", "Cocción", "Cooking"],
+      ["cooking-plants", "Plantas de cocción", "Cooking plants"],
+      ["sliced", "Loncheados", "Sliced meats"],
+      ["sausages", "Salchichas", "Sausages"],
+      ["petfood", "Pet food", "Pet food"],
+    ].map(([key, es, en]) => [key, img(`menu-icon-${key}`, `menu-icon-${key}.png`, "", "", `Line icon: ${en} (${es}), Figma Menús`)]),
+  ),
   methodCard2: img("method-2", "method-2.jpg", "Tecnologías propias", "Proprietary technologies", "Large stainless machine in grey showroom"),
 };
 
@@ -901,7 +921,7 @@ const machinePages = [
     key: "machine-moviplus-e",
     slug: "moviplus-e",
     name: "Moviplus-E",
-    image: I.moviplus40,
+    image: I.moviplusE,
     subtitle: L("Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.", "New line of meat injectors with a fully electric drive system."),
     intro: L(
       "Las nuevas inyectoras MOVIPLUS-e son la apuesta definitiva por una inyección de carne sostenible: su accionamiento totalmente eléctrico y la sencillez tecnológica de todos sus componentes se traducen en eficiencia energética, ahorro de salmuera, productividad, reciclabilidad y un mantenimiento mínimo.\n\nSu cabezal de inyección por efecto spray ofrece un reparto de la salmuera y una uniformidad de color sin rival, con gran versatilidad de porcentajes, un goteo mínimo y los mejores rendimientos finales.",
@@ -1186,7 +1206,7 @@ export const pages = [
           [
             [I.moviplusSignature, "Moviplus 4.0 Signature Edition", L("Injection Molding, the Next: excelencia en diseño inteligente.", "Injection Molding, the Next: Excellence in Smart Design.")],
             [I.moviplus40, "Moviplus 4.0", L("La nueva Moviplus 4.0 se ha diseñado especialmente para la ciberindustria del futuro.", "The new Moviplus version 4.0 has been specially designed for the cyber-industry of the future.")],
-            [I.moviplus40, "Moviplus-E", L("Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.", "New line of meat injectors with a fully electric drive system.")],
+            [I.moviplusE, "Moviplus-E", L("Nueva línea de inyectoras de carne con accionamiento totalmente eléctrico.", "New line of meat injectors with a fully electric drive system.")],
           ],
         ],
         [
@@ -1562,35 +1582,46 @@ const m = (label, url = "#", extra = {}) => ({ label, url, ...extra });
 export const menus = {
   top: [m("Metalquimia Foundation", "https://www.fundaciometalquimia.org/"), m(L("Centro de recursos", "Resources center"), "@page:resources"), m(L("Centro de ayuda", "Help center"), "@page:contact")],
   primary: [
+    // Figma "Menús" (305:5989): Productos = tarjetas por tipo de producto, Soluciones = procesos con icono. Cada panel
+    // se configura en el elemento de primer nivel (diseño, antetítulo, título y enlace al pie). Los procesos sin página
+    // propia enlazan a la página más cercana (producto o inyección).
     m(L("Productos", "Products"), "@page:solutions", {
-      description: L("NUESTRAS SOLUCIONES\nProcesado con precisión y control total en cada etapa.", "OUR SOLUTIONS\nProcessed with precision and full control at every stage."),
+      layout: "cards",
+      eyebrow: L("Nuestros productos", "Our products"),
+      title_muted: L("Procesado con precisión y", "Processed with precision and"),
+      title: L("control total en cada etapa.", "full control at every stage."),
+      link: link(L("Descubre todos los productos", "Discover all products"), "@page:solutions"),
       children: [
-        m(L("Cocidos", "Cooked"), "@page:cooked", { image: I.ham }),
-        m(L("Marinados", "Marinated"), "@page:marinated", { image: I.marinated }),
-        m(L("Curados", "Cured"), "@page:cured", { image: I.salami }),
-        m("Snacks", "@page:snacks", { image: I.snacks }),
-        m(L("Salchichas", "Sausages"), "@page:sausages", { image: I.sausages }),
-        m("Pet food", "@page:petfood", { image: I.petfood }),
+        m(L("Cocidos", "Cooked"), "@page:cooked", { image: I.solutionCooked }),
+        m(L("Marinados", "Marinated"), "@page:marinated", { image: I.solutionMarinated }),
+        m(L("Curados", "Cured"), "@page:cured", { image: I.solutionCured }),
+        m("Snacks", "@page:snacks", { image: I.solutionSnacks }),
+        m(L("Salchichas", "Sausages"), "@page:sausages", { image: I.solutionSausages }),
+        m("Pet food", "@page:petfood", { image: I.solutionPetfood }),
       ],
     }),
     m(L("Soluciones", "Solutions"), "@page:meat-injection", {
-      description: L("NUESTROS PRODUCTOS", "OUR PRODUCTS"),
+      layout: "icons",
+      eyebrow: L("Nuestras soluciones", "Our solutions"),
+      link: link(L("Descubre todas las soluciones", "Discover all solutions"), "@page:solutions"),
       children: [
-        [L("Descongelación de carne", "Meat defrosting"), L("Descongelación uniforme y sin pérdida de calidad.", "Even defrosting without loss of quality.")],
-        [L("Preparación de salmueras", "Brine preparation"), L("Disolución homogénea de ingredientes.", "Homogeneous dissolution of ingredients.")],
-        [L("Inyección de carne", "Meat injection"), L("Inyectoras de agujas de alta precisión.", "High-precision needle injectors.")],
-        [L("Marinado de carne", "Meat marinating"), L("Marinado rápido y homogéneo.", "Fast, even marinating.")],
-        [L("Tenderización de carne", "Meat tenderizing"), L("Mejora de la textura y la absorción.", "Better texture and absorption.")],
-        [L("Masaje de carne", "Meat tumbling"), L("Masaje al vacío con control de temperatura.", "Vacuum tumbling with temperature control.")],
-        [L("Embutición de carne", "Meat stuffing"), L("Embutición continua y precisa.", "Continuous, precise stuffing.")],
-        [L("Cocción de carne", "Meat cooking"), L("Cocción controlada para un producto uniforme.", "Controlled cooking for a uniform product.")],
-        [L("Plantas automáticas de cocidos y marinados", "Automated cooked and marinated plants"), L("Plantas llave en mano conectadas.", "Connected turnkey plants.")],
-        [L("GDSolutions · Loncheados y snacks", "GDSolutions · Slicing and snacks"), L("Loncheado y formatos snack.", "Slicing and snack formats.")],
-        [L("Salchichas cocidas", "Cooked sausages"), L("Producción continua de salchichas.", "Continuous sausage production.")],
-        ["Pet food", L("Equipos para snacks de mascotas.", "Equipment for pet treats.")],
-      ].map(([label, description], i) => m(label, i === 2 ? "@page:meat-injection" : "@page:machine", { description })),
+        [L("Descongelación de carne", "Meat Thawing"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality"), "thawing", "@page:cooked"],
+        [L("Preparación de salmueras", "Preparation of Brines"), L("Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo", "Quick, controlled, and efficient preparation of any type of brine and marinade"), "brine", "@page:meat-injection"],
+        [L("Inyección de carne", "Meat Injection"), L("Reparto espectacular de la salmuera y uniformidad de color", "Spectacular distribution of brine and uniformity of color"), "injection", "@page:meat-injection"],
+        [L("Marinado de carne", "Meat Marinating"), L("Marinado de carne con o sin hueso por efecto spray", "Meat marinating with or without bone by spray effect"), "marinating", "@page:marinated"],
+        [L("Tenderización de carne", "Meat Tenderization"), L("Más rendimiento y menos mermas de cocción", "Improvement of yield and reduction of cooking losses"), "tenderization", "@page:meat-injection"],
+        [L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with cooling jacket, fully versatile"), "massage", "@page:cooked"],
+        [L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle"), "stuffing", "@page:cooked"],
+        [L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con seguimiento y registro de todos los parámetros técnicos del proceso", "Smart cooking with tracking and recording of all technical parameters of the process"), "cooking", "@page:cooked"],
+        [L("Plantas automáticas de cocción y marinado", "Automatic cooking and marinating plants"), L("Conectividad inteligente: el jamón hecho a tu medida", "Smart connectivity: The ham made to your specifications"), "cooking-plants", "@page:cooked"],
+        [L("QDSolutions · Loncheados y snacks cárnicos", "QDSolutions - Sliced meats and meat snacks"), L("Maximiza el rendimiento del producto y la flexibilidad operativa", "Maximizes product yield and operational flexibility"), "sliced", "@page:snacks"],
+        [L("Salchichas cocidas", "Cooked Sausages"), L("Producción de salchichas con un sabor y una textura inmejorables", "Sausage production with unbeatable flavor and texture"), "sausages", "@page:sausages"],
+        ["Pet food", L("Equipos hechos para condiciones exigentes", "Equipment built for tough conditions"), "petfood", "@page:petfood"],
+      ].map(([label, description, icon, url]) => m(label, url, { description, icon: I.menuIcons[icon] })),
     }),
     m(L("Nuestro método", "Our method"), "#", {
+      layout: "featured",
+      eyebrow: L("Nuestro método", "Our method"),
       children: [
         m("Engineering Mindset / Creativació", "@page:engineering", { image: I.methodCard1 }),
         m(L("Tecnologías propias", "Proprietary technologies"), "@page:technologies", { image: I.methodCard2 }),
@@ -1602,9 +1633,20 @@ export const menus = {
     }),
     m(L("Representantes", "Representatives"), "@page:representatives"),
     m(L("Servicio", "Service"), "@page:services", {
-      children: [m(L("Tecnológico", "Technological"), "@page:innovation"), m(L("Recambios y servicio", "Parts & Service"), "@page:service-detail"), m(L("Formación", "Training"), "@page:services"), m(L("Ingeniería", "Engineering"), "@page:engineering"), m(L("Modernización", "Upgrade"), "@page:services"), m(L("Pedir recambios", "Order Spare Parts"), "@page:contact#form")],
+      layout: "links",
+      eyebrow: L("Nuestros servicios", "Our services"),
+      children: [
+        m(L("Tecnológico", "Technological"), "@page:innovation"),
+        m(L("Recambios y servicio", "Parts & Service"), "@page:service-detail"),
+        m(L("Formación", "Training"), "@page:services"),
+        m(L("Ingeniería", "Engineering"), "@page:engineering"),
+        m(L("Modernización", "Upgrade"), "@page:services"),
+        m(L("Pedir recambios", "Order Spare Parts"), "@page:contact#form", { highlight: true }),
+      ],
     }),
     m(L("Empresa", "Company"), "@page:about", {
+      layout: "links",
+      eyebrow: L("Sobre nosotros", "About us"),
       children: [
         m(L("Sobre Metalquimia", "About Metalquimia"), "@page:about"),
         m(L("Historia", "History"), "@page:about"),

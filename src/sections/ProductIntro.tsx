@@ -11,7 +11,7 @@ type Props = Section & {
 /**
  * Figma Páginas › Página de máquina (193:4073) › feature-highlight.
  * Foto grande con esquinas redondeadas a la izquierda y, a la derecha, el icono de destello y la presentación
- * de la máquina en Lay Grotesk (aparece palabra a palabra con destello naranja). Fondo negro.
+ * de la máquina en Lay Grotesk. Fondo negro. Al entrar en pantalla el texto se descubre línea a línea.
  * Escritorio: columnas de 861 y 369 px sobre 1464 (huecos de 125 y 109).
  */
 export default function ProductIntro({ image, text }: Props) {

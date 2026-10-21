@@ -42,7 +42,7 @@ export function MobileMenu({ items, top, cta, lang, label }: Props) {
                   <ul className="mt-3 space-y-2 pl-1">
                     {item.children.map((child) => (
                       <li key={child.url + child.label}>
-                        <Link href={child.url} className={`text-body-l ${/spare|recambio|repuesto/i.test(child.label) ? "text-red" : "text-dark-grey"}`}>
+                        <Link href={child.url} className={`text-body-l ${child.highlight ? "text-red" : "text-dark-grey"}`}>
                           {child.label}
                         </Link>
                       </li>

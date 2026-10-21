@@ -24,17 +24,14 @@ export default function Timeline({ eyebrow, title_muted, title, subtitle, button
     <div className="flex flex-col gap-12 bg-white py-20 lg:gap-16 lg:py-[120px]">
       <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} subtitle={subtitle} button={button} className="site-container" />
       {list.length > 0 && (
-        <div>
+        <div data-cards>
           {/* Sin hueco entre elementos para que la línea no se corte; el aire lo pone el padding derecho. */}
           <Carousel trackClassName={`gap-0 ${carouselGutter}`} label={title || "Línea del tiempo"}>
             {list.map((item, i) => (
-              // Cada hito: la línea crece de izquierda a derecha y luego número, título (destello) y texto (a máquina).
+              // Cada hito sube desde abajo, uno detrás de otro (data-cards); su contenido no se anima.
               <article
                 key={i}
-                className="group flex w-[280px] shrink-0 snap-start flex-col gap-5 lg:w-[340px]"
-                data-typewriter-group
-                data-typewriter-sequence
-                data-typewriter-delay={i * 0.15}
+                className="group flex w-[280px] shrink-0 snap-start flex-col gap-5 lg:w-[340px]" data-card
               >
                 <span className="pr-6 font-mono text-[0.875rem] text-grey transition-colors group-hover:text-red">
                   <Typewriter text={`[${String(i + 1).padStart(2, "0")}]`} />

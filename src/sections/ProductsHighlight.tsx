@@ -44,10 +44,8 @@ export default function ProductsHighlight({ eyebrow, title_muted, title, muted_l
         className="site-container"
       />
       {list.length > 0 && (
-        // Grupo de escritura: al acabar queda data-typed y las tarjetas que aparezcan al filtrar ya se ven.
-        <div data-typewriter-group>
-          <ProductsHighlightClient items={list} showFilters={!!show_filters} allLabel={all_label || "ALL"} label={title || "Máquinas"} />
-        </div>
+        // Las tarjetas suben desde abajo una detrás de otra (data-cards en ProductsHighlightClient); su texto no se anima.
+        <ProductsHighlightClient items={list} showFilters={!!show_filters} allLabel={all_label || "ALL"} label={title || "Máquinas"} />
       )}
     </div>
   );

@@ -41,9 +41,9 @@ export default function ContactCards({ eyebrow, title_muted, title, highlight_ti
       <div className="site-container flex flex-col gap-12 lg:gap-16">
         <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} align="center" />
 
-        <ul className="grid gap-4 md:grid-cols-3" data-stagger>
+        <ul className="grid gap-4 md:grid-cols-3" data-cards>
           {hasHighlight && (
-            <li className="flex min-h-[220px] flex-col items-start justify-between gap-6 bg-black p-6" data-typewriter-group data-typewriter-sequence>
+            <li className="flex min-h-[220px] flex-col items-start justify-between gap-6 bg-black p-6" data-card>
               <div className="flex flex-col gap-3">
                 {highlight_title && (
                   <h3 className="text-title-xs text-light-grey" data-paint>
@@ -87,7 +87,7 @@ export default function ContactCards({ eyebrow, title_muted, title, highlight_ti
               </>
             );
             return (
-              <li key={i} data-typewriter-group data-typewriter-sequence data-typewriter-delay={((i + (hasHighlight ? 1 : 0)) % 3) * 0.1}>
+              <li key={i} data-card>
                 {href ? (
                   <Link href={href.url} target={href.target || undefined} className={`${card} transition-colors hover:bg-medium-grey`}>
                     {content}
