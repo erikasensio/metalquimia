@@ -83,6 +83,10 @@ export function Animations() {
     // Sin once: true a propósito. Un trigger "once" que ya ha pasado se destruye al refrescarse y, si eso ocurre
     // mientras ScrollTrigger recorre los anteriores para crear uno nuevo, revienta ("reading 'end'"). El
     // toggleActions por defecto ("play none none none") hace lo mismo: se reproduce al entrar y ya no vuelve.
+    // Lo que ya se ve al cargar (p. ej. el botón al pie de un hero) se anima directamente, sin esperar a que el scroll
+    // lo suba hasta su punto de disparo; el resto entra al llegar a `start`.
+    const startAt = (el: Element, start: string) => (el.getBoundingClientRect().top < window.innerHeight ? "top bottom" : start);
+
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>("[data-split]").forEach((el) => {
         gsap.from(el.querySelectorAll("[data-word]"), {
@@ -91,7 +95,7 @@ export function Animations() {
           duration: 0.8,
           ease: "power3.out",
           stagger: 0.04,
-          scrollTrigger: { trigger: el, start: "top 88%" },
+          scrollTrigger: { trigger: el, start: startAt(el, "top 88%") },
         });
       });
 
@@ -99,12 +103,12 @@ export function Animations() {
         gsap.fromTo(
           el,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 90%" } },
+          { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: startAt(el, "top 90%") } },
         );
       });
 
       gsap.utils.toArray<HTMLElement>("[data-rule]").forEach((el) => {
-        gsap.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.inOut", scrollTrigger: { trigger: el, start: "top 92%" } });
+        gsap.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.inOut", scrollTrigger: { trigger: el, start: startAt(el, "top 92%") } });
       });
 
       gsap.utils.toArray<HTMLElement>("[data-stagger]").forEach((el) => {
@@ -114,7 +118,7 @@ export function Animations() {
           duration: 0.7,
           ease: "power3.out",
           stagger: 0.08,
-          scrollTrigger: { trigger: el, start: "top 88%" },
+          scrollTrigger: { trigger: el, start: startAt(el, "top 88%") },
         });
       });
 
@@ -137,7 +141,7 @@ export function Animations() {
       // Solo los grupos de fuera: los de dentro se animan con ellos, en el orden en que aparecen.
       gsap.utils.toArray<HTMLElement>("[data-typewriter-group]").filter((el) => !inGroup(el)).forEach((el) => {
         const tl = gsap.timeline({
-          scrollTrigger: { trigger: el, start: "top 80%" },
+          scrollTrigger: { trigger: el, start: startAt(el, "top 80%") },
           onComplete: () => el.setAttribute("data-typed", ""),
         });
         let at = parseFloat(el.dataset.typewriterDelay || "0");
