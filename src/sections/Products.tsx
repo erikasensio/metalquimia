@@ -25,7 +25,7 @@ type Props = Section & {
 
 // Palabra gigante de fondo (y su contorno, que va encima de la imagen).
 const WORD =
-  "absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display text-[6rem] font-semibold leading-[1.1] animate-[fade-in_0.5s_ease-out] md:text-[11rem] lg:text-[19.375rem] [font-feature-settings:'dlig'_1]";
+  "absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display text-[6rem] font-semibold leading-[1.1] animate-[fade-in_0.5s_ease-out] md:text-[11rem] lg:text-[min(19.375rem,32svh)] [font-feature-settings:'dlig'_1]";
 
 /**
  * Bloque de soluciones por categoría (Figma "products" 160:2762).
@@ -79,7 +79,8 @@ export default function Products({ eyebrow, title_muted, title, button, categori
   }, [active]);
 
   return (
-    <div className="relative flex flex-col overflow-x-clip bg-white py-[60px]" data-typewriter-group>
+    // En escritorio cabe en una pantalla bajo la cabecera (71px; 95px con la barra superior en xl): la imagen central encoge lo que haga falta.
+    <div className="relative flex flex-col overflow-x-clip bg-white py-[60px] lg:max-h-[calc(100svh-71px)] xl:max-h-[calc(100svh-95px)]" data-typewriter-group>
       <div className="site-container flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
         <div className="flex max-w-[500px] flex-col items-start gap-[21px]">
           {eyebrow && (
@@ -130,7 +131,7 @@ export default function Products({ eyebrow, title_muted, title, button, categori
       </div>
 
       {current && (
-        <div ref={visual} className="relative h-[360px] md:h-[480px] lg:h-[574px]">
+        <div ref={visual} className="relative h-[360px] md:h-[480px] lg:h-auto lg:min-h-0 lg:flex-[0_1_574px]">
           <div className="absolute inset-0 overflow-hidden" aria-hidden>
             <div className="stripes-disc absolute left-1/2 top-1/2 size-[110%] max-h-[900px] max-w-[900px] -translate-x-1/2 -translate-y-1/2" />
           </div>
@@ -143,7 +144,7 @@ export default function Products({ eyebrow, title_muted, title, button, categori
               key={`img-${active}`}
               // Con fotogramas se ve más grande para que se aprecie el movimiento.
               className={`absolute left-1/2 aspect-[463/630] -translate-x-1/2 animate-[fade-in_0.5s_ease-out] ${
-                frames ? "top-[-10%] h-[120%] lg:top-[-140px] lg:h-[820px]" : "top-0 h-full lg:top-[-46px] lg:h-[630px]"
+                frames ? "top-[-10%] h-[120%] lg:top-[-24%] lg:h-[143%]" : "top-0 h-full lg:top-[-8%] lg:h-[110%]"
               }`}
               data-products-image
             >

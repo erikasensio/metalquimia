@@ -37,15 +37,18 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
 
       <div className="site-container relative">
         {hasPrefooter && (
-          <div className="flex flex-col items-center gap-8 pb-24 pt-32 text-center lg:gap-12 lg:pb-[164px] lg:pt-[204px]" data-reveal>
-            <p className="text-title-xl max-w-[928px] lg:max-w-[1100px] [font-feature-settings:'dlig'_1]" data-split>
+          // Título que se pinta palabra a palabra, como los títulos con efecto de escritura de los módulos.
+          <div className="flex flex-col items-center gap-8 pb-24 pt-32 text-center lg:gap-12 lg:pb-[164px] lg:pt-[204px]" data-typewriter-group data-typewriter-sequence>
+            <p className="text-title-xl max-w-[928px] lg:max-w-[1100px] [font-feature-settings:'dlig'_1]" data-paint>
               {str("prefooter_title_muted") && <SplitWords text={`${str("prefooter_title_muted")} `} className="block text-grey" />}
               {str("prefooter_title") && <SplitWords text={str("prefooter_title")} className="text-light-grey" />}
             </p>
             {button?.url && (
-              <Button href={button.url} target={button.target} variant="red">
-                {button.title}
-              </Button>
+              <div data-reveal>
+                <Button href={button.url} target={button.target} variant="red">
+                  {button.title}
+                </Button>
+              </div>
             )}
           </div>
         )}
@@ -112,7 +115,7 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {legal.map((link) => (
                   <li key={link.url + link.label}>
-                    <Link href={link.url} className="text-body-xs text-grey transition-colors hover:text-white">
+                    <Link href={link.url} className="block text-body-xs text-grey transition-colors hover:text-white">
                       {link.label}
                     </Link>
                   </li>

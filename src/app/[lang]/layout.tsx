@@ -30,10 +30,11 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
     <html lang={lang} suppressHydrationWarning>
       {/* suppressHydrationWarning: el script de abajo añade clases a <html> y las extensiones del navegador (p. ej. ColorZilla) atributos al body. */}
       <body className="flex min-h-dvh flex-col" suppressHydrationWarning>
-        {/* Si la pantalla de carga ya se vio en esta visita, se oculta antes de pintar (sin parpadeo). */}
+        {/* Si la pantalla de carga ya se vio en esta visita, se oculta antes de pintar (sin parpadeo).
+            js-motion también va aquí y no solo en <Animations>: así los textos que se teclean no se ven enteros antes de escribirse. */}
         {/* next/script (beforeInteractive) y no <script> a pelo: React avisa de los <script> renderizados dentro de componentes. */}
         <Script id="mq-loader-seen" strategy="beforeInteractive">
-          {"try{sessionStorage.getItem('mq-loader')&&document.documentElement.classList.add('mq-loader-seen')}catch(e){}"}
+          {"document.documentElement.classList.add('js-motion');try{sessionStorage.getItem('mq-loader')&&document.documentElement.classList.add('mq-loader-seen')}catch(e){}"}
         </Script>
         {loaderOn && <Loader textMuted={String(options.loader_text_muted || "Meat.")} text={String(options.loader_text || "The next.")} />}
         <Header global={global} lang={lang} />

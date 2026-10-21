@@ -115,10 +115,18 @@ export function Animations() {
         // data-typewriter-html: HTML del editor (párrafos, negritas…) que se parte aquí en letras, una sola vez.
         el.querySelectorAll<HTMLElement>("[data-typewriter-html]:not([data-typewriter])").forEach(splitChars);
         el.querySelectorAll<HTMLElement>("[data-typewriter], [data-paint]").forEach((text, i) => {
-          // data-paint: el título se pinta palabra a palabra, de gris muy clarito a su color.
+          // data-paint: el título se pinta palabra a palabra, de gris muy clarito a su color,
+          // con un destello naranja en la palabra recién escrita.
           if (text.hasAttribute("data-paint")) {
-            const words = text.querySelectorAll("[data-word]");
+            const words = gsap.utils.toArray<HTMLElement>(text.querySelectorAll("[data-word]"));
+            const colors = words.map((w) => getComputedStyle(w).color);
             tl.to(words, { opacity: 1, duration: 0.35, stagger: 0.06, ease: "none" }, at);
+            tl.fromTo(
+              words,
+              { color: "#ff2f00" },
+              { color: (i: number) => colors[i], duration: 0.6, stagger: 0.06, ease: "power1.in", immediateRender: false, clearProps: "color" },
+              at,
+            );
             at += words.length * 0.06;
             return;
           }

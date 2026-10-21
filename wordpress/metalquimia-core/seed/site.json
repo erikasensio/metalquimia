@@ -700,6 +700,54 @@
    },
    "find": "Cut-out PNG salmon fillet, transparent"
   },
+  "solution-cooked": {
+   "file": "solution-cooked.png",
+   "alt": {
+    "es": "Jamón cocido con lonchas",
+    "en": "Cooked ham with slices"
+   },
+   "find": "Cut-out PNG cooked ham with floating slices (Figma Soluciones)"
+  },
+  "solution-marinated": {
+   "file": "solution-marinated.png",
+   "alt": {
+    "es": "Pieza de carne marinada",
+    "en": "Marinated meat piece"
+   },
+   "find": "Cut-out PNG marinated pork piece with slices (Figma Soluciones)"
+  },
+  "solution-cured": {
+   "file": "solution-cured.png",
+   "alt": {
+    "es": "Lonchas de embutido curado",
+    "en": "Cured sausage slices"
+   },
+   "find": "Cut-out PNG stack of salami slices (Figma Soluciones)"
+  },
+  "solution-snacks": {
+   "file": "solution-snacks.png",
+   "alt": {
+    "es": "Tiras de bacon",
+    "en": "Bacon strips"
+   },
+   "find": "Cut-out PNG floating bacon strips (Figma Soluciones)"
+  },
+  "solution-sausages": {
+   "file": "solution-sausages.png",
+   "alt": {
+    "es": "Salchichas",
+    "en": "Sausages"
+   },
+   "find": "Cut-out PNG frankfurter sausages (Figma Soluciones)"
+  },
+  "solution-petfood": {
+   "file": "solution-petfood.png",
+   "alt": {
+    "es": "Snacks para mascotas",
+    "en": "Pet treats"
+   },
+   "find": "Cut-out PNG stacked pet food treats (Figma Soluciones)"
+  },
   "plate-1": {
    "file": "plate-1.jpg",
    "alt": {
@@ -3721,15 +3769,15 @@
       "title": "control total en cada etapa.",
       "subtitle": "",
       "button": {
-       "title": "HABLA CON UN EXPERTO",
+       "title": "SOLICITA INFORMACIÓN",
        "url": "@page:contact#form",
        "target": ""
       },
       "items": [
        {
-        "image": "@img:ham",
+        "image": "@img:solution-cooked",
         "name": "Cocidos",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "La ingeniería de la precisión detrás de cada loncha.",
         "link": {
          "title": "",
          "url": "@page:cooked",
@@ -3737,9 +3785,9 @@
         }
        },
        {
-        "image": "@img:marinated",
+        "image": "@img:solution-marinated",
         "name": "Marinados",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "Sabor uniforme, de la primera pieza a la última.",
         "link": {
          "title": "",
          "url": "@page:marinated",
@@ -3747,9 +3795,9 @@
         }
        },
        {
-        "image": "@img:salami",
+        "image": "@img:solution-cured",
         "name": "Curados",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "La tradición, perfeccionada con precisión de ingeniería.",
         "link": {
          "title": "",
          "url": "@page:cured",
@@ -3757,9 +3805,9 @@
         }
        },
        {
-        "image": "@img:snacks",
+        "image": "@img:solution-snacks",
         "name": "Snacks",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "El bocado perfecto en cada pieza de proteína.",
         "link": {
          "title": "",
          "url": "@page:snacks",
@@ -3767,9 +3815,9 @@
         }
        },
        {
-        "image": "@img:sausages",
+        "image": "@img:solution-sausages",
         "name": "Salchichas",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "Uniformidad impecable en cada porción.",
         "link": {
          "title": "",
          "url": "@page:sausages",
@@ -3777,9 +3825,9 @@
         }
        },
        {
-        "image": "@img:petfood",
+        "image": "@img:solution-petfood",
         "name": "Pet food",
-        "text": "Líneas completas, de la salmuera al loncheado.",
+        "text": "Ingeniería avanzada para la nutrición premium de mascotas.",
         "link": {
          "title": "",
          "url": "@page:petfood",
@@ -3795,10 +3843,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership para toda la vida",
       "title": "que genera inventos",
-      "text": "<p>Trabajamos codo con codo con cada cliente para desarrollar soluciones a medida: de la idea a la planta en producción, y después durante toda la vida de la instalación.</p>",
+      "text": "<p>La Creativación es la forma en que Metalquimia entiende la I+D: un proceso en el que el conocimiento profundo del proceso, la ciencia de los alimentos y la ingeniería mecánica se unen para crear soluciones que antes no existían.</p>",
       "details": "",
       "button": {
-       "title": "CONÓCENOS",
+       "title": "Descubre nuestro modelo",
        "url": "@page:partnership",
        "target": ""
       },
@@ -3817,15 +3865,15 @@
       "title": "full control at every stage.",
       "subtitle": "",
       "button": {
-       "title": "TALK TO AN EXPERT",
+       "title": "REQUEST INFO",
        "url": "@page:contact#form",
        "target": ""
       },
       "items": [
        {
-        "image": "@img:ham",
+        "image": "@img:solution-cooked",
         "name": "Cooked",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Engineering the precision behind every slice.",
         "link": {
          "title": "",
          "url": "@page:cooked",
@@ -3833,9 +3881,9 @@
         }
        },
        {
-        "image": "@img:marinated",
+        "image": "@img:solution-marinated",
         "name": "Marinated",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Uniform flavor, from the first piece to the last.",
         "link": {
          "title": "",
          "url": "@page:marinated",
@@ -3843,9 +3891,9 @@
         }
        },
        {
-        "image": "@img:salami",
+        "image": "@img:solution-cured",
         "name": "Cured",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Tradition perfected through engineering precision.",
         "link": {
          "title": "",
          "url": "@page:cured",
@@ -3853,9 +3901,9 @@
         }
        },
        {
-        "image": "@img:snacks",
+        "image": "@img:solution-snacks",
         "name": "Snacks",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Defining the perfect bite in every protein piece.",
         "link": {
          "title": "",
          "url": "@page:snacks",
@@ -3863,9 +3911,9 @@
         }
        },
        {
-        "image": "@img:sausages",
+        "image": "@img:solution-sausages",
         "name": "Sausages",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Flawless uniformity in every portion.",
         "link": {
          "title": "",
          "url": "@page:sausages",
@@ -3873,9 +3921,9 @@
         }
        },
        {
-        "image": "@img:petfood",
+        "image": "@img:solution-petfood",
         "name": "Pet food",
-        "text": "Complete lines, from brine to slicing.",
+        "text": "Advanced engineering for premium pet nutrition.",
         "link": {
          "title": "",
          "url": "@page:petfood",
@@ -3891,10 +3939,10 @@
       "eyebrow": "PARTNERSHIP FOR LIFE",
       "title_muted": "Partnership for life",
       "title": "that produces inventions",
-      "text": "<p>We work side by side with every customer to develop tailor-made solutions: from the idea to the plant in production, and afterwards for the whole life of the installation.</p>",
+      "text": "<p>Creativation is Metalquimia's approach to R&D: a process where deep process knowledge, food science, and mechanical engineering converge to create solutions that didn't exist before.</p>",
       "details": "",
       "button": {
-       "title": "LEARN MORE",
+       "title": "Discover our model",
        "url": "@page:partnership",
        "target": ""
       },

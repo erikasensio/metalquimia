@@ -16,6 +16,8 @@ const LENGTH = 3;
  * la última sube y entra el botón ([data-hero-cta]). Todo va atado al scroll: al subir se deshace.
  * Para que el vídeo vaya fino, el MP4 necesita keyframes muy seguidos
  * (ffmpeg … -g 3 -keyint_min 3 -an -movflags +faststart).
+ * Además se descarga entero y se reproduce desde memoria: sin caché (p. ej. en incógnito) el navegador
+ * solo tiene lo ya bajado y los saltos a trozos sin descargar se quedan congelados.
  * Con "reducir movimiento" no hay nada de esto: primer fotograma, última frase y botón visibles (globals.css).
  */
 export function HeroScrubVideo({ src, poster }: { src: string; poster?: string }) {
@@ -27,14 +29,15 @@ export function HeroScrubVideo({ src, poster }: { src: string; poster?: string }
     if (!video || !hero || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let ctx: gsap.Context | undefined;
+    let timeline: gsap.core.Timeline | undefined;
     const setup = () => {
       if (ctx) return;
       ctx = gsap.context(() => {
-        const tl = gsap.timeline({
+        const tl = (timeline = gsap.timeline({
           defaults: { ease: "none" },
           // refreshPriority: el pin se calcula antes que las animaciones de más abajo, que se crean antes.
           scrollTrigger: { trigger: hero, start: "top top", end: `+=${LENGTH * 100}%`, pin: true, scrub: 0.5, refreshPriority: 1, invalidateOnRefresh: true },
-        });
+        }));
         // La línea de tiempo dura 1: el vídeo la ocupa entera y cada frase su tramo.
         if (video.duration) tl.fromTo(video, { currentTime: 0 }, { currentTime: video.duration, duration: 1 }, 0);
         else tl.set({}, {}, 1);
@@ -73,6 +76,25 @@ export function HeroScrubVideo({ src, poster }: { src: string; poster?: string }
       video.addEventListener("error", setup, { once: true });
     }
 
+    // Copia completa en memoria; al cambiar de fuente se vuelve al fotograma que toca según el scroll.
+    // Si falla (p. ej. CORS de otro dominio), se queda el vídeo normal.
+    let blobUrl: string | undefined;
+    const abort = new AbortController();
+    fetch(src, { signal: abort.signal })
+      .then((res) => (res.ok ? res.blob() : Promise.reject(res.status)))
+      .then((blob) => {
+        blobUrl = URL.createObjectURL(blob);
+        video.addEventListener(
+          "loadedmetadata",
+          () => {
+            if (timeline) video.currentTime = timeline.progress() * video.duration;
+          },
+          { once: true },
+        );
+        video.src = blobUrl;
+      })
+      .catch(() => {});
+
     // iOS no pinta los saltos de un vídeo que nunca se ha reproducido: se "desbloquea" con el primer toque.
     const unlock = () => video.play().then(() => video.pause()).catch(() => {});
     window.addEventListener("touchstart", unlock, { once: true, passive: true });
@@ -82,8 +104,10 @@ export function HeroScrubVideo({ src, poster }: { src: string; poster?: string }
       video.removeEventListener("error", setup);
       window.removeEventListener("touchstart", unlock);
       ctx?.revert();
+      abort.abort();
+      if (blobUrl) URL.revokeObjectURL(blobUrl);
     };
-  }, []);
+  }, [src]);
 
   return <video ref={ref} src={src} poster={poster} muted playsInline preload="auto" className="absolute inset-0 size-full object-cover" aria-hidden />;
 }

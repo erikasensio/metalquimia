@@ -2,6 +2,7 @@ import type { Section, WpImage, WpLink } from "@/lib/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Media } from "@/components/ui/Media";
 import { Button } from "@/components/ui/Button";
+import { MediaTextLines } from "./parts/MediaTextLines";
 
 type Props = Section & {
   theme?: "light" | "dark";
@@ -21,8 +22,9 @@ export default function MediaText({ theme, image_position, eyebrow, title_muted,
   const left = image_position === "left";
 
   return (
-    <div className={`py-20 lg:py-[120px] ${dark ? "bg-black text-light-grey" : "bg-white text-black-grey"}`}>
-      <div className="site-container grid items-center gap-10 lg:grid-cols-2 lg:gap-24">
+    <div className={`relative overflow-hidden py-20 lg:py-[120px] ${dark ? "bg-black text-light-grey" : "bg-white text-black-grey"}`}>
+      {!dark && <MediaTextLines />}
+      <div className="site-container relative grid items-center gap-10 lg:grid-cols-2 lg:gap-24">
         {/* En móvil la imagen va siempre primero. */}
         <Media
           image={image}
