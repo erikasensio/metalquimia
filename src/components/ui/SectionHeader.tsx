@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import type { WpLink } from "@/lib/types";
 import { Button } from "./Button";
 import { SplitWords } from "@/components/motion/SplitWords";
@@ -18,6 +19,10 @@ type Props = {
   size?: "xl" | "l" | "m" | "s";
   /** Parte gris y parte negra/blanca del título cada una en su línea (cabeceras centradas del Figma de División). */
   stacked?: boolean;
+  /** La parte gris va detrás (debajo si stacked): «Movistick / Meat Injectors». */
+  mutedLast?: boolean;
+  /** Estilo del botón; por defecto "dark" sobre fondo oscuro y "solid" sobre claro. */
+  buttonVariant?: ComponentProps<typeof Button>["variant"];
   className?: string;
 };
 
@@ -40,6 +45,8 @@ export function SectionHeader({
   as: Tag = "h2",
   size = "l",
   stacked,
+  mutedLast,
+  buttonVariant,
   className = "",
 }: Props) {
   if (!eyebrow && !titleMuted && !title && !subtitle && !button?.url) return null;
@@ -54,8 +61,9 @@ export function SectionHeader({
       )}
       {(titleMuted || title) && (
         <Tag className={`${sizes[size]} ${size === "s" ? "" : stacked ? "max-w-[966px]" : "max-w-[22ch]"} tracking-[-0.01em] [font-feature-settings:'dlig'_1] ${center ? "mx-auto" : ""}`} data-paint>
-          {titleMuted && <SplitWords text={`${titleMuted} `} className={`text-grey ${stacked ? "block" : ""}`} />}
-          {title && <SplitWords text={title} className={dark ? "text-light-grey" : "text-black"} />}
+          {titleMuted && !mutedLast && <SplitWords text={`${titleMuted} `} className={`text-grey ${stacked ? "block" : ""}`} />}
+          {title && <SplitWords text={mutedLast && titleMuted ? `${title} ` : title} className={`${dark ? "text-light-grey" : "text-black"} ${mutedLast && stacked ? "block" : ""}`} />}
+          {titleMuted && mutedLast && <SplitWords text={titleMuted} className="text-grey" />}
         </Tag>
       )}
       {subtitle && (
@@ -65,7 +73,7 @@ export function SectionHeader({
       )}
       {button?.url && (
         <div className="mt-2" data-reveal>
-          <Button href={button.url} target={button.target} variant={dark ? "dark" : "solid"}>
+          <Button href={button.url} target={button.target} variant={buttonVariant ?? (dark ? "dark" : "solid")}>
             {button.title}
           </Button>
         </div>

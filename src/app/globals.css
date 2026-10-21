@@ -440,7 +440,12 @@ html:has(main [data-section]:last-of-type > :last-child[class~="bg-black"]) [dat
     html.js-motion [data-hero-line] [data-word] {
       color: transparent;
     }
+    /* Hero secundario con scroll_highlight: palabras tenues y botón oculto hasta que el scroll los trae (ver HeroHighlight). */
+    html.js-motion [data-highlight] [data-word] {
+      color: rgb(1 0 1 / 0.1);
+    }
     html.js-motion [data-hero-cta],
+    html.js-motion [data-highlight-cta],
     html.js-motion [data-sweep-cta] {
       visibility: hidden;
       opacity: 0;

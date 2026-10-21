@@ -7,6 +7,7 @@ return array(
 	'sub_fields' => array(
 		mq_tab( $l, 'Cabecera' ),
 		...mq_heading_fields( $l ),
+		mq_f( $l, 'muted_last', 'true_false', 'Parte gris del título debajo', array( 'instructions' => 'Sí: la parte en blanco arriba y la gris debajo (p. ej. «Movistick» / «Meat Injectors»). No: la gris arriba.' ) ),
 		mq_tab( $l, 'Máquinas' ),
 		mq_f( $l, 'show_filters', 'true_false', 'Mostrar filtros por categoría', array( 'default_value' => 1, 'instructions' => 'Sí: carrusel con una pestaña por cada categoría distinta que hayas escrito en las máquinas. No: filas de cuatro, centradas si faltan máquinas.' ) ),
 		mq_f(

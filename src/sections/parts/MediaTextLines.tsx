@@ -4,13 +4,14 @@ import Image from "next/image";
  * Fondo decorativo del Combo Text+Media (Figma Modulos › 15): líneas blancas sobre medio círculo gris
  * (public/brand/media-text-lines.svg) dentro de un marco girado 46,84° que las recorta en diagonal,
  * centrado en la sección y un poco por encima de su mitad.
- * Medidas tal cual del Figma; solo en escritorio.
+ * Medidas tal cual del Figma; solo en escritorio. `className` cambia dónde va el centro (y la escala): el hero
+ * secundario usa el mismo dibujo, 1,4796 veces más grande y a la izquierda.
  */
-export function MediaTextLines() {
+export function MediaTextLines({ className = "left-[calc(50%+0.12px)] top-[calc(50%-98.75px)]" }: { className?: string }) {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute left-[calc(50%+0.12px)] top-[calc(50%-98.75px)] hidden h-[1250.496px] w-[1250.216px] -translate-x-1/2 -translate-y-1/2 items-center justify-center lg:flex"
+      className={`pointer-events-none absolute hidden h-[1250.496px] w-[1250.216px] -translate-x-1/2 -translate-y-1/2 items-center justify-center lg:flex ${className}`}
     >
       <div className="rotate-[46.84deg]">
         <div className="relative h-[881.498px] w-[887.682px] overflow-clip">

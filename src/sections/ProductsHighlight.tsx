@@ -6,6 +6,7 @@ type Props = Section & {
   eyebrow?: string;
   title_muted?: string;
   title?: string;
+  muted_last?: boolean;
   subtitle?: string;
   button?: WpLink | null;
   show_filters?: boolean;
@@ -17,7 +18,7 @@ type Props = Section & {
  * Figma Modulos › 21. Products Highlight (rediseño 325:2237).
  * Cabecera centrada y máquinas sobre negro: filtros por categoría con carrusel, o rejilla de cuatro columnas sin filtros.
  */
-export default function ProductsHighlight({ eyebrow, title_muted, title, subtitle, button, show_filters, all_label, items }: Props) {
+export default function ProductsHighlight({ eyebrow, title_muted, title, muted_last, subtitle, button, show_filters, all_label, items }: Props) {
   const list: MachineItem[] = (Array.isArray(items) ? items : [])
     .filter((item) => item?.name || item?.image?.url)
     .map((item) => ({
@@ -39,6 +40,7 @@ export default function ProductsHighlight({ eyebrow, title_muted, title, subtitl
         dark
         align="center"
         stacked
+        mutedLast={!!muted_last}
         className="site-container"
       />
       {list.length > 0 && (
