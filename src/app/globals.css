@@ -269,6 +269,16 @@
 }
 
 @layer base {
+  /* Los enlaces a anclas (#form) se desplazan suave y se paran bajo la cabecera fija (71 px; 95 px en xl). */
+  html {
+    scroll-padding-top: 71px;
+    @media (width >= 80rem) {
+      scroll-padding-top: 95px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
   body {
     @apply bg-white text-black-grey text-body-m antialiased;
   }

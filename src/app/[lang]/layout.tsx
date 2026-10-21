@@ -27,7 +27,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const loaderOn = options.loader_enabled !== false && options.loader_enabled !== 0;
 
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={lang} data-scroll-behavior="smooth" suppressHydrationWarning>
+      {/* data-scroll-behavior: el scroll suave es solo para anclas; al cambiar de página Next salta sin animar. */}
       {/* suppressHydrationWarning: el script de abajo añade clases a <html> y las extensiones del navegador (p. ej. ColorZilla) atributos al body. */}
       <body className="flex min-h-dvh flex-col" suppressHydrationWarning>
         {/* Si la pantalla de carga ya se vio en esta visita, se oculta antes de pintar (sin parpadeo).

@@ -54,6 +54,14 @@ export function Button({ href, target, variant = "outline", size = "md", icon, c
       </button>
     );
   }
+  // Ancla de la misma página (#form): <a> normal, para que el navegador haga el scroll suave del CSS.
+  if (href.startsWith("#")) {
+    return (
+      <a href={href} className={classes}>
+        {content}
+      </a>
+    );
+  }
   return (
     <Link href={href} target={target || undefined} className={classes}>
       {content}
