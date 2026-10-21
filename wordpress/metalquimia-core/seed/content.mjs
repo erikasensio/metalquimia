@@ -557,6 +557,7 @@ const division = ({ key, slugEs, slugEn, word, nameEs, products, heroMuted, hero
     {
       type: "hero_division",
       word,
+      word_outline: false,
       images: products.map((image) => ({ image })),
       title_muted: heroMuted,
       title: heroTitle,
@@ -646,7 +647,7 @@ const cooked = {
       [I.machineDefroster, L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with a cooling jacket, fully versatile")],
       [I.machineTumbler, L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle")],
       [I.machineInjector, L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
-      ["", L("Plantas automáticas de cocción y marinado", "Automatic Cooking and Marinating Plants"), L("Conectividad inteligente", "Smart connectivity")],
+      [I.machineLine, L("Plantas automáticas de cocción y marinado", "Automatic Cooking and Marinating Plants"), L("Conectividad inteligente", "Smart connectivity")],
     ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
   },
   method: {
@@ -707,7 +708,7 @@ const marinated = {
       [I.machineDefroster, L("Tenderizado de carne", "Meat Tenderization"), L("Mejora del rendimiento y reducción de las mermas de cocción", "Improvement of yield and reduction of cooking losses")],
       [I.machineTumbler, L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with a cooling jacket, fully versatile")],
       [I.machineInjector, L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle")],
-      ["", L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
+      [I.machineInjector, L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso", "Smart cooking with monitoring and recording of all technical parameters of the process")],
     ].map(([image, name, description]) => ({ image, name, category: "", description, link: link("", "@page:machine") })),
   },
   method: {
@@ -1167,6 +1168,7 @@ export const pages = [
         title_muted: L("Procesado con precisión y", "Processed with precision and"),
         title: L("control total en cada etapa.\nTransformamos cómo el mundo procesa la carne.", "full control at every stage.\nWe transform how the world processes meat."),
         button: link(L("SABER MÁS", "LEARN MORE"), "@page:solutions"),
+        word_outline: true,
         categories: [
           ["Cooked", I.ham, "cooked", I.hamFrames],
           ["Marinated", I.marinated, "marinated"],

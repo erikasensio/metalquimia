@@ -3346,6 +3346,7 @@
        "url": "@page:solutions",
        "target": ""
       },
+      "word_outline": true,
       "categories": [
        {
         "name": "Cooked",
@@ -4304,6 +4305,7 @@
        "url": "@page:solutions",
        "target": ""
       },
+      "word_outline": true,
       "categories": [
        {
         "name": "Cooked",
@@ -5389,6 +5391,7 @@
      {
       "type": "hero_division",
       "word": "Cooked",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:cooked-product-1"
@@ -5590,7 +5593,7 @@
         }
        },
        {
-        "image": "",
+        "image": "@img:machine-line",
         "name": "Plantas automáticas de cocción y marinado",
         "category": "",
         "description": "Conectividad inteligente",
@@ -5730,6 +5733,7 @@
      {
       "type": "hero_division",
       "word": "Cooked",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:cooked-product-1"
@@ -5931,7 +5935,7 @@
         }
        },
        {
-        "image": "",
+        "image": "@img:machine-line",
         "name": "Automatic Cooking and Marinating Plants",
         "category": "",
         "description": "Smart connectivity",
@@ -6075,6 +6079,7 @@
      {
       "type": "hero_division",
       "word": "Marinated",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:marinated-product-1"
@@ -6252,7 +6257,7 @@
         }
        },
        {
-        "image": "",
+        "image": "@img:machine-injector",
         "name": "Cocción de carne",
         "category": "",
         "description": "Cocción inteligente con monitorización y registro de todos los parámetros técnicos del proceso",
@@ -6392,6 +6397,7 @@
      {
       "type": "hero_division",
       "word": "Marinated",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:marinated-product-1"
@@ -6569,7 +6575,7 @@
         }
        },
        {
-        "image": "",
+        "image": "@img:machine-injector",
         "name": "Meat Cooking",
         "category": "",
         "description": "Smart cooking with monitoring and recording of all technical parameters of the process",
@@ -6713,6 +6719,7 @@
      {
       "type": "hero_division",
       "word": "Cured",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:ham-slices"
@@ -6976,6 +6983,7 @@
      {
       "type": "hero_division",
       "word": "Cured",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:ham-slices"
@@ -7243,6 +7251,7 @@
      {
       "type": "hero_division",
       "word": "Snacks",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:snacks-product-1"
@@ -7494,6 +7503,7 @@
      {
       "type": "hero_division",
       "word": "Snacks",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:snacks-product-1"
@@ -7749,6 +7759,7 @@
      {
       "type": "hero_division",
       "word": "Sausages",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:sausages-product-1"
@@ -8005,6 +8016,7 @@
      {
       "type": "hero_division",
       "word": "Sausages",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:sausages-product-1"
@@ -8265,6 +8277,7 @@
      {
       "type": "hero_division",
       "word": "Pet food",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:petfood-product-1"
@@ -8521,6 +8534,7 @@
      {
       "type": "hero_division",
       "word": "Pet food",
+      "word_outline": false,
       "images": [
        {
         "image": "@img:petfood-product-1"

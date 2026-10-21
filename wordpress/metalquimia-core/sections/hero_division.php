@@ -7,6 +7,7 @@ return array(
 	'sub_fields' => array(
 		mq_tab( $l, 'Imágenes' ),
 		mq_f( $l, 'word', 'text', 'Palabra de fondo', array( 'instructions' => 'Una palabra corta que se ve enorme en gris claro detrás de los productos (p. ej. Cooked).' ) ),
+		mq_f( $l, 'word_outline', 'true_false', 'Palabra también por encima, en contorno', array( 'default_value' => 0, 'instructions' => 'Sí: la palabra se repite encima de los productos solo con el contorno y un relleno blanco suave, así se lee a través de ellos. No: la palabra queda solo detrás.' ) ),
 		mq_f(
 			$l,
 			'images',

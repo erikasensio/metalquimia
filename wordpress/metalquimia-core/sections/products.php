@@ -24,6 +24,15 @@ return array(
 		),
 		array( 'key' => 'field_mq_products_button', 'label' => 'Botón', 'name' => 'button', 'type' => 'link' ),
 		array(
+			'key'           => 'field_mq_products_word_outline',
+			'label'         => 'Palabra también por encima, en contorno',
+			'name'          => 'word_outline',
+			'type'          => 'true_false',
+			'ui'            => 1,
+			'default_value' => 1,
+			'instructions'  => 'Sí: la palabra de fondo se repite encima de la imagen solo con el contorno y un relleno blanco suave, así se lee a través de ella. No: la palabra queda solo detrás.',
+		),
+		array(
 			'key'          => 'field_mq_products_categories',
 			'label'        => 'Categorías',
 			'name'         => 'categories',

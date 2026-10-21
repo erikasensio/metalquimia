@@ -20,10 +20,11 @@ type Props = Section & {
   title_muted?: string;
   title?: string;
   button?: WpLink | null;
+  word_outline?: boolean | null;
   categories?: Category[];
 };
 
-// Palabra gigante de fondo (y su contorno, que va encima de la imagen).
+// Palabra gigante de fondo (y, si se elige, su contorno encima de la imagen).
 const WORD =
   "absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display text-[6rem] font-semibold leading-[1.1] animate-[fade-in_0.5s_ease-out] md:text-[11rem] lg:text-[min(19.375rem,32svh)] [font-feature-settings:'dlig'_1]";
 
@@ -32,7 +33,9 @@ const WORD =
  * Al elegir una categoría cambian la palabra de fondo, la imagen y la lista de procesos.
  * La imagen se mueve con el scroll (parallax) y, si la categoría tiene fotogramas, el scroll pasa de uno a otro.
  */
-export default function Products({ eyebrow, title_muted, title, button, categories = [] }: Props) {
+export default function Products({ eyebrow, title_muted, title, button, word_outline, categories = [] }: Props) {
+  // Contenido anterior al campo: sin valor guardado se mantiene el contorno.
+  const outline = word_outline !== false;
   const [active, setActive] = useState(0);
   const current = categories[active];
   // Sin los huecos vacíos (p. ej. imágenes que faltan en modo mock).
@@ -135,7 +138,7 @@ export default function Products({ eyebrow, title_muted, title, button, categori
           <div className="absolute inset-0 overflow-hidden" aria-hidden>
             <div className="stripes-disc absolute left-1/2 top-1/2 size-[110%] max-h-[900px] max-w-[900px] -translate-x-1/2 -translate-y-1/2" />
           </div>
-          <p key={`word-${active}`} className={`${WORD} word-under-outline`} aria-hidden>
+          <p key={`word-${active}`} className={`${WORD} ${outline ? "word-under-outline" : "text-medium-grey"}`} aria-hidden>
             {current.name}
           </p>
           {(frames || current.image?.url) && (
@@ -173,9 +176,11 @@ export default function Products({ eyebrow, title_muted, title, button, categori
             </div>
           )}
           {/* La misma palabra encima de la imagen, solo con el contorno. */}
-          <p key={`outline-${active}`} className={`${WORD} word-outline pointer-events-none`} aria-hidden>
-            {current.name}
-          </p>
+          {outline && (
+            <p key={`outline-${active}`} className={`${WORD} word-outline pointer-events-none`} aria-hidden>
+              {current.name}
+            </p>
+          )}
         </div>
       )}
 

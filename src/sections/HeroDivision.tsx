@@ -6,6 +6,7 @@ import { Typewriter } from "@/components/motion/Typewriter";
 
 type Props = Section & {
   word?: string;
+  word_outline?: boolean;
   images?: { image?: WpImage | null }[] | null | false | "";
   title_muted?: string;
   title?: string;
@@ -29,7 +30,7 @@ const FLOAT = [
   { duration: "7s", delay: "-5.3s" },
 ];
 
-// Palabra gigante de fondo (y su contorno, que va encima de los productos), como en el bloque de soluciones de la home.
+// Palabra gigante de fondo (y, si se elige, su contorno encima de los productos), como en el bloque de soluciones de la home.
 // Figma: 310 px sobre 1512, centrada en vertical respecto a la fila de productos.
 const WORD =
   "pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[24vw] font-semibold leading-none lg:text-[min(20.5vw,19.375rem,55cqh)] [font-feature-settings:'dlig'_1]";
@@ -41,9 +42,10 @@ const WORD =
  * (solo el vaivén) y todos a la vista. En escritorio todo cabe en una pantalla y los productos crecen lo que dejen
  * título, texto y botón.
  */
-export default function HeroDivision({ word, images, title_muted, title, text, button }: Props) {
+export default function HeroDivision({ word, word_outline, images, title_muted, title, text, button }: Props) {
   const items = (Array.isArray(images) ? images : []).filter((item) => item?.image?.url);
   const marquee = items.length > 4;
+  const outline = Boolean(word && word_outline && items.length > 0);
   // Con pocos productos una copia no llenaría pantallas anchas: se repiten hasta tener al menos 7 por copia.
   const loop = items.length ? Array.from({ length: Math.ceil(7 / items.length) }, () => items).flat() : [];
 
@@ -51,7 +53,7 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
     <div className="overflow-hidden bg-white pb-20 pt-10 lg:flex lg:h-[calc(100svh-71px)] lg:min-h-[640px] lg:flex-col lg:pb-8 lg:pt-4 xl:h-[calc(100svh-95px)]">
       <div className="relative lg:flex lg:min-h-0 lg:flex-1 lg:items-center lg:[container-type:size]">
         {word && (
-          <p className={`${WORD} ${items.length > 0 ? "word-under-outline" : "text-medium-grey"}`} aria-hidden>
+          <p className={`${WORD} ${outline ? "word-under-outline" : "text-medium-grey"}`} aria-hidden>
             {word}
           </p>
         )}
@@ -123,11 +125,12 @@ export default function HeroDivision({ word, images, title_muted, title, text, b
         )}
 
         {/* La misma palabra encima de los productos, solo con el contorno. */}
-        {word && items.length > 0 && (
+        {outline && (
           <p className={`${WORD} word-outline z-[3]`} aria-hidden>
             {word}
           </p>
         )}
+
       </div>
 
       {(title_muted || title || text || button?.url) && (
