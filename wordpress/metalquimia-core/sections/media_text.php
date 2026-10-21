@@ -25,6 +25,20 @@ return array(
 		),
 		mq_heading_fields( $l, array( 'subtitle' => false, 'button' => false ) ),
 		array(
+			mq_f(
+				$l,
+				'title_size',
+				'button_group',
+				'Tamaño del título',
+				array(
+					'choices'       => array(
+						'l' => 'Grande',
+						'm' => 'Mediano (frases largas)',
+					),
+					'default_value' => 'l',
+				)
+			),
+			mq_f( $l, 'title_stacked', 'true_false', 'Parte gris del título en su propia línea', array( 'default_value' => 0 ) ),
 			mq_f( $l, 'text', 'wysiwyg', 'Texto', array( 'media_upload' => 0, 'toolbar' => 'basic', 'tabs' => 'visual' ) ),
 			mq_f( $l, 'details', 'textarea', 'Datos adicionales', array( 'rows' => 3, 'instructions' => 'Opcional. Líneas cortas como dirección o teléfono; cada línea se respeta tal cual.' ) ),
 			mq_f( $l, 'button', 'link', 'Botón' ),

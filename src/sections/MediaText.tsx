@@ -11,6 +11,10 @@ type Props = Section & {
   eyebrow?: string;
   title_muted?: string;
   title?: string;
+  /** "m": título a 32 px para frases largas de un solo tono (Figma Engineering Mindset 325:16691). */
+  title_size?: "l" | "m";
+  /** La parte gris del título en su propia línea (Figma Páginas › Services 591:25140). */
+  title_stacked?: boolean;
   text?: string;
   details?: string;
   button?: WpLink | null;
@@ -18,27 +22,29 @@ type Props = Section & {
 };
 
 /** Figma Modulos › 15. Combo Text+Media: texto a un lado e imagen con esquinas recortadas al otro. */
-export default function MediaText({ theme, image_position, eyebrow, title_muted, title, text, details, button, image }: Props) {
+export default function MediaText({ theme, image_position, eyebrow, title_muted, title, title_size, title_stacked, text, details, button, image }: Props) {
   const dark = theme === "dark";
   const left = image_position === "left";
 
   return (
     <div className={`relative overflow-hidden py-20 lg:py-[120px] ${dark ? "bg-black text-light-grey" : "bg-white text-black-grey"}`}>
-      {!dark && <MediaTextLines />}
-      <div className="site-container relative grid items-center gap-10 lg:grid-cols-2 lg:gap-24">
+      {/* Figma: el dibujo sube un poco más cuando la imagen va a la izquierda. */}
+      {!dark && <MediaTextLines className={left ? undefined : "left-[calc(50%+0.12px)] top-[calc(50%-69.75px)]"} />}
+      {/* Figma: dos columnas de 601 px con 16 px entre ellas (1218 px centrados) e imagen de 601 × 650. */}
+      <div className="site-container relative grid items-center gap-10 lg:max-w-[calc(1218px+3rem)] lg:grid-cols-2 lg:gap-4">
         {/* En móvil la imagen va siempre primero. */}
         <Media
           image={image}
-          className={`chamfer aspect-[4/3] lg:aspect-[5/4] ${left ? "" : "lg:order-last"}`}
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          className={`chamfer aspect-[4/3] lg:aspect-[601/650] ${left ? "" : "lg:order-last"}`}
+          sizes="(min-width: 1024px) 601px, 100vw"
           parallax
         />
         {/* Antetítulo a máquina, título que se pinta y cuerpo tecleado de principio a fin, uno detrás de otro. */}
-        <div className="flex flex-col items-start gap-8" data-typewriter-group data-typewriter-sequence>
-          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size="l" />
+        <div className={`flex flex-col items-start gap-8 ${left ? "lg:pl-16" : ""}`} data-typewriter-group data-typewriter-sequence>
+          <SectionHeader eyebrow={eyebrow} titleMuted={title_muted} title={title} dark={dark} size={title_size === "m" ? "m" : "l"} stacked={!!title_stacked} />
           {text && (
             <div
-              className={`text-body-l max-w-[56ch] space-y-4 [&_a]:underline [&_a]:underline-offset-2 [&_li]:ml-5 [&_ol]:list-decimal [&_strong]:font-semibold [&_ul]:list-disc ${
+              className={`text-body-m max-w-[497px] space-y-4 font-medium [&_a]:underline [&_a]:underline-offset-2 [&_li]:ml-5 [&_ol]:list-decimal [&_strong]:font-semibold [&_ul]:list-disc ${
                 dark ? "text-grey [&_strong]:text-light-grey" : "text-dark-grey [&_strong]:text-black"
               }`}
               data-typewriter-html

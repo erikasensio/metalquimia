@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Play, X } from "@phosphor-icons/react";
+import { Square, X } from "@phosphor-icons/react";
 import { RollText } from "@/components/ui/RollText";
 
 /** Convierte un enlace de YouTube o Vimeo en la URL del reproductor embebido (con autoplay). */
@@ -16,7 +16,7 @@ function embedUrl(url: string): string | null {
 
 type Props = { url: string; label: string };
 
-/** Botón píldora "WATCH VIDEO" que abre el vídeo en una ventana modal (Esc o clic fuera para cerrar). */
+/** Botón "WATCH VIDEO" (Figma full-screen-video 325:12801: cristal gris, cuadrado y texto mono) que abre el vídeo en una ventana modal (Esc o clic fuera para cerrar). */
 export function VideoModalButton({ url, label }: Props) {
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -62,9 +62,9 @@ export function VideoModalButton({ url, label }: Props) {
         type="button"
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
-        className="cta inline-flex items-center gap-2 rounded-full bg-white/90 py-3 pl-4 pr-5 font-mono text-[0.875rem] font-bold uppercase leading-none text-black backdrop-blur-[20px] hover:bg-white"
+        className="cta inline-flex items-center gap-4 rounded-lg bg-dark-grey/50 px-8 py-6 font-mono text-[0.875rem] uppercase leading-none text-light-grey backdrop-blur-[20px] hover:bg-dark-grey/80"
       >
-        <Play size={16} weight="fill" aria-hidden />
+        <Square size={12} weight="fill" aria-hidden />
         <RollText>{label}</RollText>
       </button>
 

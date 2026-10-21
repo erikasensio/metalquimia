@@ -19,9 +19,10 @@ return array(
 					'button_label' => 'Añadir hito',
 					'instructions' => 'En orden cronológico. Se numeran solos ([01], [02]…).',
 					'sub_fields'   => array(
-						mq_f( $l, 'title', 'text', 'Año y título', array( 'placeholder' => '1974 · Founding' ), 'items' ),
+						mq_f( $l, 'title', 'text', 'Año o título', array( 'placeholder' => '1985' ), 'items' ),
+						mq_f( $l, 'lead', 'text', 'Frase destacada', array( 'instructions' => 'Abre el texto, en negro (p. ej. «The beginning of Metalquimia»).' ), 'items' ),
 						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),
-						mq_f( $l, 'image', 'image', 'Imagen', array( 'preview_size' => 'thumbnail', 'instructions' => 'Opcional. Cuadrada, 300 × 300 px.' ), 'items' ),
+						mq_f( $l, 'image', 'image', 'Imagen', array( 'preview_size' => 'thumbnail', 'instructions' => 'Opcional. Cuadrada, 320 × 320 px.' ), 'items' ),
 					),
 				)
 			),

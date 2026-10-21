@@ -6,7 +6,14 @@ import { Carousel } from "@/components/ui/Carousel";
 import { carouselGutter } from "@/components/ui/carouselGutter";
 import { SplitWords } from "@/components/motion/SplitWords";
 
-type Item = { image?: (WpImage & { mime?: string }) | null; lead?: string; text?: string; link?: WpLink | null };
+type Item = {
+  image?: (WpImage & { mime?: string }) | null;
+  /** "light": imagen clara (fondo blanco arriba), texto destacado en negro y sin degradado oscuro. */
+  tone?: "dark" | "light";
+  lead?: string;
+  text?: string;
+  link?: WpLink | null;
+};
 type Props = Section & {
   theme?: "light" | "dark";
   eyebrow?: string;
@@ -39,6 +46,7 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
         <div data-cards>
           <Carousel dark={dark} trackClassName={`gap-4 ${carouselGutter}`} label={title || "Destacados"}>
             {list.map((item, i) => {
+              const light = item.tone === "light";
               const content = (
                 <>
                   <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.04]">
@@ -46,9 +54,9 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
                   </div>
                   {(item.lead || item.text) && (
                     <>
-                      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/60 to-transparent" aria-hidden />
-                      <p className="text-title-xs relative max-w-[36ch] p-6 text-grey lg:p-8" data-paint>
-                        {item.lead && <SplitWords text={`${item.lead} `} className="text-light-grey" />}
+                      {!light && <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/60 to-transparent" aria-hidden />}
+                      <p className={`text-title-xs relative p-6 lg:p-8 ${light ? "text-dark-grey" : "text-grey"}`} data-paint>
+                        {item.lead && <SplitWords text={`${item.lead} `} className={light ? "text-black" : "text-light-grey"} />}
                         {item.text && <SplitWords text={item.text} />}
                       </p>
                     </>
@@ -57,7 +65,7 @@ export default function HighlightsCarousel({ theme, eyebrow, title_muted, title,
               );
               // Figma (División 818:26709): tarjetas de 477 × 540 px con esquinas de 12 px y el texto arriba.
               const cls =
-                "group relative flex aspect-[477/540] w-[85vw] shrink-0 snap-start flex-col justify-start overflow-hidden rounded-xl sm:w-[420px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)]";
+                `group relative flex aspect-[477/540] w-[85vw] shrink-0 snap-start flex-col justify-start overflow-hidden rounded-xl sm:w-[420px] lg:w-[calc((min(100vw,94.5rem)-5rem)/3)] ${light ? "bg-white" : ""}`;
               return item.link?.url ? (
                 <Link key={i} href={item.link.url} target={item.link.target || undefined} className={cls} aria-label={item.link.title || item.lead || undefined} data-card>
                   {content}

@@ -10,6 +10,8 @@ type Props = {
   caret?: boolean;
   /** Clases de la pista (gap, padding). Cada hijo define su propio ancho. */
   trackClassName?: string;
+  /** Contenedor de las flechas; por defecto el de la web (alineadas a su borde derecho). */
+  controlsClassName?: string;
   label?: string;
 };
 
@@ -17,7 +19,7 @@ type Props = {
  * Carrusel horizontal con desplazamiento táctil, arrastre con el ratón y flechas (anterior / siguiente) abajo a la derecha.
  * Si todo cabe a la vez (p. ej. 3 tarjetas en escritorio) no hay nada que pasar y las flechas no se muestran.
  */
-export function Carousel({ children, dark, caret, trackClassName = "gap-4", label = "Carrusel" }: Props) {
+export function Carousel({ children, dark, caret, trackClassName = "gap-4", controlsClassName = "site-container", label = "Carrusel" }: Props) {
   const track = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
 
@@ -125,12 +127,12 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", labe
   return (
     <div className="flex flex-col gap-6" role="region" aria-roledescription="carousel" aria-label={label}>
       {/* relative: el recorte también alcanza a lo posicionado de dentro (p. ej. el texto sr-only de <Typewriter>), si no ensancha la página. */}
-      <div ref={track} className={`relative flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-none select-none ${
+      <div ref={track} className={`relative flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth scrollbar-none select-none ${
           edges.start && edges.end ? "" : "cursor-grab data-[dragging]:cursor-grabbing"
         } ${trackClassName}`}>
         {children}
       </div>
-      <div className={`site-container flex justify-end gap-1 ${edges.start && edges.end ? "hidden" : ""}`}>
+      <div className={`${controlsClassName} flex justify-end gap-1 ${edges.start && edges.end ? "hidden" : ""}`}>
         <button type="button" className={btn} onClick={() => go(-1)} disabled={edges.start} aria-label="Anterior" data-carousel-prev>
           {caret ? <CaretLeft size={14} /> : <ArrowLeft size={14} />}
         </button>

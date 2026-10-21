@@ -24,7 +24,7 @@ export function ProductsHighlightClient({ items, showFilters, allLabel, label }:
   return (
     <div className="flex flex-col gap-10 lg:gap-16">
       {showFilters && categories.length > 0 && (
-        <div className="overflow-x-auto px-5 scrollbar-none">
+        <div className="overflow-x-auto overflow-y-hidden overscroll-x-contain px-5 scrollbar-none">
           <ul ref={tabList} className="mx-auto flex w-max gap-2" role="tablist">
             {tabs.map((tab) => {
               const selected = tab.key === active;

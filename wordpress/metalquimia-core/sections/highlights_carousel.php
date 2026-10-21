@@ -19,9 +19,22 @@ return array(
 					'button_label' => 'Añadir tarjeta',
 					'sub_fields'   => array(
 						mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Vertical ≈ 9:10, mínimo 960 × 1080 px (JPG o WebP). Si la tarjeta lleva texto, va arriba sobre un degradado oscuro.' ), 'items' ),
+						mq_f(
+							$l,
+							'tone',
+							'select',
+							'Imagen',
+							array(
+								'choices'       => array(
+									'dark'  => 'Oscura (texto claro sobre degradado negro)',
+									'light' => 'Clara, blanca arriba (texto destacado en negro)',
+								),
+								'default_value' => 'dark',
+							),
+							'items'
+						),
 						mq_f( $l, 'lead', 'text', 'Texto destacado', array(), 'items' ),
-						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),
-						mq_f( $l, 'link', 'link', 'Enlace', array( 'instructions' => 'Opcional: toda la tarjeta lleva a esta página.' ), 'items' ),
+						mq_f( $l, 'text', 'textarea', 'Texto', array(), 'items' ),						mq_f( $l, 'link', 'link', 'Enlace', array( 'instructions' => 'Opcional: toda la tarjeta lleva a esta página.' ), 'items' ),
 					),
 				)
 			),

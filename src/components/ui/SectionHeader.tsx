@@ -60,7 +60,7 @@ export function SectionHeader({
         </p>
       )}
       {(titleMuted || title) && (
-        <Tag className={`${sizes[size]} ${size === "s" ? "" : stacked ? "max-w-[966px]" : "max-w-[22ch]"} tracking-[-0.01em] [font-feature-settings:'dlig'_1] ${center ? "mx-auto" : ""}`} data-paint>
+        <Tag className={`${sizes[size]} ${size === "s" ? "" : stacked ? "max-w-[966px]" : size === "m" ? "max-w-[34ch]" : "max-w-[22ch]"} tracking-[-0.01em] [font-feature-settings:'dlig'_1] ${center ? "mx-auto" : ""}`} data-paint>
           {titleMuted && !mutedLast && <SplitWords text={`${titleMuted} `} className={`text-grey ${stacked ? "block" : ""}`} />}
           {title && <SplitWords text={mutedLast && titleMuted ? `${title} ` : title} className={`${dark ? "text-light-grey" : "text-black"} ${mutedLast && stacked ? "block" : ""}`} />}
           {titleMuted && mutedLast && <SplitWords text={titleMuted} className="text-grey" />}

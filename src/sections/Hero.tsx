@@ -8,19 +8,29 @@ type Props = Section & {
   image?: WpImage | null;
   image_mobile?: WpImage | null;
   video?: WpImage | null;
+  title_muted?: string;
   title?: string;
   button?: WpLink | null;
+  button_style?: "outline" | "solid";
+  /**
+   * "veil": velo negro al 30 % en toda la foto y título Title XL (Figma Tecnologías propias 411:18562).
+   * "soft": velo del 30 % abajo al 14 % arriba y título de 32 px (Figma MQ Innovation Center 325:15231).
+   */
+  overlay?: "gradient" | "veil" | "soft";
 };
 
 /**
  * Hero a pantalla completa (Figma "hero-full-screen" 418:20919). La cabecera queda superpuesta.
  * Con vídeo, el hero se queda fijo mientras el scroll mueve el vídeo y cada línea del título
  * es una frase que entra con destello naranja; el botón aparece con la última (ver HeroScrubVideo).
+ * Con imagen (Figma Engineering Mindset 325:15215): degradado negro abajo y, si hay, primera parte del título en gris.
  */
-export default function Hero({ image, image_mobile, video, title, button }: Props) {
+export default function Hero({ image, image_mobile, video, title_muted, title, button, button_style, overlay }: Props) {
+  const veil = overlay === "veil";
+  const soft = overlay === "soft";
   const lines = video?.url ? (title ?? "").split("\n").filter((l) => l.trim()) : [];
   const cta = button?.url && (
-    <Button href={button.url} target={button.target} variant="outline">
+    <Button href={button.url} target={button.target} variant={button_style === "solid" ? "solid" : "outline"}>
       {button.title}
     </Button>
   );
@@ -64,9 +74,15 @@ export default function Hero({ image, image_mobile, video, title, button }: Prop
       {image_mobile?.url && (
         <Image src={image_mobile.url} alt={image_mobile.alt} fill priority sizes="100vw" className="object-cover object-bottom md:hidden" />
       )}
+      <div className={`absolute inset-0 ${veil ? "bg-black/30" : soft ? "bg-gradient-to-t from-black/30 to-black/14" : "bg-gradient-to-t from-black to-transparent to-23%"}`} aria-hidden />
 
-      <div className="relative flex max-w-[970px] flex-col items-center gap-[34px] text-center">
-        {title && <h1 className="text-hero whitespace-pre-line text-light-grey [font-feature-settings:'dlig'_1]">{title}</h1>}
+      <div className={`relative flex flex-col items-center text-center ${veil ? "max-w-[1140px] gap-8" : soft ? "max-w-[970px] gap-8" : "max-w-[970px] gap-[34px]"}`}>
+        {(title_muted || title) && (
+          <h1 className={`${veil ? "text-title-xl" : soft ? "text-title-m leading-[1.1]" : "text-hero"} whitespace-pre-line text-light-grey [font-feature-settings:'dlig'_1]`}>
+            {title_muted && <span className="text-medium-grey">{`${title_muted}\n`}</span>}
+            {title}
+          </h1>
+        )}
         {cta}
       </div>
     </div>

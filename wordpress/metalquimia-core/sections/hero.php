@@ -31,6 +31,13 @@ return array(
 			'instructions'  => 'MP4 sin sonido que avanza y retrocede con el scroll (el hero se queda fijo mientras tanto). La imagen de fondo sirve de portada mientras carga. Para que vaya fino, exportar con keyframes muy seguidos: ffmpeg -i entrada.mp4 -an -c:v libx264 -crf 23 -g 3 -keyint_min 3 -movflags +faststart salida.mp4',
 		),
 		array(
+			'key'          => 'field_mq_hero_title_muted',
+			'label'        => 'Título (primera parte, en gris)',
+			'name'         => 'title_muted',
+			'type'         => 'text',
+			'instructions' => 'Opcional. Va en una línea encima del título, en gris claro. Solo sin vídeo.',
+		),
+		array(
 			'key'          => 'field_mq_hero_title',
 			'label'        => 'Título',
 			'name'         => 'title',
@@ -40,5 +47,29 @@ return array(
 			'instructions' => 'Pulsa Intro para forzar un salto de línea. Si hay vídeo de fondo, cada línea es una frase que aparece con el scroll (la primera al empezar, la siguiente a mitad del vídeo, junto con el botón).',
 		),
 		array( 'key' => 'field_mq_hero_button', 'label' => 'Botón', 'name' => 'button', 'type' => 'link' ),
+		array(
+			'key'           => 'field_mq_hero_button_style',
+			'label'         => 'Estilo del botón',
+			'name'          => 'button_style',
+			'type'          => 'select',
+			'choices'       => array(
+				'outline' => 'Borde blanco',
+				'solid'   => 'Gris relleno',
+			),
+			'default_value' => 'outline',
+		),
+		array(
+			'key'           => 'field_mq_hero_overlay',
+			'label'         => 'Oscurecido de la foto',
+			'name'          => 'overlay',
+			'type'          => 'select',
+			'choices'       => array(
+				'gradient' => 'Degradado negro abajo',
+				'veil'     => 'Velo negro en toda la foto y título más grande',
+				'soft'     => 'Velo suave en toda la foto y título pequeño',
+			),
+			'default_value' => 'gradient',
+			'instructions'  => 'Solo sin vídeo.',
+		),
 	),
 );

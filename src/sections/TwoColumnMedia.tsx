@@ -17,13 +17,14 @@ export default function TwoColumnMedia({ theme, items }: Props) {
   if (!list.length) return null;
 
   return (
-    <div className={`py-20 lg:py-[120px] ${dark ? "bg-black" : "bg-white"}`}>
+    // Figma two-column-img (Instalaciones 326:24614): 40 px arriba y abajo, fotos de 732 × 780.
+    <div className={`py-10 ${dark ? "bg-black" : "bg-white"}`}>
       <div className={`site-container grid gap-4 ${list.length > 1 ? "lg:grid-cols-2" : ""}`} data-stagger>
         {list.map((item, i) => (
           <figure key={i} className="flex flex-col gap-3">
             <Media
               image={item.image}
-              className="aspect-[4/3] rounded-xl lg:aspect-[16/11]"
+              className={`aspect-[4/3] rounded-xl ${list.length > 1 ? "lg:aspect-[732/780]" : "lg:aspect-[1464/780]"}`}
               sizes={list.length > 1 ? "(min-width: 1024px) 50vw, 100vw" : "100vw"}
             />
             {item.caption && (
