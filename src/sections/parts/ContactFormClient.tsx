@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { defaultLocale, isLocale } from "@/lib/i18n";
+import { Check } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/Button";
 
 const FIELDS = ["name", "company", "address", "home_address", "postal_code", "country", "phone", "email", "message"] as const;
@@ -18,8 +19,8 @@ export type ContactTexts = Record<`label_${Field}` | `ph_${Field}`, string> & {
   error_message: string;
 };
 
-// Campos obligatorios (llevan *).
-const REQUIRED: Field[] = ["name", "company", "country", "phone", "email", "message"];
+// Campos obligatorios (llevan *): en el Figma, todos.
+const REQUIRED: readonly Field[] = FIELDS;
 
 /** Formulario de <ContactForm>: validación en el navegador y envío a /api/contact. */
 export function ContactFormClient({ texts, countries }: { texts: ContactTexts; countries: string[] }) {
@@ -72,19 +73,20 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
 
   if (status === "success") {
     return (
-      <p role="status" className="mx-auto w-full max-w-[520px] animate-[fade-in_0.4s_ease-out] border border-white/10 bg-black-grey p-6 text-center text-body-l text-light-grey">
+      <p role="status" className="mx-auto w-full max-w-[724px] animate-[fade-in_0.4s_ease-out] rounded-[12px] bg-dark-grey p-6 text-center text-title-xs text-light-grey">
         {texts.success_message}
       </p>
     );
   }
 
-  const input = "h-10 w-full bg-white px-3 text-body-s text-black placeholder:text-grey outline-none focus-visible:ring-2 focus-visible:ring-red";
+  const input =
+    "h-10 w-full rounded-[8px] border border-medium-grey bg-light-grey pl-4 pr-1 text-title-xs text-black placeholder:text-grey outline-none focus-visible:ring-2 focus-visible:ring-red";
 
   const field = (f: Field, control: React.ReactNode, className = "") => (
     <div className={`flex flex-col gap-2 ${className}`}>
-      <label htmlFor={`cf-${f}`} className="text-body-s text-light-grey">
+      <label htmlFor={`cf-${f}`} className="text-title-xs text-light-grey">
         {texts[`label_${f}`]}
-        {REQUIRED.includes(f) && <span aria-hidden> *</span>}
+        {REQUIRED.includes(f) && <span aria-hidden>*</span>}
       </label>
       {control}
       {errors[f] && (
@@ -109,32 +111,31 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
     field(f, <input {...common(f)} type={type} autoComplete={autoComplete} placeholder={texts[`ph_${f}`]} className={input} />);
 
   return (
-    <form noValidate onSubmit={onSubmit} className="mx-auto flex w-full max-w-[520px] flex-col gap-5" data-reveal>
+    <form noValidate onSubmit={onSubmit} className="mx-auto flex w-full max-w-[724px] flex-col gap-6" data-reveal>
       {text("name", "text", "name")}
       {text("company", "text", "organization")}
       {text("address", "text", "street-address")}
       {text("home_address", "text", "address-level2")}
-      <div className="grid gap-5 sm:grid-cols-2">
-        {text("postal_code", "text", "postal-code")}
-        {countries.length > 0
-          ? field(
-              "country",
-              <select {...common("country")} autoComplete="country-name" className={`${input} ${values.country ? "" : "text-grey"}`}>
+      {text("postal_code", "text", "postal-code")}
+      {countries.length > 0
+        ? field(
+            "country",
+            <div className="relative">
+              <select {...common("country")} autoComplete="country-name" className={`${input} appearance-none pr-10 ${values.country ? "" : "text-grey"}`}>
                 <option value="">{texts.ph_country}</option>
                 {countries.map((c) => (
                   <option key={c} value={c} className="text-black">
                     {c}
                   </option>
                 ))}
-              </select>,
-            )
-          : text("country", "text", "country-name")}
-      </div>
-      <div className="grid gap-5 sm:grid-cols-2">
-        {text("phone", "tel", "tel")}
-        {text("email", "email", "email")}
-      </div>
-      {field("message", <textarea {...common("message")} placeholder={texts.ph_message} className={`${input} h-32 resize-y py-2`} />)}
+              </select>
+              <img src="/brand/form-caret.svg" alt="" width={18} height={18} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2" />
+            </div>,
+          )
+        : text("country", "text", "country-name")}
+      {text("phone", "tel", "tel")}
+      {text("email", "email", "email")}
+      {field("message", <textarea {...common("message")} placeholder={texts.ph_message} className={`${input} h-[120px] resize-y pt-4`} />)}
 
       {/* Trampa para bots: invisible para personas. */}
       <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden>
@@ -144,9 +145,9 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
         </label>
       </div>
 
-      <div className="flex flex-col gap-3 pt-1">
+      <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <label className="flex cursor-pointer items-start gap-3 text-body-s text-light-grey">
+          <label className="flex cursor-pointer items-start gap-1.5 text-body-m font-medium text-grey">
             <input
               id="cf-terms"
               type="checkbox"
@@ -157,15 +158,20 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
               }}
               required
               aria-invalid={!!errors.terms || undefined}
-              className="mt-0.5 size-4 shrink-0 accent-red"
+              className="peer sr-only"
             />
-            <span className="[&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-white" dangerouslySetInnerHTML={{ __html: `${inline(texts.terms_label)} *` }} />
+            <Box />
+            <span
+              className="[&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-light-grey"
+              dangerouslySetInnerHTML={{ __html: inline(texts.terms_label).includes("*") ? inline(texts.terms_label) : `${inline(texts.terms_label)}*` }}
+            />
           </label>
-          {errors.terms && <p className="pl-7 text-body-xs text-red">{errors.terms}</p>}
+          {errors.terms && <p className="pl-[22px] text-body-xs text-red">{errors.terms}</p>}
         </div>
         {texts.marketing_label && (
-          <label className="flex cursor-pointer items-start gap-3 text-body-s text-light-grey">
-            <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} className="mt-0.5 size-4 shrink-0 accent-red" />
+          <label className="flex cursor-pointer items-start gap-1.5 text-body-m font-medium text-grey">
+            <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} className="peer sr-only" />
+            <Box />
             <span>{texts.marketing_label}</span>
           </label>
         )}
@@ -173,7 +179,7 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
 
       {texts.legal_text && (
         <div
-          className="bg-dark-grey p-4 text-body-xs text-grey [&_a]:underline [&_p+p]:mt-2 [&_strong]:text-light-grey"
+          className="rounded-[12px] bg-dark-grey p-6 text-body-xs leading-[1.2] text-light-grey [&_a]:underline"
           dangerouslySetInnerHTML={{ __html: texts.legal_text }}
         />
       )}
@@ -185,11 +191,21 @@ export function ContactFormClient({ texts, countries }: { texts: ContactTexts; c
       )}
 
       <div className={status === "sending" ? "pointer-events-none opacity-60" : ""}>
-        <Button type="submit" variant="red" className="w-full sm:w-auto">
+        <Button type="submit" variant="red">
           {texts.submit_label}
         </Button>
       </div>
     </form>
+  );
+}
+
+/** Casilla del Figma (cuadrado gris); al marcarla, el check encima. Va detrás del <input class="peer">. */
+function Box() {
+  return (
+    <span className="relative mt-[3px] size-4 shrink-0 rounded-[2px] peer-checked:[&>svg]:block peer-focus-visible:ring-2 peer-focus-visible:ring-red">
+      <img src="/brand/form-checkbox.svg" alt="" width={16} height={16} />
+      <Check size={10} weight="bold" className="absolute left-[3px] top-[3px] hidden text-light-grey" aria-hidden />
+    </span>
   );
 }
 

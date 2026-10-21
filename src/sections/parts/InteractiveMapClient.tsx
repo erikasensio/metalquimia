@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
-import { Envelope, MagnifyingGlass, Phone, X } from "@phosphor-icons/react";
+import { Envelope, EnvelopeSimple, MagnifyingGlass, Phone, X } from "@phosphor-icons/react";
 import type { WpImage } from "@/lib/types";
 
 export type MapLocation = {
@@ -14,6 +14,13 @@ export type MapLocation = {
   email: string;
   hours: string;
   image: WpImage | null;
+  /** Solo en el mapa de representantes (show_filters). */
+  continent: string;
+  country: string;
+  fax: string;
+  website: string;
+  lat: number;
+  lng: number;
   /** Posición en % sobre el mapa (null si queda fuera de la zona visible). */
   x: number | null;
   y: number | null;
@@ -26,11 +33,17 @@ export function InteractiveMapClient({
   locations,
   showList,
   searchPlaceholder,
+  ratio = "2 / 1",
+  bleed,
   children,
 }: {
   locations: MapLocation[];
   showList: boolean;
   searchPlaceholder: string;
+  /** Proporción del mapa (la del viewBox del SVG). */
+  ratio?: string;
+  /** Mapa a todo el ancho con el listado encima, a la izquierda (Figma Instalaciones 757:21208). */
+  bleed?: boolean;
   children: ReactNode;
 }) {
   const [selected, setSelected] = useState<number | null>(null);
@@ -63,7 +76,7 @@ export function InteractiveMapClient({
   return (
     <div className="relative flex flex-col gap-6 lg:block">
       <div className="relative">
-        <div className="relative aspect-[2/1] w-full">
+        <div className="relative w-full" style={{ aspectRatio: ratio }}>
         {children}
         {locations.map((loc) =>
           loc.x === null || loc.y === null ? null : (
@@ -76,11 +89,12 @@ export function InteractiveMapClient({
               className="group absolute z-10 flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
               style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
             >
-              <span className="absolute size-2.5 rounded-full bg-red/40 motion-safe:animate-ping" aria-hidden />
+              {/* Figma: círculo de 16 px al 30 % con el punto de 9 px dentro. */}
               <span
-                className={`relative rounded-full bg-red transition-transform ${loc.id === selected ? "size-3.5 ring-4 ring-red/25" : "size-2.5 group-hover:scale-125"}`}
+                className={`absolute rounded-full bg-[#ff3f3f]/30 transition-transform ${loc.id === selected ? "size-6" : "size-4 group-hover:scale-125"}`}
                 aria-hidden
               />
+              <span className={`relative size-[9px] rounded-full bg-[#ff3f3f] transition-transform ${loc.id === selected ? "scale-125" : ""}`} aria-hidden />
             </button>
           ),
         )}
@@ -114,19 +128,40 @@ export function InteractiveMapClient({
       </div>
 
       {showList && (
-        <div className="flex flex-col gap-3 bg-white/95 lg:absolute lg:left-6 lg:top-6 lg:z-10 lg:max-h-[calc(100%-48px)] lg:w-[360px] lg:p-4 lg:shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
-          <label className="relative block">
-            <span className="sr-only">{searchPlaceholder}</span>
-            <MagnifyingGlass size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-grey" aria-hidden />
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder={searchPlaceholder}
-              className="h-10 w-full border border-medium-grey bg-white pl-9 pr-3 text-body-s text-black placeholder:text-grey focus:border-dark-grey focus:outline-none"
-            />
-          </label>
-          <ul className="flex max-h-[420px] flex-col gap-2 overflow-y-auto lg:max-h-none lg:min-h-0 lg:flex-1">
+        <div
+          className={`flex flex-col gap-6 rounded-xl bg-light-grey px-4 py-[22px] lg:gap-10 ${
+            bleed
+              ? "mx-4 mb-10 lg:absolute lg:bottom-[68px] lg:left-11 lg:top-[52px] lg:z-10 lg:m-0 lg:w-[546px]"
+              : "lg:absolute lg:left-6 lg:top-6 lg:z-10 lg:max-h-[calc(100%-48px)] lg:w-[480px]"
+          }`}
+        >
+          <form
+            role="search"
+            className="flex gap-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (filtered[0]) setSelected(filtered[0].id);
+            }}
+          >
+            <label className="min-w-0 flex-1">
+              <span className="sr-only">{searchPlaceholder}</span>
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={searchPlaceholder}
+                className="text-body-m h-10 w-full rounded-xl border border-black/40 bg-transparent px-3 font-medium text-black-grey placeholder:text-black-grey/40 focus:border-black focus:outline-none"
+              />
+            </label>
+            <button
+              type="submit"
+              aria-label={searchPlaceholder}
+              className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[rgba(115,115,115,0.2)] text-black backdrop-blur-[20px] transition-colors hover:bg-[rgba(115,115,115,0.3)]"
+            >
+              <MagnifyingGlass size={16} weight="bold" />
+            </button>
+          </form>
+          <ul className="flex max-h-[456px] flex-col gap-3 overflow-y-auto lg:max-h-none lg:min-h-0 lg:flex-1">
             {filtered.map((loc) => (
               <li key={loc.id}>
                 <div
@@ -140,9 +175,11 @@ export function InteractiveMapClient({
                     }
                   }}
                   aria-pressed={loc.id === selected}
-                  className={`cursor-pointer border-l-2 bg-light-grey p-4 transition-colors hover:bg-medium-grey ${loc.id === selected ? "border-red" : "border-transparent"}`}
+                  className={`flex min-h-[140px] cursor-pointer items-end justify-between gap-4 rounded-xl p-6 transition-colors ${
+                    loc.id === selected ? "bg-medium-grey" : "bg-[#efefef] hover:bg-medium-grey"
+                  }`}
                 >
-                  <LocationInfo loc={loc} />
+                  <ListItem loc={loc} />
                 </div>
               </li>
             ))}
@@ -150,6 +187,36 @@ export function InteractiveMapClient({
         </div>
       )}
     </div>
+  );
+}
+
+/** Ficha del listado (Figma 757:21472): nombre y subtítulo en Title XS, dirección pequeña y botones de llamar y escribir. */
+function ListItem({ loc }: { loc: MapLocation }) {
+  const icon = "flex size-10 items-center justify-center rounded-[2px] bg-light-grey text-black-grey backdrop-blur-[20px] transition-colors hover:bg-red hover:text-white";
+  return (
+    <>
+      <div className="flex min-w-0 flex-col gap-6">
+        <div className="text-title-xs flex flex-col gap-2">
+          <p className="text-black-grey">{loc.name}</p>
+          {loc.subtitle && <p className="text-grey">{loc.subtitle}</p>}
+        </div>
+        {loc.address && <p className="text-body-xs whitespace-pre-line leading-[1.2] text-[#737373]">{loc.address}</p>}
+      </div>
+      {(loc.phone || loc.email) && (
+        <div className="flex shrink-0 gap-1">
+          {loc.phone && (
+            <a href={`tel:${loc.phone.replace(/[^\d+]/g, "")}`} aria-label={loc.phone} title={loc.phone} className={icon} onClick={(e) => e.stopPropagation()}>
+              <Phone size={16} weight="bold" />
+            </a>
+          )}
+          {loc.email && (
+            <a href={`mailto:${loc.email}`} aria-label={loc.email} title={loc.email} className={icon} onClick={(e) => e.stopPropagation()}>
+              <EnvelopeSimple size={16} weight="bold" />
+            </a>
+          )}
+        </div>
+      )}
+    </>
   );
 }
 
