@@ -8,8 +8,7 @@ const nextConfig: NextConfig = {
   // Añade más hosts con DEV_ORIGINS=host1,host2.
   allowedDevOrigins: ["192.168.*.*", "10.*.*.*", "*.local", ...(process.env.DEV_ORIGINS?.split(",").filter(Boolean) ?? [])],
   images: {
-    // Con WP_AUTH las imágenes pasan por /wp-content/uploads del front y el optimizador no puede leerlas.
-    unoptimized: Boolean(process.env.WP_AUTH),
+    // Con WP_AUTH las imágenes pasan por /wp-content/uploads del front; en Cloudflare las optimiza worker.ts.
     // LocalWP resuelve metalquimia.local a 127.0.0.1: solo se permite si el WordPress es local.
     dangerouslyAllowLocalIP: /(\.local|localhost|127\.0\.0\.1)$/.test(wpUrl.hostname),
     remotePatterns: [

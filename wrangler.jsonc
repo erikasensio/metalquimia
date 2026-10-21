@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "metalquimia",
-  "main": ".open-next/worker.js",
+  "main": "worker.ts",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
@@ -16,7 +16,9 @@
     // Caché de páginas y fetch de WordPress
     { "binding": "NEXT_INC_CACHE_KV", "id": "4bc208aeeab748908e543eef64ad7e2d" },
     // Etiquetas que invalida /api/revalidate
-    { "binding": "NEXT_TAG_CACHE_KV", "id": "9a9d6af7402446ff85b69054ee4d3304" }
+    { "binding": "NEXT_TAG_CACHE_KV", "id": "9a9d6af7402446ff85b69054ee4d3304" },
+    // Copia de /wp-content/uploads mientras WordPress va por Live Link (ver route.ts de uploads)
+    { "binding": "MEDIA_KV", "id": "85aa7a86ccea46c7b4865c886071c567" }
   ],
   // Optimización de next/image con Cloudflare Images
   "images": { "binding": "IMAGES" },
