@@ -10,6 +10,8 @@
  * y solo hace falta en local para subir una imagen nueva la primera vez.
  */
 
+import { catalogImages, catalogPages } from "./catalog.mjs";
+
 export const L = (es, en, other = {}) => ({ __l: true, es, en: en ?? es, ...other });
 export const images = {};
 /** Registra un hueco de imagen: archivo en seed/images, texto alternativo y descripción para buscarla. */
@@ -990,8 +992,8 @@ const machinePage = ({ key, slug, name, image, subtitle, intro, characteristics 
       items: [0, 1].flatMap(() =>
         [
           [I.m1, L("Inyectoras de carne", "Meat Injectors"), L("Tecnología de inyección por spray diseñada desde cero para el máximo reparto de la salmuera, el mínimo daño al producto y resultados constantes a escala industrial.", "Spray injection technology engineered from scratch for maximum brine distribution, minimal product damage, and consistent results at industrial scale."), "@page:meat-injection"],
-          [I.m2, L("Descongelación de carne", "Meat Defrosting"), L("Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.", "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput."), "#"],
-          [I.m3, L("Embutidoras de carne", "Meat Stuffers"), L("Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.", "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput."), "#"],
+          [I.m2, L("Descongelación de carne", "Meat Defrosting"), L("Descongelación de precisión que conserva la textura, reduce al mínimo la pérdida por goteo y mantiene la línea en marcha, sin comprometer la seguridad alimentaria ni la producción.", "Precision-controlled thawing that preserves texture, minimises drip loss, and keeps your line running — without compromising food safety or throughput."), "@page:sol-thawing"],
+          [I.m3, L("Embutidoras de carne", "Meat Stuffers"), L("Pensadas para las máximas exigencias de rendimiento, higiene y continuidad de producción, sin comprometer la seguridad alimentaria ni la producción.", "Built for the highest demands in yield, hygiene, and production continuity without compromising food safety or throughput."), "@page:sol-stuffing"],
         ].map(([image, name, description, url]) => ({ image, name, category: "", description, link: link("", url) })),
       ),
     },
@@ -1151,6 +1153,8 @@ const machinePages = [
 ];
 
 /** Página de cada máquina por su nombre (tarjetas de la categoría Inyección de carne). */
+Object.assign(images, catalogImages);
+
 const machineKey = Object.fromEntries(machinePages.map((p) => [p.es.title.toLowerCase(), p.key]));
 
 // ---------- Páginas ----------
@@ -1925,6 +1929,8 @@ export const pages = [
       offices(),
     ],
   },
+  // Al final: el importador busca la página madre (Servicios, Sobre Metalquimia…) entre las ya procesadas.
+  ...catalogPages({ engineering: engineeringMethod, partnership, productIntro: I.productIntro }),
 ];
 
 /** Los cinco edificios de Metalquimia (Figma Instalaciones 307:20167), para los Combo Text+Media y el mapa "Our offices". */
@@ -2095,18 +2101,18 @@ export const menus = {
       eyebrow: L("Nuestras soluciones", "Our solutions"),
       link: link(L("Descubre todas las soluciones", "Discover all solutions"), "@page:solutions"),
       children: [
-        [L("Descongelación de carne", "Meat Thawing"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality"), "thawing", "@page:cooked"],
-        [L("Preparación de salmueras", "Preparation of Brines"), L("Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo", "Quick, controlled, and efficient preparation of any type of brine and marinade"), "brine", "@page:meat-injection"],
+        [L("Descongelación de carne", "Meat Thawing"), L("Masaje muy suave: producto descongelado de la máxima calidad", "Very gentle massage: thawed product of the highest quality"), "thawing", "@page:sol-thawing"],
+        [L("Preparación de salmueras", "Preparation of Brines"), L("Preparación rápida, controlada y eficiente de cualquier tipo de salmuera y adobo", "Quick, controlled, and efficient preparation of any type of brine and marinade"), "brine", "@page:sol-brines"],
         [L("Inyección de carne", "Meat Injection"), L("Reparto espectacular de la salmuera y uniformidad de color", "Spectacular distribution of brine and uniformity of color"), "injection", "@page:meat-injection"],
-        [L("Marinado de carne", "Meat Marinating"), L("Marinado de carne con o sin hueso por efecto spray", "Meat marinating with or without bone by spray effect"), "marinating", "@page:marinated"],
-        [L("Tenderización de carne", "Meat Tenderization"), L("Más rendimiento y menos mermas de cocción", "Improvement of yield and reduction of cooking losses"), "tenderization", "@page:meat-injection"],
-        [L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with cooling jacket, fully versatile"), "massage", "@page:cooked"],
-        [L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle"), "stuffing", "@page:cooked"],
-        [L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con seguimiento y registro de todos los parámetros técnicos del proceso", "Smart cooking with tracking and recording of all technical parameters of the process"), "cooking", "@page:cooked"],
-        [L("Plantas automáticas de cocción y marinado", "Automatic cooking and marinating plants"), L("Conectividad inteligente: el jamón hecho a tu medida", "Smart connectivity: The ham made to your specifications"), "cooking-plants", "@page:cooked"],
-        [L("QDSolutions · Loncheados y snacks cárnicos", "QDSolutions - Sliced meats and meat snacks"), L("Maximiza el rendimiento del producto y la flexibilidad operativa", "Maximizes product yield and operational flexibility"), "sliced", "@page:snacks"],
-        [L("Salchichas cocidas", "Cooked Sausages"), L("Producción de salchichas con un sabor y una textura inmejorables", "Sausage production with unbeatable flavor and texture"), "sausages", "@page:sausages"],
-        ["Pet food", L("Equipos hechos para condiciones exigentes", "Equipment built for tough conditions"), "petfood", "@page:petfood"],
+        [L("Marinado de carne", "Meat Marinating"), L("Marinado de carne con o sin hueso por efecto spray", "Meat marinating with or without bone by spray effect"), "marinating", "@page:sol-marinating"],
+        [L("Tenderización de carne", "Meat Tenderization"), L("Más rendimiento y menos mermas de cocción", "Improvement of yield and reduction of cooking losses"), "tenderization", "@page:sol-tenderization"],
+        [L("Masaje de carne", "Meat Massage"), L("Reactores automáticos de vacío con camisa de refrigeración, totalmente versátiles", "Automatic vacuum reactors with cooling jacket, fully versatile"), "massage", "@page:sol-massage"],
+        [L("Embutición de carne", "Meat Stuffing"), L("Embutidoras continuas al vacío para músculo entero", "Continuous vacuum stuffers for whole muscle"), "stuffing", "@page:sol-stuffing"],
+        [L("Cocción de carne", "Meat Cooking"), L("Cocción inteligente con seguimiento y registro de todos los parámetros técnicos del proceso", "Smart cooking with tracking and recording of all technical parameters of the process"), "cooking", "@page:sol-cooking"],
+        [L("Plantas automáticas de cocción y marinado", "Automatic cooking and marinating plants"), L("Conectividad inteligente: el jamón hecho a tu medida", "Smart connectivity: The ham made to your specifications"), "cooking-plants", "@page:sol-plants"],
+        [L("QDSolutions · Loncheados y snacks cárnicos", "QDSolutions - Sliced meats and meat snacks"), L("Maximiza el rendimiento del producto y la flexibilidad operativa", "Maximizes product yield and operational flexibility"), "sliced", "@page:sol-qdsolutions"],
+        [L("Salchichas cocidas", "Cooked Sausages"), L("Producción de salchichas con un sabor y una textura inmejorables", "Sausage production with unbeatable flavor and texture"), "sausages", "@page:sol-sausages-cooked"],
+        ["Pet food", L("Equipos hechos para condiciones exigentes", "Equipment built for tough conditions"), "petfood", "@page:sol-petfood-machinery"],
       ].map(([label, description, icon, url]) => m(label, url, { description, icon: I.menuIcons[icon] })),
     }),
     m(L("Nuestro método", "Our method"), "#", {
@@ -2115,7 +2121,7 @@ export const menus = {
       children: [
         m("Engineering Mindset / Creativació", "@page:engineering", { image: I.methodCard1 }),
         m(L("Tecnologías propias", "Proprietary technologies"), "@page:technologies", { image: I.methodCard2 }),
-        m("Creativation Retreats", "@page:engineering"),
+        m("Creativation Retreats", "@page:corp-creativation-retreats"),
         m("Metalquimia Innovation Center", "@page:innovation"),
         m(L("Investigación en proteína vegetal", "Plant-based protein research"), "@page:proteins"),
         m("Partnership", "@page:partnership"),
@@ -2126,11 +2132,11 @@ export const menus = {
       layout: "links",
       eyebrow: L("Nuestros servicios", "Our services"),
       children: [
-        m(L("Tecnológico", "Technological"), "@page:innovation"),
+        m(L("Tecnológico", "Technological"), "@page:technologies"),
         m(L("Recambios y servicio", "Parts & Service"), "@page:service-detail"),
-        m(L("Formación", "Training"), "@page:services"),
-        m(L("Ingeniería", "Engineering"), "@page:engineering"),
-        m(L("Modernización", "Upgrade"), "@page:services"),
+        m(L("Formación", "Training"), "@page:corp-training"),
+        m(L("Ingeniería", "Engineering"), "@page:corp-engineering-service"),
+        m(L("Modernización", "Upgrade"), "@page:corp-upgrade"),
         m(L("Pedir recambios", "Order Spare Parts"), "@page:contact#form", { highlight: true }),
       ],
     }),
@@ -2142,12 +2148,12 @@ export const menus = {
         m(L("Historia", "History"), "@page:about"),
         m(L("Liderazgo", "Leadership"), "@page:about"),
         m(L("Noticias y publicaciones", "News and Publications"), "@page:resources"),
-        m(L("Revista", "Magazine"), "@page:resources"),
+        m(L("Revista", "Magazine"), "@page:corp-magazine"),
         m(L("Instalaciones", "Facilities"), "@page:facilities"),
         m(L("La Fundación", "The Foundation"), "https://www.fundaciometalquimia.org/"),
-        m(L("Calidad", "Quality"), "@page:about"),
-        m(L("Código ético", "Code of Ethics"), "@page:about"),
-        m(L("Sostenibilidad", "Sustainability"), "@page:about"),
+        m(L("Calidad", "Quality"), "@page:corp-quality"),
+        m(L("Código ético", "Code of Ethics"), "@page:corp-ethics"),
+        m(L("Sostenibilidad", "Sustainability"), "@page:corp-sustainability"),
         m(L("Empleo", "Employment"), "@page:careers"),
       ],
     }),

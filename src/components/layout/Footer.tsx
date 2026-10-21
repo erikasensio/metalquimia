@@ -19,6 +19,7 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
   const legal = global?.menus?.legal ?? [];
   const button = o.prefooter_button as WpLink | null | undefined;
   const logo = o.logo as WpImage | null | undefined;
+  const footerImage = o.footer_image as WpImage | null | undefined;
   const socials = (Array.isArray(o.socials) ? o.socials : []) as { network?: keyof typeof socialIcons; url?: string }[];
   const hasPrefooter = str("prefooter_title_muted") || str("prefooter_title");
 
@@ -28,10 +29,10 @@ export function Footer({ global, lang }: { global: Global | null; lang: string }
 
   return (
     <footer className="relative z-[1] overflow-x-clip bg-black text-light-grey" data-footer>
-      {/* Fondo: foto del pliegue de luz con un velo negro al 74 % encima. */}
+      {/* Fondo: foto del pliegue de luz con un velo negro al 75 % encima. */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <Image src={(o.footer_image as WpImage | null)?.url || "/brand/footer-bg.jpg"} alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-black/[0.74]" />
+        <Image src={footerImage?.url || "/brand/footer-bg.jpg"} alt="" fill sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-black/75" />
       </div>
       {/* Blanca por defecto; negra si la última sección de la página acaba en negro (data-footer-notch en globals.css). */}
       <Notch corner="top-right" sizeClass="h-[calc(1.5rem+2px)] w-[38%] [--notch-cut:24px] lg:h-[calc(2.5rem+2px)]" data-footer-notch />
