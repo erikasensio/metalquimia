@@ -1,5 +1,6 @@
 import type { Section, WpLink } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
+import { StripesBall } from "@/components/ui/StripesBall";
 import { DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { Typewriter } from "@/components/motion/Typewriter";
 import { SplitWords } from "@/components/motion/SplitWords";
@@ -24,7 +25,8 @@ export default function Characteristics({ eyebrow, title, items, button, file, b
 
   return (
     <div className="relative overflow-hidden bg-[#020202] pb-20 pt-20 text-light-grey lg:pt-[120px]">
-      <StripesBall />
+      {/* Centrada 70 px por encima del centro de la sección. Solo escritorio: en móvil tapaba la lista. */}
+      <StripesBall className="left-[calc(50%+0.12px)] top-[calc(50%-69.75px)] hidden lg:flex" />
       <div className="site-container relative">
         {/* La lista es larga: se escribe más rápido que el resto para no hacer esperar al botón. */}
         <div className="flex max-w-[601px] flex-col items-start gap-10" data-typewriter-group data-typewriter-sequence data-typewriter-speed={3}>
@@ -72,35 +74,6 @@ export default function Characteristics({ eyebrow, title, items, button, file, b
               )}
             </div>
           )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Bola de franjas del Figma (1250 × 1250 px, centrada 70 px por encima del centro de la sección): una caja girada
- * 46,84° recorta las dos mitades, que se vuelven a girar para quedar rectas (una de ellas del revés).
- * Va a tamaño real (la sección recorta lo que sobra). Solo escritorio: en móvil tapaba la lista.
- */
-function StripesBall() {
-  return (
-    <div
-      className="pointer-events-none absolute left-[calc(50%+0.12px)] top-[calc(50%-69.75px)] hidden size-[1250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center lg:flex"
-      aria-hidden
-    >
-      <div className="relative h-[881.5px] w-[887.7px] shrink-0 rotate-[46.84deg] overflow-clip">
-        <div className="absolute left-[206.81px] top-[41.04px] flex h-[763.35px] w-[768.22px] items-center justify-center">
-          <div className="relative h-[595.42px] w-[488.12px] shrink-0 -rotate-[46.84deg]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/characteristics-stripes-a.svg" alt="" width={488.121} height={608.371} className="absolute inset-x-0 -top-[0.77%] block h-[102.18%] w-full max-w-none" />
-          </div>
-        </div>
-        <div className="absolute left-[53.99px] top-[238.55px] flex h-[734.34px] w-[740.99px] items-center justify-center">
-          <div className="relative h-[595.11px] w-[448.64px] shrink-0 rotate-[133.16deg]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/characteristics-stripes-b.svg" alt="" width={448.644} height={608.371} className="absolute inset-x-0 -top-[0.82%] block h-[102.23%] w-full max-w-none" />
-          </div>
         </div>
       </div>
     </div>

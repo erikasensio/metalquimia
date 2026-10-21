@@ -13,13 +13,14 @@ return array(
 	'sub_fields' => array(
 		mq_tab( $l, 'Cabecera' ),
 		mq_f( $l, 'category', 'text', 'Categoría', array( 'instructions' => 'Texto corto en rojo encima del título (p. ej. CASE STUDY).', 'wrapper' => array( 'width' => 50 ) ) ),
-		mq_f( $l, 'date', 'text', 'Fecha de publicación', array( 'placeholder' => '18.01.2026', 'wrapper' => array( 'width' => 50 ) ) ),
+		mq_f( $l, 'reading_time', 'text', 'Tiempo de lectura', array( 'placeholder' => '10 MIN DE LECTURA', 'instructions' => 'Va en rojo junto a la categoría.', 'wrapper' => array( 'width' => 50 ) ) ),
+		mq_f( $l, 'date', 'text', 'Fecha de publicación', array( 'placeholder' => '22 January 2021', 'wrapper' => array( 'width' => 50 ) ) ),
 		mq_f( $l, 'title', 'textarea', 'Título', array( 'rows' => 2 ) ),
 		mq_f( $l, 'intro', 'textarea', 'Entradilla', array( 'instructions' => 'Párrafo de introducción, en letra más grande.' ) ),
 		mq_f( $l, 'author', 'text', 'Autor', array( 'wrapper' => array( 'width' => 50 ) ) ),
-		mq_f( $l, 'image', 'image', 'Imagen principal', array( 'instructions' => 'Horizontal 4:3, ≈ 1400 × 1050 px.' ) ),
-		mq_f( $l, 'author_label', 'text', 'Texto "Autor"', array( 'placeholder' => 'Author', 'wrapper' => array( 'width' => 50 ) ) ),
-		mq_f( $l, 'date_label', 'text', 'Texto "Publicado"', array( 'placeholder' => 'Published', 'wrapper' => array( 'width' => 50 ) ) ),
+		mq_f( $l, 'image', 'image', 'Imagen principal', array( 'instructions' => 'Vertical u horizontal: se recorta a la altura de la cabecera (≈ 1400 × 1600 px).' ) ),
+		mq_f( $l, 'author_label', 'text', 'Texto "Autor"', array( 'placeholder' => 'Written by', 'wrapper' => array( 'width' => 50 ) ) ),
+		mq_f( $l, 'date_label', 'text', 'Texto "Publicado"', array( 'placeholder' => 'Published on', 'wrapper' => array( 'width' => 50 ) ) ),
 		mq_tab( $l, 'Contenido' ),
 		mq_f(
 			$l,
@@ -61,7 +62,7 @@ return array(
 						),
 						'blocks'
 					),
-					mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Horizontal 16:9, ≈ 1600 × 900 px.', 'conditional_logic' => $is( 'image' ) ), 'blocks' ),
+					mq_f( $l, 'image', 'image', 'Imagen', array( 'instructions' => 'Horizontal ≈ 1400 × 740 px.', 'conditional_logic' => $is( 'image' ) ), 'blocks' ),
 					mq_f( $l, 'caption', 'text', 'Pie de foto / autor de la cita', array( 'conditional_logic' => $is( array( 'image', 'quote' ) ) ), 'blocks' ),
 					mq_f( $l, 'quote', 'textarea', 'Cita', array( 'conditional_logic' => $is( 'quote' ) ), 'blocks' ),
 				),

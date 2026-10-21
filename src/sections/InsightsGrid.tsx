@@ -1,5 +1,6 @@
 import type { Section, WpImage, WpLink } from "@/lib/types";
 import { InsightsGridClient, type InsightItem } from "./parts/InsightsGridClient";
+import { StripesBall } from "@/components/ui/StripesBall";
 import { Typewriter } from "@/components/motion/Typewriter";
 import { SplitWords } from "@/components/motion/SplitWords";
 
@@ -12,9 +13,10 @@ type Props = Section & {
 };
 
 /**
- * Página Resources › Latest Insights.
- * Cabecera negra con disco de franjas y título grande; debajo, filtros por categoría y rejilla
- * de tarjetas (mismo estilo que Insights Carousel) que se amplía de 9 en 9.
+ * Figma Páginas › Casos de éxito / Recursos (459:27939).
+ * Cabecera negra de 776 px con la bola de franjas y el título gigante en gris; los filtros por categoría
+ * van pegados a su borde inferior. Debajo, la transición negro → blanco y la rejilla de tarjetas
+ * en tres columnas que se amplía de 12 en 12.
  */
 export default function InsightsGrid({ title, subtitle, all_label, load_more_label, items }: Props) {
   const list: InsightItem[] = (Array.isArray(items) ? items : [])
@@ -27,32 +29,24 @@ export default function InsightsGrid({ title, subtitle, all_label, load_more_lab
       link: item.link?.url ? item.link : null,
     }));
 
-  return (
+  const header = (
     <>
-      <div className="relative overflow-hidden bg-black pb-20 pt-[160px] lg:pb-[120px] lg:pt-[220px]">
-        <div className="stripes-disc-dark absolute left-1/2 top-1/2 size-[700px] -translate-x-1/2 -translate-y-1/2 lg:size-[1100px]" aria-hidden />
-        <div className="site-container relative flex flex-col items-center gap-6 text-center" data-typewriter-group data-typewriter-sequence>
-          {title && (
-            <h1 className="text-title-xl text-light-grey [font-feature-settings:'dlig'_1]" data-paint>
-              <SplitWords text={title} />
-            </h1>
-          )}
-          {subtitle && (
-            <p className="max-w-[56ch] text-body-l text-grey">
-              <Typewriter text={subtitle} />
-            </p>
-          )}
-        </div>
+      {/* En el Figma el centro de la bola queda 96 px por encima del centro de la cabecera. */}
+      <StripesBall variant="insights" className="left-1/2 top-[calc(50%-96px)] flex scale-[0.6] lg:scale-100" />
+      <div className="site-container relative flex flex-col items-center gap-6 text-center" data-typewriter-group data-typewriter-sequence>
+        {title && (
+          <h1 className="text-title-xxl text-grey [font-feature-settings:'dlig'_1]" data-paint>
+            <SplitWords text={title} />
+          </h1>
+        )}
+        {subtitle && (
+          <p className="max-w-[56ch] text-body-l text-grey">
+            <Typewriter text={subtitle} />
+          </p>
+        )}
       </div>
-
-      {list.length > 0 && (
-        <div className="bg-white py-20 lg:py-[120px]">
-          {/* Grupo de escritura: al acabar queda data-typed y lo que aparezca al filtrar o cargar más ya se ve. */}
-          <div className="site-container" data-typewriter-group>
-            <InsightsGridClient items={list} allLabel={all_label || "ALL"} loadMoreLabel={load_more_label || "LOAD MORE"} />
-          </div>
-        </div>
-      )}
     </>
   );
+
+  return <InsightsGridClient header={header} items={list} allLabel={all_label || "ALL"} loadMoreLabel={load_more_label || "LOAD MORE"} />;
 }
