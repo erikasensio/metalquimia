@@ -79,18 +79,24 @@ function mq_find_page( string $lang, string $path ): ?WP_Post {
 		return ( $post && 'publish' === $post->post_status ) ? $post : null;
 	}
 
-	$args = array(
-		'post_type'      => 'page',
-		'post_status'    => 'publish',
-		'pagename'       => $path,
-		'posts_per_page' => 1,
-		'no_found_rows'  => true,
+	// Las traducciones pueden compartir slug, así que se busca entre todas las páginas con ese nombre
+	// la que tiene esta ruta completa y es del idioma pedido.
+	$pages = get_posts(
+		array(
+			'post_type'        => 'page',
+			'post_status'      => 'publish',
+			'name'             => basename( $path ),
+			'posts_per_page'   => -1,
+			'lang'             => '',
+			'suppress_filters' => false,
+		)
 	);
-	if ( function_exists( 'pll_languages_list' ) ) {
-		$args['lang'] = $lang;
+	foreach ( $pages as $page ) {
+		if ( mq_page_path( $page->ID ) === $path && mq_post_language( $page->ID ) === $lang ) {
+			return $page;
+		}
 	}
-	$query = new WP_Query( $args );
-	return $query->posts[0] ?? null;
+	return null;
 }
 
 function mq_rest_page( WP_REST_Request $request ) {

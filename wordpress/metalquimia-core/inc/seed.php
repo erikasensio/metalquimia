@@ -140,6 +140,10 @@ final class MQ_Seed {
 			update_post_meta( $id, '_mq_seed_key', $page['key'] );
 		}
 		pll_set_post_language( $id, $lang );
+		// Al crearla aún no tenía idioma y WordPress le habrá puesto "-2" si la otra traducción usa el mismo slug.
+		if ( get_post_field( 'post_name', $id ) !== $args['post_name'] ) {
+			wp_update_post( array( 'ID' => $id, 'post_name' => $args['post_name'] ) );
+		}
 		return (int) $id;
 	}
 
