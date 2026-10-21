@@ -127,7 +127,7 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", cont
   }`;
 
   return (
-    <div className="flex flex-col gap-6" role="region" aria-roledescription="carousel" aria-label={label || t("carousel", "Carrusel")}>
+    <div className="flex flex-col gap-6" role="region" aria-roledescription="carousel" aria-label={label || t("carousel", "Carousel")}>
       {/* relative: el recorte también alcanza a lo posicionado de dentro (p. ej. el texto sr-only de <Typewriter>), si no ensancha la página. */}
       <div ref={track} className={`relative flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth scrollbar-none select-none ${
           edges.start && edges.end ? "" : "cursor-grab data-[dragging]:cursor-grabbing"
@@ -135,10 +135,10 @@ export function Carousel({ children, dark, caret, trackClassName = "gap-4", cont
         {children}
       </div>
       <div className={`${controlsClassName} flex justify-end gap-1 ${edges.start && edges.end ? "hidden" : ""}`}>
-        <button type="button" className={btn} onClick={() => go(-1)} disabled={edges.start} aria-label={t("prev", "Anterior")} data-carousel-prev>
+        <button type="button" className={btn} onClick={() => go(-1)} disabled={edges.start} aria-label={t("prev", "Previous")} data-carousel-prev>
           {caret ? <CaretLeft size={14} /> : <ArrowLeft size={14} />}
         </button>
-        <button type="button" className={btn} onClick={() => go(1)} disabled={edges.end} aria-label={t("next", "Siguiente")} data-carousel-next>
+        <button type="button" className={btn} onClick={() => go(1)} disabled={edges.end} aria-label={t("next", "Next")} data-carousel-next>
           {caret ? <CaretRight size={14} /> : <ArrowRight size={14} />}
         </button>
       </div>

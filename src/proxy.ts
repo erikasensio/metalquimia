@@ -2,8 +2,8 @@ import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, locales } from "@/lib/i18n";
 
 /**
- * El idioma por defecto vive sin prefijo (/contacto) y se reescribe internamente a /es/contacto.
- * Si alguien entra con el prefijo por defecto (/es/contacto) se le redirige a la URL limpia.
+ * El idioma por defecto vive sin prefijo (/contact) y se reescribe internamente a /en/contact.
+ * Si alguien entra con el prefijo por defecto (/en/contact) se le redirige a la URL limpia.
  */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

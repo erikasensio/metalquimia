@@ -113,7 +113,7 @@ export function InteractiveMapClient({
             <button
               type="button"
               onClick={() => setSelected(null)}
-              aria-label={t("close", "Cerrar")}
+              aria-label={t("close", "Close")}
               className="absolute right-2 top-2 flex size-8 items-center justify-center text-black transition-colors hover:bg-light-grey"
             >
               <X size={16} />

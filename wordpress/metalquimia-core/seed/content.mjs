@@ -4,12 +4,13 @@
  *   - el plugin (Herramientas → Contenido inicial, o `wp mq seed`) para crear páginas, menús y ajustes;
  *   - el front en modo WP_URL=mock para maquetar sin WordPress.
  *
- * L(es, en) marca un texto traducible. "@img:clave" es una imagen de seed/images, "@page:clave" un enlace a otra página.
+ * L(es, en) marca un texto traducible; el catalán y el alemán están en i18n.json (ver build.mjs).
+ * L(es, en, { ca, de }) los fija aquí cuando el mismo par español + inglés necesita otra traducción en este punto. "@img:clave" es una imagen de seed/images, "@page:clave" un enlace a otra página.
  * Las imágenes viven en la biblioteca de medios de WordPress (opción mq_seed_images: clave → adjunto); seed/images no se versiona
  * y solo hace falta en local para subir una imagen nueva la primera vez.
  */
 
-export const L = (es, en) => ({ __l: true, es, en: en ?? es });
+export const L = (es, en, other = {}) => ({ __l: true, es, en: en ?? es, ...other });
 export const images = {};
 /** Registra un hueco de imagen: archivo en seed/images, texto alternativo y descripción para buscarla. */
 const img = (key, file, altEs, altEn, find) => {
@@ -1424,7 +1425,10 @@ export const pages = [
       logos(),
       { type: "media_text", theme: "light", image_position: "right", eyebrow: "PET CARE", title_muted: L("La precisión de inyección y cocción", "The injection and cooking precision"), title: L("que exigen los snacks premium.", "that premium pet treats demand."), text: L("<p>Las mismas tecnologías que usan los grandes fabricantes cárnicos, adaptadas a los formatos y exigencias del pet food.</p>", "<p>The same technologies used by the big meat processors, adapted to the formats and demands of pet food.</p>"), details: "", button: link(L("SOLICITA INFORMACIÓN", "REQUEST INFO"), "@page:contact#form"), image: I.tunnel },
       { type: "media_text", theme: "light", image_position: "left", eyebrow: L("FORMATOS", "FORMATS"), title_muted: L("Geometría exacta para chews, dental sticks", "Exact geometry for chews, dental sticks,"), title: L("y snacks de alto valor.", "and high-value snack formats."), text: L("<p>Control dimensional y de textura para que cada unidad sea idéntica.</p>", "<p>Dimensional and texture control so every unit is identical.</p>"), details: "", button: null, image: I.partner },
-      machines(L("Los equipos detrás de los productos", "The equipment behind the world's"), L("más constantes del mundo.", "most consistent cooked products.")),
+      machines(
+        L("Los equipos detrás de los productos", "The equipment behind the world's", { ca: "Els equips darrere dels productes", de: "Die Technik hinter den weltweit" }),
+        L("más constantes del mundo.", "most consistent cooked products.", { ca: "més constants del món.", de: "gleichmäßigsten Produkten." }),
+      ),
       { type: "highlights_carousel", theme: "dark", eyebrow: L("POR QUÉ METALQUIMIA", "WHY METALQUIMIA"), title_muted: L("Por qué los fabricantes de pet care eligen Metalquimia", "Why pet care producers choose Metalquimia"), title: L("frente a equipos genéricos.", "over purpose-built pet food equipment."), subtitle: "", button: null, items: [I.machineHero, I.software, I.silo].map((image, i) => ({ image, lead: [L("Más rendimiento.", "Higher yield."), L("Control total.", "Full control."), L("Higiene.", "Hygiene.")][i], text: L("Tecnología probada en la industria cárnica.", "Technology proven in the meat industry."), link: null })) },
       { type: "media_text", theme: "light", image_position: "left", eyebrow: L("INNOVACIÓN", "INNOVATION"), title_muted: L("La industria avanza rápido.", "The industry moves fast."), title: L("Nosotros avanzamos con ella.", "We move with it."), text: L("<p>Desarrollamos contigo nuevos formatos en nuestra planta piloto.</p>", "<p>We develop new formats with you in our pilot plant.</p>"), details: "", button: link(L("CONÓCENOS", "LEARN MORE"), "@page:innovation"), image: I.partner },
       banner(),

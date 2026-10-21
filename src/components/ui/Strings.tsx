@@ -9,7 +9,7 @@ export function StringsProvider({ lang, strings, children }: { lang: string; str
   return <StringsContext.Provider value={{ lang, strings }}>{children}</StringsContext.Provider>;
 }
 
-/** t("prev", "Anterior"): el texto de WordPress o, si está vacío, el de por defecto. */
+/** t("prev", "Previous"): el texto de WordPress o, si está vacío, el de por defecto. */
 export function useStrings() {
   const { lang, strings } = useContext(StringsContext);
   return { lang, t: (key: string, fallback: string) => strings[key] || fallback };

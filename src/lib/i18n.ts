@@ -1,4 +1,4 @@
-export const locales = (process.env.NEXT_PUBLIC_LOCALES ?? "es,en")
+export const locales = (process.env.NEXT_PUBLIC_LOCALES ?? "en,es,ca,de")
   .split(",")
   .map((l) => l.trim())
   .filter(Boolean);
@@ -9,7 +9,7 @@ export function isLocale(value: string): boolean {
   return locales.includes(value);
 }
 
-/** Ruta pública: el idioma por defecto va sin prefijo (/contacto), el resto con él (/en/contact). */
+/** Ruta pública: el idioma por defecto va sin prefijo (/contact), el resto con él (/es/contacto). */
 export function localizedPath(lang: string, path: string): string {
   const clean = path.replace(/^\/+|\/+$/g, "");
   if (lang === defaultLocale) return `/${clean}`;

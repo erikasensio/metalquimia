@@ -24,7 +24,7 @@
   "images": { "binding": "IMAGES" },
   // Valores no secretos; REVALIDATE_SECRET va con `wrangler secret put`
   "vars": {
-    "NEXT_PUBLIC_LOCALES": "es,en"
+    "NEXT_PUBLIC_LOCALES": "en,es,ca,de"
   },
   "observability": { "enabled": true }
 }

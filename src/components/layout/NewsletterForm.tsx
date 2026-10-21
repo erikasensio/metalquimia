@@ -64,7 +64,7 @@ export function NewsletterForm({ lang, label, placeholder, termsHtml, success, s
           <span className="[&_a]:underline" dangerouslySetInnerHTML={{ __html: termsHtml.replace(/<\/?p>/g, "") }} />
         </label>
       )}
-      {state === "error" && <p className="text-body-xs text-red" role="alert">{t("newsletter_error", "No se ha podido enviar. Inténtalo de nuevo.")}</p>}
+      {state === "error" && <p className="text-body-xs text-red" role="alert">{t("newsletter_error", "It could not be sent. Please try again.")}</p>}
     </form>
   );
 }

@@ -7,6 +7,7 @@ defined( 'ABSPATH' ) || exit;
  *
  *   wp mq seed            → crea lo que falta y actualiza las páginas importadas antes
  *   wp mq seed --only=home,contacto
+ *   wp mq seed --lang=ca,de   → solo esos idiomas (los demás se buscan para enlazar las traducciones, sin tocarlos)
  *
  * También hay un botón en Herramientas → Contenido inicial.
  * Las páginas creadas a mano (sin la marca _mq_seed_key) nunca se tocan.
@@ -21,7 +22,7 @@ final class MQ_Seed {
 		$this->site = json_decode( (string) $json, true ) ?: array();
 	}
 
-	public function run( array $only = array() ): array {
+	public function run( array $only = array(), array $only_langs = array() ): array {
 		if ( ! function_exists( 'pll_set_post_language' ) || ! function_exists( 'update_field' ) ) {
 			return array( 'Faltan Polylang o Secure Custom Fields.' );
 		}
@@ -34,12 +35,17 @@ final class MQ_Seed {
 		$pages = $this->site['pages'] ?? array();
 		// Con --only=menus u options las páginas no se tocan: solo se buscan para poder enlazarlas.
 		$touch = ! $only || array_diff( $only, array( 'menus', 'options' ) );
+		$all   = $langs;
+		if ( $only_langs ) {
+			$langs = array_values( array_intersect( $langs, $only_langs ) );
+		}
 		foreach ( $pages as $page ) {
-			foreach ( $langs as $lang ) {
+			foreach ( $all as $lang ) {
 				if ( isset( $page[ $lang ] ) ) {
-					$this->ids[ $page['key'] ][ $lang ] = $touch ? $this->ensure_page( $page, $lang ) : $this->find_page( $page['key'], $lang );
+					$this->ids[ $page['key'] ][ $lang ] = $touch && in_array( $lang, $langs, true ) ? $this->ensure_page( $page, $lang ) : $this->find_page( $page['key'], $lang );
 				}
 			}
+			$this->ids[ $page['key'] ] = array_filter( $this->ids[ $page['key'] ] ?? array() );
 			if ( $touch && count( $this->ids[ $page['key'] ] ?? array() ) > 1 ) {
 				pll_save_post_translations( $this->ids[ $page['key'] ] );
 			}
@@ -74,7 +80,7 @@ final class MQ_Seed {
 		}
 
 		// 2. Portada.
-		foreach ( $touch ? $pages : array() as $page ) {
+		foreach ( $touch && ! $only_langs ? $pages : array() as $page ) {
 			if ( ! empty( $page['front'] ) ) {
 				$front = $this->ids[ $page['key'] ][ mq_default_language() ] ?? 0;
 				if ( $front ) {
@@ -292,8 +298,9 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	WP_CLI::add_command(
 		'mq seed',
 		function ( $args, $assoc ) {
-			$only = ! empty( $assoc['only'] ) ? array_map( 'trim', explode( ',', $assoc['only'] ) ) : array();
-			foreach ( ( new MQ_Seed() )->run( $only ) as $line ) {
+			$only  = ! empty( $assoc['only'] ) ? array_map( 'trim', explode( ',', $assoc['only'] ) ) : array();
+			$langs = ! empty( $assoc['lang'] ) ? array_map( 'trim', explode( ',', $assoc['lang'] ) ) : array();
+			foreach ( ( new MQ_Seed() )->run( $only, $langs ) as $line ) {
 				WP_CLI::log( $line );
 			}
 			WP_CLI::success( 'Contenido importado.' );

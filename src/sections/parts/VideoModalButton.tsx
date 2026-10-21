@@ -84,7 +84,7 @@ export function VideoModalButton({ url, label }: Props) {
               ref={close}
               type="button"
               onClick={() => setOpen(false)}
-              aria-label={t("close_video", "Cerrar vídeo")}
+              aria-label={t("close_video", "Close video")}
               className="absolute right-4 top-4 flex size-10 items-center justify-center bg-black-grey text-light-grey transition-colors hover:bg-dark-grey"
             >
               <X size={18} />

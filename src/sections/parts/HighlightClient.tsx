@@ -196,7 +196,7 @@ function HighlightModal({ overlay, origin, onClose }: { overlay: HighlightOverla
             ref={closeRef}
             type="button"
             onClick={close}
-            aria-label={t("close", "Cerrar")}
+            aria-label={t("close", "Close")}
             className="flex shrink-0 cursor-pointer items-center justify-center bg-black-grey p-[11px] text-light-grey backdrop-blur-[20px] transition-colors hover:bg-black"
           >
             <X size={14} />
