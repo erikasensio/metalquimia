@@ -168,6 +168,14 @@ add_action(
 						'ui'           => 1,
 						'instructions' => 'P. ej. "Pedir recambios".',
 					),
+					array(
+						'key'          => 'field_mq_menu_muted',
+						'label'        => 'Atenuar en gris',
+						'name'         => 'menu_muted',
+						'type'         => 'true_false',
+						'ui'           => 1,
+						'instructions' => 'P. ej. "Empleo" en el menú de Empresa.',
+					),
 				),
 				'location' => array( array( array( 'param' => 'nav_menu_item', 'operator' => '==', 'value' => 'all' ) ) ),
 			)
@@ -281,6 +289,7 @@ add_action(
 							array(
 								array( 'discover_all', 'Menú: enlace al pie del desplegable', 'Si el desplegable no tiene enlace propio. P. ej. "Ver todas las soluciones".' ),
 								array( 'menu', 'Menú: botón en el móvil', 'P. ej. "Menú".' ),
+								array( 'back', 'Menú: volver atrás en el móvil', 'P. ej. "Volver".' ),
 								array( 'nav_label', 'Menú: nombre para lectores de pantalla', 'No se ve; lo leen los lectores de pantalla. P. ej. "Menú principal".' ),
 								array( 'newsletter_submit', 'Newsletter: botón de enviar', 'No se ve; lo leen los lectores de pantalla. P. ej. "Suscribirme".' ),
 								array( 'newsletter_error', 'Newsletter: mensaje si falla', 'P. ej. "No se ha podido enviar. Inténtalo de nuevo."' ),

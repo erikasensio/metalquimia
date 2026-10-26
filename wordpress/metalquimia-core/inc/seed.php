@@ -274,6 +274,7 @@ final class MQ_Seed {
 					'image'       => 'field_mq_menu_image',
 					'icon'        => 'field_mq_menu_icon',
 					'highlight'   => 'field_mq_menu_highlight',
+					'muted'       => 'field_mq_menu_muted',
 					'layout'      => 'field_mq_menu_layout',
 					'eyebrow'     => 'field_mq_menu_eyebrow',
 					'title_muted' => 'field_mq_menu_title_muted',

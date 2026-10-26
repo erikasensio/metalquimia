@@ -2059,6 +2059,7 @@ export const options = {
   strings: {
     discover_all: L("Ver todas las soluciones", "Discover all solutions"),
     menu: L("Menú", "Menu"),
+    back: L("Volver", "Back"),
     nav_label: L("Menú principal", "Main menu"),
     newsletter_submit: L("Suscribirme", "Subscribe"),
     newsletter_error: L("No se ha podido enviar. Inténtalo de nuevo.", "It could not be sent. Please try again."),
@@ -2154,7 +2155,7 @@ export const menus = {
         m(L("Calidad", "Quality"), "@page:corp-quality"),
         m(L("Código ético", "Code of Ethics"), "@page:corp-ethics"),
         m(L("Sostenibilidad", "Sustainability"), "@page:corp-sustainability"),
-        m(L("Empleo", "Employment"), "@page:careers"),
+        m(L("Empleo", "Employment"), "@page:careers", { muted: true }),
       ],
     }),
   ],

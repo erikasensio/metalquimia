@@ -89,7 +89,7 @@ export function MegaMenu({ items, discoverLabel, label }: Props) {
 type Layout = NonNullable<MenuItem["layout"]>;
 
 /** Diseño del panel: el elegido en WordPress o, si es automático, el que encaja con lo que tienen los elementos. */
-function layoutOf(item: MenuItem): Exclude<Layout, ""> {
+export function layoutOf(item: MenuItem): Exclude<Layout, ""> {
   if (item.layout) return item.layout;
   const withImage = item.children.filter((c) => c.image?.url).length;
   if (withImage && withImage === item.children.length) return "cards";
@@ -98,18 +98,20 @@ function layoutOf(item: MenuItem): Exclude<Layout, ""> {
   return "links";
 }
 
+/** Enlace al pie del panel: el suyo o, en menús sin configurar, "Ver todas" hacia la página del elemento. */
+export function panelMore(item: MenuItem, discoverLabel: string) {
+  const layout = layoutOf(item);
+  if (item.link?.url) return item.link;
+  if (!item.layout && (layout === "cards" || layout === "icons") && item.url && item.url !== "#") return { title: discoverLabel, url: item.url, target: "" };
+  return null;
+}
+
 /** Paneles del Figma "Menús" (305:5989): Productos (cards), Soluciones (icons), Nuestro método (featured), Servicio y Empresa (links). */
 function Panel({ item, discoverLabel }: { item: MenuItem; discoverLabel: string }) {
   const layout = layoutOf(item);
   const cards = item.children.filter((c) => c.image?.url);
   const plain = item.children.filter((c) => !c.image?.url);
-  // Enlace al pie: el del panel o, en menús sin configurar, "Ver todas" hacia la página del elemento.
-  const more =
-    item.link?.url
-      ? item.link
-      : !item.layout && (layout === "cards" || layout === "icons") && item.url && item.url !== "#"
-        ? { title: discoverLabel, url: item.url, target: "" }
-        : null;
+  const more = panelMore(item, discoverLabel);
 
   return (
     <div className={`site-container ${layout === "icons" ? "pt-[26px]" : "pt-8"} ${layout === "links" ? "pb-[52px]" : "pb-10"}`}>
@@ -191,13 +193,16 @@ function Panel({ item, discoverLabel }: { item: MenuItem; discoverLabel: string 
   );
 }
 
-/** Antetítulo en mono y, si lo hay, título en dos líneas (gris + negro), como "Procesado con precisión y / control total…". */
-function PanelHeading({ item }: { item: MenuItem }) {
+/** Antetítulo y título del panel (también los usa el menú móvil). */
+export function panelHeading(item: MenuItem) {
   // Compatibilidad: antes el antetítulo y el título iban en la descripción del elemento (primera línea = antetítulo).
   const [legacyEyebrow, ...legacyTitle] = item.layout || item.eyebrow ? [] : (item.description ?? "").split("\n");
-  const eyebrow = item.eyebrow || legacyEyebrow;
-  const muted = item.title_muted;
-  const title = item.title || legacyTitle.join(" ").trim();
+  return { eyebrow: item.eyebrow || legacyEyebrow, muted: item.title_muted, title: item.title || legacyTitle.join(" ").trim() };
+}
+
+/** Antetítulo en mono y, si lo hay, título en dos líneas (gris + negro), como "Procesado con precisión y / control total…". */
+function PanelHeading({ item }: { item: MenuItem }) {
+  const { eyebrow, muted, title } = panelHeading(item);
   if (!eyebrow && !muted && !title) return null;
   return (
     <div className="flex flex-col gap-6">
@@ -225,7 +230,7 @@ function LinkList({ items, columns, className = "" }: { items: MenuItem[]; colum
             href={c.url}
             target={c.target || undefined}
             className={`group/link flex w-fit items-center text-title-s transition-colors [font-feature-settings:'dlig'_1] [text-box:trim-both_cap_alphabetic] ${
-              c.highlight ? "text-red hover:text-red/70" : "text-[#2e2e2e] hover:text-grey"
+              c.highlight ? "text-red hover:text-red/70" : c.muted ? "text-grey hover:text-dark-grey" : "text-[#2e2e2e] hover:text-grey"
             }`}
           >
             <span className="w-0 overflow-hidden opacity-0 transition-all duration-300 group-hover/link:w-7 group-hover/link:opacity-100" aria-hidden>

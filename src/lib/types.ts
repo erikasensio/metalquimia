@@ -44,6 +44,8 @@ export type MenuItem = {
   icon?: WpImage | null;
   /** Se pinta en rojo (p. ej. "Pedir recambios"). */
   highlight?: boolean;
+  /** Se pinta en gris (p. ej. "Empleo"). */
+  muted?: boolean;
   /** Campos del panel (solo en los elementos de primer nivel). "" = automático según el contenido. */
   layout?: "" | "icons" | "cards" | "featured" | "links";
   eyebrow?: string;

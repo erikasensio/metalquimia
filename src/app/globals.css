@@ -197,6 +197,13 @@
     opacity: 0;
   }
 }
+/* Entrada lateral (pantallas del menú móvil); --slide-from marca el lado. */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    translate: var(--slide-from, 1.5rem) 0;
+  }
+}
 
 /*
  * CTA: los colores cambian suave al pasar el ratón y el texto (RollText) gira

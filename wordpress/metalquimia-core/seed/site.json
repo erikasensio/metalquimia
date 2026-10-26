@@ -3497,6 +3497,7 @@
    "strings": {
     "discover_all": "Discover all solutions",
     "menu": "Menu",
+    "back": "Back",
     "nav_label": "Main menu",
     "newsletter_submit": "Subscribe",
     "newsletter_error": "It could not be sent. Please try again.",
@@ -3559,6 +3560,7 @@
    "strings": {
     "discover_all": "Ver todas las soluciones",
     "menu": "Menú",
+    "back": "Volver",
     "nav_label": "Menú principal",
     "newsletter_submit": "Suscribirme",
     "newsletter_error": "No se ha podido enviar. Inténtalo de nuevo.",
@@ -3621,6 +3623,7 @@
    "strings": {
     "discover_all": "Veure totes les solucions",
     "menu": "Menú",
+    "back": "Tornar",
     "nav_label": "Menú principal",
     "newsletter_submit": "Subscriu-me",
     "newsletter_error": "No s'ha pogut enviar. Torna-ho a provar.",
@@ -3683,6 +3686,7 @@
    "strings": {
     "discover_all": "Alle Lösungen ansehen",
     "menu": "Menü",
+    "back": "Zurück",
     "nav_label": "Hauptmenü",
     "newsletter_submit": "Abonnieren",
     "newsletter_error": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.",
@@ -4007,7 +4011,8 @@
       },
       {
        "label": "Employment",
-       "url": "@page:careers"
+       "url": "@page:careers",
+       "muted": true
       }
      ]
     }
@@ -4262,7 +4267,8 @@
       },
       {
        "label": "Empleo",
-       "url": "@page:careers"
+       "url": "@page:careers",
+       "muted": true
       }
      ]
     }
@@ -4517,7 +4523,8 @@
       },
       {
        "label": "Treballa amb nosaltres",
-       "url": "@page:careers"
+       "url": "@page:careers",
+       "muted": true
       }
      ]
     }
@@ -4772,7 +4779,8 @@
       },
       {
        "label": "Karriere",
-       "url": "@page:careers"
+       "url": "@page:careers",
+       "muted": true
       }
      ]
     }
@@ -5307,25 +5315,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "FRESH POULTRY MARINATING",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FRESH MEAT MARINATING: PORK AND BEEF",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FISH MARINATING",
+          "label": "BRINE PREPARATION",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -5335,6 +5325,60 @@
          },
          {
           "label": "MEAT BLOCK DEFROSTING",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED HAM",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED SHOULDER",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON PRODUCTION",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SAUSAGE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATED PLANTS WITH 4.0 CONNECTIVITY",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -5350,25 +5394,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "FRESH POULTRY MARINATING",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FRESH MEAT MARINATING: PORK AND BEEF",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FISH MARINATING",
+          "label": "BRINE PREPARATION",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -5378,6 +5404,60 @@
          },
          {
           "label": "MEAT BLOCK DEFROSTING",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED HAM",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED SHOULDER",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON PRODUCTION",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SAUSAGE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATED PLANTS WITH 4.0 CONNECTIVITY",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -5393,25 +5473,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "FRESH POULTRY MARINATING",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FRESH MEAT MARINATING: PORK AND BEEF",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FISH MARINATING",
+          "label": "BRINE PREPARATION",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -5421,6 +5483,60 @@
          },
          {
           "label": "MEAT BLOCK DEFROSTING",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED HAM",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED SHOULDER",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON PRODUCTION",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SAUSAGE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATED PLANTS WITH 4.0 CONNECTIVITY",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -5436,25 +5552,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "FRESH POULTRY MARINATING",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FRESH MEAT MARINATING: PORK AND BEEF",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FISH MARINATING",
+          "label": "BRINE PREPARATION",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -5464,6 +5562,60 @@
          },
          {
           "label": "MEAT BLOCK DEFROSTING",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED HAM",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED SHOULDER",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON PRODUCTION",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SAUSAGE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATED PLANTS WITH 4.0 CONNECTIVITY",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -5479,25 +5631,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "FRESH POULTRY MARINATING",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FRESH MEAT MARINATING: PORK AND BEEF",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "FISH MARINATING",
+          "label": "BRINE PREPARATION",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -5507,6 +5641,60 @@
          },
          {
           "label": "MEAT BLOCK DEFROSTING",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED HAM",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "WHOLE MUSCLE COOKED SHOULDER",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON PRODUCTION",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SAUSAGE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE COOKING",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATED PLANTS WITH 4.0 CONNECTIVITY",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -6086,25 +6274,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINADO DE CARNES FRESCAS DE AVE",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE CARNE FRESCA: CERDO Y VACUNO",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE PESCADO",
+          "label": "PREPARACIÓN DE SALMUERA",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -6114,6 +6284,60 @@
          },
          {
           "label": "DESCONGELACIÓN DE BLOQUES DE CARNE",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "JAMÓN COCIDO DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PALETA COCIDA DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓN DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE SALCHICHAS",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE PRODUCTOS SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTAS AUTOMÁTICAS CON CONECTIVIDAD 4.0",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -6129,25 +6353,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINADO DE CARNES FRESCAS DE AVE",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE CARNE FRESCA: CERDO Y VACUNO",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE PESCADO",
+          "label": "PREPARACIÓN DE SALMUERA",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -6157,6 +6363,60 @@
          },
          {
           "label": "DESCONGELACIÓN DE BLOQUES DE CARNE",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "JAMÓN COCIDO DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PALETA COCIDA DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓN DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE SALCHICHAS",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE PRODUCTOS SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTAS AUTOMÁTICAS CON CONECTIVIDAD 4.0",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -6172,25 +6432,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINADO DE CARNES FRESCAS DE AVE",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE CARNE FRESCA: CERDO Y VACUNO",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE PESCADO",
+          "label": "PREPARACIÓN DE SALMUERA",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -6200,6 +6442,60 @@
          },
          {
           "label": "DESCONGELACIÓN DE BLOQUES DE CARNE",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "JAMÓN COCIDO DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PALETA COCIDA DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓN DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE SALCHICHAS",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE PRODUCTOS SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTAS AUTOMÁTICAS CON CONECTIVIDAD 4.0",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -6215,25 +6511,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINADO DE CARNES FRESCAS DE AVE",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE CARNE FRESCA: CERDO Y VACUNO",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE PESCADO",
+          "label": "PREPARACIÓN DE SALMUERA",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -6243,6 +6521,60 @@
          },
          {
           "label": "DESCONGELACIÓN DE BLOQUES DE CARNE",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "JAMÓN COCIDO DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PALETA COCIDA DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓN DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE SALCHICHAS",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE PRODUCTOS SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTAS AUTOMÁTICAS CON CONECTIVIDAD 4.0",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -6258,25 +6590,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINADO DE CARNES FRESCAS DE AVE",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE CARNE FRESCA: CERDO Y VACUNO",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINADO DE PESCADO",
+          "label": "PREPARACIÓN DE SALMUERA",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -6286,6 +6600,60 @@
          },
          {
           "label": "DESCONGELACIÓN DE BLOQUES DE CARNE",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "JAMÓN COCIDO DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PALETA COCIDA DE MÚSCULO ENTERO",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓN DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE SALCHICHAS",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓN DE PRODUCTOS SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTAS AUTOMÁTICAS CON CONECTIVIDAD 4.0",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -6865,25 +7233,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINAT DE CARNS FRESQUES D'AU",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE CARN FRESCA: PORC I VEDELLA",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE PEIX",
+          "label": "PREPARACIÓ DE SALMORRA",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -6893,6 +7243,60 @@
          },
          {
           "label": "DESCONGELACIÓ DE BLOCS DE CARN",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PERNIL CUIT DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ESPATLLA CUITA DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓ DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE SALSITXES",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE PRODUCTES SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTES AUTOMÀTIQUES AMB CONNECTIVITAT 4.0",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -6908,25 +7312,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINAT DE CARNS FRESQUES D'AU",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE CARN FRESCA: PORC I VEDELLA",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE PEIX",
+          "label": "PREPARACIÓ DE SALMORRA",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -6936,6 +7322,60 @@
          },
          {
           "label": "DESCONGELACIÓ DE BLOCS DE CARN",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PERNIL CUIT DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ESPATLLA CUITA DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓ DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE SALSITXES",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE PRODUCTES SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTES AUTOMÀTIQUES AMB CONNECTIVITAT 4.0",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -6951,25 +7391,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINAT DE CARNS FRESQUES D'AU",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE CARN FRESCA: PORC I VEDELLA",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE PEIX",
+          "label": "PREPARACIÓ DE SALMORRA",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -6979,6 +7401,60 @@
          },
          {
           "label": "DESCONGELACIÓ DE BLOCS DE CARN",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PERNIL CUIT DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ESPATLLA CUITA DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓ DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE SALSITXES",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE PRODUCTES SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTES AUTOMÀTIQUES AMB CONNECTIVITAT 4.0",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -6994,25 +7470,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINAT DE CARNS FRESQUES D'AU",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE CARN FRESCA: PORC I VEDELLA",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE PEIX",
+          "label": "PREPARACIÓ DE SALMORRA",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -7022,6 +7480,60 @@
          },
          {
           "label": "DESCONGELACIÓ DE BLOCS DE CARN",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PERNIL CUIT DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ESPATLLA CUITA DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓ DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE SALSITXES",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE PRODUCTES SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTES AUTOMÀTIQUES AMB CONNECTIVITAT 4.0",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -7037,25 +7549,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINAT DE CARNS FRESQUES D'AU",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE CARN FRESCA: PORC I VEDELLA",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINAT DE PEIX",
+          "label": "PREPARACIÓ DE SALMORRA",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -7065,6 +7559,60 @@
          },
          {
           "label": "DESCONGELACIÓ DE BLOCS DE CARN",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PERNIL CUIT DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ESPATLLA CUITA DE MÚSCUL SENCER",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "ELABORACIÓ DE BACON",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE SALSITXES",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "COCCIÓ DE PRODUCTES SOUS-VIDE",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "PLANTES AUTOMÀTIQUES AMB CONNECTIVITAT 4.0",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -7644,25 +8192,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINIEREN VON FRISCHEM GEFLÜGEL",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FRISCHFLEISCH: SCHWEIN UND RIND",
-          "link": {
-           "title": "",
-           "url": "@page:marinated",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FISCH",
+          "label": "LAKEHERSTELLUNG",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -7672,6 +8202,60 @@
          },
          {
           "label": "AUFTAUEN VON FLEISCHBLÖCKEN",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHINKEN AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHULTER AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON-HERSTELLUNG",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "GAREN VON WÜRSTCHEN",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE-GAREN",
+          "link": {
+           "title": "",
+           "url": "@page:marinated",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATISIERTE ANLAGEN MIT 4.0-KONNEKTIVITÄT",
           "link": {
            "title": "",
            "url": "@page:marinated",
@@ -7687,25 +8271,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINIEREN VON FRISCHEM GEFLÜGEL",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FRISCHFLEISCH: SCHWEIN UND RIND",
-          "link": {
-           "title": "",
-           "url": "@page:cured",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FISCH",
+          "label": "LAKEHERSTELLUNG",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -7715,6 +8281,60 @@
          },
          {
           "label": "AUFTAUEN VON FLEISCHBLÖCKEN",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHINKEN AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHULTER AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON-HERSTELLUNG",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "GAREN VON WÜRSTCHEN",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE-GAREN",
+          "link": {
+           "title": "",
+           "url": "@page:cured",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATISIERTE ANLAGEN MIT 4.0-KONNEKTIVITÄT",
           "link": {
            "title": "",
            "url": "@page:cured",
@@ -7730,25 +8350,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINIEREN VON FRISCHEM GEFLÜGEL",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FRISCHFLEISCH: SCHWEIN UND RIND",
-          "link": {
-           "title": "",
-           "url": "@page:snacks",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FISCH",
+          "label": "LAKEHERSTELLUNG",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -7758,6 +8360,60 @@
          },
          {
           "label": "AUFTAUEN VON FLEISCHBLÖCKEN",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHINKEN AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHULTER AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON-HERSTELLUNG",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "GAREN VON WÜRSTCHEN",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE-GAREN",
+          "link": {
+           "title": "",
+           "url": "@page:snacks",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATISIERTE ANLAGEN MIT 4.0-KONNEKTIVITÄT",
           "link": {
            "title": "",
            "url": "@page:snacks",
@@ -7773,25 +8429,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINIEREN VON FRISCHEM GEFLÜGEL",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FRISCHFLEISCH: SCHWEIN UND RIND",
-          "link": {
-           "title": "",
-           "url": "@page:sausages",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FISCH",
+          "label": "LAKEHERSTELLUNG",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -7801,6 +8439,60 @@
          },
          {
           "label": "AUFTAUEN VON FLEISCHBLÖCKEN",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHINKEN AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHULTER AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON-HERSTELLUNG",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "GAREN VON WÜRSTCHEN",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE-GAREN",
+          "link": {
+           "title": "",
+           "url": "@page:sausages",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATISIERTE ANLAGEN MIT 4.0-KONNEKTIVITÄT",
           "link": {
            "title": "",
            "url": "@page:sausages",
@@ -7816,25 +8508,7 @@
         "frames": [],
         "processes": [
          {
-          "label": "MARINIEREN VON FRISCHEM GEFLÜGEL",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FRISCHFLEISCH: SCHWEIN UND RIND",
-          "link": {
-           "title": "",
-           "url": "@page:petfood",
-           "target": ""
-          },
-          "thumbnail": ""
-         },
-         {
-          "label": "MARINIEREN VON FISCH",
+          "label": "LAKEHERSTELLUNG",
           "link": {
            "title": "",
            "url": "@page:petfood",
@@ -7844,6 +8518,60 @@
          },
          {
           "label": "AUFTAUEN VON FLEISCHBLÖCKEN",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHINKEN AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "KOCHSCHULTER AUS GANZEM MUSKELSTÜCK",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "BACON-HERSTELLUNG",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "GAREN VON WÜRSTCHEN",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "SOUS-VIDE-GAREN",
+          "link": {
+           "title": "",
+           "url": "@page:petfood",
+           "target": ""
+          },
+          "thumbnail": ""
+         },
+         {
+          "label": "AUTOMATISIERTE ANLAGEN MIT 4.0-KONNEKTIVITÄT",
           "link": {
            "title": "",
            "url": "@page:petfood",

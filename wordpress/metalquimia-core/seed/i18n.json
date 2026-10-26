@@ -5937,6 +5937,13 @@
    "de": "Menü"
   },
   {
+   "ctx": "options.strings.back",
+   "es": "Volver",
+   "en": "Back",
+   "ca": "Tornar",
+   "de": "Zurück"
+  },
+  {
    "ctx": "options.strings.nav_label",
    "es": "Menú principal",
    "en": "Main menu",

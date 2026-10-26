@@ -9,7 +9,7 @@ import { locales, localizedPath } from "@/lib/i18n";
  * Selector de idioma. Usa los <link rel="alternate" hreflang> que pinta cada página
  * para llevar a la traducción de la página actual; si no existe, a la portada de ese idioma.
  */
-export function LanguageSwitcher({ lang, className = "" }: { lang: string; className?: string }) {
+export function LanguageSwitcher({ lang, drawer, className = "" }: { lang: string; drawer?: boolean; className?: string }) {
   const pathname = usePathname();
   // Se guarda la ruta en la que se abrió: al navegar a otra página el desplegable queda cerrado.
   const [openAt, setOpenAt] = useState<string | null>(null);
@@ -34,14 +34,17 @@ export function LanguageSwitcher({ lang, className = "" }: { lang: string; class
         type="button"
         onClick={toggle}
         aria-expanded={open}
-        className="flex items-center gap-1.5 font-display text-[0.75rem] uppercase leading-[1.1] text-white"
+        className={`flex items-center gap-1.5 uppercase ${
+          // En el menú móvil: mono negro sobre blanco.
+          drawer ? "font-mono text-[0.875rem] font-bold leading-none text-black" : "font-display text-[0.75rem] leading-[1.1] text-white"
+        }`}
       >
         <GlobeSimple size={16} aria-hidden />
         {lang}
         <CaretDown size={8} weight="bold" aria-hidden />
       </button>
       {open && (
-        <ul className="absolute right-0 top-full z-10 mt-2 min-w-16 bg-black py-1">
+        <ul className={`absolute right-0 z-10 min-w-16 bg-black py-1 ${drawer ? "bottom-full mb-2" : "top-full mt-2"}`}>
           {locales
             .filter((l) => l !== lang)
             .map((l) => (

@@ -35,7 +35,7 @@ export function Header({ global, lang }: { global: Global | null; lang: string }
         <LanguageSwitcher lang={lang} />
       </div>
 
-      <div className="relative flex h-[71px] items-center justify-between px-5 xl:px-6">
+      <div className="relative flex h-[71px] items-center justify-between px-6">
         <Link href={home} aria-label="Metalquimia" className="shrink-0">
           {logo?.url ? (
             <>
@@ -62,14 +62,22 @@ export function Header({ global, lang }: { global: Global | null; lang: string }
               target={cta.target}
               variant="outline"
               size="sm"
-              className="hidden border-black/20 !text-black-grey hover:border-black/60 group-data-[theme=dark]:border-white/20 group-data-[theme=dark]:!text-light-grey xl:inline-flex"
+              className="max-xl:!hidden border-black/20 !text-black-grey hover:border-black/60 group-data-[theme=dark]:border-white/20 group-data-[theme=dark]:!text-light-grey xl:inline-flex"
             >
               {cta.title}
             </Button>
           )}
         </div>
 
-        <MobileMenu items={primary} top={top} cta={cta} lang={lang} label={t(global, "menu", "Menú")} />
+        <MobileMenu
+          items={primary}
+          top={top}
+          cta={cta}
+          lang={lang}
+          label={t(global, "menu", "Menú")}
+          backLabel={t(global, "back", "Back")}
+          discoverLabel={t(global, "discover_all", "Discover all")}
+        />
       </div>
     </HeaderShell>
   );

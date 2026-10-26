@@ -175,13 +175,14 @@ function mq_menu_tree( int $menu_id ): array {
 				$icon   = $field( 'menu_icon' );
 				$link   = $field( 'menu_link' );
 				$out[]  = array(
-					'label'       => $item->title,
+					'label'       => html_entity_decode( $item->title, ENT_QUOTES, 'UTF-8' ),
 					'url'         => mq_relative_url( $item->url ),
 					'target'      => $item->target,
 					'description' => (string) $item->description,
 					'image'       => mq_menu_item_image( $item ),
 					'icon'        => $icon ? mq_normalize( $icon ) : null,
 					'highlight'   => (bool) $field( 'menu_highlight' ),
+					'muted'       => (bool) $field( 'menu_muted' ),
 					'layout'      => (string) $field( 'menu_layout' ),
 					'eyebrow'     => (string) $field( 'menu_eyebrow' ),
 					'title_muted' => (string) $field( 'menu_title_muted' ),
